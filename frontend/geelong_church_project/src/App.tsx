@@ -1,13 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import Header from './components/header/header';
 
 const App = () =>{
 
   return(
     
     <>
-      <h1>Hello World</h1>
+        <Routes>
+          <Header />
+        </Routes>
     </>
   )
 
