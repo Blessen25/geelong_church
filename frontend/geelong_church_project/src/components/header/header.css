@@ -5,14 +5,14 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     display: flex;
     align-items: center;
-    padding: 0px 130px;
-    gap: 30px;
-    background-color: #f0efed;
+    padding: 0px 90px;
+    gap: 100px;
+    background-color: #f2f0f1;
 }
 
 .headerimg {
 
-    width: 270px;
+    width: 350px;
     height: 100px;
 }
 
@@ -22,3 +22,29 @@
     object-fit: cover;
     height: 100%;
 }
+
+.headercontents {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.headercontentspara {
+
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all .7s;
+
+}
+
+
+
+.headercontentspara:hover {
+
+    color: #3c79b0;
+}
+
