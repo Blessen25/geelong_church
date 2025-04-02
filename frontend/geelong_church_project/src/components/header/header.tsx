@@ -1,20 +1,26 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
-import React from 'react';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
+import { faAlignLeft, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+
+    const [ sidebarActive, setSidebarActive ] = useState(false);
+    const handleSidebarActiveButt = () => {
+
+        setSidebarActive(!sidebarActive);        
+    }
 
     return(
         
         <>
             <nav id="header">
                 <div className="headercstmicondiv">
-                    <FontAwesomeIcon icon={faBars} className='iconcstm'/>
+                    <FontAwesomeIcon icon={faAlignLeft} className={`${sidebarActive ? 'iconcstm-one-colorlightblue' : 'iconcstm-one'}`} onClick={handleSidebarActiveButt}/>
                 </div>
                 <div className="headerimg">
                     <a href="#">
-                        <img src="../assets/images/Logo/Logoimg-close.jpg" alt="" />
+                        <img src="../assets/images/Logo/Logo_new.png" alt="" />
                     </a>
                 </div>
                 <div className="headercontents">

@@ -26,7 +26,7 @@
 
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 20px;
     
 }
@@ -34,7 +34,7 @@
 .headercontentspara {
 
     color: black;
-    font-size: 18px;
+    font-size: 17px;
     text-decoration: none;
     transition: all .7s;
     position: relative;
@@ -62,7 +62,7 @@
 .headercontentspara:hover {
 
     color: #3c79b0;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 .headercstmicondiv {
@@ -78,14 +78,9 @@
         font-size: 15px;
     }
 
-    .headercontentspara:hover {
-
-        font-size: 17px;
-    }
-
     #header {
 
-        gap: 80px;
+        gap: 50px;
     }
     
 }
@@ -95,12 +90,9 @@
     .headercontentspara {
 
         font-size: 14px;
+        justify-content: space-between;
     }
 
-    .headercontentspara:hover {
-
-        font-size: 15px;
-    }
     
     .headerimg {
 
@@ -110,7 +102,9 @@
 
     #header {
 
-        gap: 40px;
+        gap: 20px;
+        height: 100px;
+        padding: 0px 30px;
     }
 }
 
@@ -138,7 +132,22 @@
 
     .headerimg {
 
-        width: 172px;
+        width: 166px;
+        height: 65px;
+    }
+
+    .iconcstm-one {
+
+        font-size: 28px;
+        color: #8b8b8b;
+        transition: all .7s;
+    }
+
+    .iconcstm-one-colorlightblue {
+        
+        font-size: 28px;
+        color: #3c79b0;
+        transition: all .7s;
     }
 }
 
@@ -153,6 +162,16 @@
     .headerimg {
 
         height: 55px;
-        width: 135px;
+        width: 140px;
+    }
+
+    .iconcstm-one {
+
+        font-size: 26px;
+    }
+
+    .iconcstm-one-colorlightblue {
+        
+        font-size: 26px;
     }
 }
