@@ -1,5 +1,6 @@
 #header {
 
+    position: fixed;
     width: 100%;
     height: 120px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -8,6 +9,7 @@
     padding: 0px 50px;
     gap: 100px;
     background-color: white;
+    z-index: 9999;
 }
 
 .headerimg {
@@ -67,6 +69,15 @@
 
 .headercstmicondiv {
 
+    display: none;
+}
+
+.outlaysidebar {
+
+    display: none;
+}
+
+.sidebardiv {
     display: none;
 }
 
@@ -149,6 +160,33 @@
         color: #3c79b0;
         transition: all .7s;
     }
+
+    .outlaysidebar {
+
+        display: block;
+        width: 100%;
+        height: 100vh;
+        border: 2px solid black;
+        background-color: black;
+        opacity: .5; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+    
+    .sidebardiv {
+
+        display: block;
+        position: fixed;
+        border: 2px solid black;
+        width: 250px;
+        height: 100%;
+        z-index: 9999;
+        top: 82px;
+        left: 0px;
+        background-color: white;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -173,5 +211,11 @@
     .iconcstm-one-colorlightblue {
         
         font-size: 26px;
+    }
+
+    .sidebardiv {
+
+        top: 73px;
+        width: 200px;
     }
 }

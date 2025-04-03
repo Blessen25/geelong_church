@@ -14,7 +14,8 @@ const Header = () => {
     return(
         
         <>
-            <nav id="header">
+            <nav>
+                <div id="header">
                 <div className="headercstmicondiv">
                     <FontAwesomeIcon icon={faAlignLeft} className={`${sidebarActive ? 'iconcstm-one-colorlightblue' : 'iconcstm-one'}`} onClick={handleSidebarActiveButt}/>
                 </div>
@@ -29,8 +30,13 @@ const Header = () => {
                     <a href='#' className='headercontentspara'>Ministries</a>
                     <a href='#' className='headercontentspara'>Newsletters</a>
                     <a href='#' className='headercontentspara'>Church Online</a>
-                    <a href='#' className='headercontentspara'>Contact</a>
-                    
+                    <a href='#' className='headercontentspara'>Contact</a>    
+                </div>
+                </div>
+                <div className="outlaysidebar">
+                    <div className="sidebardiv">
+                        
+                    </div>
                 </div>
             </nav>
         </>
