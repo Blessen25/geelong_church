@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { faAlignLeft, faBars, faChurch, faHome, faInfoCircle, faNewspaper, faPhone, faTv } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 
+    const location = useLocation();
+    const isActive = (path : any) => location.pathname === path ? "headercontentspara headercontentsparaactive" : "headercontentspara";
+    const isActiveSidebar = (path : any) => location.pathname === path ? "headercontentssidebarpara headercontentssidebarparaactive" : "headercontentssidebarpara";
     const [ sidebarActive, setSidebarActive ] = useState(false);
     const handleSidebarActiveButt = () => {
 
@@ -25,12 +29,12 @@ const Header = () => {
                     </a>
                 </div>
                 <div className="headercontents">
-                    <a href='#' className='headercontentspara'>Home</a>
-                    <a href='#' className='headercontentspara'>About</a>
-                    <a href='#' className='headercontentspara'>Ministries</a>
-                    <a href='#' className='headercontentspara'>Newsletters</a>
-                    <a href='#' className='headercontentspara'>Church Online</a>
-                    <a href='#' className='headercontentspara'>Contact</a>    
+                    <a href='/' className={`${isActive('/')}`}>Home</a>
+                    <a href='/about' className={`${isActive('/about')}`}>About</a>
+                    <a href='/ministries' className={`${isActive('/ministries')}`}>Ministries</a>
+                    <a href='/newletters' className={`${isActive('/newletters')}`}>Newsletters</a>
+                    <a href='/churchonline' className={`${isActive('/churchonline')}`}>Church Online</a>
+                    <a href='/contact' className={`${isActive('/contact')}`}>Contact</a>    
                 </div>
                 </div>
                 {sidebarActive ? (
@@ -38,12 +42,12 @@ const Header = () => {
                     <div className="outlaysidebar">
                     </div>
                     <div className="sidebardiv">
-                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faHome}/>Home</a>
-                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faInfoCircle}/>About</a>
-                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faChurch}/>Ministries</a>
-                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
-                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faTv}/>Church Online</a>
-                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faPhone}/>Contact</a> 
+                    <a href='/' className={`${isActiveSidebar('/')}`}><FontAwesomeIcon icon={faHome}/>Home</a>
+                    <a href='/about' className={`${isActiveSidebar('/about')}`}><FontAwesomeIcon icon={faInfoCircle}/>About</a>
+                    <a href='/ministries' className={`${isActiveSidebar('/ministries')}`}><FontAwesomeIcon icon={faChurch}/>Ministries</a>
+                    <a href='/newletters' className={`${isActiveSidebar('/newletters')}`}><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
+                    <a href='/churchonline' className={`${isActiveSidebar('/churchonline')}`}><FontAwesomeIcon icon={faTv}/>Church Online</a>
+                    <a href='/contact' className={`${isActiveSidebar('/contact')}`}><FontAwesomeIcon icon={faPhone}/>Contact</a> 
                     </div>  
                     </>
                 ) : (

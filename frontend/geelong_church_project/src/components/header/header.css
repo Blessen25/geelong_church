@@ -78,7 +78,13 @@
 }
 
 .sidebardiv {
+    
     display: none;
+}
+
+.headercontentsparaactive {
+
+    color: #3c79b0;   
 }
 
 
@@ -215,6 +221,12 @@
         color: white;
         background-color: #3c79b0;
     }
+
+    .headercontentssidebarparaactive {
+
+        color: white;
+        background-color: #3c79b0;
+    }
     
 }
 
@@ -234,12 +246,12 @@
 
     .iconcstm-one {
 
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .iconcstm-one-colorlightblue {
         
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .sidebardiv {
