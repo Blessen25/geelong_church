@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
 import React, { useState } from 'react';
-import { faAlignLeft, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faAlignLeft, faBars, faChurch, faHome, faInfoCircle, faNewspaper, faPhone, faTv } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 
@@ -34,10 +34,15 @@ const Header = () => {
                 </div>
                 </div>
                 <div className="outlaysidebar">
-                    <div className="sidebardiv">
-                        
-                    </div>
                 </div>
+                <div className="sidebardiv">
+                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faHome}/>Home</a>
+                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faInfoCircle}/>About</a>
+                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faChurch}/>Ministries</a>
+                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
+                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faTv}/>Church Online</a>
+                    <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faPhone}/>Contact</a> 
+                    </div>
             </nav>
         </>
     )
