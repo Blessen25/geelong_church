@@ -33,16 +33,24 @@ const Header = () => {
                     <a href='#' className='headercontentspara'>Contact</a>    
                 </div>
                 </div>
-                <div className="outlaysidebar">
-                </div>
-                <div className="sidebardiv">
+                {sidebarActive ? (
+                    <>
+                    <div className="outlaysidebar">
+                    </div>
+                    <div className="sidebardiv">
                     <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faHome}/>Home</a>
                     <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faInfoCircle}/>About</a>
                     <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faChurch}/>Ministries</a>
                     <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
                     <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faTv}/>Church Online</a>
                     <a href='#' className='headercontentssidebarpara'><FontAwesomeIcon icon={faPhone}/>Contact</a> 
-                    </div>
+                    </div>  
+                    </>
+                ) : (
+                    <>
+                    
+                    </>
+                )}
             </nav>
         </>
     )

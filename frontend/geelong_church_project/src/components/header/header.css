@@ -9,7 +9,7 @@
     padding: 0px 50px;
     gap: 100px;
     background-color: white;
-    z-index: 9999;
+    z-index: 999999;
 }
 
 .headerimg {
@@ -171,7 +171,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 999;
+        z-index: 99999;
     }
     
     .sidebardiv {
@@ -179,7 +179,7 @@
         display: block;
         position: fixed;
         height: 100%;
-        z-index: 9999;
+        z-index: 999999;
         top: 82px;
         left: 0px;
         background-color: white;

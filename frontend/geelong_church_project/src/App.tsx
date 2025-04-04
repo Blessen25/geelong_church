@@ -1,17 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header/header';
+import Home from './screens/home/home';
 
 const App = () =>{
 
   return(
     
     <>
-        <Routes>
+        <Router>
           <Header />
-        </Routes>
+          <Routes>
+            <Route path='/' element={<Home />}/>
+          </Routes>
+        </Router>
     </>
   )
 

@@ -1,0 +1,30 @@
+.containercstm {
+
+    padding: 150px 50px 30px 50px;
+    z-index: 9999;
+}
+
+
+@media screen and (max-width: 991px) {
+    
+    .containercstm {
+
+        padding: 120px 30px 20px 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .containercstm {
+
+        padding: 100px 30px 20px 30px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .containercstm {
+
+        padding: 85px 15px 15px 15px;
+    }
+}
