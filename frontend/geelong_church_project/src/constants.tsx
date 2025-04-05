@@ -2,9 +2,10 @@ import React from "react";
 
 const Colors = {
     
-    'background-color' : '#f2f0f1',
+    'background-color' : '#f0f8ff',
     'primary-color' : '#3c79b0',
     'text-color' : '#8b8b8b', 
+
 };
 
 
@@ -34,3 +35,20 @@ const FontFamily = {
 }
 
 
+const ideas = {
+
+"Pentecostal worship service" : '1',
+
+"People praying in church" : '1',
+
+"Raising hands in worship": '1',
+
+"Worship concert light background": '1',
+
+"Holy Spirit dove background": '1',
+
+"Sunrise over cross": '1',
+
+"Church worship silhouette": '1', 
+
+}
