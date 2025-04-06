@@ -5,6 +5,11 @@
     background-color: #f0f8ff;
 }
 
+.normalcontainercstm {
+
+    padding: 30px 50px;
+}
+
 
 @media screen and (max-width: 991px) {
     
@@ -12,6 +17,12 @@
 
         padding: 120px 30px 20px 30px;
     }
+
+    .normalcontainercstm {
+
+        padding: 20px 30px;
+    }
+    
 }
 
 @media screen and (max-width: 767px) {
@@ -20,6 +31,11 @@
 
         padding: 100px 30px 20px 30px;
     }
+
+    .normalcontainercstm {
+
+        padding: 20px 30px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -27,5 +43,10 @@
     .containercstm {
 
         padding: 85px 15px 15px 15px;
+    }
+
+    .normalcontainercstm {
+
+        padding: 15px;
     }
 }

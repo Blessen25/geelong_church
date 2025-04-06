@@ -52,3 +52,10 @@ const ideas = {
 "Church worship silhouette": '1', 
 
 }
+
+const Containerdivmain = {
+
+    'Containerdiv' : 'For div after the heading',
+    'NormalContainerdiv' : 'For normal usage of containerdiv',
+}
+
