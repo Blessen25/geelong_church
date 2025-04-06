@@ -5,6 +5,7 @@ const Colors = {
     'background-color' : '#f0f8ff',
     'primary-color' : '#3c79b0',
     'text-color' : '#8b8b8b', 
+    'dark-primary-color' : '#2e5f8f',
 
 };
 

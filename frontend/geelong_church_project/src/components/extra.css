@@ -10,6 +10,50 @@
     padding: 30px 50px;
 }
 
+.buttonwithtextcstm {
+
+    background-color: #3c79b0;
+    max-width: 160px;
+    min-width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 12px 16px;
+    transition: all .7s;
+    font-size: 16px;
+}
+
+.buttonwithtextcstm:hover {
+
+    box-shadow: inset 0px 100px 0px 0px #2e5f8f;
+    color: #ffffff;
+}
+
+.buttonwithtextcstmnormal {
+
+    background-color: #ffffff;
+    max-width: 160px;
+    min-width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: #000000;
+    text-decoration: none;
+    padding: 12px 16px;
+    transition: all .7s;
+    font-size: 16px;
+}
+
+.buttonwithtextcstmnormal:hover {
+
+    box-shadow: inset 0px 100px 0px 0px #3c79b0;
+    color: white;
+}
+
 
 @media screen and (max-width: 991px) {
     

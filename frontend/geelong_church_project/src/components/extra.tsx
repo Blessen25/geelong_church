@@ -1,6 +1,6 @@
 import React from "react";
 import './extra.css';
-import { ContainerdivProps } from "../interface";
+import { ButtonwithtextComponentProps, ContainerdivProps } from "../interface";
 
 export const Containerdiv:React.FC<ContainerdivProps> = (Props) => {
 
@@ -22,6 +22,25 @@ export const NormalContainerdiv:React.FC<ContainerdivProps> = (Props) => {
             <div className={`normalcontainercstm ${Props.styles ? Props.styles : ''}`}>
                 {Props.children}
             </div>
+        </>
+    )
+}
+
+
+export const ButtonwithtextComponentColor:React.FC<ButtonwithtextComponentProps> = (Props) => {
+
+    return(
+        <>
+            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstm ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.style ? Props.style : ''}`}>{Props.label}</a>
+        </>
+    )
+}
+
+export const ButtonwithtextComponent:React.FC<ButtonwithtextComponentProps> = (Props) => {
+
+    return(
+        <>
+            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstmnormal ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.style ? Props.style : ''}`}>{Props.label}</a>
         </>
     )
 }
