@@ -1,8 +1,3 @@
-p {
-
-    font-size: 16px;
-}
-
 .mainhome {
 
     width: 100%;
@@ -52,18 +47,106 @@ p {
     font-weight: 700;
 }
 
-@media screen and (max-width: 767px) {
- 
-    p {
+@media screen and (max-width: 1099px) {
+    
+    .imagecstmdivhome {
 
-        font-size: 14px;
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    
+    .textdivcstmhome h1{
+
+        font-size: 36px;
+    }
+
+    .textdivcstmhome p {
+
+        font-size: 22px;
+    }
+
+    .textdivcstmhome {
+
+        width: 540px;
+        right: 20px;
+        top: 30px;
+    }
+    
+    .imagecstmdivhome {
+
+        height: 320px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .textdivcstmhome h1{
+
+        font-size: 30px;
+    }
+
+    .textdivcstmhome p{
+
+        font-size: 18px;
+    }
+
+    .textdivcstmhome {
+
+        width: 450px;
+        gap: 15px;
+    }
+    
+    .imagecstmdivhome {
+
+        height: 270px;
     }
 }
 
 @media screen and (max-width : 575px) {
     
-    p {
 
-        font-size: 12px;
+    .textdivcstmhome h1 {
+
+        font-size: 20px;
+    }
+    
+    .textdivcstmhome p{
+
+        font-size: 13px;
+    }
+
+    .imagecstmdivhome {
+
+        height: 200px;
+    }
+
+    .textdivcstmhome {
+
+        width: 100%;
+        top: 36px;
+        right: 0px;
+        gap: 10px;
+        padding: 10px;       
+    }
+
+    .connectwithuscstm {
+
+        max-width: 100% !important;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    
+    .textdivcstmhome h1 {
+
+        font-size: 18px;
+    }
+
+    .textdivcstmhome p {
+
+        font-size: 10px;
     }
 }

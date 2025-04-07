@@ -31,7 +31,7 @@ export const ButtonwithtextComponentColor:React.FC<ButtonwithtextComponentProps>
 
     return(
         <>
-            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstm ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.style ? Props.style : ''}`}>{Props.label}</a>
+            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstm ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.classname ? Props.classname : ''}`}>{Props.label}</a>
         </>
     )
 }
@@ -40,7 +40,7 @@ export const ButtonwithtextComponent:React.FC<ButtonwithtextComponentProps> = (P
 
     return(
         <>
-            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstmnormal ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.style ? Props.style : ''}`}>{Props.label}</a>
+            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstmnormal ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.classname ? Props.classname : ''}`}>{Props.label}</a>
         </>
     )
 }

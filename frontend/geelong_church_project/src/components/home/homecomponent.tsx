@@ -14,7 +14,7 @@ const HomeComponent = () => {
                             <div className="textdivcstmhome">
                                 <h1>Welcome To <br /> Geelong Pentecostal Assembly <br /></h1>
                                 <p> A Place to Grow in Faith & Community </p>
-                                <ButtonwithtextComponentColor label={"Connect With Us"} fullwidth={false} route="#"/>
+                                <ButtonwithtextComponentColor label={"Connect With Us"} fullwidth={false} route="#" classname="connectwithuscstm"/>
                             </div>
                         </div>
                         

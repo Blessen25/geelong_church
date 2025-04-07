@@ -80,6 +80,22 @@
 
         padding: 20px 30px;
     }
+
+    .buttonwithtextcstmnormal{
+
+        font-size: 13px;
+        padding: 10px;
+        min-width: 90px;
+        max-width: 130px;
+    }
+
+    .buttonwithtextcstm {
+
+        font-size: 13px;
+        padding: 10px;
+        min-width: 90px;
+        max-width: 130px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -93,4 +109,21 @@
 
         padding: 15px;
     }
+
+    .buttonwithtextcstmnormal{
+
+        font-size: 10px;
+        padding: 6px;
+        min-width: 60px;
+        max-width: 110px;
+    }
+
+    .buttonwithtextcstm {
+
+        font-size: 10px;
+        padding: 6px;
+        min-width: 60px;
+        max-width: 110px;
+    }
+    
 }

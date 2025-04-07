@@ -10,5 +10,5 @@ export interface ButtonwithtextComponentProps {
     label : string;
     fullwidth : boolean;
     route ?: string;
-    style? : string;
+    classname? : string;
 }
