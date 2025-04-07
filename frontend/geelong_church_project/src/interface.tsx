@@ -12,3 +12,10 @@ export interface ButtonwithtextComponentProps {
     route ?: string;
     classname? : string;
 }
+
+export interface FlexwithtextandimagedivProps {
+
+    parentclassName ?: string;
+    childtextclassName ?: string;
+    childimageclassName ?:string;
+}

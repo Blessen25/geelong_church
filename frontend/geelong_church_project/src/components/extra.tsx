@@ -1,6 +1,6 @@
 import React from "react";
 import './extra.css';
-import { ButtonwithtextComponentProps, ContainerdivProps } from "../interface";
+import { ButtonwithtextComponentProps, ContainerdivProps, FlexwithtextandimagedivProps } from "../interface";
 
 export const Containerdiv:React.FC<ContainerdivProps> = (Props) => {
 
@@ -44,3 +44,4 @@ export const ButtonwithtextComponent:React.FC<ButtonwithtextComponentProps> = (P
         </>
     )
 }
+

@@ -6,6 +6,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+p{
+
+  line-height: 1.5;
+  color: #8b8b8b;
+}
+
 .w-100cstm {
 
  max-width: 100% !important;

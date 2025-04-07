@@ -1,5 +1,10 @@
 import React from "react";
 
+const CstmName = {
+
+    'church_name' : 'Geelong Pentecostal Assembly',
+}
+
 const Colors = {
     
     'background-color' : '#f0f8ff',
@@ -27,7 +32,15 @@ const FontSizes = {
     'para-large' : '16px',
     'para-medium' : '14px',
     'para-small' : '12px',
-    'para-xsmall' : '10px',
+    'para-xsmall' : '11px',
+}
+
+
+const Gap = {
+
+    'gap_above767' : '30px',
+    'gap_below767' : '20px',
+    'gap_below575' : '15px',
 }
 
 const FontFamily = {
@@ -60,3 +73,8 @@ const Containerdivmain = {
     'NormalContainerdiv' : 'For normal usage of containerdiv',
 }
 
+const ReferenceWebsites = {
+
+    'one' : 'https://www.canyonridge.org/',
+    'one-gibin-refered' : 'https://rchchurch.org.au/',
+}
