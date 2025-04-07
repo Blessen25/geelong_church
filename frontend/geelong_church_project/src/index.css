@@ -12,6 +12,16 @@ p{
   color: #8b8b8b;
 }
 
+.text_cstm_big_heading {
+
+  font-size: 36px;
+}
+
+.text_cstm_normal_para {
+
+  font-size: 16px;
+}
+
 .w-100cstm {
 
  max-width: 100% !important;
@@ -22,12 +32,30 @@ p{
   font-size: 20px;
 }
 
+@media screen and (max-width: 991px) {
+  
+  .text_cstm_big_heading {
+
+    font-size: 32px;
+  }
+
+}
 
 @media screen and (max-width: 767px) {
   
   .iconcstm {
 
     font-size: 18px;
+  }
+
+  .text_cstm_big_heading {
+
+    font-size: 30px;
+  }
+
+  .text_cstm_normal_para {
+
+    font-size: 14px;
   }
 }
 
@@ -36,5 +64,15 @@ p{
   .iconcstm {
 
     font-size: 14px;
+  }
+
+  .text_cstm_big_heading {
+
+    font-size: 26px;
+  }
+
+  .text_cstm_normal_para {
+
+    font-size: 12px;
   }
 }

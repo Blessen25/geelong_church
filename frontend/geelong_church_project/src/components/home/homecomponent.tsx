@@ -2,7 +2,7 @@ import React from "react";
 import './homecomponent.css';
 import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containerdiv } from "../extra";
 
-const HomeComponent = () => {
+export const HomeComponent = () => {
 
     return (
         <>
@@ -17,11 +17,9 @@ const HomeComponent = () => {
                                 <ButtonwithtextComponentColor label={"Connect With Us"} fullwidth={false} route="#" classname="connectwithuscstm"/>
                             </div>
                         </div>
-                        <div className="homeintrodiv">
-                            <div className="homeintrochildfirst">
-                                <div className="parentflexcstm">
-                                    <div className="childflexcstm">
-                                        <h1>A Place to Call Home</h1>
+                        <div className="parentflexcstm">
+                            <div className="childflexcstm">
+                                        <h1 className="text_cstm_big_heading">A Place to Call Home</h1>
                                         <p>At Geelong Pentecostal Assembly, we believe that everyone deserves a second chance, a new beginning, and a place to truly belong. No matter your past, your background, or where you are in your spiritual journey — you are welcome here. <br/><br/>
 
                                         We are more than just a church. We are a spirit-filled family rooted in love, faith, and hope. Our congregation is a beautiful reflection of the diversity of Geelong — people of all ages, cultures, and walks of life, united by the transforming power of Jesus Christ.<br/><br/>
@@ -33,14 +31,12 @@ const HomeComponent = () => {
                                         So whether you're just beginning to explore Christianity, returning after time away, or looking for a new church to call home, Geelong Pentecostal Assembly is here for you.<br/><br/>
                                         Welcome home. We’ve been waiting for you.
                                         </p>
-                                    </div>
-                                    <div className="childflexcstm">
-                                        <img src="../assets/images/main/praying.jpg" alt="Praying" />
-                                    </div>
-                            </div>  
                             </div>
-                            
-                        </div>
+                            <div className="childflexcstm">
+                                    <img src="../assets/images/main/praying.jpg" alt="Praying" />
+                            </div>
+                        </div>  
+                        <HomeQuote />
                     </div>
                 </>
             }/>
@@ -48,4 +44,17 @@ const HomeComponent = () => {
     )
 }
 
-export default HomeComponent;
+export const HomeQuote = () => {
+
+    return(
+        <>
+            <div className="homequotediv">
+                <h1 className="text_cstm_big_heading">God’s Promise to You</h1>
+                <blockquote>
+                    <p className="text_cstm_normal_para">"Arise, shine; for thy light is come, and the glory of the Lord is risen upon thee.”</p>
+                    <cite className="text_cstm_normal_para">Isaiah 60:1</cite>
+                </blockquote>
+            </div>
+        </>
+    )
+}
