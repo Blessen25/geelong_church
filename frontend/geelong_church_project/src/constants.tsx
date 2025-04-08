@@ -17,11 +17,11 @@ const Colors = {
 
 const FontSizes = {
     
-    'Heading-main-large' : '36px',
-    'Heading-main-xmedium' : '32px',
-    'Heading-main-medium' : '30px',
-    'Heading-main-small' : '26px',
-    'Heading-main-xsmall' : '22px',
+    'Heading-main-large' : '34px',
+    'Heading-main-xmedium' : '28px',
+    'Heading-main-medium' : '24px',
+    'Heading-main-small' : '20px',
+    'Heading-main-xsmall' : '18px',
 
     'Heading-normal-large' : '30px', 
     'Heading-normal-xmedium' : '26px', 

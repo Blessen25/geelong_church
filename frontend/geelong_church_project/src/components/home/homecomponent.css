@@ -108,6 +108,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .homequotediv {
@@ -123,6 +124,17 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    width: 33%;
+}
+
+.homequoteblockquoteflex {
+
+    display: flex;
+    gap: 20px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -168,6 +180,24 @@
     .childflexcstm p{
 
         font-size: 12px;
+    }
+
+    .homequoteblockquoteflex {
+
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .homequotediv blockquote {
+        
+        width: 49%;
+    }
+
+    .homequotediv blockquote:last-child {
+
+        width: 100%;
+        margin-top: 6px;
     }
     
 }
@@ -225,6 +255,27 @@
     
         gap: 10px;
     }
+
+    .homequotediv blockquote {
+        
+        width: 100%;
+    }
+
+    .homequotediv blockquote:last-child {
+        
+        margin-top: 0px;
+    }
+
+    .homequoteblockquoteflex {
+
+        gap: 20px;
+    }
+
+    .homequotediv {
+
+        gap: 10px;
+    }
+
 }
 
 @media screen and (max-width : 575px) {
@@ -272,6 +323,15 @@
     .parentflexcstm {
 
         gap: 15px;
+    }
+    .homequoteblockquoteflex {
+
+        gap: 15px;
+    }
+
+    .homequoteblockquoteflex blockquote{
+
+        padding: 10px;
     }
 }
 
