@@ -164,7 +164,7 @@
 
     color: white;
     position: absolute;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .homefourdivchildcstm img {
@@ -220,6 +220,16 @@
 
         height: 380px;
     }
+
+    .homefourdivcstm {
+
+        width: 832px;
+    }
+
+    .homefourdivchildcstm {
+
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -269,6 +279,16 @@
         margin-top: 6px;
     }
     
+    .homefourdivcstm {
+
+        width: 690px;
+    }
+
+    .homefourdivchildcstm {
+
+        width: 330px;
+        height: 250px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -345,6 +365,22 @@
         gap: 10px;
     }
 
+    .homefourdivcstm {
+
+        width: 500px;
+        gap: 20px;
+    }
+
+    .homefourdivchildcstm {
+
+        width: 240px;
+        height: 200px;
+    }
+    .homefourdivchildcstm p{
+
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (max-width : 575px) {
@@ -402,6 +438,23 @@
 
         padding: 10px;
     }
+
+    .homefourdivcstm {
+
+        width: 320px;
+        gap: 15px;
+    }
+
+    .homefourdivchildcstm {
+
+        width: 320px;
+        height: 210px;
+    }
+
+    .homefourdivchildcstm p{
+
+        font-size: 12px;
+    }
 }
 
 
@@ -435,5 +488,17 @@
     .childflexcstm p{
 
         font-size: 11px;
+    }
+
+    .homefourdivcstm {
+
+        width: 290px;
+        gap: 15px;
+    }
+
+    .homefourdivchildcstm {
+
+        width: 290px;
+        height: 200px;
     }
 }
