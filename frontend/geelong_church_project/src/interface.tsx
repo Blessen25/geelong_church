@@ -19,3 +19,11 @@ export interface FlexwithtextandimagedivProps {
     childtextclassName ?: string;
     childimageclassName ?:string;
 }
+
+export interface HomeFourDivChildCompProps {
+
+    text : string;
+    image : string;
+    route ?: string;
+
+}

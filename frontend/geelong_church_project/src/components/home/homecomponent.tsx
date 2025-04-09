@@ -1,6 +1,8 @@
 import React from "react";
 import './homecomponent.css';
 import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containerdiv } from "../extra";
+import { HomeFourDivChildCompProps } from "../../interface";
+import { HomeFourDivChildArray } from "../../array";
 
 export const HomeComponent = () => {
 
@@ -13,6 +15,7 @@ export const HomeComponent = () => {
                         <HomeflexContents />
                         <HomeQuote />
                         <Homefourdivs />
+                        <HomeJoinusonComp />
                     </div>
                 </>
             }/>
@@ -91,30 +94,44 @@ export const Homefourdivs = () => {
         
         <>
             <div className="homefourdivcstm">
-                <a href="#">
+                {HomeFourDivChildArray.map((items, index) =>(
+                            <HomeFourDivChildComp route={items.route} text={items.text} image={items.image} key={index}/>
+                ))}
+            </div>
+        </>
+    )
+}
+
+export const HomeFourDivChildComp:React.FC<HomeFourDivChildCompProps> = (Props) => {
+
+    return(
+
+        <>
+            <a href={Props.route}>
                 <div className="homefourdivchildcstm">
-                    <p>Verse of the Week</p>
-                    <img src="../assets/images/main/church.jpg" alt="" />
+                    <p>{Props.text}</p>
+                    <img src={Props.image} alt="Alt_Image"/>
                 </div>
-                </a>
-                <a href="#">
-                <div className="homefourdivchildcstm">
-                    <p>Upcoming Events</p>
-                    <img src="../assets/images/main/praising.jpg" alt="" />
+            </a>
+        </>
+    )
+}
+
+export const HomeJoinusonComp = () => {
+
+    return(
+
+        <>
+            <div className="joinusondivcstm">
+                <img src="../assets/images/main/reading_bible.jpg" alt="Join us" />
+                <div className="joinusondivtext">
+                    <h1>Join Us On!</h1>
+                    <p>Every Sunday at 10:00 AM</p>
+                    <div className="joinusondivbutton">
+                    <ButtonwithtextComponent label="Youtube" route="" fullwidth={false}/>
+                    <ButtonwithtextComponentColor label="Facebook" route="" fullwidth={false}/>
+                    </div>
                 </div>
-                </a>
-                <a href="#">
-                <div className="homefourdivchildcstm">
-                    <p>Need Prayer?</p>
-                    <img src="../assets/images/main/cross.jpg" alt="" />
-                </div>
-                </a>
-                <a href="#">
-                <div className="homefourdivchildcstm">
-                    <p>Our Mission</p>
-                    <img src="../assets/images/main/jesus-neon.jpg" alt="" />
-                </div>
-                </a>
             </div>
         </>
     )

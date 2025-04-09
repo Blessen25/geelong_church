@@ -9,7 +9,7 @@
 .imagecstmdivhome {
 
     width: 100%;
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -27,9 +27,8 @@
 
     position: absolute;
     width: 750px;
-    padding: 20px 0px;
-    right: 60px;
-    top: 46px;
+    right: 70px;
+    top: 120px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -165,6 +164,7 @@
     color: white;
     position: absolute;
     font-size: 16px;
+    font-weight: 600;
 }
 
 .homefourdivchildcstm img {
@@ -183,13 +183,60 @@
     width: 100%;
     height: 100%;
     background-color: rgb(0, 0, 0, 0);
-    transition: background-color 0.7s ease ;
+    transition: 0.7s;
     z-index: 1;
 }
 
 .homefourdivchildcstm:hover::after {
 
     background-color: rgb(0, 0, 0, 0.4);
+}
+
+.joinusondivcstm {
+
+    width: 100%;
+    position: relative;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.joinusondivcstm img {
+
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.joinusondivtext {
+
+    position: absolute;
+    color: white;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    right: 70px;
+}
+
+.joinusondivtext h1 {
+
+    font-size: 50px;
+}
+
+.joinusondivtext p {
+
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+}
+
+.joinusondivbutton {
+
+    display: flex;
+    gap: 40px;
+    justify-content: space-evenly;
+    
 }
 
 @media screen and (min-width: 1499px) {
@@ -206,6 +253,29 @@
     }
 }
 
+@media screen and (max-width: 1399px) {
+    
+    .imagecstmdivhome {
+
+        height: 400px;
+    }
+
+    .textdivcstmhome {
+
+        top: 70px;
+    }
+
+    .joinusondivcstm{
+
+        height: 400px;
+    }
+
+    .joinusondivtext {
+
+        top: 110px;
+    }
+}
+
 @media screen and (max-width: 1199px) {
 
     .childflexcstm p{
@@ -217,6 +287,11 @@
 @media screen and (max-width: 1099px) {
     
     .imagecstmdivhome {
+
+        height: 380px;
+    }
+
+    .joinusondivcstm{
 
         height: 380px;
     }
@@ -239,7 +314,17 @@
         font-size: 36px;
     }
 
+    .joinusondivtext h1 {
+
+        font-size: 36px;
+    }
+
     .textdivcstmhome p {
+
+        font-size: 22px;
+    }
+
+    .joinusondivtext p {
 
         font-size: 22px;
     }
@@ -248,7 +333,7 @@
 
         width: 540px;
         right: 20px;
-        top: 30px;
+        top: 50px;
     }
     
     .imagecstmdivhome {
@@ -289,7 +374,18 @@
         width: 330px;
         height: 250px;
     }
+
+    .joinusondivcstm{
+
+        height: 320px;
+    }
+
+    .joinusondivtext{
+
+        top: 90px;
+    }
 }
+
 
 @media screen and (max-width: 767px) {
 
@@ -301,6 +397,21 @@
     .textdivcstmhome p{
 
         font-size: 18px;
+    }
+
+    .joinusondivtext h1 {
+
+        font-size: 30px;
+    }
+
+    .joinusondivtext p {
+
+        font-size: 18px;
+    }
+
+    .joinusondivtext  {
+
+        gap: 15px;
     }
 
     .textdivcstmhome {
@@ -381,6 +492,17 @@
         font-size: 14px;
     }
 
+    .joinusondivcstm{
+
+        height: 270px;
+    }
+
+    .joinusondivtext{
+
+        top: 65px;
+        right: 50px;
+    }
+
 }
 
 @media screen and (max-width : 575px) {
@@ -392,6 +514,16 @@
     }
     
     .textdivcstmhome p{
+
+        font-size: 13px;
+    }
+
+    .joinusondivtext h1 {
+
+        font-size: 20px;
+    }
+
+    .joinusondivtext p {
 
         font-size: 13px;
     }
@@ -455,6 +587,22 @@
 
         font-size: 12px;
     }
+
+    .joinusondivcstm{
+
+        height: 200px;
+    }
+
+    .joinusondivtext{
+
+        top: 50px;
+        right: 40px;
+    }
+
+    .joinusondivbutton {
+
+        gap: 15px;
+    }
 }
 
 
@@ -466,6 +614,16 @@
     }
 
     .textdivcstmhome p {
+
+        font-size: 10px;
+    }
+
+    .joinusondivtext h1 {
+
+        font-size: 18px;
+    }
+
+    .joinusondivtext p {
 
         font-size: 10px;
     }
@@ -500,5 +658,16 @@
 
         width: 290px;
         height: 200px;
+    }
+
+    .joinusondivcstm{
+
+        height: 175px;
+    }
+
+    .joinusondivtext{
+
+        top: 36px;
+        right: 20px;
     }
 }
