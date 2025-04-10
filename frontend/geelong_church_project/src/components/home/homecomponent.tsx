@@ -28,6 +28,10 @@ export const HomeIntroBanner = () => {
     return (
 
         <>
+        <div className="designcstmbackgroundone"></div>
+        <div className="designcstmbackground2"></div>
+        <div className="designcstmbackground3"></div>
+        <div className="designcstmbackground4"></div>
         <div className="imagecstmdivhome">
             <img src="../assets/images/main/handraising.jpg" alt="Workship" className="imageonecstm"/>
             <div className="textdivcstmhome">
@@ -93,6 +97,7 @@ export const Homefourdivs = () => {
     return(
         
         <>
+
             <div className="homefourdivcstm">
                 {HomeFourDivChildArray.map((items, index) =>(
                             <HomeFourDivChildComp route={items.route} text={items.text} image={items.image} key={index}/>

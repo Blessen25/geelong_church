@@ -78,3 +78,19 @@ const ReferenceWebsites = {
     'one' : 'https://www.canyonridge.org/',
     'one-gibin-refered' : 'https://rchchurch.org.au/',
 }
+
+const backgroundDecorativeElements = {
+
+    "Background decorative elements" : "1",
+    "Abstract background shapes" : "2",
+    "SVG background patterns" : "3",
+    "UI design ornaments" : "4",
+    "Hero background illustrations" : "5",
+    "Geometric vector patterns" : "6",
+}
+
+const EgBackgroundDecorative = {
+
+    "Free_website" : "https://heropatterns.com/",
+    "Free_websitetwo" : "https://bgjar.com/",
+}
