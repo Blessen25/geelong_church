@@ -12,7 +12,7 @@
 
 .footerdiv1 {
 
-   width: 22%;
+   width: 480px;
    display: flex;
    flex-direction: column;
    gap: 20px;
@@ -34,13 +34,57 @@
 .footerdiv2 {
 
     border: 2px solid black;
-    width: 78%;
-
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 10px 0px;
 }
 
 .footerdiv1text {
 
     text-align: justify;
+}
+
+.footerdiv2cstmpages {
+
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerdiv2cstmpages h2{
+
+    font-size: 20px;
+}
+
+.footerdiv2cstmcontact {
+    border: 2px solid black;
+    width: 200px;
+
+}
+
+.footerdiv2cstmsocial {
+
+    border: 2px solid black;
+    width: 200px;
+}
+
+.footerdiv2atag {
+
+    text-decoration: none;
+}
+
+.footerdiv2atag p{
+
+    transition: all .7s;
+}
+
+.footerdiv2atag p:hover{
+
+    color: #3c79b0;
+    opacity: 1;
 }
 
 @media screen and (max-width: 991px) {

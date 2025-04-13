@@ -18,7 +18,22 @@ export const Footer = () => {
                     </div>
                </div>
                <div className="footerdiv2">
+                    <div className="footerdiv2cstmpages">
+                        <h2>Pages</h2>
+                        <a href="#" className='footerdiv2atag'><p>Home</p></a>
+                        <a href="#" className='footerdiv2atag'><p>About</p></a>
+                        <a href="#" className='footerdiv2atag'><p>Ministries</p></a>
+                        <a href="#" className='footerdiv2atag'><p>Newsletters</p></a>
+                        <a href="#" className='footerdiv2atag'><p>Church Online</p></a>
+                        <a href="#" className='footerdiv2atag'><p>Contact</p></a>
 
+                    </div>
+                    <div className="footerdiv2cstmcontact">
+                        
+                    </div>
+                    <div className="footerdiv2cstmsocial">
+                        
+                    </div>
                </div>
             </div>
         </>
