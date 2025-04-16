@@ -2,9 +2,11 @@ import React from 'react';
 import './footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation, faLocationDot, faMap } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from 'react-router-dom';
 
 export const Footer = () => {
-
+    const location = useLocation();
+    const isActive = (path:any) => location.pathname == path ? "footerdiv2atag footerdiv2atagactive" : "footerdiv2atag";
     return(
         <>  
             <div id='footer'>
@@ -22,12 +24,12 @@ export const Footer = () => {
                         </div>
                         <div className="footerdiv2cstmpages">
                             <h2>Pages</h2>
-                            <a href="#" className='footerdiv2atag'><p>Home</p></a>
-                            <a href="#" className='footerdiv2atag'><p>About</p></a>
-                            <a href="#" className='footerdiv2atag'><p>Ministries</p></a>
-                            <a href="#" className='footerdiv2atag'><p>Newsletters</p></a>
-                            <a href="#" className='footerdiv2atag'><p>Church Online</p></a>
-                            <a href="#" className='footerdiv2atag'><p>Contact</p></a>
+                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/')}`}>Home</p></a>
+                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/about')}`}>About</p></a>
+                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/ministries')}`}>Ministries</p></a>
+                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/newletters')}`}>Newsletters</p></a>
+                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/churchonline')}`}>Church Online</p></a>
+                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/contact')}`}>Contact</p></a>
 
                         </div>
                         <div className="footerdiv2cstmcontact">
