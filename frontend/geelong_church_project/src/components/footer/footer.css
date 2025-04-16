@@ -2,8 +2,14 @@
 
     background-color: white;
     width: 100%;
-    padding: 20px 50px;
+    padding: 40px 50px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.footer-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,7 +18,7 @@
 
 .footerdiv1 {
 
-   width: 480px;
+   width: 350px;
    display: flex;
    flex-direction: column;
    gap: 20px;
@@ -31,15 +37,6 @@
     object-fit: cover;
 }
 
-.footerdiv2 {
-
-    border: 2px solid black;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-    padding: 10px 0px;
-}
 
 .footerdiv1text {
 
@@ -48,27 +45,31 @@
 
 .footerdiv2cstmpages {
 
-    width: 200px;
+    /* border: 2px solid black; */
+    width: 110px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: start;
 }
 
 .footerdiv2cstmpages h2{
 
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footerdiv2cstmcontact {
-    border: 2px solid black;
-    width: 200px;
 
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
 }
 
 .footerdiv2cstmsocial {
 
-    border: 2px solid black;
-    width: 200px;
+    width: 210px;
 }
 
 .footerdiv2atag {
@@ -78,6 +79,7 @@
 
 .footerdiv2atag p{
 
+    position: relative;
     transition: all .7s;
 }
 
@@ -87,19 +89,302 @@
     opacity: 1;
 }
 
+.footerdiv2atag p::after {
+
+    content: "";
+    position: absolute;
+    left: 0px;
+    background-color: #3c79b0;
+    width: 0%;
+    height: 2px;
+    transition: all .7s;
+    top: 24px;
+}
+
+.footerdiv2atag p:hover::after {
+
+    width: 100%;
+}
+
+.footerdiv2cstmcontact h2{
+
+    font-size: 18px;
+}
+
+.footerdiv2cstmcontactmix {
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footerdiv2cstmsocial h2{
+
+    font-size: 18px;
+}
+
+.footerdiv2cstmsocial {
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footerdiv2cstmsocial ul
+{
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    list-style: none;
+}
+
+.footerdiv2cstmsocial ul li {
+
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: whitesmoke;
+    transition: all .7s;
+    color: #8b8b8b;
+}
+
+.footerdiv2cstmsocial ul li:hover {
+
+    background-color: #3c79b0;
+    color: white;
+}
+
+.footerdiv2cstmsocial ul a{
+    
+    text-decoration: none;
+}
+
+.footer-bottom {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+
+    font-size: 16px;
+}
+
+#footer hr{
+
+    opacity: .4;
+}
+
+@media screen and (max-width: 1199px) {
+    
+
+    .footerdiv2cstmcontactmix {
+
+        gap: 8px;
+    }
+
+    .footerdiv2cstmcontactmix p{
+
+        font-size: 14px;
+    }
+
+    .footerdiv2cstmsocial ul li {
+    
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .footerdiv2cstmsocial  {
+
+        width: 195px;
+    }
+
+    .footerdiv2atag {
+
+        font-size: 14px;
+    }
+
+    .footerdiv2atag p::after {
+
+        top: 22px;
+    }
+}
+
+@media screen and (max-width: 1099px) {
+
+    .footer-top {
+
+        gap: 30px;
+    }
+}
+
+
 @media screen and (max-width: 991px) {
     
     #footer {
 
         padding: 20px 30px;
     }
+
+    .footer-top {
+
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footerdiv1 {
+
+        width: 48%;
+    }
+
+    .footerdiv2cstmpages {
+
+        width: 48%;
+    }
+
+    .footerdiv2cstmcontact {
+
+        width: 48%;
+    }
+
+    .footerdiv2cstmsocial {
+
+        width: 48%;
+    }
 }
 
+
+@media screen and (max-width: 767px) {
+    
+    .footerdiv1text, .footer-bottom p {
+
+        font-size: 14px;
+    }
+    
+}
 
 @media screen and (max-width: 575px) {
     
     #footer {
 
         padding: 15px ;
-    }   
+    }
+    
+    .footerdiv1text {
+
+        font-size: 12px;
+    }
+
+    .footerdiv2cstmpages h2 ,.footerdiv2cstmcontact h2 ,.footerdiv2cstmsocial h2 {
+
+        font-size: 14px;
+    }
+
+    .footerdiv2atag p , .footerdiv2cstmcontactmix p, .footer-bottom p {
+
+        font-size: 12px;
+    }
+
+    .footerdiv2cstmsocial ul li {
+
+        font-size: 12px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .fa-location-dot {
+
+        font-size: 12px;
+    }
+
+    .footerdiv1img {
+    
+        width: 150px;
+        height: 58px;
+    }
+
+    .footerdiv1 {
+
+        width: 100%;
+    }
+
+    .footerdiv2cstmpages {
+
+        width: 100%;
+    }
+
+    .footerdiv2cstmcontact {
+
+        width: 100%;
+    }
+
+    .footerdiv2cstmsocial {
+
+        width: 100%;
+    }
+
+    .footerdiv2cstmsocial ul {
+
+        gap: 8px;
+    }
+    
+    .footerdiv2atag p::after {
+
+        top: 18px;
+    }
+
+    .footerdiv2cstmpages, .footerdiv2cstmsocial, .footerdiv2cstmcontact {
+
+        gap: 15px;
+    }
+
+    #footer {
+
+        gap: 10px;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    
+    .footerdiv1text {
+
+        font-size: 10px;
+    }
+
+    .footerdiv2atag p , .footerdiv2cstmcontactmix p, .footer-bottom p {
+
+        font-size: 10px;
+    }
+
+    .footerdiv2atag p::after {
+
+        top: 17px;
+    }
+
+    .footerdiv2cstmpages h2 ,.footerdiv2cstmcontact h2 ,.footerdiv2cstmsocial h2 {
+
+        font-size: 12px;
+    }
+
+    .footerdiv1img {
+    
+        width: 129px;
+        height: 50px;
+    }
+
+    .footerdiv1text {
+
+        text-align: left;
+    }
+
+    
 }
