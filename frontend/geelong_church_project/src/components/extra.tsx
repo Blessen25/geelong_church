@@ -1,6 +1,6 @@
 import React from "react";
 import './extra.css';
-import { ButtonwithtextComponentProps, ContainerdivProps, FlexwithtextandimagedivProps } from "../interface";
+import { ButtonwithtextComponentProps, ContainerdivProps, FlexwithtextandimagedivProps, TitleinMaindivProps } from "../interface";
 
 export const Containerdiv:React.FC<ContainerdivProps> = (Props) => {
 
@@ -45,3 +45,20 @@ export const ButtonwithtextComponent:React.FC<ButtonwithtextComponentProps> = (P
     )
 }
 
+export const TitleinMaindiv:React.FC<TitleinMaindivProps> = (Props) => {
+
+    return(
+        <>
+            <div className="mainshorttitlediv">
+                <div className="mainshorttitlechilddiv">
+                    <h1 className="text_cstm_big_heading ">{Props.title}</h1>
+                    <div className="initialandrealtitle">
+                        <p className="text_cstm_normal_para">{Props.initialtitle}</p>
+                        <div className="dotintialandrealtitle"></div>
+                        <p className="text_cstm_normal_para">{Props.title}</p>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}

@@ -27,3 +27,9 @@ export interface HomeFourDivChildCompProps {
     route ?: string;
 
 }
+
+export interface TitleinMaindivProps {
+
+    title : string;
+    initialtitle : string;
+}
