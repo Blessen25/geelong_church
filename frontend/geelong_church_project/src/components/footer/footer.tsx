@@ -24,12 +24,12 @@ export const Footer = () => {
                         </div>
                         <div className="footerdiv2cstmpages">
                             <h2>Pages</h2>
-                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/')}`}>Home</p></a>
-                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/about')}`}>About</p></a>
-                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/ministries')}`}>Ministries</p></a>
-                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/newletters')}`}>Newsletters</p></a>
-                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/churchonline')}`}>Church Online</p></a>
-                            <a href="#" className='footerdiv2atag'><p className={`${isActive('/contact')}`}>Contact</p></a>
+                            <a href="/" className='footerdiv2atag'><p className={`${isActive('/')}`}>Home</p></a>
+                            <a href="/about" className='footerdiv2atag'><p className={`${isActive('/about')}`}>About</p></a>
+                            <a href="/ministries" className='footerdiv2atag'><p className={`${isActive('/ministries')}`}>Ministries</p></a>
+                            <a href="/newletters" className='footerdiv2atag'><p className={`${isActive('/newletters')}`}>Newsletters</p></a>
+                            <a href="/churchonline" className='footerdiv2atag'><p className={`${isActive('/churchonline')}`}>Church Online</p></a>
+                            <a href="/contact" className='footerdiv2atag'><p className={`${isActive('/contact')}`}>Contact</p></a>
 
                         </div>
                         <div className="footerdiv2cstmcontact">
