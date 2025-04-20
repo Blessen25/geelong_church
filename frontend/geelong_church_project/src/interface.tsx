@@ -1,3 +1,4 @@
+import React from "react";
 
 export interface ContainerdivProps {
 
@@ -32,4 +33,9 @@ export interface TitleinMaindivProps {
 
     title : string;
     initialtitle : string;
+}
+
+export interface ContainerdivProps {
+
+    children : React.ReactNode;
 }

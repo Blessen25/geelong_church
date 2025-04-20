@@ -95,6 +95,12 @@
     background-color: #3c79b0;
 }
 
+.containercstmnew {
+
+    padding: 30px 50px;
+    border: 2px solid black;
+}
+
 
 @media screen and (max-width: 991px) {
     
@@ -120,6 +126,12 @@
     .containercstm {
 
         padding: 100px 30px 20px 30px;
+    }
+
+    .containercstmnew {
+
+        padding: 20px 30px;
+        border: 2px solid black;
     }
 
     .normalcontainercstm {
@@ -201,5 +213,9 @@
         padding: 20px;
         gap: 10px;
     }
-    
+    .containercstmnew {
+
+        padding: 15px 15px;
+        border: 2px solid black;
+    }
 }

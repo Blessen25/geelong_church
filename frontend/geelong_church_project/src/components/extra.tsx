@@ -62,3 +62,14 @@ export const TitleinMaindiv:React.FC<TitleinMaindivProps> = (Props) => {
         </>
     )
 }
+
+export const Containercstm:React.FC<ContainerdivProps> = (Props) => {
+
+    return(
+        <>
+            <div className="containercstmnew">
+                {Props.children}
+            </div>
+        </>
+    )
+}
