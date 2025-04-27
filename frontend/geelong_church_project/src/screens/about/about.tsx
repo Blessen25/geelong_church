@@ -1,11 +1,12 @@
 import React from "react";
 import { TitleinMaindiv } from "../../components/extra";
+import { AboutComponent } from "../../components/about/about";
 
 const About = () => {
 
     return(
-        <>
-            <TitleinMaindiv title="About Us" initialtitle= "Home"/>
+        <> 
+            <AboutComponent />
         </>
     )
 }

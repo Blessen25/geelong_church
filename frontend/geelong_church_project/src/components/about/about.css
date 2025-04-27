@@ -1,0 +1,26 @@
+.aboutfirstdiv {
+
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.aboutfirstdiv img{
+
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    
+}
+
+.aboutfirsttextdiv {
+
+    position: absolute;
+    width: 400px;
+    height: 340px;
+    top: 160px;
+    right: 200px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    background-color: #f0f8ff;
+}
