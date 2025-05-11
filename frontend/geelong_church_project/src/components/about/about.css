@@ -16,11 +16,21 @@
 .aboutfirsttextdiv {
 
     position: absolute;
-    width: 400px;
-    height: 340px;
-    top: 160px;
-    right: 200px;
+    width: 600px;
+    top: 70px;
+    right: 100px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     background-color: #f0f8ff;
+    opacity: 1;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aboutfirsttextdiv div p {
+
+    text-align: justify;
 }
