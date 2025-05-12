@@ -9,13 +9,14 @@ export const AboutComponent = () =>{
 
         <>
             <TitleinMaindiv title="About Us" initialtitle= "Home"/>
-            <Aboutfirstdiv />
-            <Aboutseconddiv />
+            <AboutWhoWeAre />
+            <AboutOurMission />
+            <AboutOurhistory />
         </>
     )
 }
 
-export const Aboutfirstdiv = () => {
+export const AboutWhoWeAre = () => {
 
     return(
         
@@ -35,7 +36,7 @@ export const Aboutfirstdiv = () => {
     )
 }
 
-export const Aboutseconddiv = () => {
+export const AboutOurMission = () => {
 
     return(
         
@@ -47,6 +48,16 @@ export const Aboutseconddiv = () => {
                 </div>
             </Containercstm>
             
+        </>
+    )
+}
+
+export const AboutOurhistory = () => {
+
+    return(
+
+        <>
+        
         </>
     )
 }
