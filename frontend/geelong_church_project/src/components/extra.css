@@ -172,6 +172,17 @@
 
         padding: 20px 30px;
     }
+
+    .flexwithiconandtextparentdiv {
+
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .flexwithiconandtextdivmaindiv {
+
+        width: calc(50% - 10px);
+    }
     
 }
 
@@ -226,6 +237,17 @@
         font-size: 18px;
     }
 
+    .fontawesomeiconflexcstm {
+
+        font-size: 26px;
+    }
+
+    .flexwithicondiv {
+
+        width: 70px;
+        height: 70px;
+    }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -274,5 +296,21 @@
     .flexwithtexth1divcstm {
 
         font-size: 16px;
+    }
+
+    .flexwithiconandtextdivmaindiv {
+
+        width: calc(100%);
+    }
+
+    .fontawesomeiconflexcstm {
+
+        font-size: 22px;
+    }
+
+    .flexwithicondiv {
+
+        width: 55px;
+        height: 55px;
     }
 }

@@ -98,7 +98,7 @@ export const Flexwithiconandtextdiv:React.FC<flexwithiconandtextdivProps> = (Pro
                     <div className="flexwithicondiv">
                         <FontAwesomeIcon icon={Props.icon} className="fontawesomeiconflexcstm"/>
                     </div>
-                    <h1 className="flexwithtexth1divcstm">{Props.titleName}</h1>
+                    {Props.titleName ? (<h1 className="flexwithtexth1divcstm">{Props.titleName}</h1>) : ("")}
                     <p className="text_cstm_normal_para fontawesometextflexcstm">{Props.textPara}</p> 
             </div>
         </>

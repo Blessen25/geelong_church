@@ -45,7 +45,7 @@ export interface flexwithiconandtextdivProps {
 
     icon: IconDefinition ;
     textPara : string;
-    titleName : string;
+    titleName ?: string;
 }
 
 export interface FlexwithiconandtextparentdivProps {
