@@ -1,6 +1,7 @@
 import React from "react";
-import { TitleinMaindiv } from "../extra";
+import { Containercstm, Flexwithiconandtextdiv, Flexwithiconandtextparentdiv, TitleinMaindiv } from "../extra";
 import './about.css'
+import { AboutOurMissionArray } from "../../array";
 
 export const AboutComponent = () =>{
 
@@ -9,6 +10,7 @@ export const AboutComponent = () =>{
         <>
             <TitleinMaindiv title="About Us" initialtitle= "Home"/>
             <Aboutfirstdiv />
+            <Aboutseconddiv />
         </>
     )
 }
@@ -29,6 +31,22 @@ export const Aboutfirstdiv = () => {
                         </div>
                 </div>
             </div>
+        </>
+    )
+}
+
+export const Aboutseconddiv = () => {
+
+    return(
+        
+        <>
+            <Containercstm>
+                <div className="aboutseconddiv">
+                    <h1 className="text_cstm_big_heading">Our Mission</h1>
+                    <Flexwithiconandtextparentdiv items={AboutOurMissionArray}/>
+                </div>
+            </Containercstm>
+            
         </>
     )
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import './extra.css';
-import { ButtonwithtextComponentProps, ContainerdivProps, FlexwithtextandimagedivProps, TitleinMaindivProps } from "../interface";
+import { ButtonwithtextComponentProps, ContainerdivProps, flexwithiconandtextdivProps, FlexwithiconandtextparentdivProps, FlexwithtextandimagedivProps, TitleinMaindivProps } from "../interface";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChurch } from "@fortawesome/free-solid-svg-icons";
 
 export const Containerdiv:React.FC<ContainerdivProps> = (Props) => {
 
@@ -69,6 +71,35 @@ export const Containercstm:React.FC<ContainerdivProps> = (Props) => {
         <>
             <div className="containercstmnew">
                 {Props.children}
+            </div>
+        </>
+    )
+}
+
+export const Flexwithiconandtextparentdiv:React.FC<FlexwithiconandtextparentdivProps> = (Props) => {
+
+    return(
+
+        <>
+            <div className="flexwithiconandtextparentdiv">
+                {Props.items.map((items,index)=>(
+                    <Flexwithiconandtextdiv icon={items.icon} textPara={items.textPara} titleName={items.titleName}  key={index}/>
+                ))}
+            </div>
+        </>
+    )
+}
+
+export const Flexwithiconandtextdiv:React.FC<flexwithiconandtextdivProps> = (Props) => {
+
+    return(
+        <>
+            <div className="flexwithiconandtextdivmaindiv">
+                    <div className="flexwithicondiv">
+                        <FontAwesomeIcon icon={Props.icon} className="fontawesomeiconflexcstm"/>
+                    </div>
+                    <h1 className="flexwithtexth1divcstm">{Props.titleName}</h1>
+                    <p className="text_cstm_normal_para fontawesometextflexcstm">{Props.textPara}</p> 
             </div>
         </>
     )

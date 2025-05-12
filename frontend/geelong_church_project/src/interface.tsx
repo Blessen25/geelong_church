@@ -1,3 +1,4 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
 
 export interface ContainerdivProps {
@@ -38,4 +39,16 @@ export interface TitleinMaindivProps {
 export interface ContainerdivProps {
 
     children : React.ReactNode;
+}
+
+export interface flexwithiconandtextdivProps {
+
+    icon: IconDefinition ;
+    textPara : string;
+    titleName : string;
+}
+
+export interface FlexwithiconandtextparentdivProps {
+
+    items: flexwithiconandtextdivProps[];
 }

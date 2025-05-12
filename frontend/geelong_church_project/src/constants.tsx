@@ -94,3 +94,10 @@ const EgBackgroundDecorative = {
     "Free_website" : "https://heropatterns.com/",
     "Free_websitetwo" : "https://bgjar.com/",
 }
+
+
+const borderradius = {
+
+    "borderradius" : "5px"
+    
+}

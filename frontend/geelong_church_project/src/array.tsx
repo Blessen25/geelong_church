@@ -1,7 +1,18 @@
+import { faBible, faChurch, faGlobe, faHandshake } from "@fortawesome/free-solid-svg-icons"
+import { text } from "stream/consumers"
+
 export const HomeFourDivChildArray = [
 
     {route:"#",text:"Verse of the Week",image:"../assets/images/main/church.jpg"},
     {route:"#",text:"Upcoming Events",image:"../assets/images/main/cross_two.jpg"},
     {route:"#",text:"Need Prayer?",image:"../assets/images/main/cross.jpg"},
     {route:"#",text:"Our Mission",image:"../assets/images/main/jesus-neon.jpg"},
+]
+
+export const AboutOurMissionArray = [
+
+    {icon: faChurch, textPara:"Experience Spirit-filled and uplifting worship services.", titleName:"Worship"},
+    {icon: faHandshake, textPara:"Foster a supportive and inclusive environment for all.", titleName:"Community"},
+    {icon: faBible, textPara:"Provide opportunities for spiritual growth through Bible studies and life groups.", titleName:"Growth"},
+    {icon: faGlobe, textPara:"Serve our local and global communities through various missions and charitable activities.", titleName:"Outreach"},
 ]
