@@ -69,7 +69,7 @@ export const Containercstm:React.FC<ContainerdivProps> = (Props) => {
 
     return(
         <>
-            <div className="containercstmnew">
+            <div className={`containercstmnew ${Props.parentClassName ? Props.parentClassName : ''}`} style={Props.parentStyle}>
                 {Props.children}
             </div>
         </>

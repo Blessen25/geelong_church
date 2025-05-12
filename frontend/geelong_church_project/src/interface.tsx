@@ -39,6 +39,8 @@ export interface TitleinMaindivProps {
 export interface ContainerdivProps {
 
     children : React.ReactNode;
+    parentStyle?: React.CSSProperties;
+    parentClassName ?: string;
 }
 
 export interface flexwithiconandtextdivProps {

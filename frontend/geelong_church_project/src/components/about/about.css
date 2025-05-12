@@ -43,6 +43,21 @@
     gap: 20px;
 }
 
+.flexprimarycolorcstmbackground {
+    color: #3c79b0;
+}
+
+.flexprimarycolorcstmbackground p {
+
+    color: #3c79b0;
+}
+
+.cstmaboutpaddingtop0px {
+    
+    padding-top: 0px;
+}
+
+
 
 @media screen and (max-width: 767px) {
     
@@ -55,6 +70,16 @@
     .aboutseconddiv {
 
         gap: 10px;
+    }
+
+    .csmtflexwrapstyle{
+
+        flex-wrap: wrap;
+    }
+    
+    .cstmaboutpaddingtop0px {
+
+        padding-top: 0px;
     }
 }
 
@@ -71,6 +96,10 @@
     .aboutfirstdiv{
 
         height: 510px;
+    }
+    .cstmaboutpaddingtop0px {
+
+        padding-top: 0px;
     }
 }
 @media screen and (max-width: 426px) {

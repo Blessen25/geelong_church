@@ -269,6 +269,10 @@
         gap: 10px;
     }
 
+    .flexwithgapcstmrow {
+
+        gap: 10px;
+    }
 
 }
 
@@ -336,8 +340,4 @@
         height: 55px;
     }
 
-    .flexwithgapcstmrow {
-
-        gap: 10px;
-    }
 }
