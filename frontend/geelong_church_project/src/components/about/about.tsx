@@ -22,7 +22,7 @@ export const AboutWhoWeAre = () => {
         
         <>
             <div className="aboutfirstdiv">
-                <img src="assets/images/main/bibleone.jpg" alt="" />
+                <img src="assets/images/main/bibleone.jpg" alt="Image" />
                 <div className="aboutfirsttextdiv">
                         <h1 className="text_cstm_big_heading">Who We Are?</h1>
                         <div>
