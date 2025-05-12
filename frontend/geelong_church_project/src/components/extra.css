@@ -151,6 +151,14 @@
     font-size: 22px;
 }
 
+.flexwithgapcstm {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 @media screen and (max-width: 991px) {
     
     .containercstm {
@@ -246,6 +254,11 @@
 
         width: 70px;
         height: 70px;
+    }
+
+    .flexwithgapcstm {
+
+        gap: 10px;
     }
 
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import './extra.css';
-import { ButtonwithtextComponentProps, ContainerdivProps, flexwithiconandtextdivProps, FlexwithiconandtextparentdivProps, FlexwithtextandimagedivProps, TitleinMaindivProps } from "../interface";
+import { ButtonwithtextComponentProps, ContainerdivProps, FlexwithgapcstmdivProps, flexwithiconandtextdivProps, FlexwithiconandtextparentdivProps, FlexwithtextandimagedivProps, TitleinMaindivProps } from "../interface";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChurch } from "@fortawesome/free-solid-svg-icons";
 
@@ -100,6 +100,17 @@ export const Flexwithiconandtextdiv:React.FC<flexwithiconandtextdivProps> = (Pro
                     </div>
                     {Props.titleName ? (<h1 className="flexwithtexth1divcstm">{Props.titleName}</h1>) : ("")}
                     <p className="text_cstm_normal_para fontawesometextflexcstm">{Props.textPara}</p> 
+            </div>
+        </>
+    )
+}
+
+export const Flexwithgapcstmdiv:React.FC<FlexwithgapcstmdivProps> = (Props) => {
+
+    return(
+        <>
+            <div className="flexwithgapcstm">
+                {Props.children}
             </div>
         </>
     )

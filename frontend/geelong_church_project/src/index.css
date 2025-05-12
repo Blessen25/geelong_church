@@ -32,6 +32,11 @@ p{
   font-size: 20px;
 }
 
+.textalign_cstmjustify{
+
+  text-align: justify;
+}
+
 @media screen and (max-width: 991px) {
   
   .text_cstm_big_heading {

@@ -52,3 +52,8 @@ export interface FlexwithiconandtextparentdivProps {
 
     items: flexwithiconandtextdivProps[];
 }
+
+export interface FlexwithgapcstmdivProps {
+
+    children : React.ReactNode;
+}
