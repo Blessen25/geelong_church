@@ -1,5 +1,5 @@
 import React from "react";
-import { Containercstm, Flexwithgapcstmdiv, Flexwithiconandtextdiv, Flexwithiconandtextparentdiv, TitleinMaindiv } from "../extra";
+import { Containercstm, Flexwithgapcstmdivcol, Flexwithiconandtextdiv, Flexwithiconandtextparentdiv, TitleinMaindiv } from "../extra";
 import './about.css'
 import { AboutOurMissionArray } from "../../array";
 
@@ -42,11 +42,11 @@ export const AboutOurMission = () => {
         
         <>
             <Containercstm>
-                <Flexwithgapcstmdiv>
+                <Flexwithgapcstmdivcol>
                     <h1 className="text_cstm_big_heading">Our Mission</h1>
                     <p className="text_cstm_normal_para textalign_cstmjustify">At Geelong Pentecostal Assembly, we are passionate about fulfilling the mission Jesus gave us — to love God, love people, and make disciples. Our mission is lived out in four core areas:</p>
                     <Flexwithiconandtextparentdiv items={AboutOurMissionArray}/>
-                </Flexwithgapcstmdiv>
+                </Flexwithgapcstmdivcol>
             </Containercstm>
             
         </>
@@ -59,10 +59,10 @@ export const AboutOurhistory = () => {
 
         <>
             <Containercstm>
-                <Flexwithgapcstmdiv>
+                <Flexwithgapcstmdivcol>
                     <h1 className="text_cstm_big_heading">Our History</h1>
                     <p className="text_cstm_normal_para textalign_cstmjustify">Geelong Pentecostal Assembly was birthed from a small prayer gathering in the heart of Geelong, where a few passionate believers came together seeking a deeper connection with God. Over the years, what started as a humble fellowship has grown into a dynamic, multicultural congregation representing people from various walks of life. With God's grace, we’ve established a strong presence in the community—offering hope, healing, and purpose to individuals and families. Our story is one of faith, perseverance, and a firm belief in God's calling to serve and uplift our city.</p>
-                </Flexwithgapcstmdiv>
+                </Flexwithgapcstmdivcol>
             </Containercstm>
         </>
     )

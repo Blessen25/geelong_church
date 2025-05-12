@@ -105,11 +105,22 @@ export const Flexwithiconandtextdiv:React.FC<flexwithiconandtextdivProps> = (Pro
     )
 }
 
-export const Flexwithgapcstmdiv:React.FC<FlexwithgapcstmdivProps> = (Props) => {
+export const Flexwithgapcstmdivcol:React.FC<FlexwithgapcstmdivProps> = (Props) => {
 
     return(
         <>
-            <div className="flexwithgapcstm">
+            <div className={`flexwithgapcstm ${Props.parentStyle ? Props.parentStyle : ""}`}>
+                {Props.children}
+            </div>
+        </>
+    )
+}
+
+export const Flexwithgapcstmdivrow:React.FC<FlexwithgapcstmdivProps> = (Props) => {
+
+    return(
+        <>
+            <div className={`flexwithgapcstmrow ${Props.parentStyle ? Props.parentStyle : ""}`}>
                 {Props.children}
             </div>
         </>
