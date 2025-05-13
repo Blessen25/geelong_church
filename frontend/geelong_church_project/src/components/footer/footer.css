@@ -189,6 +189,18 @@
     color: #3c79b0 !important;
 }
 
+.footerdiv2cstmcontactmix p a {
+
+    text-decoration: none;
+    color: #8b8b8b;
+    transition: all .7s;
+}
+
+.footerdiv2cstmcontactmix p a:hover {
+
+    color: #3c79b0
+}
+
 @media screen and (max-width: 1199px) {
     
 

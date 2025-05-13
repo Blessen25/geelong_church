@@ -1,7 +1,7 @@
 import React from 'react';
 import './footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocation, faLocationDot, faMap } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocation, faLocationDot, faMap, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
 
 export const Footer = () => {
@@ -38,6 +38,14 @@ export const Footer = () => {
                                 <FontAwesomeIcon icon={faLocationDot} color='#3c79b0'/>
                                 <p>82 Wilsons Road, Newcomb, VIC</p>
                             </div>
+                            <div className='footerdiv2cstmcontactmix'>
+                                <FontAwesomeIcon icon={faEnvelope} color='#3c79b0'/>
+                                <p><a href="mailto:geelongpentecostalassembly@gmail.com">geelongpentecostalassembly@gmail.com</a></p>
+                            </div> 
+                            <div className='footerdiv2cstmcontactmix'>
+                                <FontAwesomeIcon icon={faPhone} color='#3c79b0'/>
+                                <p><a href="tel:+61494357534">+61494357534</a></p>
+                            </div> 
                         </div>
                         <div className="footerdiv2cstmsocial">
                             <h2>Social</h2>
