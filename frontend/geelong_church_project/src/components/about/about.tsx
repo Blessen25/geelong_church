@@ -1,5 +1,5 @@
 import React from "react";
-import { Containercstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, Flexwithiconandtextdiv, Flexwithiconandtextparentdiv, TitleinMaindiv } from "../extra";
+import { ButtonwithtextComponentColor, Containercstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, Flexwithiconandtextdiv, Flexwithiconandtextparentdiv, TitleinMaindiv } from "../extra";
 import './about.css'
 import { AboutOurMissionArray } from "../../array";
 
@@ -89,7 +89,7 @@ export const AboutOurleadershipandWhattoExpect = () => {
                         <p className="text_cstm_normal_para textalign_cstmjustify">Our pastoral and leadership team is comprised of dedicated men and women who have committed their lives to the service of the Church and its members. With a heart for ministry and a passion for people, they provide spiritual care, mentorship, and oversight for various programs. They are approachable, prayerful, and always ready to lend support—whether it’s through teaching, counseling, or simply sharing life together in fellowship.</p>
                     </Flexwithgapcstmdivcol>
                     <Flexwithgapcstmdivcol parentStyle="flexprimarycolorcstmbackground">
-                        <h1 className="text_cstm_big_heading">What to Expect When You Visit</h1>
+                        <h1 className="text_cstm_big_heading">What to Expect</h1>
                         <p className="text_cstm_normal_para textalign_cstmjustify">From the moment you step into our church, you will be welcomed by a friendly community that values connection and belonging. Our Sunday worship service begins with heartfelt praise and worship, followed by a message grounded in biblical truth. Whether you're new to church, exploring faith, or looking for a spiritual home, you’ll find a safe and encouraging environment. We also offer children’s programs, translation services, and refreshments after service to foster fellowship and conversation.</p>
                     </Flexwithgapcstmdivcol>
                 </Flexwithgapcstmdivrow>
@@ -127,7 +127,16 @@ export const AboutOurMinistriesdiv = () => {
             <Containercstm parentClassName="cstmaboutpaddingtop0px">
                 <Flexwithgapcstmdivcol>
                     <h1 className="text_cstm_big_heading">Our Ministries</h1>
-                    <p className="text_cstm_normal_para">At Geelong Pentecostal Assembly, ministry is at the heart of everything we do. Our diverse range of ministries is designed to serve every age group and walk of life—helping individuals grow in faith, build meaningful relationships, and make a difference in our community. Whether you’re passionate about worship, outreach, youth mentorship, or caring for the vulnerable, there’s a place for you to get involved and thrive in your calling.</p>
+                    <p className="text_cstm_normal_para textalign_cstmjustify">At Geelong Pentecostal Assembly, ministry is at the heart of everything we do. Our diverse range of ministries is designed to serve every age group and walk of life—helping individuals grow in faith, build meaningful relationships, and make a difference in our community. Whether you’re passionate about worship, outreach, youth mentorship, or caring for the vulnerable, there’s a place for you to get involved and thrive in your calling.</p>
+                    <Flexwithgapcstmdivrow parentStyle="flexjustifycontent_spacebetween cstmaboutourministriesimagediv">
+                        <img src="assets/images/main/outreachMinsitriesone.jpg" alt="ministries" className="imagedivrowcstmabout"/>
+                        <img src="assets/images/main/womenMinistries.jpg" alt="ministries" className="imagedivrowcstmabout"/>
+                        <img src="assets/images/main/teenMinistries.jpg" alt="ministries" className="imagedivrowcstmabout"/>
+                        <img src="assets/images/main/Intercessoryprayer.jpg" alt="ministries" className="imagedivrowcstmabout"/>
+                    </Flexwithgapcstmdivrow>
+                    <div className="aboutminsitriesbtncstm">
+                        <ButtonwithtextComponentColor label={"Explore Our Minsitries"} fullwidth={false} classname="exploreministriesbtncstm"/>
+                    </div>
                 </Flexwithgapcstmdivcol>
             </Containercstm>
         </>

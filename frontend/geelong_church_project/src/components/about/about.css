@@ -57,7 +57,37 @@
     padding-top: 0px;
 }
 
+.imagedivrowcstmabout {
 
+    width: 23%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.exploreministriesbtncstm {
+
+    max-width: 190px !important;
+}
+  
+  .aboutminsitriesbtncstm {
+  
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+    
+    .cstmaboutourministriesimagediv {
+
+        flex-wrap: wrap;
+    }
+
+    .imagedivrowcstmabout {
+
+        width: calc(50% - 10px);
+    }
+}
 
 @media screen and (max-width: 767px) {
     
@@ -100,6 +130,21 @@
     .cstmaboutpaddingtop0px {
 
         padding-top: 0px;
+    }
+
+    .imagedivrowcstmabout {
+
+        width: 100%;
+    }
+
+    .aboutminsitriesbtncstm {
+
+        display: block;
+    }
+
+    .exploreministriesbtncstm {
+
+        max-width: 100% !important;
     }
 }
 @media screen and (max-width: 426px) {

@@ -37,6 +37,11 @@ p{
   text-align: justify;
 }
 
+.flexjustifycontent_spacebetween {
+
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 991px) {
   
   .text_cstm_big_heading {
