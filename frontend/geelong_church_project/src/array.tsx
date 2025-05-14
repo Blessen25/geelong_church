@@ -16,3 +16,9 @@ export const AboutOurMissionArray = [
     {icon: faBible, textPara:"Provide opportunities for spiritual growth through Bible studies and life groups.", titleName:"Growth"},
     {icon: faGlobe, textPara:"Serve our local and global communities through various missions and charitable activities.", titleName:"Outreach"},
 ]
+
+export const ContactDetailsArray = [
+
+    {icon: faChurch, textPara:"Experience Spirit-filled and uplifting worship services.", titleName:"Worship"},
+    
+]

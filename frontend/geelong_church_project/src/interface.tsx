@@ -58,5 +58,5 @@ export interface FlexwithiconandtextparentdivProps {
 export interface FlexwithgapcstmdivProps {
 
     children : React.ReactNode;
-    parentStyle ?: string;
+    parentClassname ?: string;
 }

@@ -109,7 +109,7 @@ export const Flexwithgapcstmdivcol:React.FC<FlexwithgapcstmdivProps> = (Props) =
 
     return(
         <>
-            <div className={`flexwithgapcstm ${Props.parentStyle ? Props.parentStyle : ""}`}>
+            <div className={`flexwithgapcstm ${Props.parentClassname ? Props.parentClassname : ""}`}>
                 {Props.children}
             </div>
         </>
@@ -120,7 +120,7 @@ export const Flexwithgapcstmdivrow:React.FC<FlexwithgapcstmdivProps> = (Props) =
 
     return(
         <>
-            <div className={`flexwithgapcstmrow ${Props.parentStyle ? Props.parentStyle : ""}`}>
+            <div className={`flexwithgapcstmrow ${Props.parentClassname ? Props.parentClassname : ""}`}>
                 {Props.children}
             </div>
         </>
