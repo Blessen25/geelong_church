@@ -209,6 +209,11 @@
     color: #3c79b0
 }
 
+.footerdiv2cstmcontactmixiconfont {
+
+    font-size: 16px;
+}
+
 
 @media screen and (max-width: 1399px) {
     #footer{
@@ -305,6 +310,16 @@
 
         width: 48%;
     }
+    
+    .containerfooter {
+
+        padding: 0px;
+    }
+
+    .footerdiv2cstmcontactmixiconfont {
+
+        font-size: 14px;
+    }
 }
 
 
@@ -313,6 +328,11 @@
     .footerdiv1text, .footer-bottom p {
 
         font-size: 14px;
+    }
+
+    .footerdiv2cstmcontactmixiconfont {
+
+        font-size: 12px;
     }
     
 }
@@ -395,6 +415,11 @@
     #footer {
 
         gap: 10px;
+    }
+
+    .footerdiv2cstmcontactmixiconfont {
+
+        font-size: 10px;
     }
 }
 

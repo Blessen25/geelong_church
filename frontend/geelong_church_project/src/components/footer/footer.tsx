@@ -36,15 +36,15 @@ export const Footer = () => {
                             <div className="footerdiv2cstmcontact">
                                 <h2>Contact</h2>
                                 <div className='footerdiv2cstmcontactmix'>
-                                    <FontAwesomeIcon icon={faLocationDot} color='#3c79b0'/>
+                                    <FontAwesomeIcon icon={faLocationDot} color='#3c79b0' className='footerdiv2cstmcontactmixiconfont'/>
                                     <p>82 Wilsons Road, Newcomb, VIC</p>
                                 </div>
                                 <div className='footerdiv2cstmcontactmix'>
-                                    <FontAwesomeIcon icon={faEnvelope} color='#3c79b0'/>
+                                    <FontAwesomeIcon icon={faEnvelope} color='#3c79b0' className='footerdiv2cstmcontactmixiconfont'/>
                                     <p><a href="mailto:geelongpentecostalassembly@gmail.com">geelongpentecostalassembly@gmail.com</a></p>
                                 </div> 
                                 <div className='footerdiv2cstmcontactmix'>
-                                    <FontAwesomeIcon icon={faPhone} color='#3c79b0'/>
+                                    <FontAwesomeIcon icon={faPhone} color='#3c79b0' className='footerdiv2cstmcontactmixiconfont'/>
                                     <p><a href="tel:+61494357534">+61494357534</a></p>
                                 </div> 
                             </div>
