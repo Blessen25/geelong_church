@@ -16,19 +16,6 @@ export const Containerdiv:React.FC<ContainerdivProps> = (Props) => {
     )
 }
 
-export const NormalContainerdiv:React.FC<ContainerdivProps> = (Props) => {
-
-    return(
-
-        <>
-            <div className={`normalcontainercstm ${Props.styles ? Props.styles : ''}`}>
-                {Props.children}
-            </div>
-        </>
-    )
-}
-
-
 export const ButtonwithtextComponentColor:React.FC<ButtonwithtextComponentProps> = (Props) => {
 
     return(
@@ -76,6 +63,18 @@ export const Containercstm:React.FC<ContainerdivProps> = (Props) => {
     )
 }
 
+export const ContainerWidthCstm:React.FC<ContainerdivProps> = (Props) => {
+
+    return(
+
+        <>
+            <div className="containerwidthcstm">
+                {Props.children}
+            </div>
+        </>
+    )
+}
+
 export const Flexwithiconandtextparentdiv:React.FC<FlexwithiconandtextparentdivProps> = (Props) => {
 
     return(
@@ -109,7 +108,7 @@ export const Flexwithgapcstmdivcol:React.FC<FlexwithgapcstmdivProps> = (Props) =
 
     return(
         <>
-            <div className={`flexwithgapcstm ${Props.parentClassname ? Props.parentClassname : ""}`}>
+            <div className={`flexwithgapcstm ${Props.parentClassname ? Props.parentClassname : ""}`} style={Props.parentStyle}>
                 {Props.children}
             </div>
         </>
@@ -120,7 +119,7 @@ export const Flexwithgapcstmdivrow:React.FC<FlexwithgapcstmdivProps> = (Props) =
 
     return(
         <>
-            <div className={`flexwithgapcstmrow ${Props.parentClassname ? Props.parentClassname : ""}`}>
+            <div className={`flexwithgapcstmrow ${Props.parentClassname ? Props.parentClassname : ""}`} style={Props.parentStyle}>
                 {Props.children}
             </div>
         </>

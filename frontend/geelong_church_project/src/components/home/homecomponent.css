@@ -5,7 +5,7 @@
     flex-direction: column;
     max-width: 1300px;
     margin: auto;
-    gap: 30px;
+    gap: 20px;
 }
 
 .imagecstmdivhome {
@@ -61,7 +61,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .parentflexcstm {
@@ -69,7 +69,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
 }
 
 .childflexcstm {
@@ -127,7 +127,7 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     justify-content: space-between;
     width: 33%;
 }
@@ -146,7 +146,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     position: relative;
     z-index: 9999;
 }
@@ -239,7 +239,7 @@
 .joinusondivbutton {
 
     display: flex;
-    gap: 40px;
+    gap: 20px;
     justify-content: space-evenly;
     
 }
@@ -379,7 +379,7 @@
     .homequoteblockquoteflex {
 
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 14px;
         justify-content: space-between;
     }
 
@@ -464,7 +464,7 @@
     .parentflexcstm {
 
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 15px;
     }
 
     .childflexcstm {
@@ -479,7 +479,7 @@
 
     .mainhome {
 
-        gap: 20px;
+        gap: 15px;
     }
 
     .childflexcstm:last-child {
@@ -504,18 +504,18 @@
 
     .homequoteblockquoteflex {
 
-        gap: 20px;
+        gap: 15px;
     }
 
     .homequotediv {
 
-        gap: 10px;
+        gap: 15px;
     }
 
     .homefourdivcstm {
 
         width: 500px;
-        gap: 20px;
+        gap: 15px;
     }
 
     .homefourdivchildcstm {
@@ -539,6 +539,10 @@
         right: 50px;
     }
 
+    .mainhome {
+
+        gap: 15px;
+    }
 
 }
 
@@ -641,6 +645,10 @@
         gap: 15px;
     }
 
+    .homequotediv {
+
+        gap: 15px;
+    }
 
 }
 
@@ -696,7 +704,7 @@
     .homefourdivchildcstm {
 
         width: 290px;
-        height: 200px;
+        height: 190px;
     }
 
     .joinusondivcstm{

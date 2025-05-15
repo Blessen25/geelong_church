@@ -1,31 +1,24 @@
+.mainaboutpage {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .aboutfirstdiv {
 
     width: 100%;
-    height: 600px;
     position: relative;
-}
-
-.aboutfirstdiv img{
-
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
-    
+    display: flex;
+    justify-content: space-between;
 }
 
 .aboutfirsttextdiv {
 
-    position: absolute;
-    width: 600px;
-    top: 70px;
-    right: 100px;
+    width: 100%;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     background-color: #f0f8ff;
     opacity: 1;
-    padding: 20px 40px;
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 20px;
 }
@@ -76,6 +69,115 @@
     justify-content: center;
 }
 
+
+.Aboutusstartyoursundaysparentdiv {
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row-reverse;
+}   
+
+.aboutusstartchildone {
+
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aboutusstartchildtwo {
+
+    width: 40%;
+    position: relative;
+    height: 370px;
+}
+
+.imageoneaboutusstarttwo {
+
+    width: 275px;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    height: 200px;
+    z-index: 2;
+    border-radius: 5px;
+}
+
+.imagetwoaboutusstarttwo {
+
+    width: 275px;
+    height: 200px;
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.imageoneaboutusstarttwo img {
+
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.imagetwoaboutusstarttwo img {
+
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.checklistdivaboutus {
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media screen and (max-width: 1399px) {
+    
+    .imagetwoaboutusstarttwo{
+
+        width: 240px;
+    }
+
+    .imageoneaboutusstarttwo {
+
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    
+    .imagetwoaboutusstarttwo{
+
+        width: 220px;
+    }
+
+    .imageoneaboutusstarttwo {
+
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    
+    .imagetwoaboutusstarttwo{
+
+        width: 200px;
+    }
+
+    .imageoneaboutusstarttwo {
+
+        width: 200px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     
     .cstmaboutourministriesimagediv {
@@ -87,19 +189,53 @@
 
         width: calc(50% - 10px);
     }
+
+    .Aboutusstartyoursundaysparentdiv {
+
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+
+    }
+
+    .aboutusstartchildtwo {
+
+        width: 550px;
+        height: 460px;
+    }
+
+    .aboutusstartchildone {
+
+        width: 100%;
+    }
+
+    .imagetwoaboutusstarttwo{
+
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .imageoneaboutusstarttwo {
+
+        width: 300px;
+        height: 300px;
+        top: 0px;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
     
     .aboutfirsttextdiv {
 
-        width: 460px;
-        right: 50px;
+        width: 100%;
+        padding: 15px;
     }
 
     .aboutseconddiv {
 
-        gap: 10px;
+        gap: 15px;
     }
 
     .csmtflexwrapstyle{
@@ -111,22 +247,45 @@
 
         padding-top: 0px;
     }
+
+    .mainaboutpage {
+
+        gap: 15px;
+    }
+
+    .aboutusstartchildtwo {
+
+        width: 430px;
+        height: 400px;
+    }
+    .imagetwoaboutusstarttwo{
+
+        width: 240px;
+        height: 240px;
+    }
+
+
+    .imageoneaboutusstarttwo {
+
+        width: 240px;
+        height: 240px;
+    }
+
+    .Aboutusstartyoursundaysparentdiv {
+
+        gap: 15px;
+    }
 }
 
 @media screen and (max-width: 575px) {
     
     .aboutfirsttextdiv {
 
-        padding: 20px;
+        padding: 15px;
         gap: 15px;
-        width: 94%;
-        left: 3%;
+        width: 100%;
     }
 
-    .aboutfirstdiv{
-
-        height: 510px;
-    }
     .cstmaboutpaddingtop0px {
 
         padding-top: 0px;
@@ -146,28 +305,47 @@
 
         max-width: 100% !important;
     }
-}
-@media screen and (max-width: 426px) {
-    
-    .aboutfirstdiv {
 
-        height: 540px;
+    .aboutusstartchildtwo {
+
+        width: 315px;
+        height: 320px;
+    }
+    .imagetwoaboutusstarttwo{
+
+        width: 180px;
+        height: 180px;
+        top: 140px;
+    }
+
+
+    .imageoneaboutusstarttwo {
+
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    
+    .imagetwoaboutusstarttwo{
+
+        width: 150px;
+        height: 150px;
+        top: 130px;
+    }
+
+
+    .imageoneaboutusstarttwo {
+
+        width: 150px;
+        height: 150px;
+        top: 0px;
     }
     
-}
+    .aboutusstartchildtwo {
 
-@media screen and (max-width: 400px) {
-    
-    .aboutfirstdiv {
-        
-        height: 580px;
-    }
-}
-
-
-@media screen and (max-width: 350px) {
-    .aboutfirstdiv {
-
-        height: 620px;
+        width: 260px;
+        height: 280px;
     }
 }

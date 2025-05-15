@@ -59,4 +59,5 @@ export interface FlexwithgapcstmdivProps {
 
     children : React.ReactNode;
     parentClassname ?: string;
+    parentStyle ?: React.CSSProperties;
 }
