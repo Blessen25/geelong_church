@@ -101,3 +101,12 @@ const borderradius = {
     "borderradius" : "5px"
     
 }
+
+
+const maxwidth = {
+
+    "Maximum 1399>" : "1300px",
+    "Maximum 1199>" : "1100px",
+    "Maximum 1099>" : "999px",
+    "Maximum 991>" : "899px"
+}

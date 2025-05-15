@@ -19,23 +19,25 @@ const Header = () => {
         
         <>
             <nav>
-                <div id="header">
-                <div className="headercstmicondiv">
-                    <FontAwesomeIcon icon={faAlignLeft} className={`${sidebarActive ? 'iconcstm-one-colorlightblue' : 'iconcstm-one'}`} onClick={handleSidebarActiveButt}/>
-                </div>
-                <div className="headerimg">
-                    <a href="#">
-                        <img src="../assets/images/Logo/Logo_new.png" alt="" />
-                    </a>
-                </div>
-                <div className="headercontents">
-                    <a href='/' className={`${isActive('/')}`}>Home</a>
-                    <a href='/about' className={`${isActive('/about')}`}>About</a>
-                    <a href='/ministries' className={`${isActive('/ministries')}`}>Ministries</a>
-                    <a href='/newletters' className={`${isActive('/newletters')}`}>Newsletters</a>
-                    <a href='/churchonline' className={`${isActive('/webelieve')}`}>We Believe</a>
-                    <a href='/contact' className={`${isActive('/contact')}`}>Contact</a>    
-                </div>
+                <div className="containerheadercstm">
+                    <div id="header">
+                        <div className="headercstmicondiv">
+                            <FontAwesomeIcon icon={faAlignLeft} className={`${sidebarActive ? 'iconcstm-one-colorlightblue' : 'iconcstm-one'}`} onClick={handleSidebarActiveButt}/>
+                        </div>
+                        <div className="headerimg">
+                            <a href="#">
+                                <img src="../assets/images/Logo/Logo_new.png" alt="" />
+                            </a>
+                        </div>
+                        <div className="headercontents">
+                            <a href='/' className={`${isActive('/')}`}>Home</a>
+                            <a href='/about' className={`${isActive('/about')}`}>About</a>
+                            <a href='/ministries' className={`${isActive('/ministries')}`}>Ministries</a>
+                            <a href='/newletters' className={`${isActive('/newletters')}`}>Newsletters</a>
+                            <a href='/churchonline' className={`${isActive('/webelieve')}`}>We Believe</a>
+                            <a href='/contact' className={`${isActive('/contact')}`}>Contact</a>    
+                        </div>
+                    </div>
                 </div>
                 {sidebarActive ? (
                     <>

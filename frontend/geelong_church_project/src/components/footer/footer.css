@@ -1,14 +1,22 @@
+.containerfooter {
+
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    position: relative;
+    padding: 40px 0px;
+    z-index: 99999;
+    background-color: white;
+}
+
 #footer {
 
     background-color: white;
     width: 100%;
-    padding: 40px 50px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     display: flex;
     gap: 20px;
     flex-direction: column;
-    position: relative;
-    z-index: 99999;
+    max-width: 1300px;
+    margin: auto;
 }
 
 .footer-top {
@@ -201,8 +209,21 @@
     color: #3c79b0
 }
 
+
+@media screen and (max-width: 1399px) {
+    #footer{
+
+        max-width: 1100px;
+    }
+
+}
+
 @media screen and (max-width: 1199px) {
     
+    #footer{
+
+        max-width: 999px;
+    }
 
     .footerdiv2cstmcontactmix {
 
@@ -243,6 +264,11 @@
 
         gap: 30px;
     }
+
+    #footer{
+
+        max-width: 899px;
+    }
 }
 
 
@@ -251,6 +277,7 @@
     #footer {
 
         padding: 20px 30px;
+        max-width: 100%;
     }
 
     .footer-top {
