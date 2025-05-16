@@ -27,42 +27,44 @@ export const ContactDetailsdiv = () => {
     return(
 
         <>
-                <Flexwithgapcstmdivrow>
+                <Flexwithgapcstmdivrow parentClassname="contactdetailsdivrowcstm">
                     <Flexwithgapcstmdivrow>
                         <Flexwithgapcstmdivcol>
                             <div className="imagedivcontactus">
-                                <img src="assets/images/main/ContactUs.jpg" alt="contact_us"/>
+                                <img src="assets/images/main/contactus.jpg" alt="contact_us"/>
+                                <img src="assets/images/main/contactusthree.jpg" alt="contact_us"/>
                             </div>
                         </Flexwithgapcstmdivcol>
                     </Flexwithgapcstmdivrow>
                     <Flexwithgapcstmdivrow>
                         <form>
-                        <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
-                        <h1 className="text_cstm_big_heading">Get In Touch With Us</h1>
-                        <p className="text_cstm_normal_para">Have a question or need assistance? Simply fill out the form with your inquiry or reach out to us directly via the email or phone number listed above.</p>
-                            <Flexwithgapcstmdivrow>
-                                <Flexwithgapcstmdivcol>
-                                    <p className="inputformptag">Name</p>
-                                    <input type="text" placeholder="Enter Your Name" required className="inputformcstm" />
-                                </Flexwithgapcstmdivcol>
-                                <Flexwithgapcstmdivcol>
-                                    <p className="inputformptag">Email</p>
-                                    <input type="email" placeholder="Enter Your Email" required className="inputformcstm" />
-                                </Flexwithgapcstmdivcol>
-                            </Flexwithgapcstmdivrow>
-                            <Flexwithgapcstmdivrow>
-                                <Flexwithgapcstmdivcol>
-                                    <p className="inputformptag">Subject</p>
-                                    <input type="text" placeholder="Enter Subject" required className="inputformcstm" />
-                                </Flexwithgapcstmdivcol>
-                            </Flexwithgapcstmdivrow>
-                            <Flexwithgapcstmdivrow>
-                                <Flexwithgapcstmdivcol>
-                                    <p className="inputformptag">Message</p>
-                                    <textarea name="message" placeholder="Enter Your Message" required className="inputformmessagecstm"/>
-                                </Flexwithgapcstmdivcol>
-                            </Flexwithgapcstmdivrow>
-                        </Flexwithgapcstmdivcol>
+                            <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
+                            <h1 className="text_cstm_big_heading">Get In Touch With Us</h1>
+                            <p className="text_cstm_normal_para">Have a question or need assistance? Simply fill out the form with your inquiry or reach out to us directly via the email or phone number listed above.</p>
+                                <Flexwithgapcstmdivrow>
+                                    <Flexwithgapcstmdivcol>
+                                        <p className="inputformptag">Name</p>
+                                        <input type="text" placeholder="Enter Your Name" required className="inputformcstm" />
+                                    </Flexwithgapcstmdivcol>
+                                    <Flexwithgapcstmdivcol>
+                                        <p className="inputformptag">Email</p>
+                                        <input type="email" placeholder="Enter Your Email" required className="inputformcstm" />
+                                    </Flexwithgapcstmdivcol>
+                                </Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow>
+                                    <Flexwithgapcstmdivcol>
+                                        <p className="inputformptag">Subject</p>
+                                        <input type="text" placeholder="Enter Subject" required className="inputformcstm" />
+                                    </Flexwithgapcstmdivcol>
+                                </Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow>
+                                    <Flexwithgapcstmdivcol>
+                                        <p className="inputformptag">Message</p>
+                                        <textarea name="message" placeholder="Enter Your Message" required className="inputformmessagecstm"/>
+                                    </Flexwithgapcstmdivcol>
+                                </Flexwithgapcstmdivrow>
+                                <button type="submit" className="submitbuttoncontactcstm">Submit</button>
+                            </Flexwithgapcstmdivcol>
                         </form>
                     </Flexwithgapcstmdivrow>
                 </Flexwithgapcstmdivrow>
