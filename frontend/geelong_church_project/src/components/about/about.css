@@ -230,7 +230,6 @@
     .aboutfirsttextdiv {
 
         width: 100%;
-        padding: 15px;
     }
 
     .aboutseconddiv {
@@ -275,13 +274,22 @@
 
         gap: 15px;
     }
+
+    .aboutusstartchildone {
+
+        gap: 15px;
+    }
+
+    .aboutfirsttextdiv {
+
+        gap: 15px;
+    }
 }
 
 @media screen and (max-width: 575px) {
     
     .aboutfirsttextdiv {
 
-        padding: 15px;
         gap: 15px;
         width: 100%;
     }

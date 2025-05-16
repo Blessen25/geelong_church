@@ -128,8 +128,8 @@
 
 .flexwithicondiv {
 
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    
     border-radius: 50%;
     display: flex;
@@ -139,7 +139,7 @@
 
 .fontawesomeiconflexcstm {
 
-    font-size: 36px;
+    font-size: 28px;
     color: #3c79b0;
 }
 
@@ -150,7 +150,7 @@
 
 .flexwithtexth1divcstm {
 
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .flexwithgapcstm {
@@ -243,6 +243,17 @@
         max-width: 100%;
     }
     
+    .flexwithicondiv  {
+
+        width: 65px;
+        height: 65px;
+    }
+
+    .fontawesomeiconflexcstm {
+
+        font-size: 24px;
+    }
+    
 }
 
 @media screen and (max-width: 767px) {
@@ -293,19 +304,14 @@
 
     .flexwithtexth1divcstm {
 
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .fontawesomeiconflexcstm {
 
-        font-size: 26px;
+        font-size: 20px;
     }
 
-    .flexwithicondiv {
-
-        width: 70px;
-        height: 70px;
-    }
 
     .flexwithgapcstm {
 
@@ -321,6 +327,12 @@
 
         gap: 15px;
     }
+
+    .containercstmnew {
+
+        padding: 15px 30px;
+    }
+
 
 }
 
@@ -362,14 +374,11 @@
         padding: 20px;
         gap: 15px;
     }
-    .containercstmnew {
 
-        padding: 15px 15px;
-    }
 
     .flexwithtexth1divcstm {
 
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .flexwithiconandtextdivmaindiv {
@@ -379,13 +388,18 @@
 
     .fontawesomeiconflexcstm {
 
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .flexwithicondiv {
 
         width: 55px;
         height: 55px;
+    }
+
+    .containercstmnew {
+
+        padding: 15px;
     }
 
 }

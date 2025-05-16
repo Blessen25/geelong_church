@@ -61,3 +61,12 @@ export interface FlexwithgapcstmdivProps {
     parentClassname ?: string;
     parentStyle ?: React.CSSProperties;
 }
+
+export interface ContactcardDetailsdivProps {
+
+    Icon : IconDefinition;
+    title ?: string;
+    text ?: string;
+    ahref ?: string;
+    extracardClass ?: string;
+}

@@ -1,7 +1,7 @@
 .imagedivcontactus {
 
     width: 100%;
-    aspect-ratio: 1.4/1;
+    aspect-ratio: 1/1;
 }
 
 .imagedivcontactus img{
@@ -12,11 +12,6 @@
     border-radius: 5px;
 }
 
-.contactdetailsdivcolcstm {
-    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    
-    padding: 20px;
-    border-radius: 5px; */
-}
 
 .inputformcstm {
 
@@ -52,4 +47,159 @@
 .inputformptag{
 
     color: #000;
+}
+
+.contactthreecarddiv {
+
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.contactchildcarddiv {
+
+    width: 33%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+
+.contactchildrounddiv {
+
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.contactdetailsdiv {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactdetailsdiv h1 {
+
+    font-size: 20px;
+}
+
+.fontawesomeiconcontactcstm {
+
+    font-size: 28px;
+    color: #3c79b0;
+}
+
+.atagcontactdetailscard {
+
+    text-decoration: none;
+    color: #8b8b8b;
+    transition: all .7s;
+}
+
+.atagcontactdetailscard:hover {
+
+    color: #3c79b0;
+}
+
+
+@media screen and (max-width: 1199px) {
+    
+    .contactchildcarddiv {
+
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    
+    .contactthreecarddiv {
+
+        flex-wrap: wrap;
+    }
+
+    .contactchildcarddiv {
+
+        width: calc(50% - 10px);
+    }
+
+    .contactextraemaildiv {
+
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    
+    
+    .contactchildrounddiv {
+
+        width: 65px;
+        height: 65px;
+    }
+
+    .fontawesomeiconcontactcstm {
+
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .contactchildcarddiv {
+
+        width: 100%;
+        gap: 15px;
+    }
+
+    .contactdetailsdiv {
+
+        gap: 15px;
+    }
+    
+    .fontawesomeiconcontactcstm {
+
+        font-size: 20px;
+    }
+
+    .contactdetailsdiv h1 {
+
+        font-size: 16px;
+    }
+
+    .contactthreecarddiv {
+
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .contactchildrounddiv {
+
+        width: 55px;
+        height: 55px;
+    }
+
+    .fontawesomeiconcontactcstm {
+
+        font-size: 16px;
+    }
+
+    .contactdetailsdiv h1 {
+
+        font-size: 14px;
+    }
 }
