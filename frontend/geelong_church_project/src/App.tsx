@@ -6,6 +6,9 @@ import Home from './screens/home/home';
 import { Footer } from './components/footer/footer';
 import About from './screens/about/about';
 import Contact_Us from './screens/contact/contact';
+import Ministries from './screens/ministries/ministries';
+import Newsletter from './screens/newsletter/newsletter';
+import WeBelieve from './screens/webelieve/webelieve';
 
 const App = () =>{
 
@@ -18,6 +21,9 @@ const App = () =>{
             <Route path='/' element={<Home />}/>
             <Route path='/about' element = { <About />} />
             <Route path='/contact' element = { <Contact_Us />} />
+            <Route path='/ministries' element = { <Ministries />} />
+            <Route path='/newletters' element = { <Newsletter />} />
+            <Route path='/webelieve' element = { <WeBelieve/>} />
           </Routes>
           <Footer />
         </Router>
