@@ -76,6 +76,10 @@
         width: 100%;
         border-radius: 5px;
     }
+
+    .ministriesflexchilddiv {
+        flex: 2;
+    }
 }
 
 @media screen and (max-width: 991px ) {
@@ -83,5 +87,72 @@
     .ministriesfirstdiv {
 
         flex-wrap: wrap;
+    }
+
+    .ministriesflexchilddiv {
+
+        width: 100%;
+        flex: 1;
+    }
+
+    .ministriesflexchilddivimage {
+
+        width: 100%;
+        flex: 1;
+        display: flex;
+        height: 300px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .ministriesimage {
+
+        height: 300px;
+    }
+
+    .ministriesimage:first-child , .ministriesimage:last-child {
+
+        width: 49.9%;
+        display: block;
+        position: relative;
+    }
+    
+
+    .ministriesfirstdiv  {
+
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .ministriesflexchilddivimage {
+
+        height: 250px;
+    }   
+
+    .ministriesimage:first-child , .ministriesimage:last-child {
+
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .ministriesflexchilddivimage {
+
+        height: 200px;
+    }   
+
+    .ministriesimage:last-child {
+
+        display: none;
+    }
+
+    .ministriesimage:first-child  {
+
+        width: 100%;
+        aspect-ratio: 1/1;
     }
 }
