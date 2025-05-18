@@ -1,6 +1,87 @@
 .ministriesfirstdiv {
 
-    border: 2px solid black;
     width: 100%;
-    height: 500px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.flexdirectionreversecstm {
+
+    flex-direction: row-reverse;
+}
+
+.ministriesflexchilddiv {
+
+    width: 50%;
+    flex: 1;
+}
+
+.ministriesflexchilddivimage {
+
+    width: 50%;
+    position: relative;
+    flex: 1;
+}
+
+.ministriesimage {
+
+    border-radius: 5px;
+    width: 50.4%;
+    height: 100%;
+    object-fit: cover;
+    right: 0px;
+}
+
+.ministriesimage:first-child {
+
+    position: absolute;
+    border-radius: 5px 5px 5px 0px;
+    right: 0px;
+}
+
+.ministriesimage:last-child {
+
+    position: absolute;
+    left: 0px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.ministriesflexchilddiv {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttondivministries {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1199px) {
+
+    .ministriesimage:first-child {
+
+        display: none;
+    }
+
+    .ministriesimage:last-child {
+
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 991px ) {
+    
+    .ministriesfirstdiv {
+
+        flex-wrap: wrap;
+    }
 }

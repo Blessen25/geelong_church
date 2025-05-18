@@ -42,6 +42,11 @@ p{
   justify-content: space-between;
 }
 
+.fachecksquareiconcstm {
+
+  font-size: 16px;
+}
+
 @media screen and (max-width: 991px) {
   
   .text_cstm_big_heading {
@@ -67,6 +72,11 @@ p{
 
     font-size: 14px;
   }
+
+  .fachecksquareiconcstm {
+
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -82,6 +92,11 @@ p{
   }
 
   .text_cstm_normal_para {
+
+    font-size: 12px;
+  }
+
+  .fachecksquareiconcstm {
 
     font-size: 12px;
   }

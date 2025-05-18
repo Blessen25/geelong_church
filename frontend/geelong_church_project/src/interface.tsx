@@ -70,3 +70,13 @@ export interface ContactcardDetailsdivProps {
     ahref ?: string;
     extracardClass ?: string;
 }
+
+export interface MinistriesFlexComponentProps {
+
+    title : string;
+    para : string;
+    imageone : string;
+    imagetwo : string;
+    route ?: string;
+    reverseclass ?: boolean;
+}

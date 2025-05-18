@@ -150,19 +150,19 @@ export const AboutusStartyoursundays = () => {
                     <p className="text_cstm_normal_para textalign_cstmjustify">At Geelong Pentecostal Assembly, our Sunday services begin at 10:00 AM, right in the heart of Geelong. Whether you're seeking peace, community, or spiritual growth, one visit can change your week, and your life. Come early, meet new friends, and enjoy an atmosphere filled with worship, prayer, and the living Word of God.</p>
                     <div className="checklistdivaboutus">
                         <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
-                            <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0"/>
+                            <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
                             <p className="text_cstm_normal_para">Spirit-led messages</p>
                         </Flexwithgapcstmdivrow>
                         <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
-                            <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0"/>
+                            <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/>
                             <p className="text_cstm_normal_para">Uplifting praise and worship</p>
                         </Flexwithgapcstmdivrow>
                         <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
-                            <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0"/>
+                            <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/>
                             <p className="text_cstm_normal_para">A welcoming, multicultural family</p>
                         </Flexwithgapcstmdivrow>
                         <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
-                            <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0"/>
+                            <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/>
                             <p className="text_cstm_normal_para">Kids & youth programs available</p>
                         </Flexwithgapcstmdivrow>
                     </div>
