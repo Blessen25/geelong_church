@@ -39,8 +39,8 @@ export const ContactDetailsdiv = () => {
                     <Flexwithgapcstmdivrow>
                         <form>
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
-                            <h1 className="text_cstm_big_heading">Get In Touch With Us</h1>
-                            <p className="text_cstm_normal_para">Have a question or need assistance? Simply fill out the form with your inquiry or reach out to us directly via the email or phone number listed above.</p>
+                            <h1 className="text_cstm_big_heading">Let’s Connect</h1>
+                            <p className="text_cstm_normal_para textalign_cstmjustify">We’re here to help! Simply fill out the form with your inquiry or reach out to us directly via the email or phone number listed above. We look forward to welcoming you to Geelong Pentecostal Assembly plan your visit today and experience the warmth and fellowship of our community firsthand.</p>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Name</p>
