@@ -33,7 +33,7 @@ const Header = () => {
                             <a href='/' className={`${isActive('/')}`}>Home</a>
                             <a href='/about' className={`${isActive('/about')}`}>About</a>
                             <a href='/ministries' className={`${isActive('/ministries')}`}>Ministries</a>
-                            <a href='/newletters' className={`${isActive('/newletters')}`}>Newsletters</a>
+                            <a href='/newsletters' className={`${isActive('/newsletters')}`}>Newsletters</a>
                             <a href='/webelieve' className={`${isActive('/webelieve')}`}>We Believe</a>
                             <a href='/contact' className={`${isActive('/contact')}`}>Contact</a>    
                         </div>
@@ -47,7 +47,7 @@ const Header = () => {
                     <a href='/' className={`${isActiveSidebar('/')}`}><FontAwesomeIcon icon={faHome}/>Home</a>
                     <a href='/about' className={`${isActiveSidebar('/about')}`}><FontAwesomeIcon icon={faInfoCircle}/>About</a>
                     <a href='/ministries' className={`${isActiveSidebar('/ministries')}`}><FontAwesomeIcon icon={faChurch}/>Ministries</a>
-                    <a href='/newletters' className={`${isActiveSidebar('/newletters')}`}><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
+                    <a href='/newsletters' className={`${isActiveSidebar('/newsletters')}`}><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
                     <a href='/webelieve' className={`${isActiveSidebar('/webelieve')}`}><FontAwesomeIcon icon={faDove}/>We Believe</a>
                     <a href='/contact' className={`${isActiveSidebar('/contact')}`}><FontAwesomeIcon icon={faPhone}/>Contact</a> 
                     </div>  
