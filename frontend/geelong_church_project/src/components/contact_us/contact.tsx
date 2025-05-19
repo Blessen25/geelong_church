@@ -98,7 +98,7 @@ export const ContactcardDetailsdiv:React.FC<ContactcardDetailsdivProps> = (Props
                 <div className="contactdetailsdiv">
                     <h1>{Props.title}</h1>
                     {Props.ahref ? (
-                        <a href={Props.ahref ? Props.ahref : '#'} className="atagcontactdetailscard text_cstm_normal_para">{Props.text}</a>
+                        <a href={Props.ahref ? Props.ahref : '#'} className="atagcontactdetailscard text_cstm_normal_para" rel="noopener noreferrer">{Props.text}</a>
                     ) : (
                         <p className="text_cstm_normal_para">{Props.text}</p>
                     )}

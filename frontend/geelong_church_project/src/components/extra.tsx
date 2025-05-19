@@ -20,7 +20,7 @@ export const ButtonwithtextComponentColor:React.FC<ButtonwithtextComponentProps>
 
     return(
         <>
-            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstm ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.classname ? Props.classname : ''}`}>{Props.label}</a>
+            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstm ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.classname ? Props.classname : ''}`} rel="noopener noreferrer">{Props.label}</a>
         </>
     )
 }
@@ -29,7 +29,7 @@ export const ButtonwithtextComponent:React.FC<ButtonwithtextComponentProps> = (P
 
     return(
         <>
-            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstmnormal ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.classname ? Props.classname : ''}`}>{Props.label}</a>
+            <a href={`${Props.route ? Props.route : '#'}`} className={`buttonwithtextcstmnormal ${Props.fullwidth ? 'w-100cstm' : ''} ${Props.classname ? Props.classname : ''}`} rel="noopener noreferrer">{Props.label}</a>
         </>
     )
 }
@@ -122,6 +122,17 @@ export const Flexwithgapcstmdivrow:React.FC<FlexwithgapcstmdivProps> = (Props) =
             <div className={`flexwithgapcstmrow ${Props.parentClassname ? Props.parentClassname : ""}`} style={Props.parentStyle}>
                 {Props.children}
             </div>
+        </>
+    )
+}
+
+
+export const Whatsappbutton = () => {
+
+    return(
+
+        <>
+            <a href="https://wa.me/9400260187" target="_blank" rel="noopener noreferrer" ></a>
         </>
     )
 }

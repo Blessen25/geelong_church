@@ -14,7 +14,7 @@ export const Footer = () => {
                     <div className="footer-top">
                             <div className="footerdiv1">
                                     <div className="footerdiv1img">
-                                        <a href="#">
+                                        <a href="#" rel="noopener noreferrer">
                                         <img src="./assets/images/Logo/Logo_new.png" alt="" />
                                         </a>
                                     </div>
@@ -25,12 +25,12 @@ export const Footer = () => {
                             </div>
                             <div className="footerdiv2cstmpages">
                                 <h2>Pages</h2>
-                                <a href="/" className='footerdiv2atag'><p className={`${isActive('/')}`}>Home</p></a>
-                                <a href="/about" className='footerdiv2atag'><p className={`${isActive('/about')}`}>About</p></a>
-                                <a href="/ministries" className='footerdiv2atag'><p className={`${isActive('/ministries')}`}>Ministries</p></a>
-                                <a href="/newsletters" className='footerdiv2atag'><p className={`${isActive('/newsletters')}`}>Newsletters</p></a>
-                                <a href="/webelieve" className='footerdiv2atag'><p className={`${isActive('/webelieve')}`}>We Believe</p></a>
-                                <a href="/contact" className='footerdiv2atag'><p className={`${isActive('/contact')}`}>Contact</p></a>
+                                <a href="/" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/')}`}>Home</p></a>
+                                <a href="/about" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/about')}`}>About</p></a>
+                                <a href="/ministries" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/ministries')}`}>Ministries</p></a>
+                                <a href="/newsletters" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/newsletters')}`}>Newsletters</p></a>
+                                <a href="/webelieve" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/webelieve')}`}>We Believe</p></a>
+                                <a href="/contact" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/contact')}`}>Contact</p></a>
 
                             </div>
                             <div className="footerdiv2cstmcontact">
@@ -41,32 +41,32 @@ export const Footer = () => {
                                 </div>
                                 <div className='footerdiv2cstmcontactmix'>
                                     <FontAwesomeIcon icon={faEnvelope} color='#3c79b0' className='footerdiv2cstmcontactmixiconfont'/>
-                                    <p><a href="mailto:geelongpentecostalassembly@gmail.com">geelongpentecostalassembly@gmail.com</a></p>
+                                    <p><a href="mailto:geelongpentecostalassembly@gmail.com" rel="noopener noreferrer">geelongpentecostalassembly@gmail.com</a></p>
                                 </div> 
                                 <div className='footerdiv2cstmcontactmix'>
                                     <FontAwesomeIcon icon={faPhone} color='#3c79b0' className='footerdiv2cstmcontactmixiconfont'/>
-                                    <p><a href="tel:+61494357534">+61494357534</a></p>
+                                    <p><a href="tel:+61494357534" rel="noopener noreferrer">+61494357534</a></p>
                                 </div> 
                             </div>
                             <div className="footerdiv2cstmsocial">
                                 <h2>Social</h2>
                                 <ul>
-                                        <a href="#" target='_blank'>
+                                        <a href="#" target='_blank' rel="noopener noreferrer">
                                             <li>
                                                 <i className="fab fa-facebook"></i>
                                             </li>
                                         </a>
-                                        <a href="#"  target='_blank'>
+                                        <a href="#"  target='_blank' rel="noopener noreferrer">
                                             <li>
                                                 <i className="fab fa-instagram"></i>
                                             </li>
                                         </a>
-                                        <a href="#" target='_blank'>
+                                        <a href="#" target='_blank' rel="noopener noreferrer">
                                             <li>
                                                 <i className="fab fa-twitter"></i>
                                             </li>
                                         </a>
-                                        <a href="#" target='_blank'>
+                                        <a href="#" target='_blank' rel="noopener noreferrer">
                                             <li>
                                                 <i className="fab fa-youtube"></i>
                                             </li>

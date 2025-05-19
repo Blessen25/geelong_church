@@ -25,17 +25,17 @@ const Header = () => {
                             <FontAwesomeIcon icon={faAlignLeft} className={`${sidebarActive ? 'iconcstm-one-colorlightblue' : 'iconcstm-one'}`} onClick={handleSidebarActiveButt}/>
                         </div>
                         <div className="headerimg">
-                            <a href="#">
+                            <a href="#" rel="noopener noreferrer">
                                 <img src="../assets/images/Logo/Logo_new.png" alt="" />
                             </a>
                         </div>
                         <div className="headercontents">
-                            <a href='/' className={`${isActive('/')}`}>Home</a>
-                            <a href='/about' className={`${isActive('/about')}`}>About</a>
-                            <a href='/ministries' className={`${isActive('/ministries')}`}>Ministries</a>
-                            <a href='/newsletters' className={`${isActive('/newsletters')}`}>Newsletters</a>
-                            <a href='/webelieve' className={`${isActive('/webelieve')}`}>We Believe</a>
-                            <a href='/contact' className={`${isActive('/contact')}`}>Contact</a>    
+                            <a href='/' className={`${isActive('/')}`} rel="noopener noreferrer">Home</a>
+                            <a href='/about' className={`${isActive('/about')}`} rel="noopener noreferrer">About</a>
+                            <a href='/ministries' className={`${isActive('/ministries')}`} rel="noopener noreferrer">Ministries</a>
+                            <a href='/newsletters' className={`${isActive('/newsletters')}`} rel="noopener noreferrer">Newsletters</a>
+                            <a href='/webelieve' className={`${isActive('/webelieve')}`} rel="noopener noreferrer" >We Believe</a>
+                            <a href='/contact' className={`${isActive('/contact')}`} rel="noopener noreferrer">Contact</a>    
                         </div>
                     </div>
                 </div>
@@ -44,12 +44,12 @@ const Header = () => {
                     <div className="outlaysidebar">
                     </div>
                     <div className="sidebardiv">
-                    <a href='/' className={`${isActiveSidebar('/')}`}><FontAwesomeIcon icon={faHome}/>Home</a>
-                    <a href='/about' className={`${isActiveSidebar('/about')}`}><FontAwesomeIcon icon={faInfoCircle}/>About</a>
-                    <a href='/ministries' className={`${isActiveSidebar('/ministries')}`}><FontAwesomeIcon icon={faChurch}/>Ministries</a>
-                    <a href='/newsletters' className={`${isActiveSidebar('/newsletters')}`}><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
-                    <a href='/webelieve' className={`${isActiveSidebar('/webelieve')}`}><FontAwesomeIcon icon={faDove}/>We Believe</a>
-                    <a href='/contact' className={`${isActiveSidebar('/contact')}`}><FontAwesomeIcon icon={faPhone}/>Contact</a> 
+                    <a href='/' className={`${isActiveSidebar('/')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faHome}/>Home</a>
+                    <a href='/about' className={`${isActiveSidebar('/about')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faInfoCircle}/>About</a>
+                    <a href='/ministries' className={`${isActiveSidebar('/ministries')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faChurch}/>Ministries</a>
+                    <a href='/newsletters' className={`${isActiveSidebar('/newsletters')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
+                    <a href='/webelieve' className={`${isActiveSidebar('/webelieve')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faDove}/>We Believe</a>
+                    <a href='/contact' className={`${isActiveSidebar('/contact')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPhone}/>Contact</a> 
                     </div>  
                     </>
                 ) : (
