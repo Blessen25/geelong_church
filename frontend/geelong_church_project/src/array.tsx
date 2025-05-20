@@ -3,7 +3,7 @@ import { text } from "stream/consumers"
 
 export const HomeFourDivChildArray = [
 
-    {route:"#",text:"Bible Verses",image:"../assets/images/main/church.jpg"},
+    {route:"/bibleverse",text:"Bible Verses",image:"../assets/images/main/church.jpg"},
     {route:"/newsletters",text:"Upcoming Events",image:"../assets/images/main/cross_two.jpg"},
     {route:"/contact",text:"Need Prayer?",image:"../assets/images/main/cross.jpg"},
     {route:"/about",text:"Our Mission",image:"../assets/images/main/jesus-neon.jpg"},

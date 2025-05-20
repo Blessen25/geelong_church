@@ -9,6 +9,7 @@ import Contact_Us from './screens/contact/contact';
 import Ministries from './screens/ministries/ministries';
 import Newsletter from './screens/newsletter/newsletter';
 import WeBelieve from './screens/webelieve/webelieve';
+import BibleVerse from './screens/bibleverse/bibleverse';
 
 const App = () =>{
 
@@ -24,6 +25,7 @@ const App = () =>{
             <Route path='/ministries' element = { <Ministries />} />
             <Route path='/newsletters' element = { <Newsletter />} />
             <Route path='/webelieve' element = { <WeBelieve/>} />
+            <Route path='/bibleverse' element = { <BibleVerse />} />
           </Routes>
           <Footer />
         </Router>
