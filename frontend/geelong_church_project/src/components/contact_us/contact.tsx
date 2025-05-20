@@ -121,7 +121,7 @@ export const PlanYourVisitdiv = () => {
                 <h1 className="text_cstm_big_heading">Plan Your Visit</h1>
                 <p className="text_cstm_normal_para textalign_cstmjustify">We look forward to welcoming you to Geelong Pentecostal Assembly. Plan your visit today and experience the warmth of our community firsthand.</p>
                 <h1 className="text_cstm_medium_heading">Service Timings</h1>
-                <p className="text_cstm_normal_para textalign_cstmjustify">Sunday Service ( English & Malayalam ) : 10:00 Am</p>
+                <p className="text_cstm_normal_para textalign_cstmjustify">Sunday Service ( English & Malayalam ) : 10:00 am</p>
                 <p className="text_cstm_normal_para textalign_cstmjustify">Sunday School : 09:00 am</p>
                 <p className="text_cstm_normal_para textalign_cstmjustify">Morning Prayer ( Monday - Friday ) : 05:15 am - 06:30 am</p>
                 <p className="text_cstm_normal_para textalign_cstmjustify">Youth Meeting ( 1st Sunday of every month ) : 11:30 pm</p>
