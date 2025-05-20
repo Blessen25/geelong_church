@@ -34,7 +34,7 @@ export const AboutWhoWeAre = () => {
                 <div className="aboutfirsttextdiv">
                         <h1 className="text_cstm_big_heading">Who We Are?</h1>
                         <div>
-                           <p className="text_cstm_normal_para">At Geelong Pentecostal Assembly, we are more than just a church — we are a vibrant, Christ-centered family rooted in love, unity, and spiritual growth. As a dynamic and multicultural Pentecostal community, we are passionate about sharing the life-transforming love of Jesus Christ with everyone we meet. Located in the heart of Geelong, our congregation beautifully reflects the rich cultural diversity of our city. People from all walks of life, nationalities, and backgrounds come together as one body to worship, grow, and serve in faith. Whether you’re new to the Christian faith, seeking a deeper relationship with God, or simply looking for a spiritual home, you are warmly invited to be part of our community. We believe in powerful worship, passionate prayer, and practical teaching rooted in the Word of God. Our Sunday services are filled with vibrant praise, spirit-led messages, and a strong sense of fellowship that makes everyone feel welcome and valued.</p>
+                           <p className="text_cstm_normal_para">At Geelong Pentecostal Assembly, we are more than just a church we are a vibrant, Christ-centered family rooted in love, unity, and spiritual growth. As a dynamic and multicultural Pentecostal community, we are passionate about sharing the life-transforming love of Jesus Christ with everyone we meet. Located in the heart of Geelong, our congregation beautifully reflects the rich cultural diversity of our city. People from all walks of life, nationalities, and backgrounds come together as one body to worship, grow, and serve in faith. Whether you’re new to the Christian faith, seeking a deeper relationship with God, or simply looking for a spiritual home, you are warmly invited to be part of our community. We believe in powerful worship, passionate prayer, and practical teaching rooted in the Word of God. Our Sunday services are filled with vibrant praise, spirit-led messages, and a strong sense of fellowship that makes everyone feel welcome and valued.</p>
                         </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ export const AboutOurMission = () => {
             
                 <Flexwithgapcstmdivcol>
                     <h1 className="text_cstm_big_heading">Our Mission</h1>
-                    <p className="text_cstm_normal_para textalign_cstmjustify">At Geelong Pentecostal Assembly, we are passionate about fulfilling the mission Jesus gave us — to love God, love people, and make disciples. Our mission is lived out in four core areas:</p>
+                    <p className="text_cstm_normal_para textalign_cstmjustify">At Geelong Pentecostal Assembly, we are passionate about fulfilling the mission Jesus gave us to love God, love people, and make disciples. Our mission is lived out in four core areas:</p>
                     <Flexwithiconandtextparentdiv items={AboutOurMissionArray}/>
                 </Flexwithgapcstmdivcol>
             
@@ -146,8 +146,8 @@ export const AboutusStartyoursundays = () => {
             <div className="Aboutusstartyoursundaysparentdiv">
                 <div className="aboutusstartchildone">
                     <h1 className="text_cstm_big_heading">Sunday Starts Here</h1>
-                    <p className="text_cstm_normal_para textalign_cstmjustify">Discover a vibrant worship experience that lifts your spirit and deepens your faith every Sunday at 10:00 AM.</p>
-                    <p className="text_cstm_normal_para textalign_cstmjustify">At Geelong Pentecostal Assembly, our Sunday services begin at 10:00 AM, right in the heart of Geelong. Whether you're seeking peace, community, or spiritual growth, one visit can change your week, and your life. Come early, meet new friends, and enjoy an atmosphere filled with worship, prayer, and the living Word of God.</p>
+                    <p className="text_cstm_normal_para textalign_cstmjustify">Discover a vibrant worship experience that lifts your spirit and deepens your faith every Sunday at 10:00 am.</p>
+                    <p className="text_cstm_normal_para textalign_cstmjustify">At Geelong Pentecostal Assembly, our Sunday services begin at 10:00 am, right in the heart of Geelong. Whether you're seeking peace, community, or spiritual growth, one visit can change your week, and your life. Come early, meet new friends, and enjoy an atmosphere filled with worship, prayer, and the living Word of God.</p>
                     <div className="checklistdivaboutus">
                         <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
                             <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 

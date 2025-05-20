@@ -52,6 +52,11 @@ p{
   font-size: 16px;
 }
 
+.primarycolorcstm {
+
+  color: #3c79b0;
+}
+
 @keyframes fadeinUp{
 
   0% {

@@ -151,7 +151,18 @@
     color: #ffffff;
 }
 
+.planyourvisitdiv {
 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mapcstmstyle {
+
+    width: 100%;
+    height: 450px;
+}
 @media screen and (max-width: 1399px) {
     
     .imagedivcontactus {
@@ -291,6 +302,16 @@
 
         font-size: 12px;
     }
+
+    .planyourvisitdiv {
+
+        gap: 15px;
+    }
+
+    .mapcstmstyle {
+
+        height: 340px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -344,5 +365,10 @@
     .inputformcstm::placeholder .inputformmessagecstm::placeholder{
 
         font-size: 10px;
+    }
+
+     .mapcstmstyle {
+
+        height: 250px;
     }
 }
