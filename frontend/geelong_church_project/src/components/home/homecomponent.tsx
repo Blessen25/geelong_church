@@ -33,7 +33,7 @@ export const HomeIntroBanner = () => {
             <div className="textdivcstmhome">
                 <h1>Welcome To <br /> Geelong Pentecostal Assembly <br /></h1>
                 <p> Embracing Diversity, Celebrating Faith</p>
-                <ButtonwithtextComponentColor label={"Connect With Us"} fullwidth={false} route="#" classname="connectwithuscstm"/>
+                <ButtonwithtextComponentColor label={"Connect With Us"} fullwidth={false} route="/contact" classname="connectwithuscstm"/>
             </div>
         </div>
         </>

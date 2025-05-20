@@ -47,6 +47,37 @@ p{
   font-size: 16px;
 }
 
+@keyframes fadeinUp{
+
+  0% {
+
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeOutDown  {
+
+  0% {
+
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  
+}
+
 @media screen and (max-width: 991px) {
   
   .text_cstm_big_heading {
