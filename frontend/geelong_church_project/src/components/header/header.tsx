@@ -33,7 +33,7 @@ const Header = () => {
                             <a href='/' className={`${isActive('/')}`} rel="noopener noreferrer">Home</a>
                             <a href='/about' className={`${isActive('/about')}`} rel="noopener noreferrer">About</a>
                             <a href='/ministries' className={`${isActive('/ministries')}`} rel="noopener noreferrer">Ministries</a>
-                            <a href='/newsletters' className={`${isActive('/newsletters')}`} rel="noopener noreferrer">Newsletters</a>
+                            <a href='/planyourvisit' className={`${isActive('/planyourvisit')}`} rel="noopener noreferrer">Plan Your Visit</a>
                             <a href='/webelieve' className={`${isActive('/webelieve')}`} rel="noopener noreferrer" >We Believe</a>
                             <a href='/contact' className={`${isActive('/contact')}`} rel="noopener noreferrer">Contact</a>    
                         </div>
@@ -47,7 +47,7 @@ const Header = () => {
                     <a href='/' className={`${isActiveSidebar('/')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faHome}/>Home</a>
                     <a href='/about' className={`${isActiveSidebar('/about')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faInfoCircle}/>About</a>
                     <a href='/ministries' className={`${isActiveSidebar('/ministries')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faChurch}/>Ministries</a>
-                    <a href='/newsletters' className={`${isActiveSidebar('/newsletters')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faNewspaper}/>Newsletters</a>
+                    <a href='/planyourvisit' className={`${isActiveSidebar('/planyourvisit')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faNewspaper}/>Plan Your Visit</a>
                     <a href='/webelieve' className={`${isActiveSidebar('/webelieve')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faDove}/>We Believe</a>
                     <a href='/contact' className={`${isActiveSidebar('/contact')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPhone}/>Contact</a> 
                     </div>  

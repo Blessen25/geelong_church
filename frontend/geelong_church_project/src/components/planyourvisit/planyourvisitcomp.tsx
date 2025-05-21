@@ -1,16 +1,16 @@
-import React from "react";
-import './newsletter.css';
+import './planyourvisit.css';
 import { Containercstm, ContainerWidthCstm, TitleinMaindiv } from "../extra";
+import { PlanYourVisitdiv } from "../contact_us/contact";
 
-export const NewletterComponent = () => {
+export const PlanYourVisitComp = () => {
 
     return(
 
         <>
-            <TitleinMaindiv title={"Newsletter"} initialtitle={"Home"} />
+            <TitleinMaindiv title={"Plan Your Visit"} initialtitle={"Home"} />
             <Containercstm>
                 <ContainerWidthCstm>
-                    <h1 style={{textAlign:"center"}}>Comming Soon</h1>
+                    <PlanYourVisitdiv />
                 </ContainerWidthCstm>
             </Containercstm>
         </>

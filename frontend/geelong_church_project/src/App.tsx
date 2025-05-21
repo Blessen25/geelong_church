@@ -7,9 +7,9 @@ import { Footer } from './components/footer/footer';
 import About from './screens/about/about';
 import Contact_Us from './screens/contact/contact';
 import Ministries from './screens/ministries/ministries';
-import Newsletter from './screens/newsletter/newsletter';
 import WeBelieve from './screens/webelieve/webelieve';
 import BibleVerse from './screens/bibleverse/bibleverse';
+import PlanYourVisit from './screens/planyourvisit/planyourvisit';
 
 const App = () =>{
 
@@ -23,7 +23,7 @@ const App = () =>{
             <Route path='/about' element = { <About />} />
             <Route path='/contact' element = { <Contact_Us />} />
             <Route path='/ministries' element = { <Ministries />} />
-            <Route path='/newsletters' element = { <Newsletter />} />
+            <Route path='/planyourvisit' element = { <PlanYourVisit />} />
             <Route path='/webelieve' element = { <WeBelieve/>} />
             <Route path='/bibleverse' element = { <BibleVerse />} />
           </Routes>

@@ -13,7 +13,7 @@ export const WebelieveComp = () => {
                     <h1 className="text_cstm_big_heading">God's Word</h1>
                     <p className="text_cstm_normal_para textalign_cstmjustify">We believe the Bible is the inspired, infallible, and authoritative Word of God. It is the foundation of our faith and the guide for our daily living. Through Scripture, God reveals His nature, His will for humanity, and the path to salvation.</p>
                     <blockquote className="blockquotewebelieve">
-                        <p className="text_cstm_normal_para textalign_cstmjustify">"All Scripture is God-breathed and is useful for teaching, rebuking, correcting and training in righteousness."</p>
+                        <p className="text_cstm_normal_para textalign_cstmjustify">"All Scripture is God breathed and is useful for teaching, rebuking, correcting and training in righteousness."</p>
                         <cite className="text_cstm_normal_para">2 Timothy 3:16</cite>
                     </blockquote>
                     
@@ -34,7 +34,7 @@ export const WebelieveComp = () => {
                     <h1 className="text_cstm_big_heading">The Gift of Salvation</h1>
                     <p className="text_cstm_normal_para textalign_cstmjustify">We believe that salvation is a free gift from God, not earned by works, but received by faith in Jesus Christ. Through His sacrifice, we are forgiven, justified, and made new.</p>
                     <blockquote className="blockquotewebelieve">
-                        <p className="text_cstm_normal_para textalign_cstmjustify">"For it is by grace you have been saved, through faith—and this is not from yourselves, it is the gift of God."</p>
+                        <p className="text_cstm_normal_para textalign_cstmjustify">"For it is by grace you have been saved, through faith and this is not from yourselves, it is the gift of God."</p>
                         <cite className="text_cstm_normal_para">Ephesians 2:8</cite>
                     </blockquote>
 
