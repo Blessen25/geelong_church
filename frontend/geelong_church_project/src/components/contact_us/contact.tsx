@@ -129,7 +129,7 @@ export const PlanYourVisitdiv = () => {
                 <p className="text_cstm_normal_para textalign_cstmjustify">Intercessory Prayer ( Saturday ) : 06:30 pm - 08:30 pm</p>
                 <p className="text_cstm_normal_para textalign_cstmjustify">Fasting Prayer ( 2nd Weekend of every month )</p>
                 <h1 className="text_cstm_medium_heading">Map & Location</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62866.324372587915!2d76.31149169101563!3d10.0048567013403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062785ea4b333b%3A0x1932c7092fddb7e!2sLourdes%20Hospital!5e0!3m2!1sen!2sin!4v1747758930527!5m2!1sen!2sin" className="mapcstmstyle" style= {{ border:0 }} loading="lazy" rel="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.815943614274!2d144.3920993!3d-38.166109999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad415dc3eede4e5%3A0x6fce422d549ac0fd!2sGeelong%20Pentecostal%20Assembly!5e1!3m2!1sen!2sau!4v1747781123451!5m2!1sen!2sau" className="mapcstmstyle" style= {{ border:0 }} loading="lazy" rel="no-referrer-when-downgrade"></iframe>
             </div>
         </>
     )
