@@ -81,6 +81,9 @@
 
     display: flex;
     align-items: stretch;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .childflexcstm:last-child img{
