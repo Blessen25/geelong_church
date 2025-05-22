@@ -202,7 +202,7 @@ export const Popupdiv:React.FC<PopupdivProps> = (Props) => {
                 
                 <>
                     <div className="popupdivchild">
-                        <h1 className="text_cstm_medium_heading textalign_cstmcenter">No Upcoming Events Posted</h1>
+                        <h1 className="text_cstm_medium_heading textalign_cstmcenter" style={{ color:"#8b8b8b"}}>No Upcoming Events Posted</h1>
                     </div>
                 </>}
             </div>  

@@ -27,9 +27,9 @@ export const Footer = () => {
                                 <h2>Pages</h2>
                                 <a href="/" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/')}`}>Home</p></a>
                                 <a href="/about" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/about')}`}>About</p></a>
+                                <a href="/webelieve" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/webelieve')}`}>We Believe</p></a>
                                 <a href="/ministries" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/ministries')}`}>Ministries</p></a>
                                 <a href="/planyourvisit" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/planyourvisit')}`}>Plan Your Visit</p></a>
-                                <a href="/webelieve" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/webelieve')}`}>We Believe</p></a>
                                 <a href="/contact" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/contact')}`}>Contact</p></a>
 
                             </div>
