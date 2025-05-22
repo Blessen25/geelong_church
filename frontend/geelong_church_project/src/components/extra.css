@@ -345,6 +345,12 @@
 
     font-size: 26px;    
     cursor: pointer;
+    transition: all .7s;
+}
+
+.popupcloseicon:hover {
+
+    color: #8b8b8b;
 }
 
 @media screen and (max-width:1399px) {
