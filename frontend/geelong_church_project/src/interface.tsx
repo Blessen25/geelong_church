@@ -92,4 +92,6 @@ export interface PopupdivProps {
     title : string;
     onClickprop ?: () => void;
     children ?: React.ReactNode;
+    eventName ?: string;
+    date ?: string;
 }

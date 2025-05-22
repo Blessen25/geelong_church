@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import './homecomponent.css';
-import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containerdiv, Popupdiv } from "../extra";
+import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containerdiv, Flexwithgapcstmdivcol, Popupdiv } from "../extra";
 import { HomeFourDivChildCompProps, HomeFourDivsProps } from "../../interface";
-import { HomeFourDivChildArray } from "../../array";
+import { Events, HomeFourDivChildArray } from "../../array";
 
 export const HomeComponent = () => {
 
@@ -25,7 +25,21 @@ export const HomeComponent = () => {
             {showPopup && (
                         <>
                             <div className="outlaypopupcstm">
-                                <Popupdiv onClickprop={HandleClosePopup} title="Upcoming Events"/>                               
+                                <Popupdiv onClickprop={HandleClosePopup} title="Upcoming Events" children={
+                                    <>
+                                        <div className="upcomingeventpopup">
+                                            {Events.map((items, index) =>(
+                                              <div key={index} className="upcomingeventpopupchild boxshadowcstm" style={{ backgroundImage : 'url("assets/images/main/dove.jpg")'}}>
+                                                <Flexwithgapcstmdivcol parentClassname="eventsdivcstm">
+                                                    <p className="text_cstm_normal_para upcomingeventparacstm">{items.eventName}</p>
+                                                    <p className="text_cstm_normal_para upcomingeventparacstm">{items.date}</p>
+                                                </Flexwithgapcstmdivcol>
+                                            </div>  
+                                            )
+                                            )}
+                                        </div>
+                                    </>
+                                }/>                               
                             </div>
                         </>
             )}

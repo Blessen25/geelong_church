@@ -321,13 +321,15 @@
 .popupdivparent {
 
     width: 1000px;
-    background-color: white ;
+    max-height: 600px;
+    background-color: #f0f8ff ;
     border-radius: 5px;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow: hidden;
 }
 
 .popupdivchild {
@@ -708,5 +710,6 @@
     .popupdivparent{
 
         width: 94%;
+        max-height: 550px;
     }
 }

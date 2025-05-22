@@ -1,4 +1,5 @@
 import { faBible, faChurch, faGlobe, faHandshake } from "@fortawesome/free-solid-svg-icons"
+import { eventNames } from "process"
 import { text } from "stream/consumers"
 
 export const HomeFourDivChildArray = [
@@ -21,4 +22,11 @@ export const ContactDetailsArray = [
 
     {icon: faChurch, textPara:"Experience Spirit-filled and uplifting worship services.", titleName:"Worship"},
     
+]
+
+export const Events = [
+
+    {eventName: 'Youth Meeting' , date :'June 8th'},
+    {eventName: 'Fasting Prayer' , date :'June 13th, 14th, 15th'}   
+
 ]
