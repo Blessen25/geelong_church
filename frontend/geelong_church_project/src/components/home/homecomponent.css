@@ -246,6 +246,20 @@
     justify-content: space-evenly;
     
 }
+
+.outlaypopupcstm {
+
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media screen and (min-width: 1499px) {
     
     .homefourdivcstm{

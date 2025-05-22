@@ -14,7 +14,6 @@
     align-items: center;
     gap: 100px;
     background-color: white;
-    z-index: 9999999;
     max-width: 1300px;
     margin: auto;
     justify-content: space-between;

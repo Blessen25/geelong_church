@@ -56,6 +56,20 @@ p{
 
   color: #3c79b0;
 }
+.dflexcstm {
+
+  display: flex;
+}
+
+.justifycontentendcstm {
+
+  justify-content: end;
+}
+
+.textalign_cstmcenter {
+
+  text-align: center;
+}
 
 @keyframes fadeinUp{
 

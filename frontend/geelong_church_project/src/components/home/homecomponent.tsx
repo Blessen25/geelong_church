@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import './homecomponent.css';
-import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containerdiv } from "../extra";
-import { HomeFourDivChildCompProps } from "../../interface";
+import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containerdiv, Popupdiv } from "../extra";
+import { HomeFourDivChildCompProps, HomeFourDivsProps } from "../../interface";
 import { HomeFourDivChildArray } from "../../array";
 
 export const HomeComponent = () => {
 
+    const [showPopup, setShowPopup] = useState(false);
+    const HandleOpenPopup = () => setShowPopup(true);
+    const HandleClosePopup = () => setShowPopup(false);
     return (
         <>
             <Containerdiv children={
@@ -14,11 +17,18 @@ export const HomeComponent = () => {
                         <HomeIntroBanner />
                         <HomeflexContents />
                         <HomeQuote />
-                        <Homefourdivs />
+                        <Homefourdivs onClickForUpcomingEvents={HandleOpenPopup}/>
                         <HomeJoinusonComp />
                     </div>
                 </>
             }/>
+            {showPopup && (
+                        <>
+                            <div className="outlaypopupcstm">
+                                <Popupdiv onClickprop={HandleClosePopup} title="Upcoming Events"/>                               
+                            </div>
+                        </>
+            )}
         </>
     )
 }
@@ -87,7 +97,7 @@ export const HomeflexContents = () => {
     )
 }
 
-export const Homefourdivs = () => {
+export const Homefourdivs:React.FC<HomeFourDivsProps> = (Props) => {
     
     return(
         
@@ -95,7 +105,7 @@ export const Homefourdivs = () => {
 
             <div className="homefourdivcstm">
                 {HomeFourDivChildArray.map((items, index) =>(
-                            <HomeFourDivChildComp route={items.route} text={items.text} image={items.image} key={index}/>
+                            <HomeFourDivChildComp route={items.route} text={items.text} image={items.image} onClick={items.text === "Upcoming Events" ? Props.onClickForUpcomingEvents : undefined} key={index}/>
                 ))}
             </div>
         </>
@@ -107,12 +117,19 @@ export const HomeFourDivChildComp:React.FC<HomeFourDivChildCompProps> = (Props) 
     return(
 
         <>
+        {Props.route ? (<>
             <a href={Props.route}>
                 <div className="homefourdivchildcstm">
                     <p>{Props.text}</p>
                     <img src={Props.image} alt="Alt_Image"/>
                 </div>
             </a>
+        </>) : (<>
+                <div className="homefourdivchildcstm" onClick={Props.onClick} style={{ cursor: "pointer" }}>
+                    <p>{Props.text}</p>
+                    <img src={Props.image} alt="Alt_Image"/>
+                </div>
+        </>)}
         </>
     )
 }

@@ -318,11 +318,46 @@
     height: 60px;
 }
 
+.popupdivparent {
+
+    width: 1000px;
+    background-color: white ;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popupdivchild {
+
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 5px;
+
+}
+
+.popupcloseicon {
+
+    font-size: 26px;    
+    cursor: pointer;
+}
+
 @media screen and (max-width:1399px) {
     
     .containerwidthcstm{
         
         max-width: 1100px;
+    }
+
+    .popupdivparent {
+
+        width: 899px;
     }
 }
 
@@ -331,6 +366,11 @@
     .containerwidthcstm{
         
         max-width: 999px;
+    }
+
+    .popupdivparent {
+
+        width: 799px;
     }
 }
 
@@ -390,6 +430,11 @@
     .fontawesomeiconflexcstm {
 
         font-size: 24px;
+    }
+
+    .popupdivparent {
+
+        width: 80%;
     }
     
 }
@@ -505,6 +550,23 @@
     .initialandrealtitle {
     
         gap: 10px;
+    }
+
+    .popupcloseicon {
+
+        font-size: 22px;    
+    }  
+    
+    .popupdivparent {
+
+        width: 90%;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .popupdivchild {
+
+        padding: 15px;
     }
 
 }
@@ -631,5 +693,15 @@
     .chat_whatsapp {
 
         height: 35px;
+    }
+
+    .popupcloseicon {
+
+        font-size: 16px;    
+    }
+
+    .popupdivparent{
+
+        width: 94%;
     }
 }

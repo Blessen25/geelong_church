@@ -27,7 +27,12 @@ export interface HomeFourDivChildCompProps {
     text : string;
     image : string;
     route ?: string;
+    onClick ?: () => void;
 
+}
+
+export interface HomeFourDivsProps {
+  onClickForUpcomingEvents: () => void;
 }
 
 export interface TitleinMaindivProps {
@@ -79,4 +84,12 @@ export interface MinistriesFlexComponentProps {
     imagetwo : string;
     route ?: string;
     reverseclass ?: boolean;
+}
+
+
+export interface PopupdivProps {
+
+    title : string;
+    onClickprop ?: () => void;
+    children ?: React.ReactNode;
 }
