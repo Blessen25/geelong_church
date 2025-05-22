@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { ContactcardDetailsdivProps } from "../../interface";
 import { resolveTxt } from "dns";
+import PhoneNumberField from "../inputs/input";
 
 export const Contact_UsComp = () => {
 
@@ -53,6 +54,9 @@ export const ContactDetailsdiv = () => {
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
+                                    <Flexwithgapcstmdivcol>
+                                        <PhoneNumberField />
+                                    </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Subject</p>
                                         <input type="text" placeholder="Enter Subject" required className="inputformcstm" />

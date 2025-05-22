@@ -1,0 +1,57 @@
+.inputformptag{
+
+    color: #4E4E4E;
+    font-size: 16px;
+}
+
+.react-tel-input .form-control{
+
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    color: #8b8b8b;
+    font-size: 14px;
+    width: 100%;
+}
+
+.react-tel-input .form-control::placeholder {
+
+    color: #8b8b8b;
+}
+
+.react-tel-input .selected-flag {
+
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    outline: none;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .inputformptag {
+
+        font-size: 14px;
+    }
+
+    .react-tel-input .form-control{
+
+        font-size: 12px;
+        height: 36px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .inputformptag {
+
+        font-size: 12px;
+    }
+
+    .react-tel-input .form-control{
+
+        font-size: 10px;
+        height: 30px;
+    }
+}
