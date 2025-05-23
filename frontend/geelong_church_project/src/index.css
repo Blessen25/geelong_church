@@ -24,7 +24,7 @@ p{
 
 .text_cstm_normal_para {
 
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .w-100cstm {
@@ -184,7 +184,7 @@ p{
 
   .text_cstm_normal_para {
 
-    font-size: 14px;
+    font-size: 14px !important;  
   }
 
   .fachecksquareiconcstm {
@@ -212,7 +212,7 @@ p{
 
   .text_cstm_normal_para {
 
-    font-size: 12px;
+    font-size: 12px !important;
   }
 
   .fachecksquareiconcstm {

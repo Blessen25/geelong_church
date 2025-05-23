@@ -355,7 +355,7 @@
     
     .imagecstmdivhome {
 
-        height: 650px;
+        height: 550px;
     }
 
     .joinusondivcstm{
@@ -373,6 +373,22 @@
         max-width: 1100px;
     }
 
+    .textdivcstmhome h1{
+
+        font-size: 34px;
+    }
+
+    .textdivcstmhome p {
+
+        font-size: 16px;
+    }
+
+    .textdivcstmhome blockquote {
+    
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
 }
 
 @media screen and (max-width: 1199px) {
@@ -386,6 +402,8 @@
 
         max-width: 999px;
     }
+
+    
 }
 
 @media screen and (max-width: 1099px) {
@@ -423,21 +441,6 @@
     .mainhome {
 
         max-width: 899px;
-    }
-
-    .textdivcstmhome h1{
-
-        font-size: 40px;
-    }
-
-    .textdivcstmhome blockquote{
-
-        font-size: 18px;
-    }
-
-    .textdivcstmhome p {
-
-        font-size: 20px;
     }
 }
 
@@ -508,6 +511,27 @@
         width: 100%;
     }
 
+    .textdivcstmhome h1{
+
+        font-size: 28px;
+    }
+
+    .textdivcstmhome p {
+
+        font-size: 16px;
+    }
+
+    .textdivcstmhome blockquote {
+    
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .imagecstmdivhome {
+
+        height: 450px;
+    }
+
 }
 
 
@@ -531,7 +555,7 @@
     
     .imagecstmdivhome {
 
-        height: 450px;
+        height: 400px;
     }
 
     .parentflexcstm {
@@ -623,18 +647,18 @@
 
     .textdivcstmhome h1{
 
-        font-size: 28px;
-    }
-
-    .textdivcstmhome blockquote{
-
-        font-size: 14px;
-        margin-top: 10px;
+        font-size: 24px;
     }
 
     .textdivcstmhome p {
 
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    .textdivcstmhome blockquote {
+    
+        font-size: 14px;
+        margin-top: 10px;
     }
 
     .homebackgroundbuttondiv {
@@ -740,20 +764,20 @@
         font-size: 20px;
     }
 
-    .textdivcstmhome blockquote{
-
-        font-size: 12px;
-        margin-top: 10px;
-    }
-
     .textdivcstmhome p {
 
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .textdivcstmhome blockquote {
+    
+        font-size: 12px;
+        margin-top: 0px;
     }
 
     .homebackgroundbuttondiv {
-
-        margin-top: 5px;
+        
+        margin-top: 0px;
     }
 
 }
@@ -806,24 +830,4 @@
         right: 20px;
     }
 
-    .textdivcstmhome h1{
-
-        font-size: 18px;
-    }
-
-    .textdivcstmhome blockquote{
-
-        font-size: 9px;
-        margin-top: 10px;
-    }
-
-    .textdivcstmhome p {
-
-        font-size: 12px;
-    }
-
-    .homebackgroundbuttondiv {
-
-        margin-top: 10px;
-    }
 }
