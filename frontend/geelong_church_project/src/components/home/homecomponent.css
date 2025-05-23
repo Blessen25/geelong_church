@@ -189,19 +189,16 @@
     position: relative;
     height: 500px;
     border-radius: 5px;
-}
-
-.joinusondivcstm img {
-
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .joinusondivtext {
 
-    position: absolute;
     color: white;
     top: 150px;
     display: flex;
@@ -213,13 +210,16 @@
 .joinusondivtext h1 {
 
     font-size: 50px;
+    text-align: center;
 }
 
 .joinusondivtext p {
 
-    font-size: 30px;
+    font-size: 26px;
     color: white;
     font-weight: 700;
+    text-align: center;
+
 }
 
 .joinusondivbutton {
@@ -363,10 +363,6 @@
         height: 400px;
     }
 
-    .joinusondivtext {
-
-        top: 110px;
-    }
 
     .mainhome {
 
@@ -388,6 +384,17 @@
         font-size: 16px;
         margin-top: 15px;
     }
+
+    .joinusondivtext h1 {
+
+        font-size: 34px;
+    }
+
+    .joinusondivtext p {
+
+        font-size: 16px;
+    }
+
 
 }
 
@@ -449,12 +456,7 @@
 
     .joinusondivtext h1 {
 
-        font-size: 36px;
-    }
-
-    .joinusondivtext p {
-
-        font-size: 22px;
+        font-size: 28px;
     }
 
     .childflexcstm p{
@@ -665,20 +667,30 @@
 
         margin-top: 10px;
     }
+
+     .joinusondivtext h1 {
+
+        font-size: 24px;
+    }
+
+     .joinusondivtext p {
+
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width : 575px) {
     
 
 
-    .joinusondivtext h1 {
+     .joinusondivtext h1 {
 
         font-size: 20px;
     }
 
-    .joinusondivtext p {
+     .joinusondivtext p {
 
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .imagecstmdivhome {
@@ -785,17 +797,6 @@
 
 @media screen and (max-width: 426px) {
     
-
-
-    .joinusondivtext h1 {
-
-        font-size: 18px;
-    }
-
-    .joinusondivtext p {
-
-        font-size: 10px;
-    }
 
     .childflexcstm:last-child {
 

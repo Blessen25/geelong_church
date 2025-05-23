@@ -163,8 +163,7 @@ export const HomeJoinusonComp = () => {
     return(
 
         <>
-            <div className="joinusondivcstm">
-                <img src="../assets/images/main/reading_bible.jpg" alt="Join us" />
+            <div className="joinusondivcstm" style={{ backgroundImage: "url('../assets/images/main/reading_bible.jpg')"}}>
                 <div className="joinusondivtext">
                     <h1>Join Us On!</h1>
                     <p>Every Sunday at 10:00 AM</p>
