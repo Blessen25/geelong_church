@@ -131,7 +131,7 @@ export const AboutOurMinistriesdiv = () => {
                         <img src="assets/images/main/Intercessoryprayer.jpg" alt="ministries" className="imagedivrowcstmabout"/>
                     </Flexwithgapcstmdivrow>
                     <div className="aboutminsitriesbtncstm">
-                        <ButtonwithtextComponentColor label={"Explore Our Minsitries"} fullwidth={false} classname="exploreministriesbtncstm"/>
+                        <ButtonwithtextComponentColor label={"Explore Our Minsitries"} fullwidth={false} classname="exploreministriesbtncstm" route="/ministries"/>
                     </div>
                 </Flexwithgapcstmdivcol>
         </>
