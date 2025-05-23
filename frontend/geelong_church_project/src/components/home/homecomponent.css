@@ -533,6 +533,22 @@
 
         height: 450px;
     }
+    
+    .parentflexcstm {
+
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .childflexcstm {
+
+        width: 100%;
+    }
+
+    .childflexcstm:last-child {
+
+        display: none;
+    }
 
 }
 
@@ -540,6 +556,10 @@
 @media screen and (max-width: 767px) {
 
 
+    .childflexcstm:last-child {
+
+        display: block;
+    }
     .joinusondivtext h1 {
 
         font-size: 30px;
@@ -562,7 +582,6 @@
 
     .parentflexcstm {
 
-        flex-wrap: wrap;
         gap: 15px;
     }
 
