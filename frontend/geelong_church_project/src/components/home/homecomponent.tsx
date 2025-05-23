@@ -66,7 +66,7 @@ export const HomeIntroBanner = () => {
                     <cite>Matthew 18:20</cite>
                 </blockquote>
                 <div className="homebackgroundbuttondiv">
-                    <ButtonwithtextComponent label="Connect With Us" route="" fullwidth={false}/>
+                    <ButtonwithtextComponent label="Connect With Us" route="/contact" fullwidth={false}/>
                 </div>
             </div>
         </div>
