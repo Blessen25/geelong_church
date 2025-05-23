@@ -298,6 +298,7 @@
     background-color: #25d467;
     transition: all .7s;
     gap: 10px;
+    text-decoration: none;
 }
 
 .chat_whatsapp:hover {
@@ -305,9 +306,8 @@
     background-color: #00826A;
 }
 
-.chat_whatsapp a {
+.chat_whatsapp p {
 
-    text-decoration: none;
     color: white;
 }
 
@@ -553,7 +553,7 @@
         font-size: 11px;
     }
 
-    .chat_whatsapp a {
+    .chat_whatsapp p {
 
         font-size: 14px;
     }
@@ -706,7 +706,7 @@
         font-size: 10px;
     }
 
-    .chat_whatsapp a {
+    .chat_whatsapp p {
 
         font-size: 10px;
     }
