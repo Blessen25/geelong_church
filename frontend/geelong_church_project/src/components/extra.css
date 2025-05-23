@@ -7,6 +7,11 @@
     overflow: hidden;
 }
 
+.paddingcstmhomediv {
+
+    padding: 120px 0px 0px 0px;
+}
+
 .normalcontainercstm {
 
     padding: 30px 50px;
@@ -443,6 +448,11 @@
 
         width: 80%;
     }
+
+    .paddingcstmhomediv {
+
+        padding: 100px 0px 0px 0px;
+    }
     
 }
 
@@ -576,6 +586,10 @@
         padding: 15px;
     }
 
+    .paddingcstmhomediv {
+
+        padding-top: 80px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -711,5 +725,10 @@
 
         width: 94%;
         max-height: 550px;
+    }
+
+    .paddingcstmhomediv {
+
+        padding-top: 70px;
     }
 }

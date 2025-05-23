@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './homecomponent.css';
-import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containerdiv, Flexwithgapcstmdivcol, Popupdiv } from "../extra";
+import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containercstm, Containerdiv, ContainerWidthCstm, Flexwithgapcstmdivcol, Paddingtopdivhome, Popupdiv } from "../extra";
 import { HomeFourDivChildCompProps, HomeFourDivsProps } from "../../interface";
 import { Events, HomeFourDivChildArray } from "../../array";
 
@@ -11,17 +11,18 @@ export const HomeComponent = () => {
     const HandleClosePopup = () => setShowPopup(false);
     return (
         <>
-            <Containerdiv children={
+        <Paddingtopdivhome>
+        <HomeIntroBanner />
+            <Containercstm>
                 <>
-                    <div className="mainhome">
-                        <HomeIntroBanner />
+                    <ContainerWidthCstm>
                         <HomeflexContents />
                         <HomeQuote />
                         <Homefourdivs onClickForUpcomingEvents={HandleOpenPopup}/>
                         <HomeJoinusonComp />
-                    </div>
+                    </ContainerWidthCstm>
                 </>
-            }/>
+            </Containercstm>
             {showPopup && (
                         <>
                             <div className="outlaypopupcstm">
@@ -43,7 +44,9 @@ export const HomeComponent = () => {
                             </div>
                         </>
             )}
+        </Paddingtopdivhome>
         </>
+        
     )
 }
 
@@ -52,12 +55,19 @@ export const HomeIntroBanner = () => {
     return (
 
         <>
-        <div className="imagecstmdivhome">
-            <img src="../assets/images/main/handraising.jpg" alt="Workship" className="imageonecstm"/>
+        <div className="imagecstmdivhome" style={{ backgroundImage : 'url("assets/images/main/bibleone.jpg")'}}> 
             <div className="textdivcstmhome">
-                <h1>Welcome To <br /> Geelong Pentecostal Assembly <br /></h1>
-                <p> Embracing Diversity, Celebrating Faith</p>
-                <ButtonwithtextComponentColor label={"Connect With Us"} fullwidth={false} route="/contact" classname="connectwithuscstm"/>
+                <h1>Welcome to</h1>
+                <h1>Geelong Pentecostal Assembly</h1>
+                <p>A Community Rooted in Love, Faith & Hope</p>
+                <p>Join us in Worship, Fellowship, and Spiritual Growth</p>
+                <blockquote>
+                    "For where two or three gather in my name, there am I with them."
+                    <cite>Matthew 18:20</cite>
+                </blockquote>
+                <div className="homebackgroundbuttondiv">
+                    <ButtonwithtextComponent label="Connect With Us" route="" fullwidth={false}/>
+                </div>
             </div>
         </div>
         </>

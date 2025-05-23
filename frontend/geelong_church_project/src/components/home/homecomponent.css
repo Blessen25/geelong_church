@@ -11,10 +11,17 @@
 .imagecstmdivhome {
 
     width: 100%;
-    height: 500px;
+    height: 750px;
     display: flex;
     flex-direction: column;
     position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
 }
 
 .imageonecstm {
@@ -22,32 +29,8 @@
     object-fit: cover;
     height: 100%;
     object-position: top;
-    border-radius: 5px;
 }
 
-.textdivcstmhome {
-
-    position: absolute;
-    width: 750px;
-    right: 20px;
-    top: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.textdivcstmhome h1 {
-
-    color: #ffffff;
-    font-size: 50px;
-}
-
-.textdivcstmhome p {
-
-    color: white;
-    font-size: 30px;
-    font-weight: 700;
-}
 
 .homeintrodiv {
 
@@ -308,6 +291,52 @@
     padding: 15px;
 }
 
+.textdivcstmhome {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textdivcstmhome h1{
+
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.textdivcstmhome blockquote{
+
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+    font-weight: 600;
+    animation: fadeinLeft 1s ease-in-out;
+}
+
+.textdivcstmhome p {
+
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    animation: fadeinRight 1s ease-in-out;
+
+}
+
+.homebackgroundbuttondiv {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    animation: fadeinRight 1s ease-in-out;
+}
+
 @media screen and (min-width: 1499px) {
     
     .homefourdivcstm{
@@ -326,12 +355,7 @@
     
     .imagecstmdivhome {
 
-        height: 400px;
-    }
-
-    .textdivcstmhome {
-
-        top: 70px;
+        height: 650px;
     }
 
     .joinusondivcstm{
@@ -368,7 +392,7 @@
     
     .imagecstmdivhome {
 
-        height: 380px;
+        height: 550px;
     }
 
     .joinusondivcstm{
@@ -400,40 +424,34 @@
 
         max-width: 899px;
     }
+
+    .textdivcstmhome h1{
+
+        font-size: 40px;
+    }
+
+    .textdivcstmhome blockquote{
+
+        font-size: 18px;
+    }
+
+    .textdivcstmhome p {
+
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 991px) {
     
-    .textdivcstmhome h1{
-
-        font-size: 36px;
-    }
 
     .joinusondivtext h1 {
 
         font-size: 36px;
     }
 
-    .textdivcstmhome p {
-
-        font-size: 22px;
-    }
-
     .joinusondivtext p {
 
         font-size: 22px;
-    }
-
-    .textdivcstmhome {
-
-        width: 540px;
-        right: 20px;
-        top: 50px;
-    }
-    
-    .imagecstmdivhome {
-
-        height: 320px;
     }
 
     .childflexcstm p{
@@ -495,15 +513,6 @@
 
 @media screen and (max-width: 767px) {
 
-    .textdivcstmhome h1{
-
-        font-size: 30px;
-    }
-
-    .textdivcstmhome p{
-
-        font-size: 18px;
-    }
 
     .joinusondivtext h1 {
 
@@ -519,16 +528,10 @@
 
         gap: 15px;
     }
-
-    .textdivcstmhome {
-
-        width: 450px;
-        gap: 15px;
-    }
     
     .imagecstmdivhome {
 
-        height: 270px;
+        height: 450px;
     }
 
     .parentflexcstm {
@@ -617,20 +620,32 @@
     .homequotediv blockquote {
         gap: 15px;
     }
+
+    .textdivcstmhome h1{
+
+        font-size: 28px;
+    }
+
+    .textdivcstmhome blockquote{
+
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .textdivcstmhome p {
+
+        font-size: 16px;
+    }
+
+    .homebackgroundbuttondiv {
+
+        margin-top: 10px;
+    }
 }
 
 @media screen and (max-width : 575px) {
     
 
-    .textdivcstmhome h1 {
-
-        font-size: 20px;
-    }
-    
-    .textdivcstmhome p{
-
-        font-size: 13px;
-    }
 
     .joinusondivtext h1 {
 
@@ -644,17 +659,9 @@
 
     .imagecstmdivhome {
 
-        height: 200px;
+        height: 380px;
     }
 
-    .textdivcstmhome {
-
-        width: 100%;
-        top: 36px;
-        right: 0px;
-        gap: 15px;
-        padding: 10px;       
-    }
 
     .connectwithuscstm {
 
@@ -728,21 +735,33 @@
         height: 250px;
     }
 
+    .textdivcstmhome h1{
+
+        font-size: 20px;
+    }
+
+    .textdivcstmhome blockquote{
+
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .textdivcstmhome p {
+
+        font-size: 14px;
+    }
+
+    .homebackgroundbuttondiv {
+
+        margin-top: 5px;
+    }
 
 }
 
 
 @media screen and (max-width: 426px) {
     
-    .textdivcstmhome h1 {
 
-        font-size: 18px;
-    }
-
-    .textdivcstmhome p {
-
-        font-size: 10px;
-    }
 
     .joinusondivtext h1 {
 
@@ -752,16 +771,6 @@
     .joinusondivtext p {
 
         font-size: 10px;
-    }
-
-    .textdivcstmhome {
-
-        top: 28px;
-    }
-    
-    .imagecstmdivhome {
-
-        height: 175px;
     }
 
     .childflexcstm:last-child {
@@ -797,4 +806,24 @@
         right: 20px;
     }
 
+    .textdivcstmhome h1{
+
+        font-size: 18px;
+    }
+
+    .textdivcstmhome blockquote{
+
+        font-size: 9px;
+        margin-top: 10px;
+    }
+
+    .textdivcstmhome p {
+
+        font-size: 12px;
+    }
+
+    .homebackgroundbuttondiv {
+
+        margin-top: 10px;
+    }
 }

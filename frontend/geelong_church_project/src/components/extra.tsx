@@ -16,6 +16,16 @@ export const Containerdiv:React.FC<ContainerdivProps> = (Props) => {
     )
 }
 
+export const Paddingtopdivhome:React.FC<ContainerdivProps> = (Props) => {
+    return(
+        <>
+            <div className={`paddingcstmhomediv ${Props.styles ? Props.styles : ''}`}>
+                {Props.children}
+            </div>
+        </>
+    )
+}
+
 export const ButtonwithtextComponentColor:React.FC<ButtonwithtextComponentProps> = (Props) => {
 
     return(
