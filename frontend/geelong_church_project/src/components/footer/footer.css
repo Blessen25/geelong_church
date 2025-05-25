@@ -56,7 +56,7 @@
 .footerdiv2cstmpages {
 
     /* border: 2px solid black; */
-    width: 110px;
+    width: 115px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -273,6 +273,11 @@
     #footer{
 
         max-width: 899px;
+    }
+
+    .footerdiv2cstmpages  {
+
+        width: 130px;
     }
 }
 
