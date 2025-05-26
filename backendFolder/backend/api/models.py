@@ -40,6 +40,6 @@ class Event(models.Model):
         return self.event_name
     
     class Meta:
-        ordering = ['event_date']
+        ordering = ['-event_date']
 
     
