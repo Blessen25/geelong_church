@@ -1,3 +1,15 @@
 from django.shortcuts import render
+from rest_framework import generics
+from .models import Contact, Event
+from .serializers import ContactSerializer, EventSerializer
 
 # Create your views here.
+
+
+class ContactListCreateView(generics.ListCreateAPIView):
+    queryset = Contact.objects.filter(is_deleted = False)
+    serializer_class = ContactSerializer
+
+class EventListCreateView(generics.ListCreateAPIView):
+    queryset = Event.objects.filter(is_deleted = False)
+    serializer_class = EventSerializer
