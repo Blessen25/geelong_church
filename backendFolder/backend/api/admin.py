@@ -6,11 +6,12 @@ from .models import Contact, Event
 
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name','email','phone_number','subject','message','created_at','is_deleted','deleted_at')
-    list_filter = ('is_deleted','created_at')
-    search_fields = ('name','email','phone_number','subject','message')
+    list_display = ('name','email','phone_number','subject','message','country', 'created_at','is_deleted','deleted_at')
+    list_filter = ('is_deleted','created_at','country')
+    search_fields = ('name','email','phone_number','subject','message','country')
     date_hierarchy = 'created_at'
     actions = ['soft_delete']
+    readonly_fields = ('deleted_at','country')
 
     def soft_delete(self, request, queryset):
         queryset.update(is_deleted=True, deleted_at = timezone.now())
@@ -22,6 +23,7 @@ class EventAdmin(admin.ModelAdmin):
     search_fields = ('event_name','event_date')
     date_hierarchy = 'created_at'
     actions = ['soft_delete']
+    readonly_fields = ('deleted_at',)
 
     def soft_delete(self, request, queryset):
         queryset.update(is_deleted=True, deleted_at = timezone.now())
