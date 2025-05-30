@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import ContactListCreateView, EventListCreateView
+from .views import ContactListCreateView, EventListCreateView, Home
+from . import views
 
 urlpatterns = [
 

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from .models import Contact, Event
 from .serializers import ContactSerializer, EventSerializer
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -13,3 +14,7 @@ class ContactListCreateView(generics.ListCreateAPIView):
 class EventListCreateView(generics.ListCreateAPIView):
     queryset = Event.objects.filter(is_deleted = False)
     serializer_class = EventSerializer
+
+
+def Home(request):
+    return HttpResponse("Hello world")
