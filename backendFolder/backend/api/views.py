@@ -17,7 +17,10 @@ class EventListCreateView(generics.ListCreateAPIView):
 
 
 def Home(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')
 
 def Login(request):
     return render(request, 'login.html')
+
+def Base(request):
+    return render(request, 'base.html')

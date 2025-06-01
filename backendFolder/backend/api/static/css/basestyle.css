@@ -1,0 +1,10 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

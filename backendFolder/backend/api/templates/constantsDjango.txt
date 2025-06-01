@@ -1,0 +1,7 @@
+font used = {
+
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
