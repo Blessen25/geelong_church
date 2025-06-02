@@ -7,11 +7,20 @@
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
     font-style: normal;
+
+    h1 {
+
+        background-color: white;
+    }
+
+    p {
+
+        background-color: white;
+    }
 }
 
 .cstmfullbase-class {
 
-    border: 2px solid black;
     justify-content: space-between;
     padding: 20px 10px;
     height: 100%;
