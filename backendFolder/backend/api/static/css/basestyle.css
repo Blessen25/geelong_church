@@ -39,6 +39,7 @@
     justify-content: center;
     border-radius: 5px;
     background-color: white;
+    height: 100%;
 }
 
 .cstmcontent {
@@ -47,7 +48,10 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    gap: 20px;
 }
 
 .cstmcontentheader {
@@ -59,4 +63,9 @@
 .cstmcontentheaderh1tag {
 
     font-size: 14px;
+}
+
+.cstmcontenttableh1tag {
+
+    font-size: 24px;
 }
