@@ -49,3 +49,14 @@
     border-radius: 5px;
     padding: 20px;
 }
+
+.cstmcontentheader {
+
+    background-color: white;
+    justify-content: space-between;
+}
+
+.cstmcontentheaderh1tag {
+
+    font-size: 14px;
+}

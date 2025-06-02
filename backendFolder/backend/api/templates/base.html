@@ -15,6 +15,9 @@
             {% include 'partials/sidebar.html' %}
         </div>
         <div class="cstmcontent">
+            <div class="w-100 d-flex cstmcontentheader">
+                <h1 class="cstmcontentheaderh1tag">Pages / {% block pages_header %}{% endblock %}</h1>
+            </div>
             {% block content %}
             {% endblock %}
         </div>
