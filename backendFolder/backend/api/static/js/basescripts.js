@@ -2,7 +2,7 @@ function showDeleteModal(eventId) {
 
     console.log("Show")
     const form = document.getElementById('deleteForm');
-    form.action = 'event/delete/${eventId}/';
+    form.action = '/api/event/delete/${eventId}/';
     document.getElementById('deleteModal').style.display = 'block'; 
     document.getElementById('deleteModalOverlay').style.display = 'block';
 }
