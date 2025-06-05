@@ -59,26 +59,15 @@
             </tr>
         </thead>
         <tbody>
+            {% for event in events %}
             <tr>
-            <th scope="row" class="px-3 text-nowrap">1</th>
-            <td class="px-3 text-nowrap">Mark</td>
-            <td class="px-3 text-nowrap">Otto</td>
+            <th scope="row" class="px-3 text-nowrap">{{ forloop.counter }}</th>
+            <td class="px-3 text-nowrap">{{ event.event_name }}</td>
+            <td class="px-3 text-nowrap">{{ event.event_date }}</td>
             <td class="px-3 text-nowrap actionbuttondiv"><i class="fa-regular fa-pen-to-square"></i><i class="fa-regular fa-trash-can"></i></td>
             </tr>
-            <tr>
-            <th scope="row" class="px-3 text-nowrap">2</th>
-            <td class="px-3 text-nowrap">Mark</td>
-            <td class="px-3 text-nowrap">Otto</td>
-            <td class="px-3 text-nowrap actionbuttondiv"><i class="fa-regular fa-pen-to-square"></i><i class="fa-regular fa-trash-can"></i></td>
-
-            </tr>
-            <tr>
-            <th scope="row" class="px-3 text-nowrap">3</th>
-            <td class="px-3 text-nowrap">Mark</td>
-            <td class="px-3 text-nowrap">Otto</td>
-            <td class="px-3 text-nowrap actionbuttondiv"><i class="fa-regular fa-pen-to-square"></i><i class="fa-regular fa-trash-can"></i></td>
-
-            </tr>
+            {% endfor %}
+            
         </tbody>
     </table>
     <div class="viewmorebuttondiv">

@@ -17,10 +17,12 @@ class EventListCreateView(generics.ListCreateAPIView):
 
 
 def Home(request):
-    return render(request, 'home.html')
+    events = Event.objects.filter(is_deleted = False)
+    return render(request, 'home.html', {'events' : events})
 
 def Login(request):
     return render(request, 'login.html')
 
 def Base(request):
     return render(request, 'base.html')
+
