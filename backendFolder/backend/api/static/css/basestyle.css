@@ -107,3 +107,20 @@
     color: #3c79b0;
     border: 1px solid #3c79b0;
 }
+
+
+.fa-pen-to-square {
+
+    color: rgb(0, 194, 0);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.fa-trash-can {
+
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 40px;
+
+}
