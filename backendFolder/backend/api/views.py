@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from rest_framework import generics
 from .models import Contact, Event
 from .serializers import ContactSerializer, EventSerializer
@@ -26,3 +26,7 @@ def Login(request):
 def Base(request):
     return render(request, 'base.html')
 
+
+def event_edit(request, pk):
+    event = get_object_or_404(Event, pk = pk)
+    
