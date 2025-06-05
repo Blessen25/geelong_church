@@ -64,7 +64,10 @@
             <th scope="row" class="px-3 text-nowrap">{{ forloop.counter }}</th>
             <td class="px-3 text-nowrap">{{ event.event_name }}</td>
             <td class="px-3 text-nowrap">{{ event.event_date }}</td>
-            <td class="px-3 text-nowrap actionbuttondiv"><i class="fa-regular fa-pen-to-square"></i><i class="fa-regular fa-trash-can"></i></td>
+            <td class="px-3 text-nowrap actionbuttondiv">
+                <i class="fa-regular fa-pen-to-square"></i>
+                <i class="fa-regular fa-trash-can" onclick="showDeleteModal('{{ event.id }}')"></i>
+            </td>
             </tr>
             {% endfor %}
             
@@ -72,5 +75,15 @@
     </table>
     <div class="viewmorebuttondiv">
         <a href="#" class="viewmorebutton">View More</a>
+    </div>
+
+
+    <div id="deleteModalOverlay" class="modal-overlay"></div>
+    <div id="deletModal" class="delete-modal">
+        <p>Are you sure you want to delete this event?</p>
+        <div class="deletemodalbuttondiv">
+            <a href="#" class="deletebuttonNo">No</a>
+            <a href="#" class="deletebuttonYes">Yes</a>
+        </div>
     </div>
 {% endblock content %}

@@ -3,6 +3,7 @@ from rest_framework import generics
 from .models import Contact, Event
 from .serializers import ContactSerializer, EventSerializer
 from django.http import HttpResponse
+from .forms import EventForm
 
 # Create your views here.
 
@@ -29,4 +30,18 @@ def Base(request):
 
 def event_edit(request, pk):
     event = get_object_or_404(Event, pk = pk)
-    
+    if request.method == 'POST':
+        form = EventForm(request.POST, instance = event)
+        if form.is_valid():
+            form.save()
+    else:
+        form = EventForm(instance = event)
+    return render(request, 'home.html', {'form' : form})
+
+def event_delete(request, pk):
+    event = get_object_or_404(Event, pk = pk)
+    if request.method == 'POST':
+        event.is_deleted = True
+        event.deleted_at = timezone.now()
+        event.save()
+    return redirect('home')
