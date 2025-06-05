@@ -286,7 +286,7 @@ class Contact(models.Model):
 
 class Event(models.Model):
     event_name = models.CharField(max_length=100)
-    event_date = models.DateTimeField()
+    event_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField(default=False)
     deleted_at = models.DateTimeField(null=True, blank=True)
