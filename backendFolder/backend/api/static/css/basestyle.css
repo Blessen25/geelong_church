@@ -215,3 +215,39 @@
     gap: 20px;
     background-color: white;
 }
+
+.editmodalcstmlabel {
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: start;
+}
+
+.editmodalcstmlabel label {
+
+    background-color: white;
+}
+
+.editmodalcstminput {
+
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 350px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.editmodalSubmitButtons {
+
+    width: 100%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    gap: 20px;
+}
