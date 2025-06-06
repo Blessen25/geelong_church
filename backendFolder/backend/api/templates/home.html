@@ -66,7 +66,7 @@
             <td class="px-3 text-nowrap">{{ event.event_date }}</td>
             <td class="px-3 text-nowrap actionbuttondiv">
                 <i class="fa-regular fa-pen-to-square"></i>
-                <i class="fa-regular fa-trash-can" onclick="showDeleteModal('{{ event.id }}')"></i>
+                <i class="fa-regular fa-trash-can" onclick="showDeleteModal({{ event.id }})"></i>
             </td>
             </tr>
             {% endfor %}
@@ -84,7 +84,7 @@
         <form id="deleteForm" class="deletemodalbuttondiv" method="post">
             {% csrf_token %}
             <a href="#" class="deletebuttonNo" onclick="closeDeleteModal()">No</a>
-            <a href="#" class="deletebuttonYes" >Yes</a>
+            <a href="#" class="deletebuttonYes" onclick="document.getElementById('deleteForm').submit();">Yes</a>
         </form>
     </div>
 {% endblock content %}

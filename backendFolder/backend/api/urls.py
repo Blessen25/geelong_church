@@ -6,6 +6,6 @@ urlpatterns = [
 
     path('contact/',ContactListCreateView.as_view()),
     path('event/',EventListCreateView.as_view()),
-    path('event/delete/<int:event_id>/',event_delete,name='event-delete'),
+    path('event/delete/<int:event_id>/',event_delete,name='event_delete'),
     
 ]

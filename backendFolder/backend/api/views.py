@@ -4,6 +4,7 @@ from .models import Contact, Event
 from .serializers import ContactSerializer, EventSerializer
 from django.http import HttpResponse
 from .forms import EventForm
+from django.utils import timezone
 
 # Create your views here.
 
@@ -38,8 +39,8 @@ def event_edit(request, pk):
         form = EventForm(instance = event)
     return render(request, 'home.html', {'form' : form})
 
-def event_delete(request, pk):
-    event = get_object_or_404(Event, pk = pk)
+def event_delete(request, event_id):
+    event = get_object_or_404(Event, pk = event_id)
     if request.method == 'POST':
         event.is_deleted = True
         event.deleted_at = timezone.now()
