@@ -2,9 +2,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 from rest_framework import generics
 from .models import Contact, Event
 from .serializers import ContactSerializer, EventSerializer
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .forms import EventForm
 from django.utils import timezone
+import json
+
 
 # Create your views here.
 
@@ -29,15 +31,19 @@ def Base(request):
     return render(request, 'base.html')
 
 
-def event_edit(request, pk):
-    event = get_object_or_404(Event, pk = pk)
+def edit_event(request, id):
     if request.method == 'POST':
-        form = EventForm(request.POST, instance = event)
-        if form.is_valid():
-            form.save()
-    else:
-        form = EventForm(instance = event)
-    return render(request, 'home.html', {'form' : form})
+        data = json.loads(request.body)
+        try: 
+            event = Event.objects.get(id = id)
+            event.event_name = data['event_name']
+            event.event_date = data['event_date']
+            event.save()
+            return JsonResponse({'status': 'success'})
+        except Event.DoesNotExist:
+            return JsonResponse({'status': 'not found'}, status = 404)
+    return JsonResponse({'status':'bad request'},status= 400)
+
 
 def event_delete(request, event_id):
     event = get_object_or_404(Event, pk = event_id)
