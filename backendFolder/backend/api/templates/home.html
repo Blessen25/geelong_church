@@ -66,8 +66,8 @@
                 <td class="px-3 text-nowrap">{{ event.event_name }}</td>
                 <td class="px-3 text-nowrap">{{ event.event_date }}</td>
                 <td class="px-3 text-nowrap actionbuttondiv">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    <i class="fa-regular fa-trash-can" onclick="showDeleteModal({{ event.id }})"></i>
+                    <i class="fa-regular fa-pen-to-square" onclick="showEditModal('{{ event.id }}', '{{ event.event_name|escapejs }}', '{{ event.event_date }}')"></i>
+                    <i class="fa-regular fa-trash-can" onclick="showDeleteModal('{{ event.id }}')"></i>
                 </td>
                 </tr>
                 {% endfor %}
@@ -94,8 +94,8 @@
         </form>
     </div>
 
-    <div id="EditModalOverlay" class="modal-overlay"></div>
-    <div id="EditModel" class="delete-modal">
+    <div id="EditModalOverlay" class="modal-overlay" style="display: none;"></div>
+    <div id="EditModel" class="delete-modal" style="display: none;">
         <form class="editmodalcstm">
             <p>Edit Event</p>
             <div class="editmodalcstmlabel">
