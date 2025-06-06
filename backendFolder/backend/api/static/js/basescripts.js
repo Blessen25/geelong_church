@@ -20,7 +20,9 @@ function closeDeleteModal() {
 
 function showEditModal(Id,name, date){
 
-    console.log("Event id ==",Id)
-    console.log("Event name ==",name)
-    console.log("Event date ==",date)
+    document.getElementById('editEventId').value=Id;
+    document.getElementById('editEventName').value=name;
+    document.getElementById('editEventDate').value=date;
+    document.getElementById('EditModel').style.display = 'block'; 
+    document.getElementById('EditModalOverlay').style.display = 'block';
 }
