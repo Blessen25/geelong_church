@@ -60,7 +60,7 @@
         </thead>
         <tbody>
             {% if events %}
-                {% for event in events %}
+                {% for event in events|slice:":5" %}
                 <tr>
                 <th scope="row" class="px-3 text-nowrap">{{ forloop.counter }}</th>
                 <td class="px-3 text-nowrap">{{ event.event_name }}</td>
@@ -91,6 +91,13 @@
             {% csrf_token %}
             <a href="#" class="deletebuttonNo" onclick="closeDeleteModal()">No</a>
             <a href="#" class="deletebuttonYes" onclick="document.getElementById('deleteForm').submit();">Yes</a>
+        </form>
+    </div>
+
+    <div id="EditModalOverlay" class="modal-overlay"></div>
+    <div id="EditModel" class="delete-modal">
+        <form class="editmodalcstm">
+            <p>Edit Event</p>
         </form>
     </div>
 {% endblock content %}
