@@ -100,15 +100,17 @@
             <p>Edit Event</p>
             <div class="editmodalcstmlabel">
                 <label>Event Name</label>
-                <input type="text" name="event_name" class="editmodalcstminput">
+                <input type="text" name="event_name" class="editmodalcstminput" id="editEventName">
             </div>
             <div class="editmodalcstmlabel">
                 <label>Event Date</label>
-                <input type="date" name="event_name" class="editmodalcstminput">
+                <input type="date" name="event_name" class="editmodalcstminput" id="editEventDate">
             </div>
             <div class="editmodalSubmitButtons">
-
+                <a href="#" class="deletebuttonNo" id="editCancelBtn">Cancel</a>
+                <a href="#" class="deletebuttonYes">Save</a>
             </div>
+            <input type="hidden" id="editEventId" name="event_id" />
         </form>
     </div>
 {% endblock content %}

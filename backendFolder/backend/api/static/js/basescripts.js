@@ -1,3 +1,4 @@
+/* DELETE JS */
 function showDeleteModal(eventId) {
 
     console.log("Show")
@@ -12,4 +13,12 @@ function closeDeleteModal() {
 
     document.getElementById('deleteModal').style.display = 'none'; 
     document.getElementById('deleteModalOverlay').style.display = 'none';
+}
+
+
+/* EDIT JS */
+
+function showEditModal(Id,name, date){
+
+    
 }
