@@ -59,17 +59,23 @@
             </tr>
         </thead>
         <tbody>
-            {% for event in events %}
-            <tr>
-            <th scope="row" class="px-3 text-nowrap">{{ forloop.counter }}</th>
-            <td class="px-3 text-nowrap">{{ event.event_name }}</td>
-            <td class="px-3 text-nowrap">{{ event.event_date }}</td>
-            <td class="px-3 text-nowrap actionbuttondiv">
-                <i class="fa-regular fa-pen-to-square"></i>
-                <i class="fa-regular fa-trash-can" onclick="showDeleteModal({{ event.id }})"></i>
-            </td>
-            </tr>
-            {% endfor %}
+            {% if events %}
+                {% for event in events %}
+                <tr>
+                <th scope="row" class="px-3 text-nowrap">{{ forloop.counter }}</th>
+                <td class="px-3 text-nowrap">{{ event.event_name }}</td>
+                <td class="px-3 text-nowrap">{{ event.event_date }}</td>
+                <td class="px-3 text-nowrap actionbuttondiv">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <i class="fa-regular fa-trash-can" onclick="showDeleteModal({{ event.id }})"></i>
+                </td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="4" class="text-center">No Events Found</td>
+                </tr>
+            {% endif %}
             
         </tbody>
     </table>
