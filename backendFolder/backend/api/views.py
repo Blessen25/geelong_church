@@ -22,7 +22,8 @@ class EventListCreateView(generics.ListCreateAPIView):
 
 def Home(request):
     events = Event.objects.filter(is_deleted = False)
-    return render(request, 'home.html', {'events' : events})
+    contacts = Contact.objects.filter(is_deleted = False)
+    return render(request, 'home.html', {'events' : events}, {'contacts' : contacts})
 
 def Login(request):
     return render(request, 'login.html')
