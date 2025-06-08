@@ -17,14 +17,15 @@
         </thead>
         <tbody>
            {% if contacts %}
-                {% for contact in contact|slice:"5" %}
+                {% for contact in contacts|slice:"5" %}
                 <tr>
-                    <th scope="col" class="text-nowrap px-3">{{forloop.counter}}</th>
-                    <th scope="col" class="text-nowrap px-3">{{forloop.counter}}</th>
-                    <th scope="col" class="text-nowrap px-3">{{forloop.counter}}</th>
-                    <th scope="col" class="text-nowrap px-3">{{forloop.counter}}</th>
-                    <th scope="col" class="text-nowrap px-3">{{forloop.counter}}</th>
-
+                    <td scope="col" class="text-nowrap px-3">{{ forloop.counter }}</td>
+                    <td scope="col" class="text-nowrap px-3">{{ contact.name }}</td>
+                    <td scope="col" class="text-nowrap px-3">{{ contact.email }}</td>
+                    <td scope="col" class="text-nowrap px-3">{{ contact.phone_number }}</td>
+                    <td scope="col" class="text-nowrap px-3">{{ contact.country }}</td>
+                    <td scope="col" class="text-nowrap px-3">{{ contact.subject }}</td>
+                    <td scope="col" class="webkitclambcstm px-3">{{ contact.message }}</td>
                 </tr>
                 {% endfor %}
            {% endif %}
@@ -47,7 +48,7 @@
             {% if events %}
                 {% for event in events|slice:":5" %}
                 <tr>
-                <th scope="row" class="px-3 text-nowrap">{{ forloop.counter }}</th>
+                <td scope="row" class="px-3 text-nowrap">{{ forloop.counter }}</td>
                 <td class="px-3 text-nowrap">{{ event.event_name }}</td>
                 <td class="px-3 text-nowrap">{{ event.event_date }}</td>
                 <td class="px-3 text-nowrap actionbuttondiv">
