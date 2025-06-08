@@ -38,3 +38,18 @@ def Event_delete(request, event_id):
         event.deleted_at = timezone.now()
         event.save()
     return redirect('home')
+
+def Edit_event(request, event_id):
+    if request.method == 'POST':
+        try:
+            
+            data = json.loads(request.body)
+            event = Event.objects.get(id = event_id)
+            event.event_name = data.get('event_name')
+            event.event_date = data.get('event_date')
+            event.save()
+            return JsonResponse({'success': True})
+        except Event.DoesNotExist:
+            return JsonResponse({'success': False, 'error': 'Event not found.'})
+    else:
+        return JsonResponse({'success': False, 'error': 'Invalid request method.'})

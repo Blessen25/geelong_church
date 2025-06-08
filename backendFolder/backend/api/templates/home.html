@@ -66,7 +66,7 @@
                 <td class="px-3 text-nowrap">{{ event.event_name }}</td>
                 <td class="px-3 text-nowrap">{{ event.event_date }}</td>
                 <td class="px-3 text-nowrap actionbuttondiv">
-                    <i class="fa-regular fa-pen-to-square" onclick="showEditModal('{{ event.id }}', '{{ event.event_name|escapejs }}', '{{ event.event_date }}')"></i>
+                    <i class="fa-regular fa-pen-to-square" onclick="showEditModal('{{ event.id }}', '{{ event.event_name }}', '{{ event.event_date }}')"></i>
                     <i class="fa-regular fa-trash-can" onclick="showDeleteModal('{{ event.id }}')"></i>
                 </td>
                 </tr>
@@ -96,7 +96,7 @@
 
     <div id="EditModalOverlay" class="modal-overlay" style="display: none;"></div>
     <div id="EditModel" class="delete-modal" style="display: none;">
-        <form class="editmodalcstm">
+        <form class="editmodalcstm" id="editEventForm">
             {% csrf_token %}
             <p>Edit Event</p>
             <div class="editmodalcstmlabel">
@@ -105,11 +105,11 @@
             </div>
             <div class="editmodalcstmlabel">
                 <label>Event Date</label>
-                <input type="date" name="event_name" class="editmodalcstminput" id="editEventDate">
+                <input type="date" name="event_date" class="editmodalcstminput" id="editEventDate">
             </div>
             <div class="editmodalSubmitButtons">
                 <a href="#" class="deletebuttonNo" id="editCancelBtn" onclick="closeEditModal()">Cancel</a>
-                <a href="#" class="deletebuttonYes" id="editSaveBtn">Save</a>
+                <button type="submit" class="deletebuttonYes" id="editSaveBtn">Save</button>
             </div>
             <input type="hidden" id="editEventId" name="event_id" />
         </form>

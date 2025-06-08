@@ -44,3 +44,33 @@ function closeEditModal(){
     document.getElementById('EditModalOverlay').style.display='none';
 }
 
+document.getElementById('editEventForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const eventId = document.getElementById('editEventId').value;
+    const eventName = document.getElementById('editEventName').value;
+    const eventDate = document.getElementById('editEventDate').value;
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    console.log(eventId, eventName, eventDate, csrfToken);
+
+    fetch(`/event/edit/${eventId}/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken,
+        },
+        body: JSON.stringify({
+            event_name: eventName,
+            event_date: eventDate
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Event updated successfully!");
+            location.reload(); // or update UI dynamically
+        } else {
+            alert("Failed to update event.");
+        }
+    });
+});
