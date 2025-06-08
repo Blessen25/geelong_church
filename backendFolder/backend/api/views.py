@@ -40,9 +40,12 @@ def Event_delete(request, event_id):
     return redirect('home')
 
 def Edit_event(request, event_id):
+    print(">>> Edit_event view called with ID:", event_id)
     if request.method == 'POST':
+        print(">>> Edit_event view called with ID entered post method:", event_id)
+        
         try:
-            
+            print(">>> Edit_event view called with ID entered Try method:", event_id)
             data = json.loads(request.body)
             event = Event.objects.get(id = event_id)
             event.event_name = data.get('event_name')
@@ -50,6 +53,7 @@ def Edit_event(request, event_id):
             event.save()
             return JsonResponse({'success': True})
         except Event.DoesNotExist:
+            print(">>> Edit_event view called with ID entered except method:", event_id)
             return JsonResponse({'success': False, 'error': 'Event not found.'})
     else:
         return JsonResponse({'success': False, 'error': 'Invalid request method.'})

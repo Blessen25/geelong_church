@@ -54,7 +54,7 @@ document.getElementById('editEventForm').addEventListener('submit', function(e) 
 
     console.log(eventId, eventName, eventDate, csrfToken);
 
-    fetch(`/event/edit/${eventId}/`, {
+    fetch(`/api/event/edit/${eventId}/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
