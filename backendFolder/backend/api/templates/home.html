@@ -3,7 +3,7 @@
     {% block pages_header %}Dashboard{% endblock %}
 {% block content %}
     <h1 class="cstmcontenttableh1tag">Contact</h1>
-    <table class="table">
+    <table class="table table-responsive">
         <thead>
             <tr>
             <th scope="col" class="text-nowrap px-3">Sl.No</th>
@@ -19,15 +19,19 @@
            {% if contacts %}
                 {% for contact in contacts|slice:"5" %}
                 <tr>
-                    <td scope="col" class="text-nowrap px-3">{{ forloop.counter }}</td>
-                    <td scope="col" class="text-nowrap px-3">{{ contact.name }}</td>
-                    <td scope="col" class="text-nowrap px-3">{{ contact.email }}</td>
-                    <td scope="col" class="text-nowrap px-3">{{ contact.phone_number }}</td>
-                    <td scope="col" class="text-nowrap px-3">{{ contact.country }}</td>
-                    <td scope="col" class="text-nowrap px-3">{{ contact.subject }}</td>
-                    <td scope="col" class="webkitclambcstm px-3">{{ contact.message }}</td>
+                    <td scope="col" class="text-nowrap px-3"><span class="responsivetd">Sl.No : </span>{{ forloop.counter }}</td>
+                    <td scope="col" class="text-nowrap px-3"><span class="responsivetd">Name : </span>{{ contact.name }}</td>
+                    <td scope="col" class="text-nowrap px-3"><span class="responsivetd">Email : </span>{{ contact.email }}</td>
+                    <td scope="col" class="text-nowrap px-3"><span class="responsivetd">Phone Number : </span>{{ contact.phone_number }}</td>
+                    <td scope="col" class="text-nowrap px-3"><span class="responsivetd">Country : </span>{{ contact.country }}</td>
+                    <td scope="col" class="text-nowrap px-3"><span class="responsivetd">Subject : </span>{{ contact.subject }}</td>
+                    <td scope="col" class="px-3 msgparaalign" data-table="message"><span class="responsivetd">Message : </span>{{ contact.message }}</td>
                 </tr>
                 {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="7" class="text-center">No Messages Found</td>
+                </tr>
            {% endif %}
         </tbody>
     </table>
@@ -48,12 +52,15 @@
             {% if events %}
                 {% for event in events|slice:":5" %}
                 <tr>
-                <td scope="row" class="px-3 text-nowrap">{{ forloop.counter }}</td>
-                <td class="px-3 text-nowrap">{{ event.event_name }}</td>
-                <td class="px-3 text-nowrap">{{ event.event_date }}</td>
+                <td scope="row" class="px-3 text-nowrap"><span class="responsivetd">Sl.No : </span>{{ forloop.counter }}</td>
+                <td class="px-3 text-nowrap"><span class="responsivetd">Event Name : </span>{{ event.event_name }}</td>
+                <td class="px-3 text-nowrap"><span class="responsivetd">Event Date : </span>{{ event.event_date }}</td>
                 <td class="px-3 text-nowrap actionbuttondiv">
-                    <i class="fa-regular fa-pen-to-square" onclick="showEditModal('{{ event.id }}', '{{ event.event_name }}', '{{ event.event_date }}')"></i>
-                    <i class="fa-regular fa-trash-can" onclick="showDeleteModal('{{ event.id }}')"></i>
+                    <span class="responsivetd">Actions : </span>
+                    <div class="actioniconmodal">
+                     <i class="fa-regular fa-pen-to-square" onclick="showEditModal('{{ event.id }}', '{{ event.event_name }}', '{{ event.event_date }}')"></i>
+                     <i class="fa-regular fa-trash-can" onclick="showDeleteModal('{{ event.id }}')"></i>
+                    </div>
                 </td>
                 </tr>
                 {% endfor %}
