@@ -23,7 +23,7 @@
     gap: 20px;
     font-size: 15px;
     padding: 0px 50px;
-
+    transition: all .7s;
 }
 
 .sidebarh1tag {
@@ -37,6 +37,8 @@
 
     font-size: 15px;
     color: #3c79b0;
+    background-color: transparent;
+    transition: all .7s;
 }
 
 .sidebaratag:hover {
@@ -48,7 +50,6 @@
 .sidebaratag:hover i {
 
     color: white;
-    background-color: #3c79b0;
 }
 
 

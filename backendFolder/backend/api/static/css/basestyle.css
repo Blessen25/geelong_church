@@ -259,6 +259,17 @@
     background-color: white;
 }
 
+.fa-align-left {
+
+    font-size: 20px;
+    transition: all .7s;
+}
+
+.fa-align-left:hover {
+
+    color: #3c79b0;
+}
+
 @media screen and (max-width: 1499px) {
     
     .cstmwrapper {
