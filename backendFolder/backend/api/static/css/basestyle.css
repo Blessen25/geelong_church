@@ -261,14 +261,12 @@
 
 .fa-align-left {
 
-    font-size: 20px;
+    font-size: 22px;
     transition: all .7s;
+    display: none !important; 
+    background-color: transparent;
 }
 
-.fa-align-left:hover {
-
-    color: #3c79b0;
-}
 
 @media screen and (max-width: 1499px) {
     
@@ -296,6 +294,11 @@
     .cstmwrapper {
         
         display: none;
+    }
+
+    .fa-align-left {
+        
+        display: block !important;
     }
 
     
