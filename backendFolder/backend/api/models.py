@@ -8,8 +8,8 @@ logger = logging.getLogger(__name__)
 # Create your models here.
 
 class Contact(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
     phone_number = models.CharField(max_length=20)
     subject = models.CharField(max_length=200)
     message = models.TextField(max_length=500)
@@ -285,7 +285,7 @@ class Contact(models.Model):
         ordering = ['-created_at']
 
 class Event(models.Model):
-    event_name = models.CharField(max_length=100)
+    event_name = models.CharField(max_length=30)
     event_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     is_deleted = models.BooleanField(default=False)
