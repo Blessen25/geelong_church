@@ -88,6 +88,25 @@
 
 }
 
+.sidebarh1tag{
+
+    text-align: center;
+}
+
+@media screen and (min-width:1300px) {
+    
+    .respsidebardiv {
+
+        display: none !important;
+    }
+
+    .sidebaroverlay {
+
+        display: none !important;
+    }
+    
+}
+
 @media screen and (max-width: 1299px) {
     
 

@@ -1,11 +1,20 @@
 /* OPENING SIDEBAR RESP */
 
 function openSidebar() {
+    const sidebarOverlay = document.getElementById('sidebaroverlayid');
+    const sidebarIcon = document.querySelector('.fa-align-left'); // Use querySelector for single element
+    const sidebarDiv = document.getElementById('respsidebardivid');
 
-    document.getElementById('sidebaroverlayid').style.display = 'block';
-    document.getElementById('respsidebardivid').style.display = 'flex';    
+    if (sidebarOverlay) {
+        sidebarOverlay.style.display = 'block';
+    }
+    if (sidebarIcon) {
+        sidebarIcon.style.color = '#3c79b0';
+    }
+    if (sidebarDiv) {
+        sidebarDiv.style.display = 'flex'; // Use flex directly, no need for block
+    }
 }
-
 
 /* DELETE JS */
 function showDeleteModal(eventId) {
