@@ -17,11 +17,25 @@
         <div class="cstmcontent">
             <div class="w-100 d-flex cstmcontentheader">
                 <h1 class="cstmcontentheaderh1tag">Pages / {% block pages_header %}{% endblock %}</h1>
-                <i class="fa-solid fa-align-left"></i>
+                <i class="fa-solid fa-align-left" onclick="openSidebar()"></i>
             </div>
             {% block content %}
             {% endblock %}
         </div>
+    </div>
+
+     <div id="sidebaroverlayid" class="sidebaroverlay" style="display: none;"></div>
+    <div id="respsidebardivid" class="respsidebardiv" style="display: none;">
+        <div class="image_div"></div>
+        <hr>
+        <h1 class="sidebarh1tag">Pages</h1>
+        <a href="/" class="sidebaratag"><i class="fa-solid fa-house"></i>Dashboard</a>
+        <a href="/" class="sidebaratag"><i class="fa-solid fa-id-card"></i>Contact</a>
+        <a href="/" class="sidebaratag"><i class="fa-solid fa-calendar-days"></i>Events</a>
+        <hr>
+        <h1 class="sidebarh1tag">Account</h1>
+        <!-- <a href="/" class="sidebaratag"><i class="fa-regular fa-circle-user"></i>Profile</a> -->
+        <a href="/" class="sidebaratag"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
     </div>
 </body>
 <script src="{% static 'js/basescripts.js' %}"></script>

@@ -1,3 +1,12 @@
+/* OPENING SIDEBAR RESP */
+
+function openSidebar() {
+
+    document.getElementById('sidebaroverlayid').style.display = 'block';
+    document.getElementById('respsidebardivid').style.display = 'flex';    
+}
+
+
 /* DELETE JS */
 function showDeleteModal(eventId) {
 
