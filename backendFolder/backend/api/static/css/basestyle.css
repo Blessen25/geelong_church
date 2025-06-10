@@ -268,26 +268,12 @@
 }
 
 .addnewcstm {
-
-    background-color: #3c79b0;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 5px;
-    gap: 10px;
-    color: white;
-    transition: all .7s ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    gap: 10px ;
 }
 
-.addnewcstm:hover {
-    
-    box-shadow: inset 0px 70px 0px 0px white;
-    color: #3c79b0;
-    border: 1px solid #3c79b0;
-}
 
 .eventscstmheader {
 
@@ -527,5 +513,10 @@
 
     width: 100%;
     height: 20px;
+  }
+  
+  .addnewcstm {
+
+    gap: 5px ; 
   }
 }
