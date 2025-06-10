@@ -267,6 +267,32 @@
     background-color: transparent;
 }
 
+.addnewcstm {
+
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.eventscstmheader {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-plus {
+
+    background-color: transparent;
+    font-size: 16px;
+}
+
 
 @media screen and (max-width: 1499px) {
     
@@ -393,7 +419,7 @@
     display: block;
   }
   
-  .fa-pen-to-square,.fa-trash-can {
+  .fa-pen-to-square,.fa-trash-can, .fa-plus {
 
     font-size: 14px;
   }
@@ -441,7 +467,7 @@
         gap: 10px;
     }
 
-    .fa-pen-to-square,.fa-trash-can {
+    .fa-pen-to-square,.fa-trash-can, .fa-plus {
 
         font-size: 11px;
     }
