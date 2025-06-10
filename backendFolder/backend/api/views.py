@@ -25,6 +25,11 @@ def Home(request):
     contacts = Contact.objects.filter(is_deleted = False)
     return render(request, 'home.html', {'events' : events, 'contacts' : contacts} )
 
+def Contact_fn(request):
+    contact = Contact.objects.filter(is_deleted = False)
+    return render(request, 'contact.html',{'contacts' : contact})
+
+
 def Login(request):
     return render(request, 'login.html')
 
