@@ -12,32 +12,43 @@ import json
 
 
 class ContactListCreateView(generics.ListCreateAPIView):
+
     queryset = Contact.objects.filter(is_deleted = False)
     serializer_class = ContactSerializer
 
 class EventListCreateView(generics.ListCreateAPIView):
+
     queryset = Event.objects.filter(is_deleted = False)
     serializer_class = EventSerializer
 
 
 def Home(request):
+
     events = Event.objects.filter(is_deleted = False)
     contacts = Contact.objects.filter(is_deleted = False)
     return render(request, 'home.html', {'events' : events, 'contacts' : contacts} )
 
 def Contact_fn(request):
+    
     contact = Contact.objects.filter(is_deleted = False)
     return render(request, 'contact.html',{'contacts' : contact})
 
+def Event_fn(request):
+    
+    event = Event.objects.filter(is_deleted = False)
+    return render(request, 'event.html',{'events' : event})
 
 def Login(request):
+
     return render(request, 'login.html')
 
 def Base(request):
+
     return render(request, 'base.html')
 
 
 def Event_delete(request, event_id):
+
     event = get_object_or_404(Event, pk = event_id)
     if request.method == 'POST':
         event.is_deleted = True
@@ -46,6 +57,7 @@ def Event_delete(request, event_id):
     return redirect('home')
 
 def Edit_event(request, event_id):
+    
     print(">>> Edit_event view called with ID:", event_id)
     if request.method == 'POST':
         print(">>> Edit_event view called with ID entered post method:", event_id)
