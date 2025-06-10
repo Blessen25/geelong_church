@@ -269,7 +269,7 @@
 
 .addnewcstm {
 
-    background-color: white;
+    background-color: #3c79b0;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     display: flex;
@@ -278,6 +278,15 @@
     padding: 10px 20px;
     border-radius: 5px;
     gap: 10px;
+    color: white;
+    transition: all .7s ;
+}
+
+.addnewcstm:hover {
+    
+    box-shadow: inset 0px 70px 0px 0px white;
+    color: #3c79b0;
+    border: 1px solid #3c79b0;
 }
 
 .eventscstmheader {
@@ -419,7 +428,7 @@
     display: block;
   }
   
-  .fa-pen-to-square,.fa-trash-can, .fa-plus {
+  .fa-pen-to-square,.fa-trash-can, .fa-plus, .fa-align-left {
 
     font-size: 14px;
   }
@@ -467,7 +476,7 @@
         gap: 10px;
     }
 
-    .fa-pen-to-square,.fa-trash-can, .fa-plus {
+    .fa-pen-to-square,.fa-trash-can, .fa-plus, .fa-align-left {
 
         font-size: 11px;
     }
