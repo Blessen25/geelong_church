@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="loginhomediv">
@@ -18,11 +19,12 @@
                 <label class="labelcstmlogin">Password :</label>
                 <div class="passworddiv">
                     <input type="password" name="password" class="inputcstmlogin">
-                    <span id="typePassswordid" class="toggle-eye">&#128065;</span>
+                    <span id="typePassswordid" class="toggle-eye"><i class="fa-solid fa-eye"></i></span>
                 </div>
                 <button type="submit" class="loginbtn">Login</button>
             </form>
         </div>
     </div>
 </body>
+<script src="{% static 'js/login.js' %}"></script>
 </html>
