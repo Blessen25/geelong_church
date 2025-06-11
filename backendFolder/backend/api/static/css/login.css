@@ -119,7 +119,6 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 
 .paraerrordiv {
 
-    text-align: center;
     color: red;
     font-size: 14px;
     margin: 0px;

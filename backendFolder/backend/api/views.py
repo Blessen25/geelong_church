@@ -6,7 +6,7 @@ from django.http import HttpResponse, JsonResponse
 from .forms import EventForm
 from django.utils import timezone
 import json
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, get_user_model
 
 
 # Create your views here.
@@ -40,19 +40,33 @@ def Event_fn(request):
     return render(request, 'event.html',{'events' : event})
 
 
+User = get_user_model()
 def User_login(request):
 
+    context = {'username': '', 'password': ''}
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
 
+        context['username'] = username
+        context['password'] = password
+
+        try:
+            
+            user = User.objects.get(username = username)
+        except User.DoesNotExist:
+            context['username_error'] = 'Username does not exist'
+            return render(request, 'login.html', context)
+        
         user = authenticate(request, username = username, password = password)
-        if user is not None:
-            login(request, user)
-            return redirect('home')
-        else: 
-            return render(request, 'login.html',{'error' : 'Invalid Credentials Please Check Again'})
-    return render(request, 'login.html')
+        if user is None:
+            context['password_error'] = 'Incorrect password'
+            return render(request, 'login.html', context)
+        
+        login(request, user)
+        return redirect('home')
+
+    return render(request, 'login.html', context)
 
 def Base(request):
 
