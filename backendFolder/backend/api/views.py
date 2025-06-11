@@ -6,6 +6,7 @@ from django.http import HttpResponse, JsonResponse
 from .forms import EventForm
 from django.utils import timezone
 import json
+from django.contrib.auth import authenticate, login
 
 
 # Create your views here.
@@ -40,6 +41,16 @@ def Event_fn(request):
 
 def User_login(request):
 
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(request, username = username, password = password)
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+        else: 
+            return render(request, 'login.html',{'error' : 'Invalid Credentials Please Check Again'})
     return render(request, 'login.html')
 
 def Base(request):
