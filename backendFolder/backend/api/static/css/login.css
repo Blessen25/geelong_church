@@ -63,7 +63,7 @@
 
 .loginbtn {
 
-    height: 50px;
+    padding: 10px 20px;    
     border-radius: 5px;
     outline: none;
     border: none;
@@ -79,4 +79,66 @@
     box-shadow: inset 0px 70px 0px 0px white;
     color: #3c79b0;
     border: 1px solid #3c79b0;
+}
+
+@media screen and (max-width: 899px) {
+    
+    .loginbtn {
+
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .inputcstmlogin {
+
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .labelcstmlogin {
+
+        font-size: 13px;
+    }
+
+    .logindiv {
+
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .loginbtn {
+
+        font-size: 9px;
+        padding: 10px;
+    }
+
+    .inputcstmlogin {
+
+        font-size: 9px;
+        height: 30px;
+    }
+
+    .labelcstmlogin {
+
+        font-size: 11px;
+    }
+
+    .formdivcstmlogin, .logindiv {
+        
+        gap: 15px;
+    }
+
+    .logindiv {
+
+        width: 300px;
+    }
+
+    .image_div_logo {
+
+        width: 150px;
+        height: 59px;
+        background-size: contain;
+    }
 }
