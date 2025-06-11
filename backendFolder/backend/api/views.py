@@ -38,7 +38,7 @@ def Event_fn(request):
     event = Event.objects.filter(is_deleted = False)
     return render(request, 'event.html',{'events' : event})
 
-def Login(request):
+def User_login(request):
 
     return render(request, 'login.html')
 
