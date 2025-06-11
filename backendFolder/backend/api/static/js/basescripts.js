@@ -56,6 +56,12 @@ function showEditModal(Id,name, date){
     document.getElementById('EditModalOverlay').style.display = 'block';
 }
 
+function showAddModal() {
+
+    document.getElementById('AddModel').style.display = 'block';
+    document.getElementById('AddModalOverlay').style.display = 'block';
+}
+
 function closeEditModal(){
 
     document.getElementById('EditModel').style.display='none';
