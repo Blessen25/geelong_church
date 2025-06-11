@@ -45,26 +45,37 @@ def User_login(request):
 
     context = {'username': '', 'password': ''}
     if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
+        if request.POST['username'] == '' and request.POST['password'] == '':
+            context['username_error'] = 'Username is required'
+            context['password_error'] = 'Password is required'
+            return render(request, 'login.html', context)
+        elif request.POST['username'] == '':
+            context['username_error'] = 'Username is required'
+            return render(request, 'login.html', context)
+        elif request.POST['password'] == '':
+            context['password_error'] = 'Password is required'
+            return render(request, 'login.html', context)
+        else:
+            username = request.POST['username']
+            password = request.POST['password']
 
-        context['username'] = username
-        context['password'] = password
+            context['username'] = username
+            context['password'] = password
 
-        try:
+            try:
+                
+                user = User.objects.get(username = username)
+            except User.DoesNotExist:
+                context['username_error'] = 'Username does not exist'
+                return render(request, 'login.html', context)
             
-            user = User.objects.get(username = username)
-        except User.DoesNotExist:
-            context['username_error'] = 'Username does not exist'
-            return render(request, 'login.html', context)
-        
-        user = authenticate(request, username = username, password = password)
-        if user is None:
-            context['password_error'] = 'Incorrect password'
-            return render(request, 'login.html', context)
-        
-        login(request, user)
-        return redirect('home')
+            user = authenticate(request, username = username, password = password)
+            if user is None:
+                context['password_error'] = 'Incorrect password'
+                return render(request, 'login.html', context)
+            
+            login(request, user)
+            return redirect('home')
 
     return render(request, 'login.html', context)
 
