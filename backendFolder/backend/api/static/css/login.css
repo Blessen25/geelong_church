@@ -5,7 +5,7 @@
     left: 0px;
     width: 100%;
     height: 100vh;
-    background-color: #3c79b0;
+    background-color: #f0f8ff;
 }
 
 .logindiv {
@@ -14,8 +14,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 250px;
-    height: 250px;
-    border: 2px solid black;
+    width: 500px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    
     border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image_div_logo {
+
+    background-image: url('../images//Logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 100px;
 }
