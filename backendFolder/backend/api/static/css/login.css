@@ -117,6 +117,14 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     padding-right: 40px;
 }
 
+.paraerrordiv {
+
+    text-align: center;
+    color: red;
+    font-size: 14px;
+    margin: 0px;
+}
+
 @media screen and (max-width: 899px) {
     
     .loginbtn {
@@ -144,6 +152,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     .toggle-eye {
 
         font-size: 14px;
+    }
+
+    .paraerrordiv {
+
+        font-size: 12px;
     }
 }
 
@@ -186,6 +199,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     .toggle-eye {
 
         font-size: 11px;
+    }
+
+    .paraerrordiv {
+
+        font-size: 10px;
     }
 }
 

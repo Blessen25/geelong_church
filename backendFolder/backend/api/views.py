@@ -39,6 +39,7 @@ def Event_fn(request):
     event = Event.objects.filter(is_deleted = False)
     return render(request, 'event.html',{'events' : event})
 
+
 def User_login(request):
 
     if request.method == 'POST':

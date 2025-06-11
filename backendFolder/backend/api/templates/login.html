@@ -14,6 +14,9 @@
             <div class="image_div_logo"></div>
             <form method="post" class="formdivcstmlogin">
                 {% csrf_token %}
+                {% if error %}
+                    <p style="color: red; text-align: center;" class="paraerrordiv">{{error}}</p>
+                {% endif %}
                 <label class="labelcstmlogin">Username :</label>
                 <input type="text" name="username" class="inputcstmlogin">
                 <label class="labelcstmlogin">Password :</label>
