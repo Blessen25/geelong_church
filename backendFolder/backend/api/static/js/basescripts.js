@@ -25,6 +25,14 @@ function showDeleteModal(eventId) {
     document.getElementById('deleteModalOverlay').style.display = 'block';
 }
 
+function showDeleteModalEvent(eventId){
+
+    const form = document.getElementById('deleteForm');
+    form.action =  `/api/event/deleteeventfn/${eventId}/`;
+    document.getElementById('deleteModal').style.display = 'block'; 
+    document.getElementById('deleteModalOverlay').style.display = 'block';
+}
+
 function closeDeleteModal() {
 
     document.getElementById('deleteModal').style.display = 'none'; 

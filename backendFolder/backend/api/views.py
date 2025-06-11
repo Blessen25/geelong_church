@@ -56,6 +56,14 @@ def Event_delete(request, event_id):
         event.save()
     return redirect('home')
 
+def Event_deleteevent(request, event_id):
+        event = get_object_or_404(Event, pk = event_id)
+        if request.method == 'POST':
+            event.is_deleted = True
+            event.deleted_at = timezone.now()
+            event.save()
+        return redirect('Event_fn')
+
 def Event_deleteonevent(request, event_id):
 
     event = get_object_or_404(Event, pk = event_id)
