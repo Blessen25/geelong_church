@@ -6,7 +6,7 @@ from django.http import HttpResponse, JsonResponse
 from .forms import EventForm
 from django.utils import timezone
 import json
-from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth import authenticate, login, get_user_model, logout;
 
 
 # Create your views here.
@@ -67,6 +67,10 @@ def User_login(request):
         return redirect('home')
 
     return render(request, 'login.html', context)
+
+def User_logout(request):
+    logout(request)
+    return redirect('login')
 
 def Base(request):
 
