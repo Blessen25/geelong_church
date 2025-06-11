@@ -11,6 +11,14 @@
     <div class="loginhomediv">
         <div class="logindiv">
             <div class="image_div_logo"></div>
+            <form method="post" class="formdivcstmlogin">
+                {% csrf_token %}
+                <label class="labelcstmlogin">Username :</label>
+                <input type="text" name="username" class="inputcstmlogin">
+                <label class="labelcstmlogin">Password :</label>
+                <input type="password" name="password" class="inputcstmlogin">
+                <button type="submit" class="loginbtn">Login</button>
+            </form>
         </div>
     </div>
 </body>
