@@ -109,6 +109,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     position: absolute;
     right: 10px;
     cursor: pointer;
+    color: #3c79b0;
 }
 
 .inputcstmlogin:nth-child(1) {
@@ -138,6 +139,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     .logindiv {
 
         width: 450px;
+    }
+
+    .toggle-eye {
+
+        font-size: 14px;
     }
 }
 
@@ -175,6 +181,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
         width: 150px;
         height: 59px;
         background-size: contain;
+    }
+
+    .toggle-eye {
+
+        font-size: 11px;
     }
 }
 
