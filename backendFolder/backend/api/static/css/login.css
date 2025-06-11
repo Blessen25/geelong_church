@@ -59,6 +59,7 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     padding: 15px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .loginbtn {
@@ -79,6 +80,40 @@
     box-shadow: inset 0px 70px 0px 0px white;
     color: #3c79b0;
     border: 1px solid #3c79b0;
+}
+
+/* Hide the default eye icon in Edge */
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+
+/* Hide it in Chrome (if any appearance) */
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    display: none !important;
+    visibility: hidden;
+}
+
+.passworddiv {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-eye {
+
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.inputcstmlogin:nth-child(1) {
+
+    padding-right: 40px;
 }
 
 @media screen and (max-width: 899px) {
@@ -142,3 +177,5 @@
         background-size: contain;
     }
 }
+
+
