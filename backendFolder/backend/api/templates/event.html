@@ -45,7 +45,7 @@
         <p>Are you sure you want to delete this event?</p>
         <form id="deleteForm" class="deletemodalbuttondiv" method="post">
             {% csrf_token %}
-            <a href="#" class="deletebuttonNo" onclick="closeDeleteModal()">No</a>
+            <a href="/event" class="deletebuttonNo" onclick="closeDeleteModal()">No</a>
             <a href="#" class="deletebuttonYes" onclick="document.getElementById('deleteForm').submit();">Yes</a>
         </form>
     </div>
@@ -75,7 +75,7 @@
     <div id="AddModel" class="delete-modal" style="display: none;">
         <form class="editmodalcstm" id="editEventForm">
             {% csrf_token %}
-            <p>Add Event</p>
+            <p>Add New Event</p>
             <div class="editmodalcstmlabel">
                 <label>Event Name</label>
                 <input type="text" name="event_name" class="editmodalcstminput" id="newEventName" placeholder="Enter Event Name">
@@ -85,8 +85,8 @@
                 <input type="date" name="event_date" class="editmodalcstminput" id="newEventDate">
             </div>
             <div class="editmodalSubmitButtons">
-                <a href="#" class="deletebuttonNo" id="NewCancelBtn" onclick="closeAddModal()">Cancel</a>
-                <button type="submit" class="deletebuttonYes" id="NewSaveBtn">Save</button>
+                <a href="/event" class="deletebuttonNo" id="NewCancelBtn" onclick="closeAddModal()">Cancel</a>
+                <button type="submit" class="deletebuttonYes" id="NewSaveBtn">Add</button>
             </div>
             <input type="hidden" id="newEventId" name="event_id" />
         </form>

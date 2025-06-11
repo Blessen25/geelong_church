@@ -19,10 +19,8 @@ function openSidebar() {
 /* DELETE JS */
 function showDeleteModal(eventId) {
 
-    console.log("Show")
     const form = document.getElementById('deleteForm');
     form.action =  `/api/event/delete/${eventId}/`;
-    console.log(form.action);
     document.getElementById('deleteModal').style.display = 'block'; 
     document.getElementById('deleteModalOverlay').style.display = 'block';
 }
@@ -54,12 +52,6 @@ function showEditModal(Id,name, date){
     document.getElementById('editEventDate').value=converttoDDMMYYYY(date);
     document.getElementById('EditModel').style.display = 'block'; 
     document.getElementById('EditModalOverlay').style.display = 'block';
-}
-
-function showAddModal() {
-
-    document.getElementById('AddModel').style.display = 'block';
-    document.getElementById('AddModalOverlay').style.display = 'block';
 }
 
 function closeEditModal(){
@@ -98,3 +90,75 @@ document.getElementById('editEventForm').addEventListener('submit', function(e) 
         }
     });
 });
+
+
+/* ADD FUCNTIONALITY */
+
+function showAddModal() {
+
+    document.getElementById('AddModel').style.display = 'block';
+    document.getElementById('AddModalOverlay').style.display = 'block';
+}
+
+function closeAddModal() {
+
+    document.getElementById('AddModel').style.display = 'none';
+    document.getElementById('AddModalOverlay').style.display = 'none';
+}
+
+document.getElementById('NewSaveBtn').addEventListener('click',function(e){
+
+    e.preventDefault();
+
+    const eventName = document.getElementById('newEventName').value;
+    const eventDate = document.getElementById('newEventDate').value;
+
+    console.log(eventName, eventDate);
+    if(!eventName || !eventDate){
+
+        alert("Please fill all the fields");
+        return;
+    }
+
+    fetch('/api/event/',{
+
+        method: 'POST',
+        headers: {
+
+            'Content-Type': 'application/json',
+            'X-CSRFToken': getCookie('csrftoken') 
+            },
+            body: JSON.stringify({
+            event_name: eventName,
+            event_date: eventDate
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+            alert('Event added successfully!');
+            location.reload();  
+            } else {
+            alert('Failed to add event.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error adding event.');
+        });
+});
+
+
+function getCookie(name) {
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+      cookie = cookie.trim();
+      if (cookie.startsWith(name + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
