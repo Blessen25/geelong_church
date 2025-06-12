@@ -3,6 +3,7 @@
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
     font-style: normal;
+    box-sizing: border-box;
 }
 .loginhomediv {
 
@@ -158,6 +159,31 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     text-decoration: underline;
     color: #015aa7;
 }
+
+.forgetpasswordoutlay {
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.forgetpasswordmodal {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: (-50%, -50%);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    
+    background-color: white;
+    z-index: 9999;
+    padding: 20px;
+}
+
 
 @media screen and (max-width: 899px) {
     
