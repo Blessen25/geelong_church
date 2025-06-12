@@ -12,8 +12,11 @@
     <div class="loginhomediv">
         <div class="logindiv">
             <div class="image_div_logo"></div>
-            <form method="post" class="formdivcstmlogin">
+            <form method="post" class="formdivcstmlogin" action="">
                 {% csrf_token %}
+                {% if credential_error %}
+                    <p class="paraerrordiv">{{ credential_error }}</p>
+                {% endif %}
                 <label class="labelcstmlogin">Username :</label>
                 <input type="text" name="username" class="inputcstmlogin" value="{{ username }}">
                 {% if username_error %}

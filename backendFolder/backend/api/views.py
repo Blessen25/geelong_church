@@ -71,7 +71,7 @@ def User_login(request):
             
             user = authenticate(request, username = username, password = password)
             if user is None:
-                context['password_error'] = 'Incorrect password'
+                context['credential_error'] = 'Invalid credentials'
                 return render(request, 'login.html', context)
             
             login(request, user)
