@@ -1,3 +1,9 @@
+*{
+
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 .loginhomediv {
 
     position: fixed;
@@ -124,6 +130,35 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     margin: 0px;
 }
 
+.forgetpasswordtext, .donthaveanaccnt {
+
+    margin: 0px;
+    font-size: 16px;
+}
+
+.forgetpasswordtext {
+
+    text-align: end;
+}
+
+.donthaveanaccnt {
+
+    text-align: center;
+}
+
+.signupclrcstm {
+
+    color: #3c79b0;
+    text-decoration: none;
+    transition: all .7s;
+}
+
+.signupclrcstm:hover {
+
+    text-decoration: underline;
+    color: #015aa7;
+}
+
 @media screen and (max-width: 899px) {
     
     .loginbtn {
@@ -154,6 +189,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     }
 
     .paraerrordiv {
+
+        font-size: 12px;
+    }
+
+    .forgetpasswordtext, .donthaveanaccnt {
 
         font-size: 12px;
     }
@@ -201,6 +241,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     }
 
     .paraerrordiv {
+
+        font-size: 10px;
+    }
+
+    .forgetpasswordtext, .donthaveanaccnt {
 
         font-size: 10px;
     }
