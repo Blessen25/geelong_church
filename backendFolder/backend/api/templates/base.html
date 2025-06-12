@@ -18,12 +18,14 @@
             <div class="w-100 d-flex cstmcontentheader">
                 <h1 class="cstmcontentheaderh1tag">Pages / {% block pages_header %}{% endblock %}</h1>
                 <div class="headericonandname">
-                    {% if user.is_authenticated %}
                     <div class="headericonandname">
                         <i class="fa-regular fa-circle-user"></i>
-                        <p>Blessen Vinoy Mathew</p>
-                    </div>
+                    {% if user.is_authenticated %}
+                        <p>{{ user.username}}</p>
+                    {% else %}
+                        <p>Guest</p>
                     {% endif %}  
+                    </div>
                     <i class="fa-solid fa-align-left" onclick="openSidebar()"></i>                  
                 </div>
 
