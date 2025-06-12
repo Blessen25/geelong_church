@@ -14,7 +14,7 @@
     }
 
     p {
-
+        margin: 0px !important;
         background-color: white;
     }
 }
@@ -63,6 +63,8 @@
 .cstmcontentheaderh1tag {
 
     font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
 .cstmcontenttableh1tag {
@@ -117,6 +119,12 @@
     font-size: 16px;
     margin-left: 40px;
 
+}
+
+.fa-circle-user {
+
+    background-color: white;
+    font-size: 16px;
 }
 
 .modal-overlay {
@@ -288,6 +296,20 @@
     font-size: 16px;
 }
 
+.headericonandname {
+
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.headericonandname p {
+
+    font-size: 14px;
+}
+
 @media screen and (max-width: 1499px) {
     
     .cstmwrapper {
@@ -349,6 +371,11 @@
         margin: 0px;
     }
 
+    .headericonandname p {
+
+        font-size: 11px;
+    }
+
 }
 
 
@@ -375,6 +402,7 @@
         width: 100%;
         border-collapse: collapse;
     }
+
 
 
 }
@@ -413,7 +441,7 @@
     display: block;
   }
   
-  .fa-pen-to-square,.fa-trash-can, .fa-plus, .fa-align-left {
+  .fa-pen-to-square,.fa-trash-can, .fa-plus, .fa-align-left, .fa-circle-user  {
 
     font-size: 14px;
   }
@@ -446,6 +474,16 @@
 
     font-size: 12px;
   };
+
+  .headericonandname p {
+
+        font-size: 12px;
+    }
+
+    .headericonandname {
+
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -461,7 +499,7 @@
         gap: 10px;
     }
 
-    .fa-pen-to-square,.fa-trash-can, .fa-plus, .fa-align-left {
+    .fa-pen-to-square,.fa-trash-can, .fa-plus, .fa-align-left, .fa-circle-user  {
 
         font-size: 11px;
     }
@@ -478,6 +516,11 @@
     }
 
     .cstmcontentheaderh1tag {
+
+        font-size: 9px;
+    }
+
+    .headericonandname p {
 
         font-size: 9px;
     }

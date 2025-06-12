@@ -17,7 +17,16 @@
         <div class="cstmcontent">
             <div class="w-100 d-flex cstmcontentheader">
                 <h1 class="cstmcontentheaderh1tag">Pages / {% block pages_header %}{% endblock %}</h1>
-                <i class="fa-solid fa-align-left" onclick="openSidebar()"></i>
+                <div class="headericonandname">
+                    {% if user.is_authenticated %}
+                    <div class="headericonandname">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <p>Blessen Vinoy Mathew</p>
+                    </div>
+                    {% endif %}  
+                    <i class="fa-solid fa-align-left" onclick="openSidebar()"></i>                  
+                </div>
+
             </div>
             {% block content %}
             {% endblock %}

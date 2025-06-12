@@ -1,16 +1,16 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from rest_framework import generics
-from .models import Contact, Event
-from .serializers import ContactSerializer, EventSerializer
-from django.http import HttpResponse, JsonResponse
-from .forms import EventForm
-from django.utils import timezone
-import json
+from django.shortcuts import render, get_object_or_404, redirect;
+from rest_framework import generics;
+from .models import Contact, Event;
+from .serializers import ContactSerializer, EventSerializer;
+from django.http import HttpResponse, JsonResponse;
+from .forms import EventForm;
+from django.utils import timezone;
+import json;
 from django.contrib.auth import authenticate, login, get_user_model, logout;
+from django.contrib.auth.decorators import login_required;
 
 
 # Create your views here.
-
 
 class ContactListCreateView(generics.ListCreateAPIView):
 
@@ -22,18 +22,20 @@ class EventListCreateView(generics.ListCreateAPIView):
     queryset = Event.objects.filter(is_deleted = False)
     serializer_class = EventSerializer
 
-
+@login_required
 def Home(request):
 
     events = Event.objects.filter(is_deleted = False)
     contacts = Contact.objects.filter(is_deleted = False)
     return render(request, 'home.html', {'events' : events, 'contacts' : contacts} )
 
+@login_required
 def Contact_fn(request):
     
     contact = Contact.objects.filter(is_deleted = False)
     return render(request, 'contact.html',{'contacts' : contact})
 
+@login_required
 def Event_fn(request):
     
     event = Event.objects.filter(is_deleted = False)
@@ -79,15 +81,17 @@ def User_login(request):
 
     return render(request, 'login.html', context)
 
+@login_required
 def User_logout(request):
     logout(request)
     return redirect('login')
 
+@login_required
 def Base(request):
 
     return render(request, 'base.html')
 
-
+@login_required
 def Event_delete(request, event_id):
 
     event = get_object_or_404(Event, pk = event_id)
@@ -97,6 +101,7 @@ def Event_delete(request, event_id):
         event.save()
     return redirect('home')
 
+@login_required
 def Event_deleteevent(request, event_id):
         event = get_object_or_404(Event, pk = event_id)
         if request.method == 'POST':
@@ -105,6 +110,7 @@ def Event_deleteevent(request, event_id):
             event.save()
         return redirect('Event_fn')
 
+@login_required
 def Event_deleteonevent(request, event_id):
 
     event = get_object_or_404(Event, pk = event_id)
@@ -114,6 +120,7 @@ def Event_deleteonevent(request, event_id):
         event.save()
     return redirect('event')
 
+@login_required
 def Edit_event(request, event_id):
     
     print(">>> Edit_event view called with ID:", event_id)
