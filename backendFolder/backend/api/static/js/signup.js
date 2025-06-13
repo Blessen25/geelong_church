@@ -1,7 +1,5 @@
 /* SHOW PASSWORD */
 
-const { use } = require("react");
-
 document.addEventListener('DOMContentLoaded',function() {
 
     const togglePassword1 = document.getElementById('typePasswordid1');
@@ -30,6 +28,43 @@ document.addEventListener('DOMContentLoaded',function() {
     this.classList.toggle('fa-eye-slash');
     })
 
+
+    document.getElementById('password2').addEventListener('input', function() {
+
+        const password1 = document.getElementById('password1').value;
+        const password2 = this.value;
+        const password2Error = document.getElementById('password2-error');
+
+        
+        if (password1 !== password2) {
+            password2Error.textContent = 'Passwords do not match';
+            password2Error.style.display = 'block';
+        } else {
+            password2Error.textContent = '';
+            password2Error.style.display = 'none';
+        }
+    })
+
+
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+        
+        let hasError = false;
+
+        if(document.getElementById('password1').value !== document.getElementById('password2').value) {
+            
+            hasError = true;
+        }
+
+        if(ValidatePassword()) {
+
+            hasError = true
+        }
+
+        if(hasError) {
+
+            e.preventDefault()
+        }
+    })
 })
 
 /* Password COLOR DIV */
@@ -39,6 +74,7 @@ function ValidatePassword(){
     const password = document.getElementById('password1').value;
     const error = document.getElementById('password-error');
     const bars = document.querySelectorAll('.password-strength .bar');
+    const error_true = false
 
     let strength = 0;
     error.textContent = '';
@@ -61,6 +97,8 @@ function ValidatePassword(){
 
         error.textContent = 'Your password must contain at least 8 characters, uppercase, lowercase, number and special character';
         error.style.display = 'block';
+        error_true = true
+        return error_true
     }
 
     bars.forEach(bar => {
@@ -77,4 +115,3 @@ function ValidatePassword(){
     }
 
 }
-
