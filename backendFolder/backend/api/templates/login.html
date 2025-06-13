@@ -18,13 +18,13 @@
                     <p class="paraerrordiv">{{ credential_error }}</p>
                 {% endif %}
                 <label class="labelcstmlogin">Username :</label>
-                <input type="text" name="username" class="inputcstmlogin" value="{{ username }}" placeholder="Enter your username">
+                <input maxlength="20" type="text" name="username" class="inputcstmlogin" value="{{ username }}" placeholder="Enter your username">
                 {% if username_error %}
                     <p class="paraerrordiv">{{ username_error }}</p>
                 {% endif %}
                 <label class="labelcstmlogin">Password :</label>
                 <div class="passworddiv">
-                    <input type="password" name="password" class="inputcstmlogin" id="password" value="{{ password }}" placeholder="Enter your password">
+                    <input maxlength="20" type="password" name="password" class="inputcstmlogin" id="password" value="{{ password }}" placeholder="Enter your password">
                     <i class="fa-solid fa-eye toggle-eye" id="typePasswordid"></i>
                 </div>
                 {% if password_error %}

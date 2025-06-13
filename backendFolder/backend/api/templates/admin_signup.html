@@ -12,17 +12,17 @@
     <div class="loginhomediv">
         <div class="logindiv">
             <div class="image_div_logo"></div>
-            <form method="post" class="formdivcstmlogin" action="">
+            <form method="post" class="formdivcstmlogin" action="" id="signup-form">
                 {% csrf_token %}
                 <label class="labelcstmlogin">Username :</label>
-                <input type="text" name="username" class="inputcstmlogin" value="{{ request.POST.username }}" placeholder="Enter your username">
-                
+                <input maxlength="20" type="text" name="username" class="inputcstmlogin" value="{{ request.POST.username }}" placeholder="Enter your username">
+
                 <label class="labelcstmlogin">Email :</label>
-                <input type="email" name="email" class="inputcstmlogin" value="{{ request.POST.email }}" placeholder="Enter your email address">
+                <input maxlength="40" type="email" name="email" class="inputcstmlogin" value="{{ request.POST.email }}" placeholder="Enter your email address">
 
                 <label class="labelcstmlogin">Password :</label>
                 <div class="passworddiv">
-                    <input type="password" name="password1" class="inputcstmlogin" id="password1" placeholder="Enter your password" onkeyup="ValidatePassword()">
+                    <input maxlength="20" type="password" name="password1" class="inputcstmlogin" id="password1" placeholder="Enter your password" onkeyup="ValidatePassword()">
                     <i class="fa-solid fa-eye toggle-eye" id="typePasswordid1"></i>
                 </div>
                 <div class="password-strength">
@@ -34,9 +34,10 @@
                 <div id="password-error" class="error-message"></div>
                 <label class="labelcstmlogin">Confirm Password :</label>
                 <div class="passworddiv">
-                    <input type="password" name="password2" class="inputcstmlogin" id="password2" placeholder="Confirm your password">
+                    <input maxlength="20" type="password" name="password2" class="inputcstmlogin" id="password2" placeholder="Confirm your password">
                     <i class="fa-solid fa-eye toggle-eye" id="typePasswordid2"></i>
                 </div>
+                <div id="password2-error" class="error-message"></div>
 
                 <button type="submit" class="loginbtn">Signup</button>
 

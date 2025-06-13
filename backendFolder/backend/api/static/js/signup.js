@@ -1,5 +1,7 @@
 /* SHOW PASSWORD */
 
+const { use } = require("react");
+
 document.addEventListener('DOMContentLoaded',function() {
 
     const togglePassword1 = document.getElementById('typePasswordid1');
@@ -75,3 +77,4 @@ function ValidatePassword(){
     }
 
 }
+
