@@ -27,25 +27,6 @@ document.addEventListener('DOMContentLoaded',function() {
     this.classList.toggle('fa-eye');
     this.classList.toggle('fa-eye-slash');
     })
-
-
-    document.getElementById('password2').addEventListener('input', function() {
-
-        const password1 = document.getElementById('password1').value;
-        const password2 = this.value;
-        const password2Error = document.getElementById('password2-error');
-
-        
-        if (password1 !== password2) {
-            password2Error.textContent = 'Passwords do not match';
-            password2Error.style.display = 'block';
-        } else {
-            password2Error.textContent = '';
-            password2Error.style.display = 'none';
-        }
-    })
-
-
 })
 
 /* Password COLOR DIV */

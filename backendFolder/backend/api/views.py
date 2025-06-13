@@ -76,8 +76,12 @@ def admin_signup_view(request):
             user.is_staff = True
             user.save()
             return redirect('login')
+        else:
+            print("there is an error here >>>>>>>>>>>>>>>>>")
+            return render(request, 'admin_signup.html', {'form': form})
     else:
         form = AdminSignupForm()
+        print(">>> admin_signup_view called with GET method")
     return render(request, 'admin_signup.html', {'form': form})
 
 # Pages views here

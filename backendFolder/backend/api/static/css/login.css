@@ -191,6 +191,12 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     display: none;
 }
 
+.error-message_cstm {
+
+    color: red;
+    font-size: 12px;
+}
+
 .password-strength {
 
     display: flex;
@@ -266,6 +272,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 
         font-size: 12px;
     }
+
+    .error-message, .error-message_cstm {
+
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -317,6 +328,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     .forgetpasswordtext, .donthaveanaccnt {
 
         font-size: 10px;
+    }
+
+    .error-message, .error-message_cstm {
+
+        font-size: 8px !important;
     }
 }
 

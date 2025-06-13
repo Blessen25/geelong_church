@@ -14,17 +14,27 @@
             <div class="image_div_logo"></div>
             <form method="post" class="formdivcstmlogin" action="" id="signup-form">
                 {% csrf_token %}
+                
                 <label class="labelcstmlogin">Username :</label>
                 <input maxlength="20" type="text" name="username" class="inputcstmlogin" value="{{ request.POST.username }}" placeholder="Enter your username">
+                {% if form.username.errors %}
+                    <div class="error-message_cstm">{{ form.username.errors.0 }}</div>
+                {% endif %}
 
                 <label class="labelcstmlogin">Email :</label>
                 <input maxlength="40" type="email" name="email" class="inputcstmlogin" value="{{ request.POST.email }}" placeholder="Enter your email address">
+                {% if form.email.errors %}
+                    <div class="error-message_cstm">{{ form.email.errors.0 }}</div>
+                {% endif %}
 
                 <label class="labelcstmlogin">Password :</label>
                 <div class="passworddiv">
-                    <input maxlength="20" type="password" name="password1" class="inputcstmlogin" id="password1" placeholder="Enter your password" onkeyup="ValidatePassword()">
+                    <input maxlength="20" type="password" name="password1" class="inputcstmlogin" id="password1" placeholder="Enter your password" onkeyup="ValidatePassword()" value="{{ request.POST.password1 }}">
                     <i class="fa-solid fa-eye toggle-eye" id="typePasswordid1"></i>
                 </div>
+                {% if form.password1.errors %}
+                    <div class="error-message_cstm">{{ form.password1.errors.0 }}</div>
+                {% endif %}
                 <div class="password-strength">
                     <div class="bar" id="bar-1"></div>
                     <div class="bar" id="bar-2"></div>
@@ -34,10 +44,12 @@
                 <div id="password-error" class="error-message"></div>
                 <label class="labelcstmlogin">Confirm Password :</label>
                 <div class="passworddiv">
-                    <input maxlength="20" type="password" name="password2" class="inputcstmlogin" id="password2" placeholder="Confirm your password">
+                    <input maxlength="20" type="password" name="password2" class="inputcstmlogin" id="password2" placeholder="Confirm your password" value="{{ request.POST.password2 }}">
                     <i class="fa-solid fa-eye toggle-eye" id="typePasswordid2"></i>
                 </div>
-                <div id="password2-error" class="error-message"></div>
+                {% if form.password2.errors %}
+                    <div class="error-message_cstm">{{ form.password2.errors.0 }}</div>
+                {% endif %}
 
                 <button type="submit" class="loginbtn">Signup</button>
 
