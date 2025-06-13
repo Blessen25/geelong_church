@@ -3,15 +3,15 @@ from rest_framework import generics;
 from .models import Contact, Event;
 from .serializers import ContactSerializer, EventSerializer;
 from django.http import HttpResponse, JsonResponse;
-from .forms import EventForm;
+from .forms import EventForm, AdminSignupForm;
 from django.utils import timezone;
 import json;
 from django.contrib.auth import authenticate, login, get_user_model, logout;
 from django.contrib.auth.decorators import login_required;
+from django.contrib.auth.models import User;
 
 
 # Create your views here.
-
 class ContactListCreateView(generics.ListCreateAPIView):
 
     queryset = Contact.objects.filter(is_deleted = False)
@@ -22,26 +22,7 @@ class EventListCreateView(generics.ListCreateAPIView):
     queryset = Event.objects.filter(is_deleted = False)
     serializer_class = EventSerializer
 
-@login_required
-def Home(request):
-
-    events = Event.objects.filter(is_deleted = False)
-    contacts = Contact.objects.filter(is_deleted = False)
-    return render(request, 'home.html', {'events' : events, 'contacts' : contacts} )
-
-@login_required
-def Contact_fn(request):
-    
-    contact = Contact.objects.filter(is_deleted = False)
-    return render(request, 'contact.html',{'contacts' : contact})
-
-@login_required
-def Event_fn(request):
-    
-    event = Event.objects.filter(is_deleted = False)
-    return render(request, 'event.html',{'events' : event})
-
-
+# Functions here
 User = get_user_model()
 def User_login(request):
 
@@ -85,6 +66,40 @@ def User_login(request):
 def User_logout(request):
     logout(request)
     return redirect('login')
+
+
+def admin_signup_view(request):
+    if request.method == 'POST':
+        form = AdminSignupForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.is_staff = True
+            user.save()
+            return redirect('login')
+    else:
+        form = AdminSignupForm()
+    return render(request, 'admin_signup.html', {'form': form})
+
+# Pages views here
+
+@login_required
+def Home(request):
+
+    events = Event.objects.filter(is_deleted = False)
+    contacts = Contact.objects.filter(is_deleted = False)
+    return render(request, 'home.html', {'events' : events, 'contacts' : contacts} )
+
+@login_required
+def Contact_fn(request):
+    
+    contact = Contact.objects.filter(is_deleted = False)
+    return render(request, 'contact.html',{'contacts' : contact})
+
+@login_required
+def Event_fn(request):
+    
+    event = Event.objects.filter(is_deleted = False)
+    return render(request, 'event.html',{'events' : event})
 
 @login_required
 def Base(request):

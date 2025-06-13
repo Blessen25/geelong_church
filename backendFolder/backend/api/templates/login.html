@@ -18,13 +18,13 @@
                     <p class="paraerrordiv">{{ credential_error }}</p>
                 {% endif %}
                 <label class="labelcstmlogin">Username :</label>
-                <input type="text" name="username" class="inputcstmlogin" value="{{ username }}">
+                <input type="text" name="username" class="inputcstmlogin" value="{{ username }}" placeholder="Enter your username">
                 {% if username_error %}
                     <p class="paraerrordiv">{{ username_error }}</p>
                 {% endif %}
                 <label class="labelcstmlogin">Password :</label>
                 <div class="passworddiv">
-                    <input type="password" name="password" class="inputcstmlogin" id="password" value="{{ password }}">
+                    <input type="password" name="password" class="inputcstmlogin" id="password" value="{{ password }}" placeholder="Enter your password">
                     <i class="fa-solid fa-eye toggle-eye" id="typePassswordid"></i>
                 </div>
                 {% if password_error %}
@@ -32,7 +32,7 @@
                 {% endif %}
                 <a href="#" class="forgetpasswordtext signupclrcstm">Forget Password?</a>
                 <button type="submit" class="loginbtn">Login</button>
-                <p class="donthaveanaccnt">Don't have an account? <a href="#" class="signupclrcstm">Signup</a></p>
+                <p class="donthaveanaccnt">Don't have an account? <a href="/admin-signup" class="signupclrcstm">Signup</a></p>
             </form>
         </div>
     </div>

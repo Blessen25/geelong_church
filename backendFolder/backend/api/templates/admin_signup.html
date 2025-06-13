@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="loginhomediv">
+        <div class="logindiv">
+            <div class="image_div_logo"></div>
+            <form method="post" class="formdivcstmlogin" action="">
+                {% csrf_token %}
+                <label class="labelcstmlogin">Username :</label>
+                <input type="text" name="username" class="inputcstmlogin" value="{{ request.POST.username }}" placeholder="Enter your username">
+                
+                <label class="labelcstmlogin">Email :</label>
+                <input type="email" name="email" class="inputcstmlogin" value="{{ request.POST.email }}" placeholder="Enter your email address">
+
+                <label class="labelcstmlogin">Password :</label>
+                <div class="passworddiv">
+                    <input type="password" name="password1" class="inputcstmlogin" id="password1" placeholder="Enter your password">
+                    <i class="fa-solid fa-eye toggle-eye" id="typePassswordid1"></i>
+                </div>
+
+                <label class="labelcstmlogin">Confirm Password :</label>
+                <div class="passworddiv">
+                    <input type="password" name="password2" class="inputcstmlogin" id="password2" placeholder="Confirm your password">
+                    <i class="fa-solid fa-eye toggle-eye" id="typePassswordid2"></i>
+                </div>
+
+                <button type="submit" class="loginbtn">Signup</button>
+
+                <p class="donthaveanaccnt">Already have an account? <a href="{% url 'login' %}" class="signupclrcstm">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="{% static 'js/login.js' %}"></script>
+</html>
