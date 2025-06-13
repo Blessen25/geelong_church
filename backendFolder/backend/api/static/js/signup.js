@@ -46,25 +46,6 @@ document.addEventListener('DOMContentLoaded',function() {
     })
 
 
-    document.getElementById('signup-form').addEventListener('submit', function(e) {
-        
-        let hasError = false;
-
-        if(document.getElementById('password1').value !== document.getElementById('password2').value) {
-            
-            hasError = true;
-        }
-
-        if(ValidatePassword()) {
-
-            hasError = true
-        }
-
-        if(hasError) {
-
-            e.preventDefault()
-        }
-    })
 })
 
 /* Password COLOR DIV */
@@ -74,7 +55,6 @@ function ValidatePassword(){
     const password = document.getElementById('password1').value;
     const error = document.getElementById('password-error');
     const bars = document.querySelectorAll('.password-strength .bar');
-    const error_true = false
 
     let strength = 0;
     error.textContent = '';
@@ -98,7 +78,6 @@ function ValidatePassword(){
         error.textContent = 'Your password must contain at least 8 characters, uppercase, lowercase, number and special character';
         error.style.display = 'block';
         error_true = true
-        return error_true
     }
 
     bars.forEach(bar => {
