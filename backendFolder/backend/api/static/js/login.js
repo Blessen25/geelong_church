@@ -1,4 +1,4 @@
-const togglePassword = document.getElementById('typePassswordid');
+const togglePassword = document.getElementById('typePasswordid');
 const passwordInput = document.getElementById('password');
 
 togglePassword.addEventListener('click',function(){
