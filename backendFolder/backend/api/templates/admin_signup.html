@@ -22,10 +22,16 @@
 
                 <label class="labelcstmlogin">Password :</label>
                 <div class="passworddiv">
-                    <input type="password" name="password1" class="inputcstmlogin" id="password1" placeholder="Enter your password">
+                    <input type="password" name="password1" class="inputcstmlogin" id="password1" placeholder="Enter your password" onkeyup="ValidatePassword()">
                     <i class="fa-solid fa-eye toggle-eye" id="typePasswordid1"></i>
                 </div>
-
+                <div class="password-strength">
+                    <div class="bar" id="bar-1"></div>
+                    <div class="bar" id="bar-2"></div>
+                    <div class="bar" id="bar-3"></div>
+                    <div class="bar" id="bar-4"></div>
+                </div>                
+                <div id="password-error" class="error-message"></div>
                 <label class="labelcstmlogin">Confirm Password :</label>
                 <div class="passworddiv">
                     <input type="password" name="password2" class="inputcstmlogin" id="password2" placeholder="Confirm your password">
