@@ -4,7 +4,9 @@
     font-optical-sizing: auto;
     font-style: normal;
     box-sizing: border-box;
+    margin: 0px;
 }
+
 .loginhomediv {
 
     position: fixed;
@@ -54,7 +56,9 @@
 .labelcstmlogin {
 
     font-size: 20px;
+    text-align: justify;
 }
+
 
 .inputcstmlogin {
 
@@ -236,6 +240,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 
     font-size: 28px;
     font-weight: 500;
+    margin: 0px 0px 10px 0px;
 }
 
 
@@ -348,7 +353,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     .forgotpasswordh1text {
 
         font-size: 18px;
-        margin-top: 5px;
+        margin: 0px 0px 5px 0px;
     }
 
     .inputcstmlogin {
