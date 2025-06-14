@@ -232,6 +232,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     background-color: rgb(0, 255, 0);
 }
 
+.forgotpasswordh1text {
+
+    font-size: 28px;
+    font-weight: 500;
+}
 
 
 @media screen and (max-width: 899px) {
@@ -276,6 +281,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     .error-message, .error-message_cstm {
 
         font-size: 10px;
+    }
+
+    .forgotpasswordh1text {
+
+        font-size: 22px;
     }
 }
 
@@ -333,6 +343,22 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     .error-message, .error-message_cstm {
 
         font-size: 8px !important;
+    }
+
+    .forgotpasswordh1text {
+
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .inputcstmlogin {
+
+        padding: 10px;
+    }
+
+    .inputcstmlogin:nth-child(1) {
+
+        padding: 10px 20px 10px 10px;
     }
 }
 

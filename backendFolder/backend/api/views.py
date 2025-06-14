@@ -3,12 +3,13 @@ from rest_framework import generics;
 from .models import Contact, Event;
 from .serializers import ContactSerializer, EventSerializer;
 from django.http import HttpResponse, JsonResponse;
-from .forms import EventForm, AdminSignupForm;
+from .forms import EventForm, AdminSignupForm, CustomPasswordResetForm;
 from django.utils import timezone;
 import json;
 from django.contrib.auth import authenticate, login, get_user_model, logout;
 from django.contrib.auth.decorators import login_required;
 from django.contrib.auth.models import User;
+from django.contrib.auth.views import PasswordResetView
 
 
 # Create your views here.
@@ -21,6 +22,10 @@ class EventListCreateView(generics.ListCreateAPIView):
 
     queryset = Event.objects.filter(is_deleted = False)
     serializer_class = EventSerializer
+
+class MyPasswordResetView(PasswordResetView):
+    template_name = 'accounts/password_reset.html'
+    form_class = CustomPasswordResetForm
 
 # Functions here
 User = get_user_model()

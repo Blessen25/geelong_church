@@ -2,6 +2,7 @@ from django import forms
 from .models import Event
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import PasswordResetForm
 
 class EventForm(forms.ModelForm):
     class Meta:
@@ -27,3 +28,12 @@ class AdminSignupForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
+class CustomPasswordResetForm(PasswordResetForm):
+    email = forms.EmailField(
+        max_length=254,
+        widget=forms.EmailInput(attrs={
+            'class': 'inputcstmlogin',
+            'placeholder': 'Enter your email'
+        }),
+        label='Email'
+    )
