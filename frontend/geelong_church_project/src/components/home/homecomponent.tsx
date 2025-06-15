@@ -1,14 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './homecomponent.css';
 import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containercstm, Containerdiv, ContainerWidthCstm, Flexwithgapcstmdivcol, Paddingtopdivhome, Popupdiv } from "../extra";
 import { HomeFourDivChildCompProps, HomeFourDivsProps } from "../../interface";
 import { Events, HomeFourDivChildArray } from "../../array";
+import axios from "axios";
 
 export const HomeComponent = () => {
 
     const [showPopup, setShowPopup] = useState(false);
     const HandleOpenPopup = () => setShowPopup(true);
     const HandleClosePopup = () => setShowPopup(false);
+
+    const API_URL = process.env.REACT_APP_API_URL
+
+    const getEvents = async () => {
+
+        try {
+            const response = await axios.get(`${API_URL}event/`)
+            return response.data;
+        } catch (error) {
+
+            console.error('Error fetching events:', error);
+            throw error;
+        }
+    };
+
+    useEffect(()=>{
+
+        console.log(getEvents());
+    },[])
+
     return (
         <>
         <Paddingtopdivhome>

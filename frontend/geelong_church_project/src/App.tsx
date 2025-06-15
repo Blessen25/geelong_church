@@ -11,6 +11,7 @@ import WeBelieve from './screens/webelieve/webelieve';
 import BibleVerse from './screens/bibleverse/bibleverse';
 import PlanYourVisit from './screens/planyourvisit/planyourvisit';
 
+
 const App = () =>{
 
   return(
