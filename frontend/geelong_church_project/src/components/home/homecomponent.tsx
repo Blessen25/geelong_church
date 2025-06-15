@@ -36,7 +36,6 @@ export const HomeComponent = () => {
 
                 const data = await getEvents();
                 setEvents(data);
-                console.log("data",data)
                 setLoading(false);
             } catch(error){
                 setLoading(false);
