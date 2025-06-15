@@ -95,3 +95,12 @@ export interface PopupdivProps {
     eventName ?: string;
     date ?: string;
 }
+
+export interface Event {
+  id: number;
+  event_name: string;
+  event_date: string; // Use string since DateField serializes to YYYY-MM-DD
+  created_at: string;
+  is_deleted: boolean;
+  deleted_at: string | null;
+}

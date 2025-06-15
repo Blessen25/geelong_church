@@ -4,12 +4,17 @@ import { ButtonwithtextComponent, ButtonwithtextComponentColor, Containercstm, C
 import { HomeFourDivChildCompProps, HomeFourDivsProps } from "../../interface";
 import { Events, HomeFourDivChildArray } from "../../array";
 import axios from "axios";
+import { faL } from "@fortawesome/free-solid-svg-icons";
+import { Event } from "../../interface";
+import { format } from "date-fns";
 
 export const HomeComponent = () => {
 
     const [showPopup, setShowPopup] = useState(false);
     const HandleOpenPopup = () => setShowPopup(true);
     const HandleClosePopup = () => setShowPopup(false);
+    const [events, setEvents] = useState<Event[]>([]);
+    const [loading, setLoading] = useState(false);
 
     const API_URL = process.env.REACT_APP_API_URL
 
@@ -25,10 +30,20 @@ export const HomeComponent = () => {
         }
     };
 
-    useEffect(()=>{
+    useEffect(()=> {
+        const fetchEvents = async () => {
+            try {
 
-        console.log(getEvents());
-    },[])
+                const data = await getEvents();
+                setEvents(data);
+                console.log("data",data)
+                setLoading(false);
+            } catch(error){
+                setLoading(false);
+            }
+        };
+        fetchEvents();
+    },[]);
 
     return (
         <>
@@ -49,17 +64,25 @@ export const HomeComponent = () => {
                             <div className="outlaypopupcstm">
                                 <Popupdiv onClickprop={HandleClosePopup} title="Upcoming Events" children={
                                     <>
-                                        <div className="upcomingeventpopup">
-                                            {Events.map((items, index) =>(
-                                              <div key={index} className="upcomingeventpopupchild boxshadowcstm" style={{ backgroundImage : 'url("assets/images/main/dove.jpg")'}}>
-                                                <Flexwithgapcstmdivcol parentClassname="eventsdivcstm">
-                                                    <p className="text_cstm_normal_para upcomingeventparacstm">{items.eventName}</p>
-                                                    <p className="text_cstm_normal_para upcomingeventparacstm">{items.date}</p>
-                                                </Flexwithgapcstmdivcol>
-                                            </div>  
+                                        {events.length > 0 ? (
+                                            <> 
+                                                 <div className="upcomingeventpopup">
+                                                    {events.map((items, index) =>(
+                                                    <div key={index} className="upcomingeventpopupchild boxshadowcstm" style={{ backgroundImage : 'url("assets/images/main/dove.jpg")'}}>
+                                                        <Flexwithgapcstmdivcol parentClassname="eventsdivcstm">
+                                                            <p className="text_cstm_normal_para upcomingeventparacstm">{items.event_name}</p>
+                                                            <p className="text_cstm_normal_para upcomingeventparacstm">{format(new Date(items.event_date), 'MMMM d')}</p>
+                                                        </Flexwithgapcstmdivcol>
+                                                </div>  
                                             )
                                             )}
                                         </div>
+                                            </>
+                                        ) : (
+                                            <div className="popupdivchild">
+                                                <h1 className="text_cstm_medium_heading textalign_cstmcenter" style={{ color:"#8b8b8b"}}>No Upcoming Events</h1>
+                                            </div>
+                                        )}
                                     </>
                                 }/>                               
                             </div>
