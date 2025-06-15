@@ -1,11 +1,9 @@
 import React from "react";
 import './contact.css';
 import { Containercstm, ContainerWidthCstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, TitleinMaindiv,  } from "../extra";
-import { ContactDetailsArray } from "../../array";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { ContactcardDetailsdivProps } from "../../interface";
-import { resolveTxt } from "dns";
 import PhoneNumberField from "../inputs/input";
 
 export const Contact_UsComp = () => {
