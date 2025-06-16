@@ -50,36 +50,70 @@ export const ContactDetailsdiv = () => {
         }))
     }
 
+    const API_URL = process.env.REACT_APP_API_URL
 
-    const handleSubmit = async(e:any) => {
+    const handleSubmit = async (e: any) => {
+            e.preventDefault();
+            setcommonError('');
+            setSuccess('');
 
-        e.preventDefault();
-        try {
-            const response = await fetch('http://127.0.0.1:8000/api/contact/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to submit the form');
+            // Client-side validation
+            if (!formData.name) {
+                setcommonError('Please enter your name.');
+                return;
+            }
+            if (!formData.email) {
+                setcommonError('Please enter your email.');
+                return;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                setcommonError('Please enter a valid email address.');
+                return;
+            }
+            if (!formData.phone_number) {
+                setcommonError('Please enter your phone number.');
+                return;
+            }
+            if (!formData.subject) {
+                setcommonError('Please enter a subject.');
+                return;
+            }
+            if (!formData.message) {
+                setcommonError('Please enter your message.');
+                return;
             }
 
-            const result = await response.json();
-            setSuccess("Your message has been sent successfully");
-            setFormData({
-                name: '',
-                email: '',
-                phone_number: '',
-                subject: '',
-                message: '',
-            });
-        } catch (err) {
-            console.error(err);
-        }
-    };
+            try {
+                console.log('Sending payload:', JSON.stringify(formData)); // Debug log
+                const response = await fetch(`${API_URL}contact/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json(); // Parse the error response
+                    console.log('Error response from server:', errorData); // Log the error details
+                    setcommonError(errorData.message || 'Failed to submit the form. Please check your input.');
+                    throw new Error('Failed to submit the form');
+                }
+
+                const result = await response.json();
+                setSuccess('Your message has been sent successfully!');
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone_number: '',
+                    subject: '',
+                    message: '',
+                });
+            } catch (err) {
+                console.error(err);
+            }
+        };
 
     return(
 
