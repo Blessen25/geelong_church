@@ -6,6 +6,7 @@ import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-
 import { ContactcardDetailsdivProps } from "../../interface";
 import PhoneNumberField from "../inputs/input";
 import { useNavigate } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { set } from "date-fns";
 import { redirect } from "react-router-dom";
 
@@ -259,9 +260,9 @@ export const ContactDetailsdiv = () => {
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
                             {success && 
                             <>
-                                <div className="alert alert-success" role="alert">
+                                <div className="alert alert-success alert-dismissible fade show" role="alert">
                                     <strong>{success}</strong>
-                                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={() => setSuccess('')}></button>
                                 </div>
                             </>}
                             <h1 className="text_cstm_big_heading">Let’s Connect</h1>
