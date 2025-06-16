@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { ContactcardDetailsdivProps } from "../../interface";
 import PhoneNumberField from "../inputs/input";
+import { useNavigate } from "react-router-dom";
 import { set } from "date-fns";
+import { redirect } from "react-router-dom";
 
 export const Contact_UsComp = () => {
 
@@ -25,6 +27,7 @@ export const Contact_UsComp = () => {
 
 export const ContactDetailsdiv = () => {    
 
+    const navigate = useNavigate();
     const [success, setSuccess] = useState('');
     const [commonerror, setcommonError] = useState('');
     const [nameerror, setnameError] = useState('');
@@ -231,6 +234,9 @@ export const ContactDetailsdiv = () => {
                     subject: '',
                     message: '',
                 });
+                setTimeout(() => {
+                    navigate('/'); // Redirect to the home page
+                }, 1500);
             } catch (err) {
                 console.error(err);
             }
