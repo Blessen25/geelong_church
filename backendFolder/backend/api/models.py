@@ -19,14 +19,17 @@ class Contact(models.Model):
     deleted_at = models.DateTimeField(null=True, blank=True)
 
 
-def save(self, *args, **kwargs):
-    if self.is_deleted and self.deleted_at is None:
-        self.deleted_at = timezone.localtime(timezone.now())
-    elif not self.is_deleted:
-        self.deleted_at = None
+    def save(self, *args, **kwargs):
+        if self.is_deleted and self.deleted_at is None:
+            self.deleted_at = timezone.localtime(timezone.now())
+        elif not self.is_deleted:
+            self.deleted_at = None
 
-    super().save(*args, **kwargs)
-    
+        super().save(*args, **kwargs)
+
+        def __str__(self):
+            return self.name
+
     class Meta:
         ordering = ['-created_at']
 
