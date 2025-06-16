@@ -8,6 +8,12 @@
   font-style: normal;
 }
 
+.errordivcstm {
+
+  color: red;
+  font-size: 12px;
+}
+
 p{
 
   line-height: 1.5;
@@ -198,6 +204,11 @@ p{
 
   font-size: 17px;  
   }
+
+  .errordivcstm {
+
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -225,5 +236,10 @@ p{
   .text_cstm_medium_heading{
 
     font-size: 13px;  
+  }
+
+  .errordivcstm {
+
+    font-size: 8px;
   }
 }

@@ -26,6 +26,12 @@ export const ContactDetailsdiv = () => {
 
     const [success, setSuccess] = useState('');
     const [commonerror, setcommonError] = useState('');
+    const [nameerror, setnameError] = useState('');
+    const [emailerror, setemailError] = useState('');
+    const [phoneerror, setphoneError] = useState('');
+    const [subjecterror, setsubjectError] = useState('');
+    const [messageerror, setmessageError] = useState('');
+
     const [ formData, setFormData ] = useState({
         name: '',
         email: '',
@@ -34,6 +40,14 @@ export const ContactDetailsdiv = () => {
         message: '',
     })
 
+    const [charCount, setCharCount] = useState({
+        name: 0,
+        email: 0,
+        phone_number: 0,
+        subject: 0,
+        message: 0,
+    });
+
     const handleIInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prevData) => {
@@ -41,14 +55,26 @@ export const ContactDetailsdiv = () => {
             console.log("Form Data Updated:", updated);
             return updated;
         });
+
+        setCharCount((prevCount) => ({
+            ...prevCount,
+            [name]: value.length
+        }));
     };
 
     const handlePhoneChange = (phone:any) => {
-        setFormData((prevData)=> ({
-            ...prevData,
-            phone_number: phone
-        }))
-    }
+            if (phone.length <= 20) {
+            setFormData((prevData) => ({
+                ...prevData,
+                phone_number: phone
+            }));
+
+            setCharCount((prevCount) => ({
+                ...prevCount,
+                phone_number: phone.length
+            }));
+        }
+    };
 
     const API_URL = process.env.REACT_APP_API_URL
 
@@ -56,31 +82,48 @@ export const ContactDetailsdiv = () => {
             e.preventDefault();
             setcommonError('');
             setSuccess('');
+            setnameError('');
+            setemailError('');
+            setphoneError('');
+            setsubjectError('');
+            setmessageError('');
+            
+            let hasError = false;
 
-            // Client-side validation
-            if (!formData.name) {
-                setcommonError('Please enter your name.');
-                return;
+            if (!formData.name.trim()) {
+                if (formData.name.length < 30) {
+                    setnameError('Please enter a name.');
+                    hasError = true;
+                } else {
+                    setnameError('');
+                }
+            } else {
+                setnameError('');
             }
+
             if (!formData.email) {
-                setcommonError('Please enter your email.');
-                return;
+                setemailError('Please enter a email.');
+                hasError = true;
             }
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(formData.email)) {
-                setcommonError('Please enter a valid email address.');
-                return;
+                setemailError('Please enter a valid email address.');
+                hasError = true;
             }
             if (!formData.phone_number) {
-                setcommonError('Please enter your phone number.');
-                return;
+                setphoneError('Please enter a phone number.');
+                hasError = true;
             }
             if (!formData.subject) {
-                setcommonError('Please enter a subject.');
-                return;
+                setsubjectError('Please enter a subject.');
+                hasError = true;
             }
             if (!formData.message) {
-                setcommonError('Please enter your message.');
+                setmessageError('Please enter a message.');
+                hasError = true;
+            }
+
+            if (hasError) {
                 return;
             }
 
@@ -143,25 +186,36 @@ export const ContactDetailsdiv = () => {
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Name</p>
                                         <input name="name" type="text" placeholder="Enter Your Name" required className="inputformcstm" maxLength={30} value={formData.name} onChange={handleIInputChange}/>
+                                        { nameerror && charCount.name < 30 && <p className="errordivcstm">{nameerror}</p> }
+                                        {charCount.name === 30 && <p className="errordivcstm">Max Characters Filled</p>}
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Email</p>
                                         <input name="email" type="email" placeholder="Enter Your Email" required className="inputformcstm" maxLength={50} value={formData.email} onChange={handleIInputChange}/>
+                                        {emailerror && <p className="errordivcstm">{emailerror}</p>}
+                                        {charCount.email === 50 && <p className="errordivcstm">Max Characters Filled</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
                                         <PhoneNumberField value={formData.phone_number} onChange={handlePhoneChange}/>
+                                        {phoneerror && <p className="errordivcstm">{phoneerror}</p>}
+                                        {charCount.phone_number === 20 && <p className="errordivcstm">Max Characters Filled</p>}
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Subject</p>
                                         <input name="subject" type="text" placeholder="Enter Subject" required className="inputformcstm" maxLength={200} value={formData.subject} onChange={handleIInputChange}/>
+                                        {subjecterror && <p className="errordivcstm">{subjecterror}</p>}
+                                        {charCount.subject === 200 && <p className="errordivcstm">Max Characters Filled</p>}
+
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Message</p>
                                         <textarea name="message" placeholder="Enter Your Message" required className="inputformmessagecstm" maxLength={500} value={formData.message} onChange={handleIInputChange}/>
+                                        {messageerror && <p className="errordivcstm">{messageerror}</p>}
+                                        {charCount.message === 500 && <p className="errordivcstm">Max Characters Filled</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <button type="submit" className="submitbuttoncontactcstm" onClick={handleSubmit}>Submit</button>
