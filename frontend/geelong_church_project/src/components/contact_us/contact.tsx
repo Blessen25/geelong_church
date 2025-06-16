@@ -201,7 +201,7 @@ export const ContactDetailsdiv = () => {
                 setmessageError('');
             }
             
-            if (valid) {
+            if (!valid) {
                 return;
             }
 
