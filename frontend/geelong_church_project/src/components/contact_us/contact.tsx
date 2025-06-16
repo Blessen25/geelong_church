@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import './contact.css';
 import { Containercstm, ContainerWidthCstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, TitleinMaindiv,  } from "../extra";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,7 +22,64 @@ export const Contact_UsComp = () => {
     )
 }
 
-export const ContactDetailsdiv = () => {
+export const ContactDetailsdiv = () => {    
+
+    const [success, setSuccess] = useState('');
+    const [commonerror, setcommonError] = useState('');
+    const [ formData, setFormData ] = useState({
+        name: '',
+        email: '',
+        phone_number: '',
+        subject: '',
+        message: '',
+    })
+
+    const handleIInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => {
+            const updated = { ...prevData, [name]: value };
+            console.log("Form Data Updated:", updated);
+            return updated;
+        });
+    };
+
+    const handlePhoneChange = (phone:any) => {
+        setFormData((prevData)=> ({
+            ...prevData,
+            phone_number: phone
+        }))
+    }
+
+
+    const handleSubmit = async(e:any) => {
+
+        e.preventDefault();
+        try {
+            const response = await fetch('http://127.0.0.1:8000/api/contact/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to submit the form');
+            }
+
+            const result = await response.json();
+            setSuccess("Your message has been sent successfully");
+            setFormData({
+                name: '',
+                email: '',
+                phone_number: '',
+                subject: '',
+                message: '',
+            });
+        } catch (err) {
+            console.error(err);
+        }
+    };
 
     return(
 
@@ -39,34 +96,41 @@ export const ContactDetailsdiv = () => {
                     <Flexwithgapcstmdivrow>
                         <form>
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
+                            {success && 
+                            <>
+                                <div className="alert alert-success" role="alert">
+                                    <strong>{success}</strong>
+                                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            </>}
                             <h1 className="text_cstm_big_heading">Let’s Connect</h1>
                             <p className="text_cstm_normal_para textalign_cstmjustify">Have a question or need assistance? Simply fill out the form with your inquiry or reach out to us directly via the email or phone number listed above.</p>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Name</p>
-                                        <input type="text" placeholder="Enter Your Name" required className="inputformcstm" />
+                                        <input name="name" type="text" placeholder="Enter Your Name" required className="inputformcstm" maxLength={30} value={formData.name} onChange={handleIInputChange}/>
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Email</p>
-                                        <input type="email" placeholder="Enter Your Email" required className="inputformcstm" />
+                                        <input name="email" type="email" placeholder="Enter Your Email" required className="inputformcstm" maxLength={50} value={formData.email} onChange={handleIInputChange}/>
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <PhoneNumberField />
+                                        <PhoneNumberField value={formData.phone_number} onChange={handlePhoneChange}/>
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Subject</p>
-                                        <input type="text" placeholder="Enter Subject" required className="inputformcstm" />
+                                        <input name="subject" type="text" placeholder="Enter Subject" required className="inputformcstm" maxLength={200} value={formData.subject} onChange={handleIInputChange}/>
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Message</p>
-                                        <textarea name="message" placeholder="Enter Your Message" required className="inputformmessagecstm"/>
+                                        <textarea name="message" placeholder="Enter Your Message" required className="inputformmessagecstm" maxLength={500} value={formData.message} onChange={handleIInputChange}/>
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
-                                <button type="submit" className="submitbuttoncontactcstm">Submit</button>
+                                <button type="submit" className="submitbuttoncontactcstm" onClick={handleSubmit}>Submit</button>
                             </Flexwithgapcstmdivcol>
                         </form>
                     </Flexwithgapcstmdivrow>

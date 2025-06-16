@@ -104,3 +104,8 @@ export interface Event {
   is_deleted: boolean;
   deleted_at: string | null;
 }
+
+export interface PhoneNumberFieldProps {
+    value: string;
+    onChange: (phone: string) => void;
+}

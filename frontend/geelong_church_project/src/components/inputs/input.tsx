@@ -3,22 +3,23 @@ import 'react-phone-input-2/lib/style.css';
 import { Flexwithgapcstmdivcol } from "../extra";
 import PhoneInput from "react-phone-input-2";
 import './input.css';
+import { PhoneNumberFieldProps } from "../../interface";
 
-const PhoneNumberField = () => {
+const PhoneNumberField: React.FC<PhoneNumberFieldProps> = (Props) => {
 
-    const [phonevalue , setPhoneValue] = useState('');
     return(
         <>
             <Flexwithgapcstmdivcol>
                 <p className="inputformptag">Phone</p>
                 <PhoneInput 
                 country={'au'}
-                value={''}
-                onChange={setPhoneValue}
+                value={Props.value}
+                onChange={Props.onChange}
                 inputProps={{
                     name: "phone",
                     required: true,
-                    autoFocus: true
+                    autoFocus: true,
+                    maxLength: 20,
                 }}
                 inputClass="phoneinputformcstm"
                 />
