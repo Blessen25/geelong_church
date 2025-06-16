@@ -15,7 +15,6 @@
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "axios": "^1.10.0",
-    "bootstrap": "^5.3.6",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "react": "^19.1.0",

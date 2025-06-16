@@ -163,6 +163,16 @@
     width: 100%;
     height: 450px;
 }
+
+.successdivgreen {
+
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    padding: 20px;
+    background-color: #75b798;
+    font-size: 14px;
+}
 @media screen and (max-width: 1399px) {
     
     .imagedivcontactus {
@@ -312,6 +322,11 @@
 
         height: 340px;
     }
+
+    .successdivgreen {
+
+        font-size: 11px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -370,5 +385,11 @@
      .mapcstmstyle {
 
         height: 250px;
+    }
+
+    .successdivgreen {
+
+        font-size: 9px;
+        padding: 10px;
     }
 }
