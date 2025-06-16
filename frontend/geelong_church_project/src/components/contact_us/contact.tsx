@@ -43,6 +43,7 @@ export const ContactDetailsdiv = () => {
         phone_number: '',
         subject: '',
         message: '',
+        country: '',
     })
 
     const [charCount, setCharCount] = useState({
@@ -117,12 +118,13 @@ export const ContactDetailsdiv = () => {
         }
     };
 
-    const handlePhoneChange = (phone:any) => {
+    const handlePhoneChange = (phone:any, countryData:any) => {
            setFormData((prevData) => ({
                 ...prevData,
                 phone_number: phone,
+                country: countryData?.name || 'Unknown',
             }));
-
+            
             if (!phone) {
                 setphoneError('Please enter a phone number.');
             } else if (phone.length >= MAX_LENGTHS.phone_number) {
@@ -234,6 +236,7 @@ export const ContactDetailsdiv = () => {
                     phone_number: '',
                     subject: '',
                     message: '',
+                    country: '',
                 });
                 setTimeout(() => {
                     navigate('/'); // Redirect to the home page

@@ -107,5 +107,5 @@ export interface Event {
 
 export interface PhoneNumberFieldProps {
     value: string;
-    onChange: (phone: string) => void;
+    onChange: (phone: string, country: any) => void;
 }
