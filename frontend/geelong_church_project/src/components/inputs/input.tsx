@@ -15,7 +15,6 @@ const PhoneNumberField: React.FC<PhoneNumberFieldProps> = (Props) => {
                 country={'au'}
                 value={Props.value}
                 onChange={(value, countryData) => {
-                    console.log(value, countryData);
                     Props.onChange(value, countryData);
                 }}
                 inputProps={{
