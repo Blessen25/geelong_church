@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { ContactcardDetailsdivProps } from "../../interface";
 import PhoneNumberField from "../inputs/input";
+import { set } from "date-fns";
 
 export const Contact_UsComp = () => {
 
@@ -48,6 +49,14 @@ export const ContactDetailsdiv = () => {
         message: 0,
     });
 
+    const MAX_LENGTHS = {
+        name: 30,
+        email: 50,
+        phone_number: 20,
+        subject: 200,
+        message: 500,
+    };
+
     const handleIInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prevData) => {
@@ -60,20 +69,63 @@ export const ContactDetailsdiv = () => {
             ...prevCount,
             [name]: value.length
         }));
+
+        if (name === 'name') {
+            if (!value) {
+                setnameError('Please enter a name.');
+            } else if (value.length >= MAX_LENGTHS.name) {
+                setnameError('Max Characters Filled');
+            } else {
+                setnameError('');
+            }
+        }
+
+        if (name === 'email') {
+            if (!value) {
+                setemailError('Please enter an email.');
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                setemailError('Please enter a valid email address.');
+            } else if (value.length >= MAX_LENGTHS.email) {
+                setemailError('Max Characters Filled');
+            } else {
+                setemailError('');
+            }
+        }
+
+        if (name === 'subject') {
+            if (!value) {
+                setsubjectError('Please enter a subject.');
+            } else if (value.length >= MAX_LENGTHS.subject) {
+                setsubjectError('Max Characters Filled');
+            } else {
+                setsubjectError('');
+            }
+        }
+
+        if (name === 'message') {
+            if (!value) {
+                setmessageError('Please enter a message.');
+            } else if (value.length >= MAX_LENGTHS.message) {
+                setmessageError('Max Characters Filled');
+            } else {
+                setmessageError('');
+            }
+        }
     };
 
     const handlePhoneChange = (phone:any) => {
-            if (phone.length <= 20) {
-            setFormData((prevData) => ({
+           setFormData((prevData) => ({
                 ...prevData,
-                phone_number: phone
+                phone_number: phone,
             }));
 
-            setCharCount((prevCount) => ({
-                ...prevCount,
-                phone_number: phone.length
-            }));
-        }
+            if (!phone) {
+                setphoneError('Please enter a phone number.');
+            } else if (phone.length >= MAX_LENGTHS.phone_number) {
+                setphoneError('Max Characters Filled');
+            } else {
+                setphoneError('');
+            }
     };
 
     const API_URL = process.env.REACT_APP_API_URL
@@ -88,42 +140,68 @@ export const ContactDetailsdiv = () => {
             setsubjectError('');
             setmessageError('');
             
-            let hasError = false;
+            
+            let valid = true;
 
-            if (!formData.name.trim()) {
-                if (formData.name.length < 30) {
-                    setnameError('Please enter a name.');
-                    hasError = true;
-                } else {
-                    setnameError('');
-                }
+            // Name
+            if (!formData.name) {
+                setnameError('Please enter a name.');
+                valid = false;
+            } else if (formData.name.length >= MAX_LENGTHS.name) {
+                setnameError('Max Characters Filled');
+                valid = false;
             } else {
                 setnameError('');
             }
 
+            // Email
             if (!formData.email) {
-                setemailError('Please enter a email.');
-                hasError = true;
-            }
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(formData.email)) {
+                setemailError('Please enter an email.');
+                valid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
                 setemailError('Please enter a valid email address.');
-                hasError = true;
-            }
-            if (!formData.phone_number) {
-                setphoneError('Please enter a phone number.');
-                hasError = true;
-            }
-            if (!formData.subject) {
-                setsubjectError('Please enter a subject.');
-                hasError = true;
-            }
-            if (!formData.message) {
-                setmessageError('Please enter a message.');
-                hasError = true;
+                valid = false;
+            } else if (formData.email.length >= MAX_LENGTHS.email) {
+                setemailError('Max Characters Filled');
+                valid = false;
+            } else {
+                setemailError('');
             }
 
-            if (hasError) {
+            // Phone
+            if (!formData.phone_number) {
+                setphoneError('Please enter a phone number.');
+                valid = false;
+            } else if (formData.phone_number.length >= MAX_LENGTHS.phone_number) {
+                setphoneError('Max Characters Filled');
+                valid = false;
+            } else {
+                setphoneError('');
+            }
+
+            // Subject
+            if (!formData.subject) {
+                setsubjectError('Please enter a subject.');
+                valid = false;
+            } else if (formData.subject.length >= MAX_LENGTHS.subject) {
+                setsubjectError('Max Characters Filled');
+                valid = false;
+            } else {
+                setsubjectError('');
+            }
+
+            // Message
+            if (!formData.message) {
+                setmessageError('Please enter a message.');
+                valid = false;
+            } else if (formData.message.length >= MAX_LENGTHS.message) {
+                setmessageError('Max Characters Filled');
+                valid = false;
+            } else {
+                setmessageError('');
+            }
+            
+            if (valid) {
                 return;
             }
 
@@ -186,27 +264,23 @@ export const ContactDetailsdiv = () => {
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Name</p>
                                         <input name="name" type="text" placeholder="Enter Your Name" required className="inputformcstm" maxLength={30} value={formData.name} onChange={handleIInputChange}/>
-                                        { nameerror && charCount.name < 30 && <p className="errordivcstm">{nameerror}</p> }
-                                        {charCount.name === 30 && <p className="errordivcstm">Max Characters Filled</p>}
+                                        { nameerror && <p className="errordivcstm">{nameerror}</p> }
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Email</p>
                                         <input name="email" type="email" placeholder="Enter Your Email" required className="inputformcstm" maxLength={50} value={formData.email} onChange={handleIInputChange}/>
                                         {emailerror && <p className="errordivcstm">{emailerror}</p>}
-                                        {charCount.email === 50 && <p className="errordivcstm">Max Characters Filled</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
                                         <PhoneNumberField value={formData.phone_number} onChange={handlePhoneChange}/>
                                         {phoneerror && <p className="errordivcstm">{phoneerror}</p>}
-                                        {charCount.phone_number === 20 && <p className="errordivcstm">Max Characters Filled</p>}
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Subject</p>
                                         <input name="subject" type="text" placeholder="Enter Subject" required className="inputformcstm" maxLength={200} value={formData.subject} onChange={handleIInputChange}/>
                                         {subjecterror && <p className="errordivcstm">{subjecterror}</p>}
-                                        {charCount.subject === 200 && <p className="errordivcstm">Max Characters Filled</p>}
 
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
@@ -215,7 +289,6 @@ export const ContactDetailsdiv = () => {
                                         <p className="inputformptag">Message</p>
                                         <textarea name="message" placeholder="Enter Your Message" required className="inputformmessagecstm" maxLength={500} value={formData.message} onChange={handleIInputChange}/>
                                         {messageerror && <p className="errordivcstm">{messageerror}</p>}
-                                        {charCount.message === 500 && <p className="errordivcstm">Max Characters Filled</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <button type="submit" className="submitbuttoncontactcstm" onClick={handleSubmit}>Submit</button>
