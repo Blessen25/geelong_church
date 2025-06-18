@@ -36,7 +36,7 @@
 
 .image_div_logo {
 
-    background-image: url('../images//Logo.png');
+    background-image: url('../images/Logo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -245,6 +245,19 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     font-size: 28px;
     font-weight: 500;
     margin: 0px 0px 10px 0px;
+}
+
+.whilecolorloginbtn {
+
+    background-color: white !important; 
+    border: 1px solid #3c79b0 !important;
+    color: #3c79b0 !important;
+}
+
+.whilecolorloginbtn:hover{
+
+    box-shadow: inset 0px 70px 0px 0px #3c79b0 !important;
+    color: white !important;
 }
 
 
