@@ -30,7 +30,9 @@
                 {% if password_error %}
                     <p class="paraerrordiv">{{ password_error }}</p>
                 {% endif %}
-                <a href="/password-reset" class="forgetpasswordtext signupclrcstm">Forget Password?</a>
+                <div class="widthforgetpassword">
+                    <a href="/password-reset" class="forgetpasswordtext signupclrcstm">Forget Password?</a>  
+                </div>
                 <button type="submit" class="loginbtn">Login</button>
                 <p class="donthaveanaccnt">Don't have an account? <a href="/admin-signup" class="signupclrcstm">Signup</a></p>
             </form>

@@ -260,6 +260,12 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     color: white !important;
 }
 
+.widthforgetpassword {
+
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
 
 @media screen and (max-width: 899px) {
     
