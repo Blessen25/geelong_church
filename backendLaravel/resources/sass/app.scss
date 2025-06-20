@@ -1,12 +1,13 @@
 @import 'bootstrap/scss/bootstrap';
 
 
-$primary-color1: #3c79b0;
-$secondary-color1: #f0f8ff;
+$primary-color: #3c79b0;
+$secondary-color: #f0f8ff;
 body {
 
-  background-color: $secondary-color1;
-  p,h1,h2,h3,h4,h5,h6,a{    
+  background-color: $secondary-color;
+  p,h1,h2,h3,h4,h5,h6,a{
+        
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
