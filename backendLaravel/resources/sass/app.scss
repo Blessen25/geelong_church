@@ -1,1 +1,14 @@
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
+
+
+$primary-color1: #3c79b0;
+$secondary-color1: #f0f8ff;
+body {
+
+  background-color: #f0f8ff;
+  p,h1,h2,h3,h4,h5,h6,a{    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+}
