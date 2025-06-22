@@ -7,14 +7,24 @@
 
 .sidebar-layoutcstm {
 
-    width: 250px;
+    width: 350px;
     border: 2px solid black;
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-layoutcstm {
 
     width: 100%;
     border: 2px solid black;
-    height: 250px;
+}
+
+.image_div {
+
+    width: 100px;
+    height: 100px;
 }

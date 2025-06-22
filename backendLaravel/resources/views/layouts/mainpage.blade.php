@@ -9,7 +9,7 @@
 <body>
     <div class="w-100 d-flex mainpage-cstmstyle">
         <div class="sidebar-layoutcstm">
-
+            <img src="{{asset('images/Logo.png')}}" alt="Logo-Image" class="image_div">
         </div>
         <div class="main-layoutcstm">
 
