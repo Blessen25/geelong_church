@@ -1,0 +1,18 @@
+To create a SCSS:
+
+1.  First create the file for SCSS then add the extension to the page 
+    for eg :
+
+    @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/sass/mainpage.scss'])
+
+2.  Add the same to vite.config.js 
+   
+    for eg: 
+
+   input: ['resources/sass/app.scss', 'resources/js/app.js','resources/sass/mainpage.scss'],
+
+3.  Import the same to app.css like 
+    for eg:
+
+    @import '../sass/mainpage.scss';
+
