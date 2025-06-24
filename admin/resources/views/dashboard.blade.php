@@ -3,7 +3,7 @@
 @section('page-title','Dashboard')
 
 @section('content')
-    <h1>Contact</h1>
+    <h1 class="headingh1tag">Contact</h1>
     <div class="table-scroll-wrapper">
         <table class="table-cstm">
             <thead>
@@ -49,7 +49,7 @@
          </tbody>
         </table>
     </div>
-    <h1>Events</h1>
+    <h1 class="headingh1tag">Events</h1>
     <div class="table-scroll-wrapper">
         <table class="table-cstm">
             <thead>
