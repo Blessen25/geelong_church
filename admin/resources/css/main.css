@@ -136,5 +136,30 @@ body {
 
 .content-div {
 
+    display: flex;
     padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.table-scroll-wrapper {
+
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-cstm {
+
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+    white-space: nowrap;
+}
+
+.table-cstm th, .table-cstm td{
+
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    text-align: left;
 }
