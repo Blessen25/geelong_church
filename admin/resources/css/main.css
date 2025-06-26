@@ -205,6 +205,12 @@ body {
     justify-content: space-evenly;
 }
 
+.activesidebaratag {
+
+    background-color: #3c79b0 !important;
+    color: white !important;
+}
+
 @media screen and (max-width: 1199px) {
     
     .sidebar-cstm {
