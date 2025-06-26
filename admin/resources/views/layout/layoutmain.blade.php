@@ -29,7 +29,7 @@
                     <span>@yield('page-title')</span>
                 </div>
                 <div class="profile_div">
-                    <i class="fa-solid fa-bars icontagcstm"></i>
+                    <i id="OpenSideBar" class="fa-solid fa-bars icontagcstm"></i>
                     <i class="fa-regular fa-circle-user icontagcstm"></i>
                     <span>Blessen Vinoy Mathew</span>
                 </div>
@@ -43,7 +43,7 @@
     </div>
     <div class="sidebarrespdiv">
         <div class="sidebarhearder">
-            <i class="fa-solid fa-xmark icontagcstm"></i>
+            <i id="CloseSideBar" class="fa-solid fa-xmark icontagcstm"></i>
         </div>
         <img src="{{ Vite::asset('resources/images/Logo_new.png') }}" alt="Logo_img" class="Logo-imgclass">
             <hr class="line-cstm">
