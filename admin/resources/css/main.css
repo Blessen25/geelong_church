@@ -199,6 +199,12 @@ body {
     display: none;
 }
 
+.tdtableevent {
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
 @media screen and (max-width: 1199px) {
     
     .sidebar-cstm {

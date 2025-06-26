@@ -65,20 +65,29 @@
                 <th scope="row">1</th>
                 <td>Mark Abraham</td>
                 <td>mark.abraham.superlongemailaddress@example.com</td>
-                <td>+1-202-555-0143</td>
+                <td class="tdtableevent">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
              </tr>
              <tr>
                 <th scope="row">2</th>
                 <td>Jacob Varghese</td>
                 <td>jacob.varghese.contactmail@example.org</td>
-                <td>+91-98460-12345</td>
+                <td class="tdtableevent">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
                 
              </tr>
              <tr>
                 <th scope="row">3</th>
                 <td>John Doe</td>
                 <td>john.doe.professional.email@longdomainmail.com</td>
-                <td>+44-20-7946-0958</td>
+                <td class="tdtableevent">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </td>
                 
              </tr>
          </tbody>
