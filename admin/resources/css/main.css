@@ -177,7 +177,27 @@ body {
     display: none;
 }
 
+.outlaymainddiv {
 
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+}
+
+.sidebarrespdiv {
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    background-color: #f0f8ff;
+    display: none;
+}
 
 @media screen and (max-width: 1199px) {
     
@@ -257,5 +277,134 @@ body {
 
         display: block;
     }
+
+    .outlaymainddiv, .sidebarrespdiv {
+
+        display: block;
+    }
+
+    .sidebarrespdiv {
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+        align-items: center;
+    }
+
+    
+    .sidebarhearder {
+
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
 }
 
+@media screen and (max-width: 767px) {
+    
+    .table-cstm th, .table-cstm td{ 
+
+        font-size: 12px;
+    }
+
+    .headingh1tag {
+
+        font-size: 20px;
+    }
+
+    .header_div {
+
+        height: 80px;
+    }
+
+    .icontagcstm {
+
+        font-size: 12px;
+    }
+
+    .sidebarh1tag {
+
+        font-size: 16px;
+    }
+
+    .sidebartexttag {
+
+        font-size: 12px;
+    }
+
+    .sidebarrespdiv  {
+
+        width: 230px;
+    }
+
+    .Logo-imgclass {
+
+        width: 180px;
+        height: 70px;
+    }
+    
+    .sidebaratag  {
+
+        min-width: 170px;
+        max-width: 200px;
+        padding-left: 36px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .table-cstm th, .table-cstm td{
+
+        font-size: 10px;
+    }
+
+    .headingh1tag {
+
+        font-size: 16px;
+    }
+
+    .content-div{
+
+        padding: 15px;
+    }
+
+    .header_div {
+
+        padding: 0px 15px;
+        height: 70px;
+    }
+
+    .profile_div,.icontagcstm,.pages_div {
+
+        font-size: 10px;
+    }
+
+    .sidebarrespdiv {
+
+        width: 200px;
+    }
+
+    .Logo-imgclass {
+
+        width: 160px;
+        height: 70px;
+    }
+
+    .sidebarh1tag {
+
+        font-size: 14px;
+    }
+
+    .sidebaratag {
+
+        min-width: 150px;
+        padding-left: 28px;
+    }
+
+    .sidebartexttag {
+
+        font-size: 10px;
+    }
+}
