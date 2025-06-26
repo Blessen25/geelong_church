@@ -30,6 +30,7 @@
                     <span>@yield('page-title')</span>
                 </div>
                 <div class="profile_div">
+                    <i class="fa-solid fa-bars icontagcstm"></i>
                     <i class="fa-regular fa-circle-user icontagcstm"></i>
                     <span>Blessen Vinoy Mathew</span>
                 </div>
