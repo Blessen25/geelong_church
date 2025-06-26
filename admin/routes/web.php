@@ -16,7 +16,7 @@ Route::get('/contact',function() {
     return view('contact');
 });
 
-Route::get('/evetns',function(){
+Route::get('/event',function(){
 
     return view('event');
 });
