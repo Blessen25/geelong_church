@@ -353,6 +353,11 @@ body {
         max-width: 200px;
         padding-left: 36px;
     }
+
+    .btncstmtag {
+
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -406,6 +411,11 @@ body {
     }
 
     .sidebartexttag {
+
+        font-size: 10px;
+    }
+
+     .btncstmtag {
 
         font-size: 10px;
     }

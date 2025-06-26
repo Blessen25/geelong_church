@@ -20,8 +20,8 @@
                 <td>Mark Abraham</td>
                 <td>mark.abraham.superlongemailaddress@example.com</td>
                 <td class="tdtableevent">
-                    <button type="button" class="btn btn-primary">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-primary btncstmtag">Edit</button>
+                    <button type="button" class="btn btn-danger btncstmtag">Delete</button>
                 </td>
              </tr>
              <tr>
@@ -29,8 +29,8 @@
                 <td>Jacob Varghese</td>
                 <td>jacob.varghese.contactmail@example.org</td>
                 <td class="tdtableevent">
-                    <button type="button" class="btn btn-primary">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-primary btncstmtag">Edit</button>
+                    <button type="button" class="btn btn-danger btncstmtag">Delete</button>
                 </td>
                 
              </tr>
@@ -39,8 +39,8 @@
                 <td>John Doe</td>
                 <td>john.doe.professional.email@longdomainmail.com</td>
                 <td class="tdtableevent">
-                    <button type="button" class="btn btn-primary">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-primary btncstmtag">Edit</button>
+                    <button type="button" class="btn btn-danger btncstmtag">Delete</button>
                 </td>
              </tr>
          </tbody>
