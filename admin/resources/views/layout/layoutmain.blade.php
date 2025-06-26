@@ -14,9 +14,9 @@
             <img src="{{ Vite::asset('resources/images/Logo_new.png') }}" alt="Logo_img" class="Logo-imgclass">
             <hr class="line-cstm">
             <h1 class="sidebarh1tag">Pages</h1>
-            <a href="#" class="sidebaratag"><i class="fa-solid fa-house icontagcstm"></i><span class="sidebartexttag">Dashboard</span></a>
-            <a href="#" class="sidebaratag"><i class="fa-solid fa-address-card icontagcstm"></i><span class="sidebartexttag">Contact</span></a>
-            <a href="#" class="sidebaratag"><i class="fa-solid fa-calendar-days icontagcstm"></i><span class="sidebartexttag">Events</span></a>
+            <a href="/" class="sidebaratag"><i class="fa-solid fa-house icontagcstm"></i><span class="sidebartexttag">Dashboard</span></a>
+            <a href="/contact" class="sidebaratag"><i class="fa-solid fa-address-card icontagcstm"></i><span class="sidebartexttag">Contact</span></a>
+            <a href="/event" class="sidebaratag"><i class="fa-solid fa-calendar-days icontagcstm"></i><span class="sidebartexttag">Events</span></a>
             <hr class="line-cstm">
             <h1 class="sidebarh1tag">Profile</h1>
             <a href="#" class="sidebaratag"><i class="fa-solid fa-user icontagcstm"></i><span class="sidebartexttag">Logout</span></a>
@@ -48,9 +48,9 @@
         <img src="{{ Vite::asset('resources/images/Logo_new.png') }}" alt="Logo_img" class="Logo-imgclass">
             <hr class="line-cstm">
             <h1 class="sidebarh1tag">Pages</h1>
-            <a href="#" class="sidebaratag"><i class="fa-solid fa-house icontagcstm"></i><span class="sidebartexttag">Dashboard</span></a>
-            <a href="#" class="sidebaratag"><i class="fa-solid fa-address-card icontagcstm"></i><span class="sidebartexttag">Contact</span></a>
-            <a href="#" class="sidebaratag"><i class="fa-solid fa-calendar-days icontagcstm"></i><span class="sidebartexttag">Events</span></a>
+            <a href="/" class="sidebaratag"><i class="fa-solid fa-house icontagcstm"></i><span class="sidebartexttag">Dashboard</span></a>
+            <a href="/contact" class="sidebaratag"><i class="fa-solid fa-address-card icontagcstm"></i><span class="sidebartexttag">Contact</span></a>
+            <a href="/event" class="sidebaratag"><i class="fa-solid fa-calendar-days icontagcstm"></i><span class="sidebartexttag">Events</span></a>
             <hr class="line-cstm">
             <h1 class="sidebarh1tag">Profile</h1>
             <a href="#" class="sidebaratag"><i class="fa-solid fa-user icontagcstm"></i><span class="sidebartexttag">Logout</span></a>
