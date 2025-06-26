@@ -278,11 +278,6 @@ body {
         display: block;
     }
 
-    .outlaymainddiv, .sidebarrespdiv {
-
-        display: block;
-    }
-
     .sidebarrespdiv {
 
         display: flex;

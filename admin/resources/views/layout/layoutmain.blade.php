@@ -39,9 +39,9 @@
             </div>
         </div>
     </div>
-    <div class="outlaymainddiv">
+    <div id="outlayidman" class="outlaymainddiv">
     </div>
-    <div class="sidebarrespdiv">
+    <div id="sidebaridmain" class="sidebarrespdiv">
         <div class="sidebarhearder">
             <i id="CloseSideBar" class="fa-solid fa-xmark icontagcstm"></i>
         </div>
