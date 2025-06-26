@@ -285,6 +285,7 @@ body {
         gap: 20px;
         padding: 15px;
         align-items: center;
+        display: none;
     }
 
     

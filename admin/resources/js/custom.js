@@ -5,5 +5,18 @@ document.addEventListener("DOMContentLoaded",()=>{
     const overlay = document.getElementById('outlayidman');
     const sidebar = document.getElementById('sidebaridmain');
 
+    if( openBtn && closeBtn && overlay && sidebar){
 
+        openBtn.addEventListener('click',()=>{
+
+            overlay.style.display = 'block';
+            sidebar.style.display = 'flex';
+        })
+
+        closeBtn.addEventListener('click',()=>{
+
+            overlay.style.display = 'none';
+            sidebar.style.display = 'none';
+        })
+    }
 })
