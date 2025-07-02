@@ -216,6 +216,11 @@ body {
     text-align: center;
 }
 
+.paratexttable {
+
+    font-size: 16px;
+}
+
 @media screen and (max-width: 1199px) {
     
     .sidebar-cstm {
@@ -369,6 +374,12 @@ body {
 
         font-size: 12px;
     }
+
+    .paratexttable {
+
+        font-size: 12px;
+    }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -429,5 +440,15 @@ body {
      .btncstmtag {
 
         font-size: 10px;
+    }
+
+    .paratexttable {
+
+        font-size: 10px;
+    }
+
+    .sidebarrespdiv  {
+
+        gap: 15px;
     }
 }
