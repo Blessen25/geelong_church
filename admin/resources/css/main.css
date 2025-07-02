@@ -211,6 +211,11 @@ body {
     color: white !important;
 }
 
+.table-cstm th{
+
+    text-align: center;
+}
+
 @media screen and (max-width: 1199px) {
     
     .sidebar-cstm {
