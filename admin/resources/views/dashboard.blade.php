@@ -36,6 +36,9 @@
         </table>
        @endif
     </div>
+    <div class="viewmorediv">
+         <a href="#" class="viewmorebutt">View More</a>
+    </div>
     <h1 class="headingh1tag">Events</h1>
     <div class="table-scroll-wrapper">
          @if($events->isEmpty())
@@ -72,5 +75,7 @@
             </table>
         @endif
     </div>
-
+    <div class="viewmorediv">
+         <a href="#" class="viewmorebutt">View More</a>
+    </div>
 @endsection

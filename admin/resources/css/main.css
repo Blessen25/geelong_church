@@ -221,6 +221,31 @@ body {
     font-size: 16px;
 }
 
+.viewmorediv {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.viewmorebutt {
+
+    padding: 10px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #3c79b0;
+    border: 1px solid #3c79b0;
+    font-size: 16px;
+    transition: all .7s;
+}
+
+.viewmorebutt:hover {
+
+    background-color: #3c79b0;
+    color: white;
+}
+
 @media screen and (max-width: 1199px) {
     
     .sidebar-cstm {
@@ -380,6 +405,12 @@ body {
         font-size: 12px;
     }
 
+    .viewmorebutt{
+
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -450,5 +481,11 @@ body {
     .sidebarrespdiv  {
 
         gap: 15px;
+    }
+
+    .viewmorebutt{
+
+        font-size: 10px;
+        padding: 6px 8px;
     }
 }
