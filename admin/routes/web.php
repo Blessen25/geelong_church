@@ -10,15 +10,6 @@ use App\Http\Controllers\DashboardController;
 // });
 
 
-Route::get('/contact',function() {
-
-    return view('contact');
-});
-
-Route::get('/event',function(){
-
-    return view('event');
-});
 
 Route::get('/admin/contacts',[ContactController::class,'index'])->name('contacts.index');
 
