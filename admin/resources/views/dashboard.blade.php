@@ -5,7 +5,10 @@
 @section('content')
     <h1 class="headingh1tag">Contact</h1>
     <div class="table-scroll-wrapper">
-        <table class="table-cstm">
+       @if($contacts->isEmpty())
+            <p class="text-center p-3 paratexttable">No contact messages to display.</p>
+       @else
+            <table class="table-cstm">
             <thead>
                 <tr>
                     <th scope="col">Sl.No</th>
@@ -15,83 +18,59 @@
                     <th scope="col">Country</th>
                     <th scope="col">Subject</th>
                     <th scope="col">Message</th>
-
                 </tr>
             </thead>
             <tbody>
-             <tr>
-                <th scope="row">1</th>
-                <td>Mark Abraham</td>
-                <td>mark.abraham.superlongemailaddress@example.com</td>
-                <td>+1-202-555-0143</td>
-                <td>United States</td>
-                <td>Project Inquiry</td>
-                <td>Hello, I would like to know more about your services in detail. Please get back to me soon. Thanks!</td>
-             </tr>
-             <tr>
-                <th scope="row">2</th>
-                <td>Jacob Varghese</td>
-                <td>jacob.varghese.contactmail@example.org</td>
-                <td>+91-98460-12345</td>
-                <td>India</td>
-                <td>Partnership</td>
-                <td>We’re looking to collaborate on future events. Please schedule a meeting for further discussion.</td>
-             </tr>
-             <tr>
-                <th scope="row">3</th>
-                <td>John Doe</td>
-                <td>john.doe.professional.email@longdomainmail.com</td>
-                <td>+44-20-7946-0958</td>
-                <td>United Kingdom</td>
-                <td>Feedback</td>
-                <td>I love your platform! Just wanted to give some feedback on how it could be even better with more integrations.</td>
-             </tr>
-         </tbody>
+                @foreach($contacts as $index => $contact)
+                <tr>
+                    <th scope="row">{{ $index + 1 }}</th>
+                    <td>{{ $contact->name }}</td>
+                    <td>{{ $contact->email }}</td>
+                    <td>{{ $contact->phone_number }}</td>
+                    <td>{{ $contact->country }}</td>
+                    <td>{{ $contact->subject }}</td>
+                    <td>{{ $contact->message }}</td>
+                </tr>
+                @endforeach
+            </tbody>
         </table>
+       @endif
     </div>
     <h1 class="headingh1tag">Events</h1>
     <div class="table-scroll-wrapper">
-        <table class="table-cstm">
-            <thead>
-                <tr>
-                    <th scope="col">Sl.No</th>
-                    <th scope="col">Event Name</th>
-                    <th scope="col">Event Date</th>
-                    <th scope="col">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-             <tr>
-                <th scope="row">1</th>
-                <td>Mark Abraham</td>
-                <td>mark.abraham.superlongemailaddress@example.com</td>
-                <td class="tdtableevent">
-                    <button type="button" class="btn btn-primary btncstmtag">Edit</button>
-                    <button type="button" class="btn btn-danger btncstmtag">Delete</button>
-                </td>
-             </tr>
-             <tr>
-                <th scope="row">2</th>
-                <td>Jacob Varghese</td>
-                <td>jacob.varghese.contactmail@example.org</td>
-                <td class="tdtableevent">
-                    <button type="button" class="btn btn-primary btncstmtag">Edit</button>
-                    <button type="button" class="btn btn-danger btncstmtag">Delete</button>
-                </td>
-                
-             </tr>
-             <tr>
-                <th scope="row">3</th>
-                <td>John Doe</td>
-                <td>john.doe.professional.email@longdomainmail.com</td>
-                <td class="tdtableevent">
-                    <button type="button" class="btn btn-primary btncstmtag">Edit</button>
-                    <button type="button" class="btn btn-danger btncstmtag">Delete</button>
-                </td>
-                
-             </tr>
-         </tbody>
-        </table>
+         @if($events->isEmpty())
+        <p class="text-center p-3 paratexttable">No events have been added recently.</p>
+        @else
+            <table class="table-cstm">
+                <thead>
+                    <tr>
+                        <th scope="col">Sl.No</th>
+                        <th scope="col">Event Name</th>
+                        <th scope="col">Event Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($events as $index => $event)
+                    <tr>
+                        <th scope="row">{{ $index + 1 }}</th>
+                        <td>{{ $event->event_name }}</td>
+                        <td>{{ \Carbon\Carbon::parse($event->event_date)->format('d M Y') }}</td>
+                        <td class="tdtableevent">
+                            <a href="{{ route('events.edit', $event->id) }}">
+                                <button type="button" class="btn btn-primary btncstmtag">Edit</button>
+                            </a>
+                            <form action="{{ route('events.destroy', $event->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btncstmtag" onclick="return confirm('Are you sure?')">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @endif
     </div>
 
 @endsection
