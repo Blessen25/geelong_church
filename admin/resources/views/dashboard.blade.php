@@ -39,7 +39,10 @@
     <div class="viewmorediv">
          <a href="/admin/contacts" class="viewmorebutt">View More</a>
     </div>
-    <h1 class="headingh1tag">Events</h1>
+    <div class="eventsdiv">
+        <h1 class="headingh1tag">Events</h1>
+        <a href="#" class="viewmorebutt">Add Event</a>
+    </div>
     <div class="table-scroll-wrapper">
          @if($events->isEmpty())
         <p class="text-center p-3 paratexttable">No events have been added recently.</p>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="eventsdiv">
     <h1 class="headingh1tag">Events</h1>
-    <a href="#" class="viewmorebutt">Add New</a>
+    <a href="#" class="viewmorebutt">Add Event</a>
 </div>
 <div class="table-scroll-wrapper">
     @if($events->isEmpty())
