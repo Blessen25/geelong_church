@@ -246,6 +246,13 @@ body {
     color: white;
 }
 
+.eventsdiv {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media screen and (max-width: 1199px) {
     
     .sidebar-cstm {

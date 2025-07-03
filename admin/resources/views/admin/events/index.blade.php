@@ -1,7 +1,10 @@
 @extends('layout.layoutmain')
 @section('page-title','Events')
 @section('content')
-<h1 class="headingh1tag">Events</h1>
+<div class="eventsdiv">
+    <h1 class="headingh1tag">Events</h1>
+    <a href="#" class="viewmorebutt">Add New</a>
+</div>
 <div class="table-scroll-wrapper">
     @if($events->isEmpty())
         <p class="text-center p-3 paratexttable">No events have been added recently.</p>
