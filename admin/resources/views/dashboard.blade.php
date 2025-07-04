@@ -36,9 +36,11 @@
         </table>
        @endif
     </div>
-    <div class="viewmorediv">
+    @if($contacts->isNotEmpty())
+        <div class="viewmorediv">
          <a href="/admin/contacts" class="viewmorebutt">View More</a>
-    </div>
+        </div>
+    @endif
     <div class="eventsdiv">
         <h1 class="headingh1tag">Events</h1>
         <a href="#" class="viewmorebutt">Add Event</a>
@@ -78,7 +80,23 @@
             </table>
         @endif
     </div>
-    <div class="viewmorediv">
+    @if($events->isNotEmpty())
+        <div class="viewmorediv">
          <a href="/admin/events" class="viewmorebutt">View More</a>
-    </div>
+        </div>
+    @endif
+
+    <!-- Add/ Edit Event Modal -->
+     <div class="addeditoverlay">
+        <div id="eventModal" class="editaddmodal" >
+            <div class="editaddmodalheader">
+            <h1 class="headingh1tag">Edit Event</h1>
+            <i id="CloseEventModal" class="fa-solid fa-xmark icontagcstm"></i>
+            </div>
+            <form action="#" method="POST" id="eventForm">
+                @csrf
+                <input type="hidden" name="_method" value="POST" id="formMethod">
+            </form>
+        </div>
+     </div>
 @endsection
