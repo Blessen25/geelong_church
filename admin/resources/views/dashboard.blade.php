@@ -95,7 +95,10 @@
             </div>
             <form action="#" method="POST" id="eventForm">
                 @csrf
-                <input type="hidden" name="_method" value="POST" id="formMethod">
+                <div class="formmodalcstm">
+                    <label class="labelcstm" for="event_name">Event Name</label>
+                <input class="inputcstmclass" type="text" name="event_name" id="eventName"/>
+                </div>
             </form>
         </div>
      </div>

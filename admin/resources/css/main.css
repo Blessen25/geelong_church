@@ -286,6 +286,29 @@ body {
     align-items: center;
 }
 
+.formmodalcstm {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.labelcstm {
+
+    font-size: 16px;
+}
+
+.inputcstmclass {
+
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 15px;
+    height: 40px;
+}
+
 @media screen and (max-width: 1199px) {
     
     .sidebar-cstm {
@@ -344,6 +367,16 @@ body {
     
 
     .table-cstm th, .table-cstm td{ 
+
+        font-size: 14px;
+    }
+
+    .labelcstm {
+
+        font-size: 14px;
+    }
+
+    .inputcstmclass {
 
         font-size: 14px;
     }
@@ -452,6 +485,18 @@ body {
         padding: 8px 10px;
     }
 
+    .labelcstm {
+
+        font-size: 12px;
+    }
+
+    .inputcstmclass {
+
+        height: 35px;
+        font-size: 12px;
+
+    }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -528,5 +573,22 @@ body {
 
         font-size: 10px;
         padding: 6px 8px;
+    }
+
+    .labelcstm {
+
+        font-size: 10px;
+    }
+
+    .inputcstmclass {
+
+        height: 30px;
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .editaddmodalheader,.formmodalcstm {
+    
+        gap: 15px;
     }
 }
