@@ -274,13 +274,14 @@ body {
     z-index: 9999;
     border-radius: 5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
 }
 .editaddmodalheader {
     width: 100%;
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
 }

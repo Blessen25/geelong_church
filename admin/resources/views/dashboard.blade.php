@@ -90,8 +90,8 @@
      <div class="addeditoverlay">
         <div id="eventModal" class="editaddmodal" >
             <div class="editaddmodalheader">
-            <h1 class="headingh1tag">Edit Event</h1>
-            <i id="CloseEventModal" class="fa-solid fa-xmark icontagcstm"></i>
+                <h1 class="headingh1tag">Edit Event</h1>
+                <i id="CloseEventModal" class="fa-solid fa-xmark icontagcstm"></i>
             </div>
             <form action="#" method="POST" id="eventForm">
                 @csrf
