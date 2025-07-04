@@ -309,6 +309,18 @@ body {
     height: 40px;
 }
 
+.submitbuttonmodal {
+
+    background-color: #3c79b0;
+    color: white;
+}
+
+.submitbuttonmodal:hover {
+
+    background-color: transparent;
+    color: #3c79b0;
+}
+
 @media screen and (max-width: 1199px) {
     
     .sidebar-cstm {
