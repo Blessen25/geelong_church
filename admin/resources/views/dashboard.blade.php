@@ -69,11 +69,7 @@
                                 onclick="openEditModal({{ $event->id }}, '{{ $event->event_name }}', '{{ $event->event_date }}')">
                                 Edit
                             </button>
-                            <form action="{{ route('events.destroy', $event->id) }}" method="POST" style="display:inline;">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btncstmtag" onclick="return confirm('Are you sure?')">Delete</button>
-                            </form>
+                            <button type="submit" class="btn btn-danger btncstmtag" onclick="openDeleteModal({{ $event->id }})">Delete</button>
                         </td>
                     </tr>
                     @endforeach
@@ -110,7 +106,19 @@
 
      <div class="deleteedoverlay" id="deleteModalOverlay">
         <div id="deleteModal" class="delete-modal">
-
+            <div class="editaddmodalheader">
+                <h1 class="headingh1tag" id="eventModalTitle">Delete Event</h1>
+                <i id="ClosedeleteModal" class="fa-solid fa-xmark icontagcstm" onclick="CloseEventModal()"></i>
+            </div>
+            <form id="deleteForm" method="POST">
+                @csrf
+                @method('DELETE')
+                <p class="deletetext">Are you sure you want to delete this event?</p>
+                <div class="deletefooterdiv">
+                    <button class='viewmorebutt' type='submit'>Yes</button>
+                    <button class='viewmorebutt submitbuttonmodal' type='button' onclick="CloseEventModal()">No</button>
+                </div>
+            </form>
         </div>
      </div>
 @endsection

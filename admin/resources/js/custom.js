@@ -46,4 +46,14 @@ document.addEventListener("DOMContentLoaded",()=>{
         document.getElementById('eventModalOverlay').style.display = 'flex';
     }
 
+    window.openDeleteModal = (id) => {
+
+        document.getElementById('deleteForm').action = `/admin/events/${id}`;
+        document.getElementById('deleteModalOverlay').style.display = 'flex';
+    }
+
+    window.CloseEventModal = () => {
+
+        document.getElementById('deleteModalOverlay').style.display = 'none';
+    }
 })
