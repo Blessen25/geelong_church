@@ -65,9 +65,10 @@
                         <td>{{ $event->event_name }}</td>
                         <td>{{ \Carbon\Carbon::parse($event->event_date)->format('d M Y') }}</td>
                         <td class="tdtableevent">
-                            <a href="{{ route('events.edit', $event->id) }}">
-                                <button type="button" class="btn btn-primary btncstmtag">Edit</button>
-                            </a>
+                            <button type="button" class="btn btn-primary btncstmtag"
+                                onclick="openEditModal({{ $event->id }}, '{{ $event->event_name }}', '{{ $event->event_date }}')">
+                                Edit
+                            </button>
                             <form action="{{ route('events.destroy', $event->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')

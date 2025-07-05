@@ -22,9 +22,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     window.openAddModal = () => {
         
-        console.log("askhdasjhdhasjkd")
         document.getElementById('eventModalTitle').innerText = 'Add Event';
-        document.getElementById('eventForm').action = "/events";
+        document.getElementById('eventForm').action = "/admin/events";
         document.getElementById('formMethod').value = 'POST';
         document.getElementById('eventName').value = '';
         document.getElementById('eventDate').value = '';
@@ -36,4 +35,15 @@ document.addEventListener("DOMContentLoaded",()=>{
 
         document.getElementById('eventModalOverlay').style.display = 'none';
     }
+
+    window.openEditModal= (id, name, date) => {
+
+        document.getElementById('eventModalTitle').innerText = 'Edit Event';
+        document.getElementById('eventForm').action=`/admin/events/${id}`;
+        document.getElementById('formMethod').value = 'PUT';
+        document.getElementById('eventName').value = name;
+        document.getElementById('eventDate').value = date;
+        document.getElementById('eventModalOverlay').style.display = 'flex';
+    }
+
 })

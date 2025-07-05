@@ -13,6 +13,6 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/admin/contacts',[ContactController::class,'index'])->name('contacts.index');
 
-Route::resource('/admin/events',EventController::class)->except(['show']);
+Route::resource('/admin/events', EventController::class)->except(['show']);
 
 Route::get('/admin/dashboard',[DashboardController::class,'index'])->name('dashboard');
