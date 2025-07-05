@@ -603,4 +603,9 @@ body {
     
         gap: 15px;
     }
+
+    .editaddmodal {
+
+        width: 280px;
+    }
 }
