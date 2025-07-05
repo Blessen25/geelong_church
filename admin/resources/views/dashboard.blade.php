@@ -43,7 +43,7 @@
     @endif
     <div class="eventsdiv">
         <h1 class="headingh1tag">Events</h1>
-        <a href="#" class="viewmorebutt">Add Event</a>
+        <button class="viewmorebutt" onclick="openAddModal()">Add Event</button>
     </div>
     <div class="table-scroll-wrapper">
          @if($events->isEmpty())
@@ -87,14 +87,15 @@
     @endif
 
     <!-- Add/ Edit Event Modal -->
-     <div class="addeditoverlay">
+     <div class="addeditoverlay" id="eventModalOverlay">
         <div id="eventModal" class="editaddmodal" >
             <div class="editaddmodalheader">
-                <h1 class="headingh1tag">Edit Event</h1>
-                <i id="CloseEventModal" class="fa-solid fa-xmark icontagcstm"></i>
+                <h1 class="headingh1tag" id="eventModalTitle">Edit Event</h1>
+                <i id="CloseEventModal" class="fa-solid fa-xmark icontagcstm" onclick="CloseEventModal()"></i>
             </div>
             <form action="#" method="POST" id="eventForm">
                 @csrf
+                <input type="hidden" name="_method" value="POST" id="formMethod">
                 <div class="formmodalcstm">
                     <label class="labelcstm" for="event_name">Event Name</label>
                     <input class="inputcstmclass" type="text" name="event_name" id="eventName" placeholder="Enter Event Name" required/>

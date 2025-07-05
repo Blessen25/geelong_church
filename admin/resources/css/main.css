@@ -265,6 +265,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 999;
+    display: none;
 }
 
 .editaddmodal {
@@ -284,6 +285,7 @@ body {
     gap: 20px;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .formmodalcstm {
@@ -319,6 +321,11 @@ body {
 
     background-color: transparent;
     color: #3c79b0;
+}
+
+#CloseEventModal {
+
+    cursor: pointer !important;
 }
 
 @media screen and (max-width: 1199px) {

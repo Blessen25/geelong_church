@@ -19,4 +19,21 @@ document.addEventListener("DOMContentLoaded",()=>{
             sidebar.style.display = 'none';
         })
     }
+
+    window.openAddModal = () => {
+        
+        console.log("askhdasjhdhasjkd")
+        document.getElementById('eventModalTitle').innerText = 'Add Event';
+        document.getElementById('eventForm').action = "/events";
+        document.getElementById('formMethod').value = 'POST';
+        document.getElementById('eventName').value = '';
+        document.getElementById('eventDate').value = '';
+        document.getElementById('eventModalOverlay').style.display ='flex';
+        
+    }
+
+    window.CloseEventModal = () => {
+
+        document.getElementById('eventModalOverlay').style.display = 'none';
+    }
 })
