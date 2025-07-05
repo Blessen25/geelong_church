@@ -101,10 +101,16 @@
                     <label class="labelcstm" for="event_name">Event Name</label>
                     <input class="inputcstmclass" type="text" name="event_name" id="eventName" placeholder="Enter Event Name" required/>
                     <label class="labelcstm" for="event_date">Event Date</label>
-                    <input type="date" class="inputcstmclass" name="event_date" id="eventDate" placeholder="Enter Event Date" required>
+                    <input type="date" class="inputcstmclass" name="event_date" id="eventDate" placeholder="Enter Event Date" min="{{ date('Y-m-d') }}" required>
                     <button class="submitbuttonmodal viewmorebutt">Submit</button>
                 </div>
             </form>
+        </div>
+     </div>
+
+     <div class="deleteedoverlay" id="deleteModalOverlay">
+        <div id="deleteModal" class="delete-modal">
+
         </div>
      </div>
 @endsection

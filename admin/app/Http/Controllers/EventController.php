@@ -53,12 +53,12 @@ class EventController extends Controller
     public function update(Request $request, Event $event)
     {
         
-         $request->validate([
-        'event_name' => 'required|string',
+          $validated = $request->validate([
+        'event_name' => 'required|string|max:255',
         'event_date' => 'required|date',
         ]);
 
-        $event->update($request->all());
+        $event->update($validated);
         return redirect()->route('events.index')->with('success', 'Event updated successfully.');
     }
 
