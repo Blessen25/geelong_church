@@ -104,19 +104,20 @@
         </div>
      </div>
 
+    <!-- Delete Event -->
      <div class="deleteedoverlay" id="deleteModalOverlay">
         <div id="deleteModal" class="delete-modal">
             <div class="editaddmodalheader">
                 <h1 class="headingh1tag" id="eventModalTitle">Delete Event</h1>
-                <i id="ClosedeleteModal" class="fa-solid fa-xmark icontagcstm" onclick="CloseEventModal()"></i>
+                <i id="ClosedeleteModal" class="fa-solid fa-xmark icontagcstm" onclick="CloseEventModaldelete()"></i>
             </div>
             <form id="deleteForm" method="POST">
                 @csrf
                 @method('DELETE')
                 <p class="deletetext">Are you sure you want to delete this event?</p>
                 <div class="deletefooterdiv">
+                    <button class='viewmorebutt submitbuttonmodal' type='button' onclick="CloseEventModaldelete()">No</button>
                     <button class='viewmorebutt' type='submit'>Yes</button>
-                    <button class='viewmorebutt submitbuttonmodal' type='button' onclick="CloseEventModal()">No</button>
                 </div>
             </form>
         </div>

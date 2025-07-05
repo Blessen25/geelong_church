@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         document.getElementById('deleteModalOverlay').style.display = 'flex';
     }
 
-    window.CloseEventModal = () => {
+    window.CloseEventModaldelete = () => {
 
         document.getElementById('deleteModalOverlay').style.display = 'none';
     }
