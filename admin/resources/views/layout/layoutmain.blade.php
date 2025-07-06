@@ -20,7 +20,13 @@
             <a href="/admin/events" class="sidebaratag {{ Request::is('admin/events') ? 'activesidebaratag' : '' }}"><i class="fa-solid fa-calendar-days icontagcstm"></i><span class="sidebartexttag">Events</span></a>
             <hr class="line-cstm">
             <h1 class="sidebarh1tag">Profile</h1>
-            <a href="#" class="sidebaratag"><i class="fa-solid fa-user icontagcstm"></i><span class="sidebartexttag">Logout</span></a>
+            <form action="{{ route('logout') }}" method="POST" >
+                @csrf
+                <button type="submit" class="sidebaratag" >
+                    <i class="fa-solid fa-user icontagcstm"></i>
+                    <span class="sidebartexttag">Logout</span>
+                </button>
+            </form>
         </div>
         <div class="main-cstm">
             <div class="header_div">
@@ -54,7 +60,13 @@
             <a href="/admin/events" class="sidebaratag {{ Request::is('admin/events') ? 'activesidebaratag' : '' }}"><i class="fa-solid fa-calendar-days icontagcstm"></i><span class="sidebartexttag">Events</span></a>
             <hr class="line-cstm">
             <h1 class="sidebarh1tag">Profile</h1>
-            <a href="#" class="sidebaratag"><i class="fa-solid fa-user icontagcstm"></i><span class="sidebartexttag">Logout</span></a>
+            <form action="{{ route('logout') }}" method="POST" >
+                @csrf
+                <button type="submit" class="sidebaratag" >
+                    <i class="fa-solid fa-user icontagcstm"></i>
+                    <span class="sidebartexttag">Logout</span>
+                </button>
+            </form>
     </div>
 </body>
 </html>
