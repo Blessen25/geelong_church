@@ -22,7 +22,7 @@
                 <div class="passwordandforget">
                     <input type="password" class="inputcstmclass" name="password" placeholder="Password" maxlength="20" required />
                     <div class="forgetpassworddiv">
-                        <a href="#" class="deletetext" >Forget Password</a>
+                        <a href="{{ route('password.request') }}" class="deletetext" >Forget Password</a>
                     </div>
                 </div>
                 
