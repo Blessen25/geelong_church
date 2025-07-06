@@ -11,6 +11,13 @@ use App\Http\Controllers\AuthController;
 // });
 
 
+Route::get('/', function () {
+    return redirect(auth()->check() ? route('dashboard') : route('login'));
+});
+
+Route::fallback(function () {
+    return redirect('/');
+});
 
 Route::get('/admin/contacts',[ContactController::class,'index'])->middleware('auth')->name('contacts.index');
 
