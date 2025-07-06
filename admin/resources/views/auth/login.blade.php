@@ -16,10 +16,15 @@
             <form method="POST" action="{{ route('login') }}" class="loginform">
                 @csrf
                 <label for="Login" class="labelcstm">Username or Email Address</label>
-                <input type="text" name="login" placeholder="Email or Username" class="inputcstmclass" maxlength="50" required />
+                <input type="text" name="login" placeholder="Username or Email" class="inputcstmclass" maxlength="50" required />
                 
                 <label for="Password" class="labelcstm">Password</label>
-                <input type="password" class="inputcstmclass" name="password" placeholder="Password" maxlength="20" required />
+                <div class="passwordandforget">
+                    <input type="password" class="inputcstmclass" name="password" placeholder="Password" maxlength="20" required />
+                    <div class="forgetpassworddiv">
+                        <a href="#" class="deletetext" >Forget Password</a>
+                    </div>
+                </div>
                 
                 <button type="submit" class="submitbuttonmodal viewmorebutt">Login</button>
                 <div class="alreadyhave">
