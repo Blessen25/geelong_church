@@ -38,7 +38,7 @@
                 <div class="profile_div">
                     <i id="OpenSideBar" class="fa-solid fa-bars icontagcstm"></i>
                     <i class="fa-regular fa-circle-user icontagcstm"></i>
-                    <span>Blessen Vinoy Mathew</span>
+                    <span>{{ auth()->user()->username }}</span>
                 </div>
             </div>
             <div class="content-div">

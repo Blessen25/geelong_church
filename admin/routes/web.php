@@ -12,11 +12,13 @@ use App\Http\Controllers\AuthController;
 
 
 
-Route::get('/admin/contacts',[ContactController::class,'index'])->name('contacts.index');
+Route::get('/admin/contacts',[ContactController::class,'index'])->middleware('auth')->name('contacts.index');
 
-Route::resource('/admin/events', EventController::class)->except(['show']);
+Route::resource('/admin/events', EventController::class)->middleware('auth')->except(['show']);
 
-Route::get('/admin/dashboard',[DashboardController::class,'index'])->name('dashboard');
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])
+    ->middleware('auth')
+    ->name('dashboard');
 
 
 Route::get('/login',[AuthController::class, 'showLoginForm'])->name('login');
