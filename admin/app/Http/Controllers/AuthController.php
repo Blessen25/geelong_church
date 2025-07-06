@@ -44,11 +44,20 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function login(Request $request)
+   public function login(Request $request)
     {
         $credentials = $request->only('login', 'password');
-
         $fieldType = filter_var($credentials['login'], FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+
+        // 🔍 Debug
+        $user = \App\Models\User::where($fieldType, $credentials['login'])->first();
+        if (!$user) {
+            return back()->withErrors(['login' => 'User not found.']);
+        }
+
+        if (!\Hash::check($credentials['password'], $user->password)) {
+            return back()->withErrors(['login' => 'Password is incorrect.']);
+        }
 
         if (auth()->attempt([$fieldType => $credentials['login'], 'password' => $credentials['password']])) {
             $request->session()->regenerate();
