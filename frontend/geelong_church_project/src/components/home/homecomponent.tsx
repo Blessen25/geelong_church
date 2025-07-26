@@ -101,7 +101,7 @@ export const HomeIntroBanner = () => {
         <div className="imagecstmdivhome" style={{ backgroundImage : 'url("assets/images/main/bibleone.jpg")'}}> 
             <div className="textdivcstmhome">
                 <h1>Welcome to</h1>
-                <h1>Geelong Pentecostal Assmbly</h1>
+                <h1>Geelong Pentecostal Assembly</h1>
                 <p>A Community Rooted in Love, Faith & Hope</p>
                 <p>Join us in Worship, Fellowship, and Spiritual Growth</p>
                 <blockquote>
