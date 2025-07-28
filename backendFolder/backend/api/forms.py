@@ -28,6 +28,18 @@ class AdminSignupForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
+    def clean_username(self):
+        username = self.cleaned_data.get('username')
+        if User.objects.filter(username__iexact = username).exists():
+            raise forms.ValidationError("Username already exists. Please choose another username.")
+        return username
+    
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if User.objects.filter(email__iexact = email).exists():
+            raise forms.ValidationError("Email already exists. Please choose another email id.")
+        return email
+
 class CustomPasswordResetForm(PasswordResetForm):
     email = forms.EmailField(
         max_length=254,
