@@ -120,10 +120,9 @@ export const ContactDetailsdiv = () => {
     const handlePhoneChange = (phone:any, countryData:any) => {
            setFormData((prevData) => ({
                 ...prevData,
-                phone_number: phone,
+                phone_number: '+' + phone,
                 country: countryData?.name || 'Unknown',
             }));
-            
             if (!phone) {
                 setphoneError('Please enter a phone number.');
             } else if (phone.length >= MAX_LENGTHS.phone_number) {
