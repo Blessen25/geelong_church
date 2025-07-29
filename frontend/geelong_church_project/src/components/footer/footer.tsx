@@ -45,7 +45,7 @@ export const Footer = () => {
                                 </div> 
                                 <div className='footerdiv2cstmcontactmix'>
                                     <FontAwesomeIcon icon={faPhone} color='#3c79b0' className='footerdiv2cstmcontactmixiconfont'/>
-                                    <p><a href="tel:+61494357534" rel="noopener noreferrer">+61494357534</a></p>
+                                    <p><a href="tel:+61494357534" rel="noopener noreferrer">+61 494 357 534</a></p>
                                 </div> 
                             </div>
                             <div className="footerdiv2cstmsocial">
