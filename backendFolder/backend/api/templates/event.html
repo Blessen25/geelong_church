@@ -2,33 +2,32 @@
 {% load static %}
 {% block pages_header %}Events{% endblock %}
 {% block content %}
-    <div class="w-100 d-flex justify-content-between" style="background-color: white;">
+    <div class="w-100 d-flex justify-content-between">
         <h1 class="cstmcontenttableh1tag eventscstmheader">Events</h1>
         <a class="viewmorebutton addnewcstm" href="#" onclick="showAddModal()"><i class="fa-solid fa-plus"></i>Add New</a>
     </div>
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
             <tr>
-            <th scope="col" class="text-nowrap px-3">Sl.No</th>
-            <th scope="col" class="text-nowrap px-3">Event Name</th>
-            <th scope="col" class="text-nowrap px-3">Event Date</th>
-            <th scope="col" class="text-nowrap px-3">Actions</th>
+                <th scope="col">Sl.No</th>
+                <th scope="col">Event Name</th>
+                <th scope="col">Event Date</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
             {% if events %}
                 {% for event in events|slice:":5" %}
                 <tr>
-                <td scope="row" class="px-3 text-nowrap"><span class="responsivetd">Sl.No : </span>{{ forloop.counter }}</td>
-                <td class="px-3 text-nowrap"><span class="responsivetd">Event Name : </span>{{ event.event_name }}</td>
-                <td class="px-3 text-nowrap"><span class="responsivetd">Event Date : </span>{{ event.event_date }}</td>
-                <td class="px-3 text-nowrap actionbuttondiv">
-                    <span class="responsivetd">Actions : </span>
-                    <div class="actioniconmodal">
-                     <i class="fa-regular fa-pen-to-square" onclick="showEditModal('{{ event.id }}', '{{ event.event_name }}', '{{ event.event_date }}')"></i>
-                     <i class="fa-regular fa-trash-can" onclick="showDeleteModalEvent('{{ event.id }}')"></i>
-                    </div>
-                </td>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ event.event_name }}</td>
+                    <td>{{ event.event_date }}</td>
+                    <td>
+                        <div class="actionbuttondiv">
+                            <i class="fa-regular fa-pen-to-square" onclick="showEditModal('{{ event.id }}', '{{ event.event_name }}', '{{ event.event_date }}')"></i>
+                            <i class="fa-regular fa-trash-can" onclick="showDeleteModalEvent('{{ event.id }}')"></i>
+                        </div>
+                    </td>
                 </tr>
                 {% endfor %}
             {% else %}
@@ -36,7 +35,6 @@
                     <td colspan="4" class="text-center">No Events Found</td>
                 </tr>
             {% endif %}
-            
         </tbody>
     </table>
 
@@ -57,7 +55,7 @@
             <p>Edit Event</p>
             <div class="editmodalcstmlabel">
                 <label>Event Name</label>
-                <input type="text" name="event_name" class="editmodalcstminput" id="editEventName">
+                <input type="text" name="event_name" class="editmodalcstminput" id="editEventName" maxlength="50">
             </div>
             <div class="editmodalcstmlabel">
                 <label>Event Date</label>
@@ -78,7 +76,7 @@
             <p>Add New Event</p>
             <div class="editmodalcstmlabel">
                 <label>Event Name</label>
-                <input type="text" name="event_name" class="editmodalcstminput" id="newEventName" placeholder="Enter Event Name">
+                <input type="text" name="event_name" class="editmodalcstminput" id="newEventName" placeholder="Enter Event Name" maxlength="50">
             </div>
             <div class="editmodalcstmlabel">
                 <label>Event Date</label>
