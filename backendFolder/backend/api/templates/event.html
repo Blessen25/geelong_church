@@ -9,20 +9,20 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th scope="col">Sl.No</th>
-                <th scope="col">Event Name</th>
-                <th scope="col">Event Date</th>
-                <th scope="col">Actions</th>
+                <th scope="col" class="cstmeventtableth">Sl.No</th>
+                <th scope="col" class="cstmeventtableth">Event Name</th>
+                <th scope="col" class="cstmeventtableth">Event Date</th>
+                <th scope="col" class="cstmeventtableth">Actions</th>
             </tr>
         </thead>
         <tbody>
             {% if events %}
                 {% for event in events|slice:":5" %}
                 <tr>
-                    <th scope="row">{{ forloop.counter }}</th>
-                    <td>{{ event.event_name }}</td>
-                    <td>{{ event.event_date }}</td>
-                    <td>
+                    <th scope="row" class="cstmeventtableth">{{ forloop.counter }}</th>
+                    <td class="cstmeventtableth">{{ event.event_name }}</td>
+                    <td class="cstmeventtableth">{{ event.event_date }}</td>
+                    <td class="cstmeventtableth">
                         <div class="actionbuttondiv">
                             <i class="fa-regular fa-pen-to-square" onclick="showEditModal('{{ event.id }}', '{{ event.event_name }}', '{{ event.event_date }}')"></i>
                             <i class="fa-regular fa-trash-can" onclick="showDeleteModalEvent('{{ event.id }}')"></i>
