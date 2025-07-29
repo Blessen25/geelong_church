@@ -25,7 +25,7 @@ const Header = () => {
                             <FontAwesomeIcon icon={faAlignLeft} className={`${sidebarActive ? 'iconcstm-one-colorlightblue' : 'iconcstm-one'}`} onClick={handleSidebarActiveButt}/>
                         </div>
                         <div className="headerimg">
-                            <a href="#" rel="noopener noreferrer">
+                            <a href="/" rel="noopener noreferrer">
                                 <img src="../assets/images/Logo/Logo_new.png" alt="" />
                             </a>
                         </div>
