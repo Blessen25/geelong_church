@@ -114,6 +114,11 @@ function closeAddModal() {
     document.getElementById('AddModalOverlay').style.display = 'none';
 }
 
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('newEventDate').setAttribute('min', today);
+document.getElementById('editEventDate').setAttribute('min', today);
+
+
 document.getElementById('NewSaveBtn').addEventListener('click',function(e){
 
     e.preventDefault();
