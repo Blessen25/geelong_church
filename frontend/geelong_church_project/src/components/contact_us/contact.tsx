@@ -317,7 +317,7 @@ export const ContactDetailsthreecarddiv = () => {
             <div className="contactthreecarddiv">
                    <ContactcardDetailsdiv Icon={faLocationDot} title="Address" text="82 Wilsons Road, Newcomb, VIC"/>
                    <ContactcardDetailsdiv Icon={faPhone} title="Phone Number" text="+61 494 357 534" ahref="tel:+61494357534"/>                
-                   <ContactcardDetailsdiv Icon={faEnvelope} extracardClass="contactextraemaildiv" title="Email Address" text="geelongpentecostalassembly@gmail.com" ahref="mailto:geelongpentecostalassembly@gmail.com"/>
+                   <ContactcardDetailsdiv Icon={faEnvelope} extracardClass="contactextraemaildiv" title="Email Address" text="info@geelongpentecostalassembly.com.au" ahref="mailto:info@geelongpentecostalassembly.com.au"/>
             </div>
         </>
     )

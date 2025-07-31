@@ -41,7 +41,7 @@ export const Footer = () => {
                                 </div>
                                 <div className='footerdiv2cstmcontactmix'>
                                     <FontAwesomeIcon icon={faEnvelope} color='#3c79b0' className='footerdiv2cstmcontactmixiconfont'/>
-                                    <p><a href="mailto:geelongpentecostalassembly@gmail.com" rel="noopener noreferrer">geelongpentecostalassembly@gmail.com</a></p>
+                                    <p><a href="mailto:info@geelongpentecostalassembly.com.au" rel="noopener noreferrer">info@geelongpentecostalassembly.com.au</a></p>
                                 </div> 
                                 <div className='footerdiv2cstmcontactmix'>
                                     <FontAwesomeIcon icon={faPhone} color='#3c79b0' className='footerdiv2cstmcontactmixiconfont'/>
