@@ -173,11 +173,20 @@
     background-color: #75b798;
     font-size: 14px;
 }
+
 @media screen and (max-width: 1399px) {
     
     .imagedivcontactus {
 
         height: 625px;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1099px) {
+    
+    .custom_card_textforthreedivs {
+
+        font-size: 14px !important;
     }
 }
 
