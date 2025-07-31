@@ -214,6 +214,24 @@
     font-size: 16px;
 }
 
+@media screen and (max-width: 1399px) and (min-width: 1200px) {
+    
+    .footerdiv2cstmcontactmix p a {
+
+        display: block;
+        width: 252px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .footerdiv2cstmcontactmix {
+
+        width: 280px;
+    }
+
+
+}
 
 @media screen and (max-width: 1399px) {
     #footer{
@@ -261,6 +279,25 @@
 
         top: 22px;
     }
+}
+
+@media screen and (max-width: 1099px) and (min-width: 992px) {
+    
+    .footerdiv2cstmcontactmix p a {
+
+        display: block;
+        width: 252px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .footerdiv2cstmcontactmix {
+
+        width: 280px;
+    }
+
+
 }
 
 @media screen and (max-width: 1099px) {
@@ -327,6 +364,25 @@
     }
 }
 
+@media screen and (max-width: 669px) and (min-width: 576px) {
+    
+     .footerdiv2cstmcontactmix p a {
+
+        display: block;
+        width: 240px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .footerdiv2cstmcontactmix {
+
+        width: 100%;
+        white-space: nowrap;
+        
+    }
+}
+
 
 @media screen and (max-width: 767px) {
     
@@ -339,6 +395,7 @@
 
         font-size: 12px;
     }
+
     
 }
 
