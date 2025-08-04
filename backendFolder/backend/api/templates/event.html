@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             {% if events %}
-                {% for event in events|slice:":5" %}
+                {% for event in events %}
                 <tr>
                     <th scope="row" class="cstmeventtableth">{{ forloop.counter }}</th>
                     <td class="cstmeventtableth">{{ event.event_name }}</td>
