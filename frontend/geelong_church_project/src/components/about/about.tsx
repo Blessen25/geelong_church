@@ -125,10 +125,10 @@ export const AboutOurMinistriesdiv = () => {
                     <h1 className="text_cstm_big_heading">Our Ministries</h1>
                     <p className="text_cstm_normal_para textalign_cstmjustify">At Geelong Pentecostal Assembly, ministry is at the heart of everything we do. Our diverse range of ministries is designed to serve every age group and walk of life—helping individuals grow in faith, build meaningful relationships, and make a difference in our community. Whether you’re passionate about worship, outreach, youth mentorship, or caring for the vulnerable, there’s a place for you to get involved and thrive in your calling.</p>
                     <Flexwithgapcstmdivrow parentClassname="flexjustifycontent_spacebetween cstmaboutourministriesimagediv">
-                        <img src="assets/images/main/outreachMinsitriesone.jpg" alt="ministries" className="imagedivrowcstmabout"/>
-                        <img src="assets/images/main/womenMinistries.jpg" alt="ministries" className="imagedivrowcstmabout"/>
-                        <img src="assets/images/main/teenMinistries.jpg" alt="ministries" className="imagedivrowcstmabout"/>
-                        <img src="assets/images/main/Intercessoryprayer.jpg" alt="ministries" className="imagedivrowcstmabout"/>
+                        <img src="assets/images/main/outreachMinsitriesone.jpg" alt="ministries" className="imagedivrowcstmabout" loading="lazy"/>
+                        <img src="assets/images/main/womenMinistries.jpg" alt="ministries" className="imagedivrowcstmabout" loading="lazy"/>
+                        <img src="assets/images/main/teenMinistries.jpg" alt="ministries" className="imagedivrowcstmabout" loading="lazy"/>
+                        <img src="assets/images/main/Intercessoryprayer.jpg" alt="ministries" className="imagedivrowcstmabout" loading="lazy"/>
                     </Flexwithgapcstmdivrow>
                     <div className="aboutminsitriesbtncstm">
                         <ButtonwithtextComponentColor label={"Explore Our Minsitries"} fullwidth={false} classname="exploreministriesbtncstm" route="/ministries"/>
@@ -169,10 +169,10 @@ export const AboutusStartyoursundays = () => {
                 </div>
                 <div className="aboutusstartchildtwo">
                     <div className="imageoneaboutusstarttwo">
-                        <img src="assets/images/main/reading_bible.jpg" alt="imageone" />
+                        <img src="assets/images/main/reading_bible.jpg" alt="imageone" loading="lazy"/>
                     </div>
                     <div className="imagetwoaboutusstarttwo">
-                        <img src="assets/images/main/prayerone.jpg" alt="imageone" />
+                        <img src="assets/images/main/prayerone.jpg" alt="imageone" loading="lazy"/>
                     </div>
                 </div>
             </div>

@@ -38,8 +38,8 @@ export const MinistriesFlexComponent:React.FC<MinistriesFlexComponentProps> = (P
                 <p className="textalign_cstmjustify text_cstm_normal_para">{Props.para}</p>
             </div>
             <div className="ministriesflexchilddivimage">
-                <img src={Props.imageone} alt="Image" className="ministriesimage"/>
-                <img src={Props.imagetwo} alt="Image" className="ministriesimage"/>
+                <img src={Props.imageone} alt="Image" className="ministriesimage" loading="lazy"/>
+                <img src={Props.imagetwo} alt="Image" className="ministriesimage" loading="lazy"/>
             </div>
         </div>
         {/* <div className="buttondivministries">

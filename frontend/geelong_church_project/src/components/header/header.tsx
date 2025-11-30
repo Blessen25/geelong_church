@@ -3,6 +3,7 @@ import './header.css';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { faAlignLeft, faBars, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faTv } from '@fortawesome/free-solid-svg-icons';
+import Logo from "../assets/images/Logo/Logo_new.png";
 
 const Header = () => {
 
@@ -26,7 +27,7 @@ const Header = () => {
                         </div>
                         <div className="headerimg">
                             <a href="/" rel="noopener noreferrer">
-                                <img src="../assets/images/Logo/Logo_new.png" alt="" />
+                                <img src="../assets/images/Logo/Logo_new.png" alt="Logo Image" loading="lazy"/>
                             </a>
                         </div>
                         <div className="headercontents">
