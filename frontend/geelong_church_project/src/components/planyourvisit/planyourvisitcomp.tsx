@@ -31,6 +31,7 @@ export const PlanYourVisitdiv = () => {
                 <ServiceTimings />
                 <WhattoExpect />
                 <MapandLocation />
+                <PrayerRequestdiv />
             </div>
         </>
     )
@@ -116,6 +117,16 @@ const WhattoExpect = () => {
                     <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
                     <p className="text_cstm_normal_para textalign_cstmjustify">An environment where families, youth, and individuals can all feel at home</p>
             </Flexwithgapcstmdivrow>
+        </>
+    )
+}
+
+const PrayerRequestdiv = () => {
+
+    return(
+
+        <>
+        
         </>
     )
 }
