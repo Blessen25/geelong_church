@@ -1,5 +1,5 @@
 import './planyourvisit.css';
-import { Containercstm, ContainerWidthCstm, Flexwithgapcstmdivrow, TitleinMaindiv } from "../extra";
+import { ButtonwithtextComponentColor, Containercstm, ContainerWidthCstm, Flexwithgapcstmdivrow, TitleinMaindiv } from "../extra";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 
@@ -126,7 +126,26 @@ const PrayerRequestdiv = () => {
     return(
 
         <>
-        
+            <h1 className="text_cstm_big_heading">Prayer Request</h1>
+            <p className="text_cstm_normal_para textalign_cstmjustify"> We believe no one should walk alone. Our prayer team is here to stand with you, encourage you, and pray with faith and love.</p>
+            <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
+                    <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
+                    <p className="text_cstm_normal_para textalign_cstmjustify">🙏 Personal prayer</p>
+            </Flexwithgapcstmdivrow>
+            <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
+                    <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
+                    <p className="text_cstm_normal_para textalign_cstmjustify">💬 Pastoral care</p>
+            </Flexwithgapcstmdivrow>
+            <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
+                    <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
+                    <p className="text_cstm_normal_para textalign_cstmjustify">👨‍👩‍👧 Family & marriage support</p>
+            </Flexwithgapcstmdivrow>
+            <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
+                    <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
+                    <p className="text_cstm_normal_para textalign_cstmjustify">🕊️ Spiritual guidance</p>
+            </Flexwithgapcstmdivrow>
+            <ButtonwithtextComponentColor label="Submit a Prayer Request" route="#" fullwidth={false} classname='submitprayerbtn'/>
+                
         </>
     )
 }

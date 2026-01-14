@@ -23,6 +23,11 @@
 
 }
 
+.submitprayerbtn {
+
+    max-width: 220px;
+}
+
 @media screen and (max-width: 1199px) {
     
     .mapandlocation {
@@ -53,6 +58,11 @@
         width: 100%;
         height: 300px;
     }
+
+    .submitprayerbtn {
+
+        max-width: 175px;
+    }
 }
 
 @media screen and (max-width : 575px) {
@@ -62,5 +72,10 @@
 
         width: 100%;
         height: 250px;
+    }
+
+    .submitprayerbtn {
+
+        max-width: 140px;
     }
 }
