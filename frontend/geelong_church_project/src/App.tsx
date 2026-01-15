@@ -10,6 +10,7 @@ import Ministries from './screens/ministries/ministries';
 import WeBelieve from './screens/webelieve/webelieve';
 import BibleVerse from './screens/bibleverse/bibleverse';
 import PlanYourVisit from './screens/planyourvisit/planyourvisit';
+import Prayer_Request from './components/prayerrequest/prayer';
 
 
 const App = () =>{
@@ -27,6 +28,7 @@ const App = () =>{
             <Route path='/planyourvisit' element = { <PlanYourVisit />} />
             <Route path='/webelieve' element = { <WeBelieve/>} />
             <Route path='/bibleverse' element = { <BibleVerse />} />
+            <Route path='/prayerrequest' element = {<Prayer_Request />} />
           </Routes>
           <Footer />
         </Router>

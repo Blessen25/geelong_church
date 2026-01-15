@@ -144,7 +144,7 @@ const PrayerRequestdiv = () => {
                     <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
                     <p className="text_cstm_normal_para textalign_cstmjustify">🕊️ Spiritual guidance</p>
             </Flexwithgapcstmdivrow>
-            <ButtonwithtextComponentColor label="Submit a Prayer Request" route="#" fullwidth={false} classname='submitprayerbtn'/>
+            <ButtonwithtextComponentColor label="Submit a Prayer Request" route="/prayerrequest" fullwidth={false} classname='submitprayerbtn'/>
                 
         </>
     )
