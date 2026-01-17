@@ -1,5 +1,4 @@
-import React from "react";
-import { ButtonwithtextComponentColor, Containercstm, Containerdiv, ContainerWidthCstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, Flexwithiconandtextparentdiv, TitleinMaindiv } from "../extra";
+import { ButtonwithtextComponentColor, Containercstm, ContainerWidthCstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, Flexwithiconandtextparentdiv, TitleinMaindiv } from "../extra";
 import './about.css'
 import { AboutOurMissionArray } from "../../array";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -1,9 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { faAlignLeft, faBars, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faTv } from '@fortawesome/free-solid-svg-icons';
-import Logo from "../assets/images/Logo/Logo_new.png";
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { faAlignLeft, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 

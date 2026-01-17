@@ -6,8 +6,6 @@ import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-
 import { ContactcardDetailsdivProps } from "../../interface";
 import PhoneNumberField from "../inputs/input";
 import { useNavigate } from "react-router-dom";
-import { set } from "date-fns";
-import { redirect } from "react-router-dom";
 
 export const ContactUsComp = () => {
 
