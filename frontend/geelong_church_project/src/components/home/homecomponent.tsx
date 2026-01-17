@@ -188,13 +188,13 @@ export const HomeFourDivChildComp:React.FC<HomeFourDivChildCompProps> = (Props) 
             <a href={Props.route}>
                 <div className="homefourdivchildcstm">
                     <p>{Props.text}</p>
-                    <img src={Props.image} alt="Alt_Image" loading="lazy"/>
+                    <img src={Props.image} alt="Image" loading="lazy"/>
                 </div>
             </a>
         </>) : (<>
                 <div className="homefourdivchildcstm" onClick={Props.onClick} style={{ cursor: "pointer" }}>
                     <p>{Props.text}</p>
-                    <img src={Props.image} alt="Alt_Image" loading="lazy"/>
+                    <img src={Props.image} alt="Image" loading="lazy"/>
                 </div>
         </>)}
         </>

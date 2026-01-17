@@ -15,7 +15,7 @@ export const Footer = () => {
                             <div className="footerdiv1">
                                     <div className="footerdiv1img">
                                         <a href="#" rel="noopener noreferrer">
-                                        <img src="./assets/images/Logo/Logo_new.png" alt="" />
+                                        <img src="./assets/images/Logo/Logo_new.png" alt="Logo" />
                                         </a>
                                     </div>
                                     

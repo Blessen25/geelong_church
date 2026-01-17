@@ -27,7 +27,7 @@ const Header = () => {
                         </div>
                         <div className="headerimg">
                             <a href="/" rel="noopener noreferrer">
-                                <img src="../assets/images/Logo/Logo_new.png" alt="Logo Image" loading="lazy"/>
+                                <img src="../assets/images/Logo/Logo_new.png" alt="Logo" loading="lazy"/>
                             </a>
                         </div>
                         <div className="headercontents">

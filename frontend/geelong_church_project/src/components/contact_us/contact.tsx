@@ -252,8 +252,8 @@ export const ContactDetailsdiv = () => {
                     <Flexwithgapcstmdivrow>
                         <Flexwithgapcstmdivcol>
                             <div className="imagedivcontactus">
-                                <img src="assets/images/main/contactus.jpg" alt="contact_us" loading="lazy"/>
-                                <img src="assets/images/main/contactusthree.jpg" alt="contact_us" loading="lazy"/>
+                                <img src="assets/images/main/contactus.jpg" alt="contact us" loading="lazy"/>
+                                <img src="assets/images/main/contactusthree.jpg" alt="contact us" loading="lazy"/>
                             </div>
                         </Flexwithgapcstmdivcol>
                     </Flexwithgapcstmdivrow>
