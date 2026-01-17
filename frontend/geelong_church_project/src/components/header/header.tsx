@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { faAlignLeft, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faAlignLeft, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 
@@ -35,7 +35,8 @@ const Header = () => {
                             <a href='/webelieve' className={`${isActive('/webelieve')}`} rel="noopener noreferrer" >We Believe</a>
                             <a href='/ministries' className={`${isActive('/ministries')}`} rel="noopener noreferrer">Ministries</a>
                             <a href='/planyourvisit' className={`${isActive('/planyourvisit')}`} rel="noopener noreferrer">Plan Your Visit</a>
-                            <a href='/contact' className={`${isActive('/contact')}`} rel="noopener noreferrer">Contact</a>    
+                            <a href='/contact' className={`${isActive('/contact')}`} rel="noopener noreferrer">Contact</a>   
+                            <a href='/prayerrequest' className={`${isActive('/prayerrequest')}`} rel="noopener noreferrer">Requests</a>    
                         </div>
                     </div>
                 </div>
@@ -50,6 +51,8 @@ const Header = () => {
                     <a href='/ministries' className={`${isActiveSidebar('/ministries')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faChurch}/>Ministries</a>
                     <a href='/planyourvisit' className={`${isActiveSidebar('/planyourvisit')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faNewspaper}/>Plan Your Visit</a>
                     <a href='/contact' className={`${isActiveSidebar('/contact')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPhone}/>Contact</a> 
+                    <a href='/prayerrequest' className={`${isActiveSidebar('/prayerrequest')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPrayingHands}/>Requests</a>
+                    
                     </div>  
                     </>
                 ) : (
