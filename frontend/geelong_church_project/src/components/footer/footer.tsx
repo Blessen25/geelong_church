@@ -1,12 +1,11 @@
-import React from 'react';
 import './footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLocation, faLocationDot, faMap, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocation, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
 
 export const Footer = () => {
     const location = useLocation();
-    const isActive = (path:any) => location.pathname == path ? "footerdiv2atag footerdiv2atagactive" : "footerdiv2atag";
+    const isActive = (path:any) => location.pathname === path ? "footerdiv2atag footerdiv2atagactive" : "footerdiv2atag";
     return(
         <>  
             <div className="containerfooter">

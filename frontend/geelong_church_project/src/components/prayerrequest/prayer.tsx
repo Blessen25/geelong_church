@@ -1,6 +1,6 @@
 import { TitleinMaindiv } from '../extra';
 import './prayer.css';
-const Prayer_Request = () => {
+const PrayerRequest = () => {
 
     return(
 
@@ -12,4 +12,4 @@ const Prayer_Request = () => {
     )
 }
 
-export default Prayer_Request;
+export default PrayerRequest;

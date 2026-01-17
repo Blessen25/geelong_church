@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { set } from "date-fns";
 import { redirect } from "react-router-dom";
 
-export const Contact_UsComp = () => {
+export const ContactUsComp = () => {
 
     return(
 
