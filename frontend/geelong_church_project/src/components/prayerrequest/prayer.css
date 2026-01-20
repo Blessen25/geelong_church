@@ -50,13 +50,14 @@
     position: relative;
 }
 
-.fa-calendar {
+.fa-calendar, .fa-chevron-down{
 
     position: absolute;
     right: 10px;
     top: 11px;
     color: #8b8b8b;
     pointer-events: none;
+    font-size: 16px;
 }
 
 .prayerreqform {
@@ -69,6 +70,17 @@
 .optionclass {
 
     background-color: #F0F8FF !important;
+}
+
+.selectapperance {
+
+    appearance: none;
+}
+
+.select-wrapper-cstm {
+
+    position: relative;
+    width: 100%;
 }
 
 
@@ -95,6 +107,11 @@
 
         gap: 15px;
     }
+
+    .fa-calendar, .fa-chevron-down {
+
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -107,5 +124,10 @@
     .contact-checkbox {
 
         font-size: 10px;
+    }
+
+    .fa-calendar, .fa-chevron-down {
+
+        font-size: 12px;
     }
 }
