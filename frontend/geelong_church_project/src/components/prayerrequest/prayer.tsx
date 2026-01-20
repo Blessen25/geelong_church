@@ -1,11 +1,25 @@
 import { Containercstm, ContainerWidthCstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, TitleinMaindiv } from '../extra';
 import PhoneNumberField from '../inputs/input';
 import './prayer.css';
+import { useState } from 'react';
+
+/* For Date Picker */
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+
+type ContactMethod = "Phone" | "Text" | "Email" | "WhatsApp";
+
+
 const PrayerRequest = () => {
+
+    const [visitDate, setVisitDate] = useState<Date>(new Date());
 
     const HandlePhoneChange = (phone: string, country: any) => {
         console.log("Phone number changed:", phone, country);
     };
+
+    
+    const [contactMethod, setContactMethod] = useState<ContactMethod>("Phone");
     return(
 
         <>
@@ -34,6 +48,32 @@ const PrayerRequest = () => {
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Address</p>
                                         <input name="subject" type="text" placeholder="Enter Your Home Address" required className="inputformcstm" maxLength={200} />
+                                    </Flexwithgapcstmdivcol>
+                                </Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow>
+                                    <Flexwithgapcstmdivcol>
+                                         <p className="inputformptag">Preferred Visit Date</p>
+                                                <DatePicker
+                                                    selected={visitDate}
+                                                    onChange={(date:any) => date && setVisitDate(date)}
+                                                    dateFormat="dd/MM/yyyy"
+                                                    className="inputformcstm"   // ✅ YOUR style applied directly
+                                                    placeholderText="DD/MM/YYYY"
+                                                />
+                                    </Flexwithgapcstmdivcol>
+                                    <Flexwithgapcstmdivcol>
+                                        <p className="inputformptag">Best way to contact you</p>
+
+                                            <select
+                                            className="inputformcstm"
+                                            value={contactMethod}
+                                            onChange={(e) => setContactMethod(e.target.value as ContactMethod)}
+                                            >
+                                            <option value="Phone">Phone</option>
+                                            <option value="Text">Text</option>
+                                            <option value="Email">Email</option>
+                                            <option value="WhatsApp">WhatsApp</option>
+                                            </select>
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>

@@ -594,6 +594,7 @@
 
 @media screen and (max-width: 575px) {
     
+    
     .containercstm {
 
         padding: 85px 15px 15px 15px;
@@ -730,5 +731,14 @@
     .paddingcstmhomediv {
 
         padding-top: 70px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    
+
+    .flexwithgapcstmrow {
+
+        flex-direction: column;
     }
 }

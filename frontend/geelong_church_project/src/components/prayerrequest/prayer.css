@@ -1,0 +1,59 @@
+.datepickercstm {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-checkbox-group {
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    height: 40px;
+}
+
+.contact-checkbox {
+
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 14px;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    
+    .contact-checkbox-group {
+
+        height: 36px;
+        gap: 15px;
+
+    }
+
+    .contact-checkbox {
+
+        font-size: 12px;
+    }
+
+    .datepickercstm {
+
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .contact-checkbox-group {
+
+        height: 30px;
+    }
+
+    .contact-checkbox {
+
+        font-size: 10px;
+    }
+}
