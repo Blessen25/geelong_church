@@ -11,9 +11,10 @@ type ContactMethod = "Phone" | "Text" | "Email" | "WhatsApp";
 type VisitingFirstTime = "Yes" | "No";
 type HearAboutUs = "Friend / Family" | "Social Media" | "Google" | "Walked In" |"Other";
 type AttendAnotherChurch = "Yes" | "No";
-type WhatBringsYouToChurch = "Invited by a friend" | "Looking for a church community" | "Prayer" | "Curiosity" | "Recently moved to the area" | "Other";
 type PrayerWithSomeone = "Yes" | "No";
-
+type ContactFromPastor = "Yes" | "No";
+type AreasYouWouldLikePrayerFor = "Healing" | "Family" | "Finances" | "Marriage" | "Children" | "Spiritual Growth" | "Freedom / Deliverance" | "Salvation" | "Other";
+ 
 
 const PrayerRequest = () => {
 
@@ -30,9 +31,10 @@ const PrayerRequest = () => {
     const [hearAboutOther, setHearAboutOther] = useState("");
     const [attendAnotherChurch, setAttendAnotherChurch] = useState<AttendAnotherChurch>("No");
     const [ifyesChurchName, setIfyesChurchName] = useState("");
-    const [WhatBringsYou, setWhatBringsYou] = useState<WhatBringsYouToChurch>("Invited by a friend");
-    const [ifyesOtherReason, setIfyesOtherReason] = useState("");
     const [prayerWithSomeone, setPrayerWithSomeone] = useState<PrayerWithSomeone>("Yes");
+    const [contactFromPastor, setContactFromPastor] = useState<ContactFromPastor>("Yes");
+    const [areasYouWouldLikePrayerFor, setAreasYouWouldLikePrayerFor] = useState<AreasYouWouldLikePrayerFor>("Healing");
+    const [areaother, setAreaother] = useState("");
 
     return(
 
@@ -171,33 +173,38 @@ const PrayerRequest = () => {
                                         )}
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">What brings you to visit our church</p>
+                                        <p className="inputformptag">Areas you would like prayer for</p>
                                         <div className="select-wrapper-cstm">
                                         <select
                                             className="inputformcstm selectapperance"
-                                            value={WhatBringsYou}
-                                            onChange={(e) => setWhatBringsYou(e.target.value as WhatBringsYouToChurch)}
+                                            value={areasYouWouldLikePrayerFor}
+                                            onChange={(e) => setAreasYouWouldLikePrayerFor(e.target.value as AreasYouWouldLikePrayerFor)}
                                             >
-                                            <option value="Invited by a friend" className='optionclass'>Invited by a friend</option>
-                                            <option value="Looking for a church community" className='optionclass'>Looking for a church community</option>
-                                            <option value="Prayer" className='optionclass'>Prayer</option>
-                                            <option value="Curiosity" className='optionclass'>Curiosity</option>
-                                            <option value="Recently moved to the area" className='optionclass'>Recently moved to the area</option>
+                                            <option value="Healing" className='optionclass'>Healing</option>
+                                            <option value="Family" className='optionclass'>Family</option>
+                                            <option value="Finances" className='optionclass'>Finances</option>
+                                            <option value="Marriage" className='optionclass'>Marriage</option>
+                                            <option value="Children" className='optionclass'>Children</option>
+                                            <option value="Spiritual Growth" className='optionclass'>Spiritual Growth</option>
+                                            <option value="Freedom / Deliverance" className='optionclass'>Freedom / Deliverance</option>
+                                            <option value="Salvation" className='optionclass'>Salvation</option>
                                             <option value="Other" className='optionclass'>Other</option>
 
                                         </select>
                                         <i className="fa-solid fa-chevron-down"></i>
                                         </div>
-                                        {WhatBringsYou === "Other" && (
+                                        {areasYouWouldLikePrayerFor === "Other" && (
+
                                         <input
                                             type="text"
                                             className="inputformcstm"
-                                            placeholder="Please specify the reason"
-                                            value={ifyesOtherReason}
-                                            onChange={(e) => setIfyesOtherReason(e.target.value)}
-                                            maxLength={60}
+                                            placeholder="Please specify the areas you would like prayer for"
+                                            value={areaother}
+                                            onChange={(e) => setAreaother(e.target.value)}
+                                            maxLength={50}
                                         />
                                         )}
+                                        
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 {/* <Flexwithgapcstmdivrow>
@@ -227,18 +234,27 @@ const PrayerRequest = () => {
                                         </div>
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Would you like someone to pray with you today?</p>
+                                        <p className="inputformptag">Would you like a pastor or prayer team member to contact you?</p>
                                         <div className="select-wrapper-cstm">
                                         <select
                                             className="inputformcstm selectapperance"
-                                            value={prayerWithSomeone}
-                                            onChange={(e) => setPrayerWithSomeone(e.target.value as PrayerWithSomeone)}
+                                            value={contactFromPastor}
+                                            onChange={(e) => setContactFromPastor(e.target.value as ContactFromPastor)}
                                             >
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
                                         <i className="fa-solid fa-chevron-down"></i>
                                         </div>
+                                    </Flexwithgapcstmdivcol>
+                                </Flexwithgapcstmdivrow>
+                            </Flexwithgapcstmdivcol>
+                            <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
+                                <h1 className="text_cstm_big_heading">Prayer Request</h1>
+                                <Flexwithgapcstmdivrow>
+                                    <Flexwithgapcstmdivcol>
+                                        <p className="inputformptag">Please share anything you would like us to pray for. All requests are kept confidential.</p>
+                                        <textarea name="message" placeholder="Enter Your Prayer Request" required className="inputformmessagecstm" maxLength={1500}/>
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                             </Flexwithgapcstmdivcol>
