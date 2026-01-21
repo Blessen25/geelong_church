@@ -104,3 +104,12 @@
         font-size: 10px !important; 
     }
 }
+
+@media screen and (max-width: 426px) {
+    
+
+    .react-tel-input .country-list {
+    
+        width: 280px !important;
+    }
+}
