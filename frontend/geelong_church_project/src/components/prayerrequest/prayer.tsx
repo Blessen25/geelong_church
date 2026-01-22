@@ -49,11 +49,17 @@ const PrayerRequest = () => {
                                 <h1 className="text_cstm_big_heading">Personal Information</h1>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Full Name</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Full Name</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <input name="name" type="text" placeholder="Enter Your Full Name" required className="inputformcstm" maxLength={30} />
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Email</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Email</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <input name="email" type="email" placeholder="Enter Your Email" required className="inputformcstm" maxLength={50} />
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
@@ -63,11 +69,12 @@ const PrayerRequest = () => {
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Address</p>
-                                        <input name="subject" type="text" placeholder="Enter Your Home Address" required className="inputformcstm" maxLength={200} />
+                                        <input name="subject" type="text" placeholder="Enter Your Home Address" className="inputformcstm" maxLength={200} />
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
+                                        
                                          <p className="inputformptag">Date of Birth</p>
                                             <div className="datepickerwraper">
                                                 <DatePicker
@@ -82,7 +89,10 @@ const PrayerRequest = () => {
                                             
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Best way to contact you</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Best way to contact you</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                             <div className="select-wrapper-cstm">
                                                 <select
                                                 className="inputformcstm selectapperance"
@@ -106,7 +116,10 @@ const PrayerRequest = () => {
                                 <h1 className="text_cstm_big_heading">About You</h1>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Are you visiting us for the first time?</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Are you visiting us for the first time?</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <div className="select-wrapper-cstm">
                                         <select
                                             className="inputformcstm selectapperance"
@@ -120,7 +133,10 @@ const PrayerRequest = () => {
                                         </div>
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">How did you hear about our church?</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">How did you hear about our church?</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <div className="select-wrapper-cstm">
                                         <select
                                             className="inputformcstm selectapperance"
@@ -149,7 +165,10 @@ const PrayerRequest = () => {
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Do you currently attend another church?</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Do you currently attend another church?</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <div className="select-wrapper-cstm">
                                         <select
                                             className="inputformcstm selectapperance"
@@ -220,7 +239,10 @@ const PrayerRequest = () => {
                                 <h1 className="text_cstm_big_heading">Spiritual Support</h1>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Would you like someone to pray with you today?</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Would you like someone to pray with you today?</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <div className="select-wrapper-cstm">
                                         <select
                                             className="inputformcstm selectapperance"
@@ -234,7 +256,10 @@ const PrayerRequest = () => {
                                         </div>
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Would you like a pastor or prayer team member to contact you?</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Would you like a pastor or prayer team member to contact you?</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <div className="select-wrapper-cstm">
                                         <select
                                             className="inputformcstm selectapperance"
@@ -253,7 +278,10 @@ const PrayerRequest = () => {
                                 <h1 className="text_cstm_big_heading">Prayer Request</h1>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Please share anything you would like us to pray for. All requests are kept confidential.</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Please share anything you would like us to pray for. All requests are kept confidential.</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <textarea name="message" placeholder="Enter Your Prayer Request" required className="inputformmessagecstm" maxLength={1500}/>
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>

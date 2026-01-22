@@ -268,12 +268,18 @@ export const ContactDetailsdiv = () => {
                             <p className="text_cstm_normal_para textalign_cstmjustify">Have a question or need assistance? Simply fill out the form with your inquiry or reach out to us directly via the email or phone number listed above.</p>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Name</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Name</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <input name="name" type="text" placeholder="Enter Your Name" required className="inputformcstm" maxLength={30} value={formData.name} onChange={handleIInputChange}/>
                                         { nameerror && <p className="errordivcstm">{nameerror}</p> }
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Email</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Email</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <input name="email" type="email" placeholder="Enter Your Email" required className="inputformcstm" maxLength={50} value={formData.email} onChange={handleIInputChange}/>
                                         {emailerror && <p className="errordivcstm">{emailerror}</p>}
                                     </Flexwithgapcstmdivcol>
@@ -284,7 +290,10 @@ export const ContactDetailsdiv = () => {
                                         {phoneerror && <p className="errordivcstm">{phoneerror}</p>}
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Subject</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Subject</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <input name="subject" type="text" placeholder="Enter Subject" required className="inputformcstm" maxLength={200} value={formData.subject} onChange={handleIInputChange}/>
                                         {subjecterror && <p className="errordivcstm">{subjecterror}</p>}
 
@@ -292,7 +301,10 @@ export const ContactDetailsdiv = () => {
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Message</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Message</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <textarea name="message" placeholder="Enter Your Message" required className="inputformmessagecstm" maxLength={500} value={formData.message} onChange={handleIInputChange}/>
                                         {messageerror && <p className="errordivcstm">{messageerror}</p>}
                                     </Flexwithgapcstmdivcol>

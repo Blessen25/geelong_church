@@ -10,7 +10,10 @@ const PhoneNumberField: React.FC<PhoneNumberFieldProps> = (Props) => {
     return(
         <>
             <Flexwithgapcstmdivcol>
-                <p className="inputformptag">Phone</p>
+                <div className="stardiv">
+                    <p className="inputformptag">Phone</p>
+                    <span className="starcstm">*</span>
+                </div>
                 <PhoneInput 
                 country={'au'}
                 value={Props.value}
