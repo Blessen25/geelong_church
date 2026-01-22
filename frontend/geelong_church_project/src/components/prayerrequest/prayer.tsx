@@ -36,6 +36,30 @@ const PrayerRequest = () => {
     const [areasYouWouldLikePrayerFor, setAreasYouWouldLikePrayerFor] = useState<AreasYouWouldLikePrayerFor>("");
     const [areaother, setAreaother] = useState("");
 
+    const [formData, setFormData] = useState({
+        fullname: "",
+        emailaddress: "",
+        phonenumber: "",
+        address: "",
+        dateofbirth: "",
+        contactmethod: "",
+        visitingfirsttime: "",
+        hearaboutus: "",
+        attendanotherchurch: "",
+        areasforprayer: "",
+        prayerwithsomeone: "",
+        contactfrompastor: "",
+        prayerrequestmessage: ""
+
+    });
+    
+    /* Error handling */
+    const HandleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
+        const { name, value } = e.target;
+        
+    }
+
     return(
 
         <>
