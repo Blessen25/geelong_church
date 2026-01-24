@@ -36,7 +36,7 @@ const Header = () => {
                             <a href='/ministries' className={`${isActive('/ministries')}`} rel="noopener noreferrer">Ministries</a>
                             <a href='/planyourvisit' className={`${isActive('/planyourvisit')}`} rel="noopener noreferrer">Plan Your Visit</a>
                             <a href='/contact' className={`${isActive('/contact')}`} rel="noopener noreferrer">Contact</a>   
-                            <a href='/prayerrequest' className={`${isActive('/prayerrequest')}`} rel="noopener noreferrer">Requests</a>    
+                            <a href='/prayerrequest' className={`${isActive('/prayerrequest')}`} rel="noopener noreferrer">Prayer</a>    
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ const Header = () => {
                     <a href='/ministries' className={`${isActiveSidebar('/ministries')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faChurch}/>Ministries</a>
                     <a href='/planyourvisit' className={`${isActiveSidebar('/planyourvisit')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faNewspaper}/>Plan Your Visit</a>
                     <a href='/contact' className={`${isActiveSidebar('/contact')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPhone}/>Contact</a> 
-                    <a href='/prayerrequest' className={`${isActiveSidebar('/prayerrequest')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPrayingHands}/>Requests</a>
+                    <a href='/prayerrequest' className={`${isActiveSidebar('/prayerrequest')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPrayingHands}/>Prayer</a>
                     
                     </div>  
                     </>
