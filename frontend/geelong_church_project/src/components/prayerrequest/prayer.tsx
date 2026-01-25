@@ -7,13 +7,13 @@ import { useState } from 'react';
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 
-type ContactMethod = "" |"Phone" | "Text" | "Email" | "WhatsApp";
-type VisitingFirstTime = "" | "Yes" | "No";
-type HearAboutUs = "" |"Friend / Family" | "Social Media" | "Google" | "Walked In" |"Other";
-type AttendAnotherChurch = "" |"Yes" | "No";
-type PrayerWithSomeone = "" |"Yes" | "No";
-type ContactFromPastor = "" |"Yes" | "No";
-type AreasYouWouldLikePrayerFor = "" |"Healing" | "Family" | "Finances" | "Marriage" | "Children" | "Spiritual Growth" | "Freedom / Deliverance" | "Salvation" | "Other";
+type ContactMethod = "Phone" | "Text" | "Email" | "WhatsApp";
+type VisitingFirstTime = "Yes" | "No";
+type HearAboutUs = "Friend / Family" | "Social Media" | "Google" | "Walked In" |"Other";
+type AttendAnotherChurch = "Yes" | "No";
+type PrayerWithSomeone = "Yes" | "No";
+type ContactFromPastor = "Yes" | "No";
+type AreasYouWouldLikePrayerFor ="Healing" | "Family" | "Finances" | "Marriage" | "Children" | "Spiritual Growth" | "Freedom / Deliverance" | "Salvation" | "Other";
  
 
 const PrayerRequest = () => {
@@ -25,15 +25,15 @@ const PrayerRequest = () => {
     };
 
     
-    const [contactMethod, setContactMethod] = useState<ContactMethod>("");
-    const [firsttime, setFirsttime] = useState<VisitingFirstTime>("");
-    const [hearAboutUs, setHearAboutUs] = useState<HearAboutUs>("");
+    const [contactMethod, setContactMethod] = useState<ContactMethod>("Phone");
+    const [firsttime, setFirsttime] = useState<VisitingFirstTime>("Yes");
+    const [hearAboutUs, setHearAboutUs] = useState<HearAboutUs>("Friend / Family");
     const [hearAboutOther, setHearAboutOther] = useState("");
-    const [attendAnotherChurch, setAttendAnotherChurch] = useState<AttendAnotherChurch>("");
+    const [attendAnotherChurch, setAttendAnotherChurch] = useState<AttendAnotherChurch>("No");
     const [ifyesChurchName, setIfyesChurchName] = useState("");
-    const [prayerWithSomeone, setPrayerWithSomeone] = useState<PrayerWithSomeone>("");
-    const [contactFromPastor, setContactFromPastor] = useState<ContactFromPastor>("");
-    const [areasYouWouldLikePrayerFor, setAreasYouWouldLikePrayerFor] = useState<AreasYouWouldLikePrayerFor>("");
+    const [prayerWithSomeone, setPrayerWithSomeone] = useState<PrayerWithSomeone>("No");
+    const [contactFromPastor, setContactFromPastor] = useState<ContactFromPastor>("No");
+    const [areasYouWouldLikePrayerFor, setAreasYouWouldLikePrayerFor] = useState<AreasYouWouldLikePrayerFor>("Spiritual Growth");
     const [areaother, setAreaother] = useState("");
 
     const [formData, setFormData] = useState({
@@ -123,7 +123,6 @@ const PrayerRequest = () => {
                                                 value={contactMethod}
                                                 onChange={(e) => setContactMethod(e.target.value as ContactMethod)}
                                                 >
-                                                <option value="" disabled>Select an option</option>
                                                 <option value="Phone" className='optionclass'>Phone</option>
                                                 <option value="Text" className='optionclass'>Text</option>
                                                 <option value="Email" className='optionclass'>Email</option>
@@ -151,7 +150,6 @@ const PrayerRequest = () => {
                                             value={firsttime}
                                             onChange={(e) => setFirsttime(e.target.value as VisitingFirstTime)}
                                             >
-                                            <option value="" disabled>Select an option</option>
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
@@ -169,7 +167,6 @@ const PrayerRequest = () => {
                                             value={hearAboutUs}
                                             onChange={(e) => setHearAboutUs(e.target.value as HearAboutUs)}
                                             >
-                                            <option value="" disabled>Select an option</option>
                                             <option value="Friend / Family" className='optionclass'>Friend / Family</option>
                                             <option value="Social Media" className='optionclass'>Social Media</option>
                                             <option value="Google" className='optionclass'>Google</option>
@@ -202,7 +199,6 @@ const PrayerRequest = () => {
                                             value={attendAnotherChurch}
                                             onChange={(e) => setAttendAnotherChurch(e.target.value as AttendAnotherChurch)}
                                             >
-                                            <option value="" disabled>Select an option</option>
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
@@ -230,7 +226,6 @@ const PrayerRequest = () => {
                                             value={areasYouWouldLikePrayerFor}
                                             onChange={(e) => setAreasYouWouldLikePrayerFor(e.target.value as AreasYouWouldLikePrayerFor)}
                                             >
-                                            <option value="" disabled>Select an option</option>
                                             <option value="Healing" className='optionclass'>Healing</option>
                                             <option value="Family" className='optionclass'>Family</option>
                                             <option value="Finances" className='optionclass'>Finances</option>
@@ -281,7 +276,6 @@ const PrayerRequest = () => {
                                             value={prayerWithSomeone}
                                             onChange={(e) => setPrayerWithSomeone(e.target.value as PrayerWithSomeone)}
                                             >
-                                            <option value="" disabled>Select an option</option>
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
@@ -299,7 +293,6 @@ const PrayerRequest = () => {
                                             value={contactFromPastor}
                                             onChange={(e) => setContactFromPastor(e.target.value as ContactFromPastor)}
                                             >
-                                            <option value="" disabled>Select an option</option>
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
