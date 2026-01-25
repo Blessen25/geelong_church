@@ -1,11 +1,11 @@
 from django.urls import path
-from .views import ContactListCreateView, EventListCreateView, Event_delete, Edit_event,Event_deleteevent, prayer_page, token_login;
+from .views import ContactListCreateView, EventListCreateView, Event_delete, Edit_event,Event_deleteevent, token_login, PrayerRequestListCreateView;
 
 urlpatterns = [
 
     path('contact/',ContactListCreateView.as_view()),
     path('event/',EventListCreateView.as_view()),
-    path("prayers/", prayer_page, name="prayer_page"),
+    path("prayers/", PrayerRequestListCreateView.as_view()),
     
     path("token/", token_login, name="token_login"),
 
