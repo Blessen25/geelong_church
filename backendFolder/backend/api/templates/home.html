@@ -42,6 +42,7 @@
         <a href="/contact" class="viewmorebutton">View More</a>
     </div>  
     {% endif %}
+    
     <div class="w-100 d-flex justify-content-between">
         <h1 class="cstmcontenttableh1tag eventscstmheader">Events</h1>
         <a class="viewmorebutton addnewcstm" href="#" onclick="showAddModal()"><i class="fa-solid fa-plus"></i>Add New</a>
@@ -81,6 +82,86 @@
     <div class="viewmorebuttondiv">
         <a href="/event" class="viewmorebutton">View More</a>
     </div>
+    {% endif %}
+    <h1 class="cstmcontenttableh1tag">Prayer Requests</h1>
+    <div style="overflow-x: auto;">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="cstmeventtableth">Sl.No</th>
+
+                <th class="cstmeventtableth">Full Name</th>
+                <th class="cstmeventtableth">Email</th>
+                <th class="cstmeventtableth">Phone</th>
+                <th class="cstmeventtableth">Country</th>
+
+                <th class="cstmeventtableth">Address</th>
+                <th class="cstmeventtableth">DOB</th>
+                <th class="cstmeventtableth">Contact Method</th>
+
+                <th class="cstmeventtableth">First Time Visitor</th>
+                <th class="cstmeventtableth">Heard About Us</th>
+                <th class="cstmeventtableth">Other Source</th>
+
+                <th class="cstmeventtableth">Attend Another Church</th>
+                <th class="cstmeventtableth">Church Name</th>
+
+                <th class="cstmeventtableth">Prayer Area</th>
+                <th class="cstmeventtableth">Other Area</th>
+
+                <th class="cstmeventtableth">Pray With Someone</th>
+                <th class="cstmeventtableth">Pastor Contact</th>
+
+                <th class="cstmeventtableth">Prayer Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if prayers %}
+                {% for prayer in prayers %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+
+                    <td>{{ prayer.fullname }}</td>
+                    <td>{{ prayer.emailaddress }}</td>
+                    <td>{{ prayer.phonenumber }}</td>
+                    <td>{{ prayer.country }}</td>
+
+                    <td>{{ prayer.address }}</td>
+                    <td>{{ prayer.dateofbirth }}</td>
+                    <td>{{ prayer.contactmethod }}</td>
+
+                    <td>{{ prayer.visitingfirsttime }}</td>
+                    <td>{{ prayer.hearaboutus }}</td>
+                    <td>{{ prayer.hearaboutother|default:"—" }}</td>
+
+                    <td>{{ prayer.attendanotherchurch }}</td>
+                    <td>{{ prayer.ifyeschurchname|default:"—" }}</td>
+
+                    <td>{{ prayer.areasforprayer }}</td>
+                    <td>{{ prayer.areaother|default:"—" }}</td>
+
+                    <td>{{ prayer.prayerwithsomeone }}</td>
+                    <td>{{ prayer.contactfrompastor }}</td>
+
+                    <td style="min-width:300px; white-space:pre-wrap;">
+                        {{ prayer.prayerrequestmessage }}
+                    </td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="18" class="text-center">
+                        No Prayer Requests Found
+                    </td>
+                </tr>
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+    {% if prayers|length > 5 %}
+    <div class="viewmorebuttondiv">
+        <a href="/prayers" class="viewmorebutton">View More</a>
+    </div>  
     {% endif %}
     <div id="deleteModalOverlay" class="modal-overlay" style="display: none;"></div>
     <div id="deleteModal" class="delete-modal" style="display: none;">
