@@ -117,7 +117,7 @@ def Event_fn(request):
 @login_required
 def prayer_page(request):
     prayers = PrayerRequest.objects.all().order_by('-id')
-    return render(request, "prayer.html", {"prayers": prayers})
+    return render(request, "prayer_req.html", {"prayers": prayers})
 
 @login_required
 def Base(request):
