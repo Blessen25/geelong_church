@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils import timezone
-from .models import Contact, Event
+from .models import Contact, Event, PrayerRequest
+
 
 # Register your models here.
 
@@ -32,3 +33,4 @@ class EventAdmin(admin.ModelAdmin):
 
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Event, EventAdmin)
+admin.site.register(PrayerRequest)

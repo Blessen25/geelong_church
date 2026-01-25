@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect;
 from rest_framework import generics;
-from .models import Contact, Event;
+from .models import Contact, Event, PrayerRequest;
 from .serializers import ContactSerializer, EventSerializer;
 from django.http import HttpResponse, JsonResponse;
 from .forms import EventForm, AdminSignupForm, CustomPasswordResetForm, CustomSetPasswordForm;
@@ -113,6 +113,11 @@ def Event_fn(request):
     
     event = Event.objects.filter(is_deleted = False)
     return render(request, 'event.html',{'events' : event})
+
+@login_required
+def prayer_page(request):
+    prayers = PrayerRequest.objects.all().order_by('-id')
+    return render(request, "prayer.html", {"prayers": prayers})
 
 @login_required
 def Base(request):

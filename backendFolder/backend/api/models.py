@@ -56,3 +56,34 @@ class Event(models.Model):
         ordering = ['-event_date']
 
     
+from django.db import models
+
+class PrayerRequest(models.Model):
+    fullname = models.CharField(max_length=30)
+    emailaddress = models.EmailField(max_length=50)
+    phonenumber = models.CharField(max_length=30, blank=True, null=True)
+    country = models.CharField(max_length=50, blank=True, null=True)
+
+    address = models.CharField(max_length=200, blank=True, null=True)
+    dateofbirth = models.CharField(max_length=20, blank=True, null=True)  # or DateField if you prefer
+    contactmethod = models.CharField(max_length=20)
+
+    visitingfirsttime = models.CharField(max_length=10)
+    hearaboutus = models.CharField(max_length=30)
+    hearaboutother = models.CharField(max_length=60, blank=True, null=True)
+
+    attendanotherchurch = models.CharField(max_length=10)
+    ifyeschurchname = models.CharField(max_length=100, blank=True, null=True)
+
+    areasforprayer = models.CharField(max_length=50)
+    areaother = models.CharField(max_length=50, blank=True, null=True)
+
+    prayerwithsomeone = models.CharField(max_length=10)
+    contactfrompastor = models.CharField(max_length=10)
+
+    prayerrequestmessage = models.TextField(max_length=1500)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.fullname
