@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect;
 from rest_framework import generics;
 from .models import Contact, Event, PrayerRequest;
-from .serializers import ContactSerializer, EventSerializer;
+from .serializers import ContactSerializer, EventSerializer, PrayerRequestSerializer;
 from django.http import HttpResponse, JsonResponse;
 from .forms import EventForm, AdminSignupForm, CustomPasswordResetForm, CustomSetPasswordForm;
 from django.utils import timezone;
@@ -22,6 +22,12 @@ class EventListCreateView(generics.ListCreateAPIView):
 
     queryset = Event.objects.filter(is_deleted = False)
     serializer_class = EventSerializer
+
+
+class PrayerRequestListCreateView(generics.ListCreateAPIView):
+
+    queryset = PrayerRequest.objects.filter(is_deleted = False)
+    serializer_class = PrayerRequestSerializer
 
 class MyPasswordResetView(PasswordResetView):
     template_name = 'accounts/password_reset.html'
