@@ -84,6 +84,7 @@ class PrayerRequest(models.Model):
     prayerrequestmessage = models.TextField(max_length=1500)
 
     created_at = models.DateTimeField(auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
         return self.fullname
