@@ -109,3 +109,16 @@ export interface PhoneNumberFieldProps {
     value: string;
     onChange : (phone: string, country: any) => void;
 }
+
+export interface PopupModalProps {
+
+    isOpen ?: boolean;
+    onClose ?: () => void;
+    modalTitle ?: string;
+    modalSubtitle ?: string;
+    variant ?: "success" | "error" | "info";
+    primaryButtonText ?: string;
+    showCloseButton ?: boolean;
+    children ?: React.ReactNode;
+}   
+

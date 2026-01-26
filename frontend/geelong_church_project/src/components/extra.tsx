@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './extra.css';
-import { ButtonwithtextComponentProps, ContainerdivProps, FlexwithgapcstmdivProps, flexwithiconandtextdivProps, FlexwithiconandtextparentdivProps, FlexwithtextandimagedivProps, PopupdivProps, TitleinMaindivProps } from "../interface";
+import { ButtonwithtextComponentProps, ContainerdivProps, FlexwithgapcstmdivProps, flexwithiconandtextdivProps, FlexwithiconandtextparentdivProps, FlexwithtextandimagedivProps, PopupdivProps, PopupModalProps, TitleinMaindivProps } from "../interface";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChurch, faClose } from "@fortawesome/free-solid-svg-icons";
 
@@ -215,6 +215,17 @@ export const Popupdiv:React.FC<PopupdivProps> = (Props) => {
                     </div>
                 </>}
             </div>  
+        </>
+    )
+}
+
+export const PopupModal:React.FC<PopupModalProps> = (Props) => {
+
+    
+    return(
+
+        <>
+            
         </>
     )
 }
