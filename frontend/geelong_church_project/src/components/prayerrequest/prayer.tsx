@@ -6,6 +6,7 @@ import { useState } from 'react';
 /* For Date Picker */
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
+import { useNavigate } from 'react-router-dom';
 
 type ContactMethod = "Phone" | "Text" | "Email" | "WhatsApp";
 type VisitingFirstTime = "Yes" | "No";
@@ -18,13 +19,18 @@ type AreasYouWouldLikePrayerFor ="Healing" | "Family" | "Finances" | "Marriage" 
 
 const PrayerRequest = () => {
 
-    const [visitDate, setVisitDate] = useState<Date>(new Date());
+     const navigate = useNavigate();
+    const [success, setSuccess] = useState("");
+    const [commonerror, setcommonError] = useState("");
 
-    const HandlePhoneChange = (phone: string, country: any) => {
-        console.log("Phone number changed:", phone, country);
-    };
+    const [fullnameError, setFullnameError] = useState("");
+    const [emailError, setEmailError] = useState("");
+    const [phoneError, setPhoneError] = useState("");
+    const [addressError, setAddressError] = useState("");
+    const [messageError, setMessageError] = useState("");
 
-    
+    const [visitDate, setVisitDate] = useState<Date | null>(null);
+
     const [contactMethod, setContactMethod] = useState<ContactMethod>("Phone");
     const [firsttime, setFirsttime] = useState<VisitingFirstTime>("Yes");
     const [hearAboutUs, setHearAboutUs] = useState<HearAboutUs>("Friend / Family");
@@ -37,29 +43,241 @@ const PrayerRequest = () => {
     const [areaother, setAreaother] = useState("");
 
     const [formData, setFormData] = useState({
-        fullname: "",
-        emailaddress: "",
-        phonenumber: "",
-        address: "",
-        dateofbirth: "",
-        contactmethod: "",
-        visitingfirsttime: "",
-        hearaboutus: "",
-        attendanotherchurch: "",
-        areasforprayer: "",
-        prayerwithsomeone: "",
-        contactfrompastor: "",
-        prayerrequestmessage: ""
+    fullname: "",
+    emailaddress: "",
+    phonenumber: "",
+    country: "",
+    address: "",
+    dateofbirth: "",
 
+    contactmethod: "Phone",
+    visitingfirsttime: "Yes",
+    hearaboutus: "Friend / Family",
+    hearaboutother: "",
+
+    attendanotherchurch: "No",
+    ifyeschurchname: "",
+
+    areasforprayer: "Spiritual Growth",
+    areaother: "",
+
+    prayerwithsomeone: "No",
+    contactfrompastor: "No",
+
+    prayerrequestmessage: "",
     });
+
+    const [charCount, setCharCount] = useState({
+        fullname: 0,
+        emailaddress: 0,
+        phonenumber: 0,
+        address: 0,
+        hearaboutother: 0,
+        ifyeschurchname: 0,
+        areaother: 0,
+        prayerrequestmessage: 0,
+    });
+
+    const MAX_LENGTHS = {
+        fullname: 30,
+        emailaddress: 50,
+        phonenumber: 20,
+        address: 200,
+        hearaboutother: 60,
+        ifyeschurchname: 100,
+        areaother: 50,
+        prayerrequestmessage: 1500,
+    };
     
     /* Error handling */
-    const HandleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleInputChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 
         const { name, value } = e.target;
-        
-    }
 
+        setFormData((prev) => {
+
+            const updated = { ...prev, [name]: value };
+            console.log("Updated Form Data:", updated);
+            return updated;
+        });
+
+        if (name in charCount) {
+
+            setCharCount((prev) => ({ ...prev, [name]: value.length }));
+        }
+
+        if (name === "fullname") {
+        if (!value) setFullnameError("Please enter your full name.");
+        else if (value.length >= MAX_LENGTHS.fullname) setFullnameError("Max Characters Filled");
+        else setFullnameError("");
+        }
+
+        if (name === "emailaddress") {
+        if (!value) setEmailError("Please enter an email.");
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) setEmailError("Please enter a valid email address.");
+        else if (value.length >= MAX_LENGTHS.emailaddress) setEmailError("Max Characters Filled");
+        else setEmailError("");
+        }
+
+        if (name === "address") {
+        if (value.length >= MAX_LENGTHS.address) setAddressError("Max Characters Filled");
+        else setAddressError("");
+        }
+
+        if (name === "prayerrequestmessage") {
+        if (!value) setMessageError("Please enter your prayer request.");
+        else if (value.length >= MAX_LENGTHS.prayerrequestmessage) setMessageError("Max Characters Filled");
+        else setMessageError("");
+        }
+    };
+
+    const handlePhoneChange = (phone: any, countryData: any) => {
+        setFormData((prev) => ({
+        ...prev,
+        phonenumber: "+" + phone,
+        country: countryData?.name || "Unknown",
+        }));
+
+        if (!phone) setPhoneError("Please enter a phone number.");
+        else if (("+" + phone).length >= MAX_LENGTHS.phonenumber) setPhoneError("Max Characters Filled");
+        else setPhoneError("");
+    };
+
+    const syncSelect = () => {
+        setFormData((prev) => ({
+        ...prev,
+        contactmethod: contactMethod,
+        visitingfirsttime: firsttime,
+        hearaboutus: hearAboutUs,
+        hearaboutother: hearAboutUs === "Other" ? hearAboutOther : "",
+        attendanotherchurch: attendAnotherChurch,
+        ifyeschurchname: attendAnotherChurch === "Yes" ? ifyesChurchName : "",
+        areasforprayer: areasYouWouldLikePrayerFor,
+        areaother: areasYouWouldLikePrayerFor === "Other" ? areaother : "",
+        prayerwithsomeone: prayerWithSomeone,
+        contactfrompastor: contactFromPastor,
+        }));
+    };
+
+    const API_URL = process.env.REACT_APP_API_URL;
+
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
+
+        setcommonError("");
+        setSuccess("");
+        setFullnameError("");
+        setEmailError("");
+        setPhoneError("");
+        setAddressError("");
+        setMessageError("");
+
+        syncSelect();
+
+        let valid = true;
+
+        if (!formData.fullname) {
+        setFullnameError("Please enter your full name.");
+        valid = false;
+        }
+
+        if (!formData.emailaddress) {
+        setEmailError("Please enter an email.");
+        valid = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.emailaddress)) {
+        setEmailError("Please enter a valid email address.");
+        valid = false;
+        }
+
+        if (!formData.phonenumber) {
+        setPhoneError("Please enter a phone number.");
+        valid = false;
+        }
+
+        if (!formData.prayerrequestmessage) {
+        setMessageError("Please enter your prayer request.");
+        valid = false;
+        }
+
+        if (!valid) return;
+
+        // date handling
+        const dob = visitDate ? visitDate.toISOString().slice(0, 10) : "";
+        const payload = {
+        ...formData,
+        dateofbirth: dob,
+        hearaboutother: hearAboutUs === "Other" ? hearAboutOther : "",
+        ifyeschurchname: attendAnotherChurch === "Yes" ? ifyesChurchName : "",
+        areaother: areasYouWouldLikePrayerFor === "Other" ? areaother : "",
+        contactmethod: contactMethod,
+        visitingfirsttime: firsttime,
+        hearaboutus: hearAboutUs,
+        attendanotherchurch: attendAnotherChurch,
+        areasforprayer: areasYouWouldLikePrayerFor,
+        prayerwithsomeone: prayerWithSomeone,
+        contactfrompastor: contactFromPastor,
+        };
+
+        try {
+        console.log("Sending payload:", JSON.stringify(payload));
+
+        const response = await fetch(`${API_URL}prayers/`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+        });
+
+        const text = await response.text();
+        let result: any = text;
+        try {
+            result = JSON.parse(text);
+        } catch {}
+
+        if (!response.ok) {
+            console.log("Error response from server:", result);
+            setcommonError(result?.message || "Failed to submit the prayer request. Please check your input.");
+            return;
+        }
+
+        setSuccess("Your prayer request has been submitted successfully!");
+        setFormData({
+            fullname: "",
+            emailaddress: "",
+            phonenumber: "",
+            country: "",
+            address: "",
+            dateofbirth: "",
+
+            contactmethod: "Phone",
+            visitingfirsttime: "Yes",
+            hearaboutus: "Friend / Family",
+            hearaboutother: "",
+
+            attendanotherchurch: "No",
+            ifyeschurchname: "",
+
+            areasforprayer: "Spiritual Growth",
+            areaother: "",
+
+            prayerwithsomeone: "No",
+            contactfrompastor: "No",
+
+            prayerrequestmessage: "",
+        });
+
+        setHearAboutOther("");
+        setIfyesChurchName("");
+        setAreaother("");
+        setVisitDate(null);
+
+        setTimeout(() => {
+            navigate("/");
+        }, 1500);
+        } catch (err) {
+        console.error(err);
+        setcommonError("Something went wrong. Please try again.");
+        }
+    };
     return(
 
         <>
@@ -68,7 +286,7 @@ const PrayerRequest = () => {
                 <ContainerWidthCstm children={<>
                         <h1 className='text_cstm_big_heading'>We’re so glad you are here.</h1>
                         <p className="text_cstm_normal_para">Please take a moment to fill this out so we can serve and pray for you.</p>
-                        <form className='prayerreqform'>
+                        <form className='prayerreqform' onSubmit={handleSubmit}>
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
                                 <h1 className="text_cstm_big_heading">Personal Information</h1>
                                 <Flexwithgapcstmdivrow>
@@ -77,23 +295,23 @@ const PrayerRequest = () => {
                                             <p className="inputformptag">Full Name</p>
                                             <span className="starcstm">*</span>
                                         </div>
-                                        <input name="name" type="text" placeholder="Enter Your Full Name" required className="inputformcstm" maxLength={30} />
+                                        <input name="fullname" type="text" placeholder="Enter Your Full Name" required className="inputformcstm" maxLength={30} />
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Email</p>
                                             <span className="starcstm">*</span>
                                         </div>
-                                        <input name="email" type="email" placeholder="Enter Your Email" required className="inputformcstm" maxLength={50} />
+                                        <input name="emailaddress" type="email" placeholder="Enter Your Email" required className="inputformcstm" maxLength={50} />
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
-                                        <PhoneNumberField value={"+61723823"} onChange={HandlePhoneChange}/>
+                                        <PhoneNumberField value={formData.phonenumber} onChange={handlePhoneChange} />
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Address</p>
-                                        <input name="subject" type="text" placeholder="Enter Your Home Address" className="inputformcstm" maxLength={200} />
+                                        <input name="address" type="text" placeholder="Enter Your Home Address" className="inputformcstm" maxLength={200} />
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
@@ -309,11 +527,11 @@ const PrayerRequest = () => {
                                             <p className="inputformptag">Please share anything you would like us to pray for. All requests are kept confidential.</p>
                                             <span className="starcstm">*</span>
                                         </div>
-                                        <textarea name="message" placeholder="Enter Your Prayer Request" required className="inputformmessagecstm" maxLength={1500}/>
+                                        <textarea name="prayerrequestmessage" placeholder="Enter Your Prayer Request" required className="inputformmessagecstm" maxLength={1500}/>
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                             </Flexwithgapcstmdivcol>
-                            <button type="submit" className="submitbuttoncontactcstm">Submit</button>
+                            <button type="submit" className="submitbuttoncontactcstm" onClick={handleSubmit}>Submit</button>
                         </form>
                         
                     </>} />
