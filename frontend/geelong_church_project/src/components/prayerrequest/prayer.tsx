@@ -289,29 +289,35 @@ const PrayerRequest = () => {
                         <form className='prayerreqform' onSubmit={handleSubmit}>
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
                                 <h1 className="text_cstm_big_heading">Personal Information</h1>
+                                {success && <div className="successdivgreen">{success}</div>}
+                                {commonerror && <p className="errordivcstm">{commonerror}</p>}
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Full Name</p>
                                             <span className="starcstm">*</span>
                                         </div>
-                                        <input name="fullname" type="text" placeholder="Enter Your Full Name" required className="inputformcstm" maxLength={30} />
+                                        <input name="fullname" type="text" placeholder="Enter Your Full Name"  className="inputformcstm" maxLength={30} value={formData.fullname} onChange={handleInputChange}/>
+                                        {fullnameError && <p className="errordivcstm">{fullnameError}</p>}
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Email</p>
                                             <span className="starcstm">*</span>
                                         </div>
-                                        <input name="emailaddress" type="email" placeholder="Enter Your Email" required className="inputformcstm" maxLength={50} />
+                                        <input name="emailaddress" type="email" placeholder="Enter Your Email"  className="inputformcstm" maxLength={50} value={formData.emailaddress} onChange={handleInputChange}/>
+                                        {emailError && <p className="errordivcstm">{emailError}</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
                                         <PhoneNumberField value={formData.phonenumber} onChange={handlePhoneChange} />
+                                        {phoneError && <p className="errordivcstm">{phoneError}</p>}
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
                                         <p className="inputformptag">Address</p>
-                                        <input name="address" type="text" placeholder="Enter Your Home Address" className="inputformcstm" maxLength={200} />
+                                        <input name="address" type="text" placeholder="Enter Your Home Address" className="inputformcstm" maxLength={200} value={formData.address} onChange={handleInputChange}/>
+                                        {addressError && <p className="errordivcstm">{addressError}</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                                 <Flexwithgapcstmdivrow>
@@ -333,7 +339,6 @@ const PrayerRequest = () => {
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Best way to contact you</p>
-                                            <span className="starcstm">*</span>
                                         </div>
                                             <div className="select-wrapper-cstm">
                                                 <select
@@ -360,7 +365,6 @@ const PrayerRequest = () => {
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Are you visiting us for the first time?</p>
-                                            <span className="starcstm">*</span>
                                         </div>
                                         <div className="select-wrapper-cstm">
                                         <select
@@ -377,7 +381,6 @@ const PrayerRequest = () => {
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">How did you hear about our church?</p>
-                                            <span className="starcstm">*</span>
                                         </div>
                                         <div className="select-wrapper-cstm">
                                         <select
@@ -409,7 +412,6 @@ const PrayerRequest = () => {
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Do you currently attend another church?</p>
-                                            <span className="starcstm">*</span>
                                         </div>
                                         <div className="select-wrapper-cstm">
                                         <select
@@ -436,7 +438,6 @@ const PrayerRequest = () => {
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Areas you would like prayer for</p>
-                                            <span className="starcstm">*</span>
                                         </div>
                                         <div className="select-wrapper-cstm">
                                         <select
@@ -486,7 +487,6 @@ const PrayerRequest = () => {
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Would you like someone to pray with you today?</p>
-                                            <span className="starcstm">*</span>
                                         </div>
                                         <div className="select-wrapper-cstm">
                                         <select
@@ -503,7 +503,6 @@ const PrayerRequest = () => {
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Would you like a pastor or prayer team member to contact you?</p>
-                                            <span className="starcstm">*</span>
                                         </div>
                                         <div className="select-wrapper-cstm">
                                         <select
@@ -527,11 +526,12 @@ const PrayerRequest = () => {
                                             <p className="inputformptag">Please share anything you would like us to pray for. All requests are kept confidential.</p>
                                             <span className="starcstm">*</span>
                                         </div>
-                                        <textarea name="prayerrequestmessage" placeholder="Enter Your Prayer Request" required className="inputformmessagecstm" maxLength={1500}/>
+                                        <textarea name="prayerrequestmessage" placeholder="Enter Your Prayer Request" className="inputformmessagecstm" maxLength={1500} value={formData.prayerrequestmessage} onChange={handleInputChange}/>
+                                        {messageError && <p className="errordivcstm">{messageError}</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                             </Flexwithgapcstmdivcol>
-                            <button type="submit" className="submitbuttoncontactcstm" onClick={handleSubmit}>Submit</button>
+                            <button type="submit" className="submitbuttoncontactcstm">Submit</button>
                         </form>
                         
                     </>} />
