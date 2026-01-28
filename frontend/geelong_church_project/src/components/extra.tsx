@@ -221,7 +221,6 @@ export const Popupdiv:React.FC<PopupdivProps> = (Props) => {
 
 export const PopupModal:React.FC<PopupModalProps> = (Props) => {
 
-    
     return(
 
         <>
