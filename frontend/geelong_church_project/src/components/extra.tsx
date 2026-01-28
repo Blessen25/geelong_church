@@ -225,9 +225,15 @@ export const PopupModal:React.FC<PopupModalProps> = (Props) => {
     return(
 
         <>
-            <div className="popupmodal">
-                
-            </div>
+        {Props.isOpen && (
+            <>
+                <div className="outlaypopup"></div>
+                <div className="popupmodal">
+
+                </div>
+            </>
+            )  
+        } 
         </>
     )
 }
