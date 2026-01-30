@@ -378,10 +378,35 @@
     transform: translate(-50%, -50%);
     z-index: 99999992;
     width: 750px;
-    height: 450px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     background-color: whitesmoke;
     border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icondiv {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rounddivicon {
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #3c79b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+
 }
 
 @media screen and (max-width:1399px) {

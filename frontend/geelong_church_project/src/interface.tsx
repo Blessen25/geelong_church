@@ -117,7 +117,9 @@ export interface PopupModalProps {
     modalTitle ?: string;
     modalSubtitle ?: string;
     variant ?: "success" | "error" | "info";
+    iconsign ?: string;
     primaryButtonText ?: string;
+    secondaryButtonText ?: string;
     showCloseButton ?: boolean;
     children ?: React.ReactNode;
 }   

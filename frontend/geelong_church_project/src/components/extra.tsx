@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './extra.css';
 import { ButtonwithtextComponentProps, ContainerdivProps, FlexwithgapcstmdivProps, flexwithiconandtextdivProps, FlexwithiconandtextparentdivProps, FlexwithtextandimagedivProps, PopupdivProps, PopupModalProps, TitleinMaindivProps } from "../interface";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChurch, faClose } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faClose, faInfo, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export const Containerdiv:React.FC<ContainerdivProps> = (Props) => {
 
@@ -228,7 +228,16 @@ export const PopupModal:React.FC<PopupModalProps> = (Props) => {
             <>
                 <div className="outlaypopup"></div>
                 <div className="popupmodal">
-
+                    <div className="icondiv">
+                        <div className="rounddivicon">
+                            {Props.variant === "success" && <FontAwesomeIcon icon={faCheck} className="successicon"/>}
+                            {Props.variant === "error" && <FontAwesomeIcon icon={faXmark} className="erroricon"/>}
+                            {Props.variant === "info" && <FontAwesomeIcon icon={faInfo} className="infoicon"/>}
+                        </div>
+                    </div>
+                    <div className="detailsdiv">
+                        <h1>{Props.modalSubtitle}</h1>
+                    </div>
                 </div>
             </>
             )  
