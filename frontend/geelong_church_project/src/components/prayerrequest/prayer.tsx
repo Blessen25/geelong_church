@@ -537,7 +537,7 @@ const PrayerRequest = () => {
                         )}
 
                         {commonerror && (
-                            <PopupModal variant='error' modalSubtitle={"There has been some error while submitting your prayer request"} isOpen={true} primaryButtonText='Go To Home'/>
+                            <PopupModal variant='error' modalSubtitle={"There has been some issues while submitting your prayer request, please try again later"} isOpen={true} primaryButtonText='Go To Home'/>
                         )}
                     </>} />
             </Containercstm>

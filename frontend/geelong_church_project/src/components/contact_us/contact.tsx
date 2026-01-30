@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import './contact.css';
-import { Containercstm, ContainerWidthCstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, TitleinMaindiv,  } from "../extra";
+import { Containercstm, ContainerWidthCstm, Flexwithgapcstmdivcol, Flexwithgapcstmdivrow, PopupModal, TitleinMaindiv,  } from "../extra";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { ContactcardDetailsdivProps } from "../../interface";
@@ -235,9 +235,9 @@ export const ContactDetailsdiv = () => {
                     country: '',
                 });
                 console.log('form data after subkitting', formData);
-                setTimeout(() => {
-                    navigate('/'); // Redirect to the home page
-                }, 1500);
+                // setTimeout(() => {
+                //     navigate('/'); // Redirect to the home page
+                // }, 1500);
             } catch (err) {
                 console.error(err);
             }
@@ -258,12 +258,6 @@ export const ContactDetailsdiv = () => {
                     <Flexwithgapcstmdivrow>
                         <form>
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
-                            {success && 
-                            <>
-                                <div className="successdivgreen">
-                                    {success}
-                                </div>
-                            </>}
                             <h1 className="text_cstm_big_heading">Let’s Connect</h1>
                             <p className="text_cstm_normal_para textalign_cstmjustify">Have a question or need assistance? Simply fill out the form with your inquiry or reach out to us directly via the email or phone number listed above.</p>
                                 <Flexwithgapcstmdivrow>
@@ -314,6 +308,14 @@ export const ContactDetailsdiv = () => {
                         </form>
                     </Flexwithgapcstmdivrow>
                 </Flexwithgapcstmdivrow>
+                {success && 
+                <>
+                    <PopupModal variant='success' modalSubtitle='Your Message has been submitted successfully' isOpen={true} primaryButtonText='Go To Home'/>
+                </>}
+                {commonerror && 
+                <>
+                    <PopupModal variant='error' modalSubtitle={"There has been some issues while submitting your message, please try again later!"} isOpen={true} primaryButtonText='Go To Home'/>
+                </>}
         </>
     )
 }
