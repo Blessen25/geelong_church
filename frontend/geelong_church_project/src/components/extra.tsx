@@ -236,7 +236,7 @@ export const PopupModal:React.FC<PopupModalProps> = (Props) => {
                         </div>
                     </div>
                     <div className="detailsdiv">
-                        <h1>{Props.modalSubtitle}</h1>
+                        <p className="text_cstm_normal_para" style={{textAlign : 'center'}}>{Props.modalSubtitle}</p>
                     </div>
                     <div className="buttondiv">
                         {Props.primaryButtonText && <ButtonwithtextComponentColor route="/" label={Props.primaryButtonText} classname="" fullwidth={false}/>}

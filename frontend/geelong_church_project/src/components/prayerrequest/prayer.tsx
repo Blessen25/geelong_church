@@ -270,9 +270,9 @@ const PrayerRequest = () => {
         setAreaother("");
         setVisitDate(null);
 
-        setTimeout(() => {
-            navigate("/");
-        }, 1500);
+        // setTimeout(() => {
+        //     navigate("/");
+        // }, 1500);
         } catch (err) {
         console.error(err);
         setcommonError("Something went wrong. Please try again.");
@@ -289,7 +289,6 @@ const PrayerRequest = () => {
                         <form className='prayerreqform' onSubmit={handleSubmit}>
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
                                 <h1 className="text_cstm_big_heading">Personal Information</h1>
-                                {success && <div className="successdivgreen">{success}</div>}
                                 {commonerror && <p className="errordivcstm">{commonerror}</p>}
                                 <Flexwithgapcstmdivrow>
                                     <Flexwithgapcstmdivcol>
@@ -531,9 +530,15 @@ const PrayerRequest = () => {
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
                             </Flexwithgapcstmdivcol>
-                            <button type="submit" className="submitbuttoncontactcstm">Submit</button>
+                            <button type="submit" className="submitbuttoncontactcstm" style={{cursor : 'pointer'}}>Submit</button>
                         </form>
-                        
+                        {success && (
+                            <PopupModal variant='success' modalSubtitle='Your Prayer Request has been submitted successfully' isOpen={true} primaryButtonText='Go To Home'/>
+                        )}
+
+                        {commonerror && (
+                            <PopupModal variant='error' modalSubtitle={"There has been some error while submitting your prayer request"} isOpen={true} primaryButtonText='Go To Home'/>
+                        )}
                     </>} />
             </Containercstm>
         </>
