@@ -533,7 +533,7 @@ const PrayerRequest = () => {
                             </Flexwithgapcstmdivcol>
                             <button type="submit" className="submitbuttoncontactcstm">Submit</button>
                         </form>
-                        <PopupModal isOpen={true} variant='error'/>
+                        
                     </>} />
             </Containercstm>
         </>

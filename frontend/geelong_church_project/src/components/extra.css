@@ -510,7 +510,18 @@
 
         padding: 100px 0px 0px 0px;
     }
+
+    .rounddivicon {
+
+        width: 60px;
+        height: 60px;
+    }
     
+    .popupmodal {
+
+        padding: 50px;
+        width: 440px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -646,6 +657,18 @@
     .paddingcstmhomediv {
 
         padding-top: 80px;
+    }
+
+    .rounddivicon {
+
+        width: 40px;
+        height: 40px;
+    }
+    
+    .popupmodal {
+
+        padding: 30px;
+        width: 330px;
     }
 }
 
@@ -793,5 +816,17 @@
     .flexwithgapcstmrow {
 
         flex-direction: column;
+    }
+
+    .rounddivicon {
+
+        width: 35px;
+        height: 35px;
+    }
+    
+    .popupmodal {
+
+        padding: 20px;
+        width: 260px;
     }
 }

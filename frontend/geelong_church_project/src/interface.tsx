@@ -122,5 +122,6 @@ export interface PopupModalProps {
     secondaryButtonText ?: string;
     showCloseButton ?: boolean;
     children ?: React.ReactNode;
+    secondaryButtonRoute ?: string;
 }   
 

@@ -239,8 +239,8 @@ export const PopupModal:React.FC<PopupModalProps> = (Props) => {
                         <h1>{Props.modalSubtitle}</h1>
                     </div>
                     <div className="buttondiv">
-                        {Props.primaryButtonText && <ButtonwithtextComponentColor route="#" label={Props.primaryButtonText} classname="" fullwidth={false}/>}
-                        {Props.secondaryButtonText && <ButtonwithtextComponent route="#" label={Props.secondaryButtonText} classname="" fullwidth={false}/>}
+                        {Props.primaryButtonText && <ButtonwithtextComponentColor route="/" label={Props.primaryButtonText} classname="" fullwidth={false}/>}
+                        {Props.secondaryButtonText && <ButtonwithtextComponent route={Props.secondaryButtonRoute ? Props.secondaryButtonRoute : "#"} label={Props.secondaryButtonText} classname="" fullwidth={false}/>}
                     </div>
                 </div>
             </>
