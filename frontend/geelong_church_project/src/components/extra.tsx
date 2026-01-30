@@ -230,13 +230,17 @@ export const PopupModal:React.FC<PopupModalProps> = (Props) => {
                 <div className="popupmodal">
                     <div className="icondiv">
                         <div className="rounddivicon">
-                            {Props.variant === "success" && <FontAwesomeIcon icon={faCheck} className="successicon"/>}
-                            {Props.variant === "error" && <FontAwesomeIcon icon={faXmark} className="erroricon"/>}
-                            {Props.variant === "info" && <FontAwesomeIcon icon={faInfo} className="infoicon"/>}
+                            {Props.variant === "success" && <FontAwesomeIcon icon={faCheck} className="successicon text_cstm_big_heading"/>}
+                            {Props.variant === "error" && <FontAwesomeIcon icon={faXmark} className="erroricon text_cstm_big_heading"/>}
+                            {Props.variant === "info" && <FontAwesomeIcon icon={faInfo} className="infoicon text_cstm_big_heading"/>}
                         </div>
                     </div>
                     <div className="detailsdiv">
                         <h1>{Props.modalSubtitle}</h1>
+                    </div>
+                    <div className="buttondiv">
+                        {Props.primaryButtonText && <ButtonwithtextComponentColor route="#" label={Props.primaryButtonText} classname="" fullwidth={false}/>}
+                        {Props.secondaryButtonText && <ButtonwithtextComponent route="#" label={Props.secondaryButtonText} classname="" fullwidth={false}/>}
                     </div>
                 </div>
             </>
