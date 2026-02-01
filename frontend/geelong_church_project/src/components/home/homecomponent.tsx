@@ -69,7 +69,7 @@ export const HomeComponent = () => {
                                                     {events.map((items, index) =>(
                                                     <div key={index} className="upcomingeventpopupchild boxshadowcstm">
                                                         <img
-                                                            src="/assets/images/main/dove.jpg"
+                                                            src="/assets/images/main/dove.webp"
                                                             alt="Upcoming event"
                                                             loading="lazy"
                                                             className="upcomingeventimg"
@@ -111,7 +111,7 @@ export const HomeIntroBanner = () => {
         <>
             <div className="imagecstmdivhome">
                 <img
-                    src="/assets/images/main/bibleone.jpg"
+                    src="/assets/images/main/bibleone.webp"
                     alt="Geelong Pentecostal Assembly"
                     loading="lazy"
                     className="homebgimg homebgimg--hidden"
@@ -256,7 +256,7 @@ export const HomeJoinusonComp = () => {
         <>
             <div className="joinusondivcstm">
                 <img
-                    src="/assets/images/main/reading_bible.jpg"
+                    src="/assets/images/main/reading_bible.webp"
                     alt="Reading the Bible together"
                     loading="lazy"
                     className="joinusbgimg fade-img"
