@@ -72,7 +72,7 @@ export const HomeComponent = () => {
                                                             <p className="text_cstm_normal_para upcomingeventparacstm">{items.event_name}</p>
                                                             <p className="text_cstm_normal_para upcomingeventparacstm">{format(new Date(items.event_date), 'MMMM d')}</p>
                                                         </Flexwithgapcstmdivcol>
-                                                </div>  
+                                                    </div>  
                                             )
                                             )}
                                         </div>
