@@ -109,21 +109,36 @@ export const HomeIntroBanner = () => {
     return (
 
         <>
-        <div className="imagecstmdivhome" style={{ backgroundImage : 'url("assets/images/main/bibleone.jpg")'}}> 
-            <div className="textdivcstmhome">
-                <h1>Welcome to</h1>
-                <h1>Geelong Pentecostal Assembly</h1>
-                <p>A Community Rooted in Love, Faith & Hope</p>
-                <p>Join us in Worship, Fellowship, and Spiritual Growth</p>
-                <blockquote>
+            <div className="imagecstmdivhome">
+                <img
+                    src="/assets/images/main/bibleone.jpg"
+                    alt="Geelong Pentecostal Assembly"
+                    loading="lazy"
+                    className="homebgimg homebgimg--hidden"
+                    onLoad={(e) => e.currentTarget.classList.add('homebgimg--visible')}
+                />
+
+                <div className="textdivcstmhome">
+                    <h1>Welcome to</h1>
+                    <h1>Geelong Pentecostal Assembly</h1>
+                    <p>A Community Rooted in Love, Faith & Hope</p>
+                    <p>Join us in Worship, Fellowship, and Spiritual Growth</p>
+
+                    <blockquote>
                     "For where two or three gather in my name, there am I with them."
                     <cite>Matthew 18:20</cite>
-                </blockquote>
-                <div className="homebackgroundbuttondiv">
-                    <ButtonwithtextComponent label="Connect With Us" route="/contact" fullwidth={false}/>
+                    </blockquote>
+
+                    <div className="homebackgroundbuttondiv">
+                    <ButtonwithtextComponent
+                        label="Connect With Us"
+                        route="/contact"
+                        fullwidth={false}
+                    />
+                    </div>
                 </div>
             </div>
-        </div>
+
         </>
     )
 }

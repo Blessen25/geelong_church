@@ -12,16 +12,28 @@
 
     width: 100%;
     height: 750px;
-    display: flex;
-    flex-direction: column;
     position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     background-color: #f0f8ff;
+}
+
+.homebgimg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; 
+    z-index: 1;
+}
+
+.textdivcstmhome {
+    
+    position: relative;
+    z-index: 2;
 }
 
 .imageonecstm {
@@ -346,6 +358,17 @@
     justify-content: center;
     margin-top: 20px;
     animation: fadeinRight 1s ease-in-out;
+}
+
+.homebgimg--hidden {
+
+    opacity: 0;
+}
+
+.homebgimg--visible {
+    
+    opacity: 1;
+    transition: opacity 0.8s ease;
 }
 
 @media screen and (min-width: 1499px) {
