@@ -205,15 +205,30 @@
 .joinusondivcstm {
 
     width: 100%;
-    position: relative;
     height: 500px;
+    position: relative;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.joinusbgimg {
+
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+    object-position: center; 
+    z-index: 1;
+}
+
+.joinusondivtext {
+    
+    z-index: 2;
+    text-align: center;
 }
 
 .joinusondivtext {
@@ -385,7 +400,7 @@
 }
 
 .fade-img--visible {
-    
+
     opacity: 1;
 }
 

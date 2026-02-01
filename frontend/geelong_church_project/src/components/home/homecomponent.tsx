@@ -236,13 +236,13 @@ export const HomeFourDivChildComp:React.FC<HomeFourDivChildCompProps> = (Props) 
             <a href={Props.route}>
                 <div className="homefourdivchildcstm">
                     <p>{Props.text}</p>
-                    <img src={Props.image} alt="Image" loading="lazy"/>
+                    <img src={Props.image} alt="Image" loading="lazy" className="fade-img" onLoad={(e) => e.currentTarget.classList.add('fade-img--visible')}/>
                 </div>
             </a>
         </>) : (<>
                 <div className="homefourdivchildcstm" onClick={Props.onClick} style={{ cursor: "pointer" }}>
                     <p>{Props.text}</p>
-                    <img src={Props.image} alt="Image" loading="lazy"/>
+                    <img src={Props.image} alt="Image" loading="lazy" className="fade-img" onLoad={(e) => e.currentTarget.classList.add('fade-img--visible')}/>
                 </div>
         </>)}
         </>
@@ -254,16 +254,25 @@ export const HomeJoinusonComp = () => {
     return(
 
         <>
-            <div className="joinusondivcstm" style={{ backgroundImage: "url('../assets/images/main/reading_bible.jpg')"}}>
+            <div className="joinusondivcstm">
+                <img
+                    src="/assets/images/main/reading_bible.jpg"
+                    alt="Reading the Bible together"
+                    loading="lazy"
+                    className="joinusbgimg fade-img"
+                    onLoad={(e) => e.currentTarget.classList.add('fade-img--visible')}
+                />
+
                 <div className="joinusondivtext">
                     <h1>Join Us On!</h1>
                     <p>Every Sunday at 10:00 AM</p>
+
                     <div className="joinusondivbutton">
-                    <ButtonwithtextComponent label="Youtube" route="" fullwidth={false}/>
-                    <ButtonwithtextComponentColor label="Facebook" route="" fullwidth={false}/>
+                    <ButtonwithtextComponent label="Youtube" route="" fullwidth={false} />
+                    <ButtonwithtextComponentColor label="Facebook" route="" fullwidth={false} />
                     </div>
-                </div>
             </div>
+</div>
         </>
     )
 }
