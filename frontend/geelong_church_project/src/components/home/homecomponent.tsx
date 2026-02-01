@@ -173,19 +173,41 @@ export const HomeflexContents = () => {
     return(
 
         <>
-        <div className="parentflexcstm">
+            <div className="parentflexcstm">
                 <div className="childflexcstm">
-                        <h1 className="text_cstm_big_heading">A Place to Call Home</h1>
-                        <p className="textalign_cstmjustify text_cstm_normal_para">At Geelong Pentecostal Assembly, we believe that everyone deserves a second chance, a new beginning, and a place to truly belong. No matter your past, your background, or where you are in your spiritual journey you are welcome here. </p>
-                        <p className="textalign_cstmjustify text_cstm_normal_para">We are more than just a church. We are a spirit-filled family rooted in love, faith, and hope. Our congregation is a beautiful reflection of the diversity of Geelong people of all ages, cultures, and walks of life, united by the transforming power of Jesus Christ.</p>
-                        <p className="textalign_cstmjustify text_cstm_normal_para">Each week, we come together to worship, pray, and grow not as strangers, but as one community in Christ. Whether it's a powerful Sunday service, a quiet moment of reflection, or a shared meal during fellowship, we believe in walking side by side through life’s joys and struggles.</p>
-                        <p className="textalign_cstmjustify text_cstm_normal_para">If you're feeling lost, tired, or searching for purpose, know this God has not forgotten you, and neither have we. Our doors and our hearts are wide open. Here, you’ll find a place to heal, to connect, and to rediscover the joy of living a life led by faith.</p>
-                        <p className="textalign_cstmjustify text_cstm_normal_para"> So whether you're just beginning to explore Christianity, returning after time away, or looking for a new church to call home, Geelong Pentecostal Assembly is here for you.</p>
-                        <p className="textalign_cstmjustify text_cstm_normal_para">Welcome home. We’ve been waiting for you.</p>
+                    <h1 className="text_cstm_big_heading">A Place to Call Home</h1>
+
+                    <p className="textalign_cstmjustify text_cstm_normal_para">
+                    At Geelong Pentecostal Assembly, we believe that everyone deserves a second chance, a new beginning, and a place to truly belong. No matter your past, your background, or where you are in your spiritual journey you are welcome here.
+                    </p>
+
+                    <p className="textalign_cstmjustify text_cstm_normal_para">
+                    We are more than just a church. We are a spirit-filled family rooted in love, faith, and hope. Our congregation is a beautiful reflection of the diversity of Geelong people of all ages, cultures, and walks of life, united by the transforming power of Jesus Christ.
+                    </p>
+
+                    <p className="textalign_cstmjustify text_cstm_normal_para">
+                    Each week, we come together to worship, pray, and grow not as strangers, but as one community in Christ.
+                    </p>
+
+                    <p className="textalign_cstmjustify text_cstm_normal_para">
+                    If you're feeling lost, tired, or searching for purpose, know this God has not forgotten you, and neither have we.
+                    </p>
+
+                    <p className="textalign_cstmjustify text_cstm_normal_para">
+                    Welcome home. We’ve been waiting for you.
+                    </p>
                 </div>
-                <div className="childflexcstm" style={{ backgroundImage: "url('../assets/images/main/praying.jpg"}}>
+
+                <div className="childflexcstm imagewrapper">
+                    <img
+                    src="/assets/images/main/praying.jpg"
+                    alt="Prayer and worship"
+                    loading="lazy"
+                    className="fade-img"
+                    onLoad={(e) => e.currentTarget.classList.add('fade-img--visible')}
+                    />
                 </div>
-        </div>  
+            </div>
         </>
     )
 }
