@@ -67,12 +67,23 @@ export const HomeComponent = () => {
                                             <> 
                                                  <div className="upcomingeventpopup">
                                                     {events.map((items, index) =>(
-                                                    <div key={index} className="upcomingeventpopupchild boxshadowcstm" style={{ backgroundImage : 'url("assets/images/main/dove.jpg")'}}>
+                                                    <div key={index} className="upcomingeventpopupchild boxshadowcstm">
+                                                        <img
+                                                            src="/assets/images/main/dove.jpg"
+                                                            alt="Upcoming event"
+                                                            loading="lazy"
+                                                            className="upcomingeventimg"
+                                                        />
+
                                                         <Flexwithgapcstmdivcol parentClassname="eventsdivcstm">
-                                                            <p className="text_cstm_normal_para upcomingeventparacstm">{items.event_name}</p>
-                                                            <p className="text_cstm_normal_para upcomingeventparacstm">{format(new Date(items.event_date), 'MMMM d')}</p>
+                                                            <p className="text_cstm_normal_para upcomingeventparacstm">
+                                                            {items.event_name}
+                                                            </p>
+                                                            <p className="text_cstm_normal_para upcomingeventparacstm">
+                                                            {format(new Date(items.event_date), 'MMMM d')}
+                                                            </p>
                                                         </Flexwithgapcstmdivcol>
-                                                    </div>  
+                                                    </div>
                                             )
                                             )}
                                         </div>

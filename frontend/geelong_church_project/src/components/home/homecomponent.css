@@ -260,17 +260,28 @@
 
     width: calc(50% - 10px);
     height: 300px;
-}
-
-.upcomingeventpopupchild {
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.upcomingeventimg {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.eventsdivcstm {
+    position: relative;
+    z-index: 2;
 }
 
 .upcomingeventparacstm {
