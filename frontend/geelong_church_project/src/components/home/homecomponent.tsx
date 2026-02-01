@@ -200,7 +200,7 @@ export const HomeflexContents = () => {
 
                 <div className="childflexcstm imagewrapper">
                     <img
-                    src="/assets/images/main/praying.jpg"
+                    src="/assets/images/main/praying.webp"
                     alt="Prayer and worship"
                     loading="lazy"
                     className="fade-img"
