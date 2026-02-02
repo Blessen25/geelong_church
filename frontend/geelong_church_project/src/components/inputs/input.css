@@ -50,7 +50,7 @@
 .phoneinputformcstm {
 
     background-color: transparent !important;
-    color: #8b8b8b !important;
+    color: #4e4e4e !important;
 }
 
 .phoneinputformcstm:hover, .phoneinputformcstm:focus {
@@ -58,6 +58,11 @@
     border: none !important;
     outline: none !important;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+}
+
+.phoneinputformcstm::placeholder {
+
+    color: #8b8b8b !important;
 }
 
 .react-datepicker-wrapper {

@@ -36,10 +36,15 @@
     border: none;
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    color: #8b8b8b;
+    color: #4e4e4e;
     background-color: transparent;
     font-size: 14px;
     
+}
+
+.inputformcstm::placeholder {
+
+    color: #8e8e8e;
 }
 
 .inputformmessagecstm {
@@ -51,13 +56,14 @@
     border: none;
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    color: #8b8b8b;
+    color: #4e4e4e;
     background-color: transparent;
     font-size: 14px;
     resize: none;
 }
 
 .inputformcstm::placeholder .inputformmessagecstm::placeholder{
+    
     font-size: 14px;
     color: #8b8b8b;
 }

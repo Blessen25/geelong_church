@@ -813,10 +813,15 @@
         padding-top: 70px;
     }
 
-    .flexwithgapcstmrow {
+    .flex-direction-col-575px  {
+
+        flex-direction: column !important;
+    }
+
+    /* .flexwithgapcstmrow {
 
         flex-direction: column;
-    }
+    } */
 
     .rounddivicon {
 

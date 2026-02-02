@@ -290,7 +290,7 @@ const PrayerRequest = () => {
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
                                 <h1 className="text_cstm_big_heading">Personal Information</h1>
                                 {commonerror && <p className="errordivcstm">{commonerror}</p>}
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname='flex-direction-col-575px'>
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Full Name</p>
@@ -308,7 +308,7 @@ const PrayerRequest = () => {
                                         {emailError && <p className="errordivcstm">{emailError}</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname='flex-direction-col-575px'>
                                     <Flexwithgapcstmdivcol>
                                         <PhoneNumberField value={formData.phonenumber} onChange={handlePhoneChange} />
                                         {phoneError && <p className="errordivcstm">{phoneError}</p>}
@@ -319,9 +319,8 @@ const PrayerRequest = () => {
                                         {addressError && <p className="errordivcstm">{addressError}</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname='flex-direction-col-575px'>
                                     <Flexwithgapcstmdivcol>
-                                        
                                          <p className="inputformptag">Date of Birth</p>
                                             <div className="datepickerwraper">
                                                 <DatePicker
@@ -355,12 +354,11 @@ const PrayerRequest = () => {
                                             
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
-
                                 {/* <button type="submit" className="submitbuttoncontactcstm">Submit</button> */}
                             </Flexwithgapcstmdivcol>
-                            <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
+                            <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm ">
                                 <h1 className="text_cstm_big_heading">About You</h1>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname='flex-direction-col-575px'>
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Are you visiting us for the first time?</p>
@@ -407,7 +405,7 @@ const PrayerRequest = () => {
                                         )}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname='flex-direction-col-575px'>
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Do you currently attend another church?</p>
@@ -482,7 +480,7 @@ const PrayerRequest = () => {
                             </Flexwithgapcstmdivcol>
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
                                 <h1 className="text_cstm_big_heading">Spiritual Support</h1>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname='flex-direction-col-575px'>
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Would you like someone to pray with you today?</p>
@@ -519,7 +517,7 @@ const PrayerRequest = () => {
                             </Flexwithgapcstmdivcol>
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
                                 <h1 className="text_cstm_big_heading">Prayer Request</h1>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname='flex-direction-col-575px'>
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Please share anything you would like us to pray for. All requests are kept confidential.</p>

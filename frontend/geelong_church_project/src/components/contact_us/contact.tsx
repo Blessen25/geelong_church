@@ -247,7 +247,7 @@ export const ContactDetailsdiv = () => {
 
         <>
                 <Flexwithgapcstmdivrow parentClassname="contactdetailsdivrowcstm">
-                    <Flexwithgapcstmdivrow>
+                    <Flexwithgapcstmdivrow >
                         <Flexwithgapcstmdivcol>
                             <div className="imagedivcontactus">
                                 <img src="assets/images/main/contactus.jpg" alt="contact us" loading="lazy"/>
@@ -260,7 +260,7 @@ export const ContactDetailsdiv = () => {
                             <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
                             <h1 className="text_cstm_big_heading">Let’s Connect</h1>
                             <p className="text_cstm_normal_para textalign_cstmjustify">Have a question or need assistance? Simply fill out the form with your inquiry or reach out to us directly via the email or phone number listed above.</p>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname="flex-direction-col-575px">
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Name</p>
@@ -278,7 +278,7 @@ export const ContactDetailsdiv = () => {
                                         {emailerror && <p className="errordivcstm">{emailerror}</p>}
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname="flex-direction-col-575px">
                                     <Flexwithgapcstmdivcol>
                                         <PhoneNumberField value={formData.phone_number} onChange={handlePhoneChange}/>
                                         {phoneerror && <p className="errordivcstm">{phoneerror}</p>}
@@ -293,7 +293,7 @@ export const ContactDetailsdiv = () => {
 
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
-                                <Flexwithgapcstmdivrow>
+                                <Flexwithgapcstmdivrow parentClassname="flex-direction-col-575px">
                                     <Flexwithgapcstmdivcol>
                                         <div className="stardiv">
                                             <p className="inputformptag">Message</p>

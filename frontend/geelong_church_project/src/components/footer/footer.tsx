@@ -30,6 +30,7 @@ export const Footer = () => {
                                 <a href="/ministries" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/ministries')}`}>Ministries</p></a>
                                 <a href="/planyourvisit" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/planyourvisit')}`}>Plan Your Visit</p></a>
                                 <a href="/contact" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/contact')}`}>Contact</p></a>
+                                <a href="/prayerrequest" className='footerdiv2atag' rel="noopener noreferrer"><p className={`${isActive('/prayerrequest')}`}>Prayer</p></a>
 
                             </div>
                             <div className="footerdiv2cstmcontact">
