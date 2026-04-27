@@ -76,7 +76,7 @@ export const Footer = () => {
                     </div>
                     <hr />
                     <div className="footer-bottom">
-                        <p>Copyright © 2025. All Rights Reserved.</p>
+                        <p>Copyright © 2026 Geelong Pentecostal Assembly. All Rights Reserved.</p>
                     </div>
                 </div>          
             </div>
