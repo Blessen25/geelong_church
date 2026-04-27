@@ -11,6 +11,7 @@ import BibleVerse from './screens/bibleverse/bibleverse';
 import PlanYourVisit from './screens/planyourvisit/planyourvisit';
 import PrayerRequest from './components/prayerrequest/prayer';
 import ContactUs from './screens/contact/contact';
+import Meetings from './screens/meetings/meetings';
 
 
 const App = () =>{
@@ -29,6 +30,7 @@ const App = () =>{
             <Route path='/webelieve' element = { <WeBelieve/>} />
             <Route path='/bibleverse' element = { <BibleVerse />} />
             <Route path='/prayerrequest' element = {<PrayerRequest />} />
+            <Route path='/meetingrequest' element = {<Meetings />} />
           </Routes>
           <Footer />
         </Router>
