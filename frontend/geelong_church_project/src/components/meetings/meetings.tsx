@@ -1,3 +1,4 @@
+import { Containercstm, ContainerWidthCstm, TitleinMaindiv } from '../extra';
 import './meetings.css';
 
 const Meetings_Component = () => {
@@ -5,7 +6,14 @@ const Meetings_Component = () => {
     return(
 
         <>
-            <h1>Meetingsss</h1>
+            <TitleinMaindiv title="Meeting Request" initialtitle= "Home"/>
+            <Containercstm>
+                <ContainerWidthCstm children={
+                    <>
+                        <h1>Meeting  Request</h1>
+                    </>
+                }/>
+            </Containercstm>
         </>
     )
 }
