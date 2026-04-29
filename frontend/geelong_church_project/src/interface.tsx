@@ -125,3 +125,8 @@ export interface PopupModalProps {
     secondaryButtonRoute ?: string;
 }   
 
+
+export type Person = {
+  name: string;
+  age: string;
+};
