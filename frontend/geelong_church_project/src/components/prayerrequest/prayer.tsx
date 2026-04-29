@@ -314,7 +314,10 @@ const PrayerRequest = () => {
                                         {phoneError && <p className="errordivcstm">{phoneError}</p>}
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
-                                        <p className="inputformptag">Address</p>
+                                        <div className="stardiv">
+                                            <p className="inputformptag">Address</p>
+                                            <span className="starcstm">*</span>
+                                        </div>
                                         <input name="address" type="text" placeholder="Enter Your Home Address" className="inputformcstm" maxLength={200} value={formData.address} onChange={handleInputChange}/>
                                         {addressError && <p className="errordivcstm">{addressError}</p>}
                                     </Flexwithgapcstmdivcol>
