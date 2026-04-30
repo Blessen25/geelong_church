@@ -13,7 +13,7 @@ import { Person } from '../../interface';
 
 const Meetings_Component = () => {
   const [personCount, setPersonCount] = useState<number>(1);
-  
+
   const [formData, setFormData] = useState({
     fullname: '',
     emailaddress: '',
@@ -26,81 +26,137 @@ const Meetings_Component = () => {
     { name: '', age: '' },
   ]);
 
-  const handlePersonChange = (
-  index: number,
-  field: 'name' | 'age',
-  value: string
-) => {
-  const updatedPersons = [...persons];
-
-  if (!updatedPersons[index]) {
-    updatedPersons[index] = { name: '', age: '' };
-  }
-
-  updatedPersons[index][field] = value;
-  setPersons(updatedPersons);
-};
-
   const [errors, setErrors] = useState<any>({});
+
+  const handleInputChange = (
+    field: keyof typeof formData,
+    value: string | Date | null
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+
+    setErrors((prevErrors: any) => {
+      const updatedErrors = { ...prevErrors };
+
+      if (field === 'fullname' && String(value).trim()) {
+        delete updatedErrors.fullname;
+      }
+
+      if (field === 'emailaddress' && String(value).trim()) {
+        delete updatedErrors.emailaddress;
+      }
+
+      if (field === 'dob' && value) {
+        delete updatedErrors.dob;
+      }
+
+      if (field === 'phone' && String(value).trim()) {
+        delete updatedErrors.phone;
+      }
+
+      return updatedErrors;
+    });
+  };
+
+  const handlePersonChange = (
+    index: number,
+    field: 'name' | 'age',
+    value: string
+  ) => {
+    const updatedPersons = [...persons];
+
+    if (!updatedPersons[index]) {
+      updatedPersons[index] = { name: '', age: '' };
+    }
+
+    updatedPersons[index][field] = value;
+    setPersons(updatedPersons);
+
+    const errorKey = `person_${index}_${field}`;
+
+    setErrors((prevErrors: any) => {
+      const updatedErrors = { ...prevErrors };
+
+      if (field === 'name' && value.trim()) {
+        delete updatedErrors[errorKey];
+      }
+
+      if (
+        field === 'age' &&
+        value.trim() &&
+        Number(value) >= 1 &&
+        Number(value) <= 130
+      ) {
+        delete updatedErrors[errorKey];
+      }
+
+      return updatedErrors;
+    });
+  };
 
   const handlePersonCountChange = (count: number) => {
     setPersonCount(count);
 
     setPersons(
-      Array.from({ length: count }, (_, index) => persons[index] || { name: '', age: '' })
+      Array.from(
+        { length: count },
+        (_, index) => persons[index] || { name: '', age: '' }
+      )
     );
   };
 
   const validateForm = () => {
-
     const newErrors: any = {};
 
     if (!formData.fullname.trim()) {
-
-      newErrors.fullname = "Full Name is required";
+      newErrors.fullname = 'Full Name is required';
     }
 
     if (!formData.emailaddress.trim()) {
-      newErrors.emailaddress = "Email is required";
+      newErrors.emailaddress = 'Email is required';
     }
 
     if (!formData.dob) {
-      newErrors.dob = "Date of Birth is required";
+      newErrors.dob = 'Date of Birth is required';
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
+      newErrors.phone = 'Phone number is required';
     }
 
     persons.forEach((person, index) => {
-
       if (!person.name.trim()) {
-        newErrors[`person_${index}_name`] = `Person ${index + 1} Name is required`;
+        newErrors[`person_${index}_name`] =
+          `Person ${index + 1} Name is required`;
       }
 
       if (!person.age.trim()) {
-        newErrors[`person_${index}_age`] = `Person ${index + 1} Age is required`;
-      }else if(Number(person.age) < 1 || Number(person.age) > 130){
-        newErrors[`person_${index}_age`] = `Person ${index + 1} Age must be a valid age`;
-    }
+        newErrors[`person_${index}_age`] =
+          `Person ${index + 1} Age is required`;
+      } else if (Number(person.age) < 1 || Number(person.age) > 130) {
+        newErrors[`person_${index}_age`] =
+          `Person ${index + 1} Age must be a valid age`;
+      }
     });
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  }
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-
     e.preventDefault();
 
     if (!validateForm()) {
-
-      return;  
+      return;
     }
 
-    console.log('Form submitted successfully');
+    console.log('Form submitted successfully', {
+      ...formData,
+      persons,
+    });
   };
-  
 
   return (
     <>
@@ -111,6 +167,7 @@ const Meetings_Component = () => {
           children={
             <>
               <h1 className="text_cstm_big_heading">Registration Form</h1>
+
               <p className="text_cstm_normal_para">
                 Fill in your details and we’ll get back to you.
               </p>
@@ -125,7 +182,7 @@ const Meetings_Component = () => {
                   Ministering: PR. Merlin John
                 </p>
                 <p className="text_cstm_normal_para">
-                  Date: June 6 (Saturday)
+                  Date: June 6 Saturday
                 </p>
                 <p className="text_cstm_normal_para">
                   Time: 10:00 AM – 4:00 PM
@@ -144,14 +201,22 @@ const Meetings_Component = () => {
                         <p className="inputformptag">Full Name</p>
                         <span className="starcstm">*</span>
                       </div>
+
                       <input
                         name="fullname"
                         type="text"
                         placeholder="Enter Your Full Name"
                         className="inputformcstm"
                         maxLength={30}
+                        value={formData.fullname}
+                        onChange={(e) =>
+                          handleInputChange('fullname', e.target.value)
+                        }
                       />
-                      {errors.fullname && <p className="errordivcstm">{errors.fullname}</p>}
+
+                      {errors.fullname && (
+                        <p className="errordivcstm">{errors.fullname}</p>
+                      )}
                     </Flexwithgapcstmdivcol>
 
                     <Flexwithgapcstmdivcol>
@@ -159,14 +224,22 @@ const Meetings_Component = () => {
                         <p className="inputformptag">Email</p>
                         <span className="starcstm">*</span>
                       </div>
+
                       <input
                         name="emailaddress"
                         type="email"
                         placeholder="Enter Your Email"
                         className="inputformcstm"
                         maxLength={50}
+                        value={formData.emailaddress}
+                        onChange={(e) =>
+                          handleInputChange('emailaddress', e.target.value)
+                        }
                       />
-                      {errors.emailaddress && <p className="errordivcstm">{errors.emailaddress}</p>}
+
+                      {errors.emailaddress && (
+                        <p className="errordivcstm">{errors.emailaddress}</p>
+                      )}
                     </Flexwithgapcstmdivcol>
                   </Flexwithgapcstmdivrow>
 
@@ -179,49 +252,68 @@ const Meetings_Component = () => {
 
                       <div className="datepickerwraper">
                         <DatePicker
+                          selected={formData.dob}
+                          onChange={(date:any) =>
+                            handleInputChange('dob', date)
+                          }
                           dateFormat="dd/MM/yyyy"
                           className="inputformcstm"
                           placeholderText="DD/MM/YYYY"
                         />
                         <i className="fa-regular fa-calendar"></i>
                       </div>
-                      {errors.dob && <p className="errordivcstm">{errors.dob}</p>}
+
+                      {errors.dob && (
+                        <p className="errordivcstm">{errors.dob}</p>
+                      )}
                     </Flexwithgapcstmdivcol>
 
                     <Flexwithgapcstmdivcol>
                       <PhoneNumberField
-                        value={''}
-                        onChange={(phone: string, country: any) => {
-                          console.log(phone, country);
+                        value={formData.phone}
+                        onChange={(phone: string) => {
+                          handleInputChange('phone', phone);
                         }}
                       />
-                      {errors.phone && <p className="errordivcstm">{errors.phone}</p>}
+
+                      {errors.phone && (
+                        <p className="errordivcstm">{errors.phone}</p>
+                      )}
                     </Flexwithgapcstmdivcol>
                   </Flexwithgapcstmdivrow>
 
                   <Flexwithgapcstmdivrow parentClassname="flex-direction-col-575px">
                     <Flexwithgapcstmdivcol>
                       <p className="inputformptag">Address</p>
+
                       <input
                         name="address"
                         type="text"
                         placeholder="Enter Your Home Address"
                         className="inputformcstm"
                         maxLength={200}
+                        value={formData.address}
+                        onChange={(e) =>
+                          handleInputChange('address', e.target.value)
+                        }
                       />
                     </Flexwithgapcstmdivcol>
 
                     <Flexwithgapcstmdivcol>
-                        <div className="stardiv">
-                            <p className="inputformptag">Number of persons attending</p>
-                            <span className="starcstm">*</span>
-                        </div>
+                      <div className="stardiv">
+                        <p className="inputformptag">
+                          Number of persons attending
+                        </p>
+                        <span className="starcstm">*</span>
+                      </div>
 
                       <div className="select-wrapper-cstm">
                         <select
                           className="inputformcstm selectapperance"
                           value={personCount}
-                          onChange={(e) => handlePersonCountChange(Number(e.target.value))}
+                          onChange={(e) =>
+                            handlePersonCountChange(Number(e.target.value))
+                          }
                         >
                           {Array.from({ length: 5 }, (_, index) => (
                             <option
@@ -246,40 +338,56 @@ const Meetings_Component = () => {
                     >
                       <Flexwithgapcstmdivcol>
                         <div className="stardiv">
-                            <p className="inputformptag">Name (Person {index + 1})</p>
-                            <span className="starcstm">*</span>
+                          <p className="inputformptag">
+                            Name Person {index + 1}
+                          </p>
+                          <span className="starcstm">*</span>
                         </div>
+
                         <input
-                          name={`person_${index + 1}_name`}
+                          name={`person_${index}_name`}
                           type="text"
                           placeholder={`Enter Person ${index + 1} Name`}
                           className="inputformcstm"
                           maxLength={30}
-                          value={persons[index]?.name || ""}
-                          onChange={(e) => handlePersonChange(index, "name", e.target.value)}
-                        />  
+                          value={persons[index]?.name || ''}
+                          onChange={(e) =>
+                            handlePersonChange(index, 'name', e.target.value)
+                          }
+                        />
+
                         {errors[`person_${index}_name`] && (
-                          <p className="errordivcstm">{errors[`person_${index}_name`]}</p>
+                          <p className="errordivcstm">
+                            {errors[`person_${index}_name`]}
+                          </p>
                         )}
                       </Flexwithgapcstmdivcol>
 
                       <Flexwithgapcstmdivcol>
                         <div className="stardiv">
-                            <p className="inputformptag">Age (Person {index + 1})</p>
-                            <span className="starcstm">*</span>
+                          <p className="inputformptag">
+                            Age Person {index + 1}
+                          </p>
+                          <span className="starcstm">*</span>
                         </div>
+
                         <input
-                          name={`person_${index + 1}_age`}
+                          name={`person_${index}_age`}
                           type="number"
                           placeholder={`Enter Person ${index + 1} Age`}
                           className="inputformcstm"
                           min={1}
-                          max={120}
-                          value={persons[index]?.age || ""}
-                          onChange={(e) => handlePersonChange(index, "age", e.target.value)}
+                          max={130}
+                          value={persons[index]?.age || ''}
+                          onChange={(e) =>
+                            handlePersonChange(index, 'age', e.target.value)
+                          }
                         />
+
                         {errors[`person_${index}_age`] && (
-                          <p className="errordivcstm">{errors[`person_${index}_age`]}</p>
+                          <p className="errordivcstm">
+                            {errors[`person_${index}_age`]}
+                          </p>
                         )}
                       </Flexwithgapcstmdivcol>
                     </Flexwithgapcstmdivrow>
