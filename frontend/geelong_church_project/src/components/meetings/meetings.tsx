@@ -12,7 +12,7 @@ import PhoneNumberField from '../inputs/input';
 import { Person } from '../../interface';
 
 const Meetings_Component = () => {
-  const [personCount, setPersonCount] = useState<number>(1);
+  const [personCount, setPersonCount] = useState<number>(0);
 
   const [formData, setFormData] = useState({
     fullname: '',
@@ -221,31 +221,6 @@ const Meetings_Component = () => {
 
                     <Flexwithgapcstmdivcol>
                       <div className="stardiv">
-                        <p className="inputformptag">Email</p>
-                        <span className="starcstm">*</span>
-                      </div>
-
-                      <input
-                        name="emailaddress"
-                        type="email"
-                        placeholder="Enter Your Email"
-                        className="inputformcstm"
-                        maxLength={50}
-                        value={formData.emailaddress}
-                        onChange={(e) =>
-                          handleInputChange('emailaddress', e.target.value)
-                        }
-                      />
-
-                      {errors.emailaddress && (
-                        <p className="errordivcstm">{errors.emailaddress}</p>
-                      )}
-                    </Flexwithgapcstmdivcol>
-                  </Flexwithgapcstmdivrow>
-
-                  <Flexwithgapcstmdivrow parentClassname="flex-direction-col-575px">
-                    <Flexwithgapcstmdivcol>
-                      <div className="stardiv">
                         <p className="inputformptag">Date of Birth</p>
                         <span className="starcstm">*</span>
                       </div>
@@ -265,6 +240,34 @@ const Meetings_Component = () => {
 
                       {errors.dob && (
                         <p className="errordivcstm">{errors.dob}</p>
+                      )}
+                    </Flexwithgapcstmdivcol>
+
+                    
+                  </Flexwithgapcstmdivrow>
+
+                  <Flexwithgapcstmdivrow parentClassname="flex-direction-col-575px">
+                    
+                    <Flexwithgapcstmdivcol>
+                      <div className="stardiv">
+                        <p className="inputformptag">Email</p>
+                        <span className="starcstm">*</span>
+                      </div>
+
+                      <input
+                        name="emailaddress"
+                        type="email"
+                        placeholder="Enter Your Email"
+                        className="inputformcstm"
+                        maxLength={50}
+                        value={formData.emailaddress}
+                        onChange={(e) =>
+                          handleInputChange('emailaddress', e.target.value)
+                        }
+                      />
+
+                      {errors.emailaddress && (
+                        <p className="errordivcstm">{errors.emailaddress}</p>
                       )}
                     </Flexwithgapcstmdivcol>
 
@@ -302,7 +305,7 @@ const Meetings_Component = () => {
                     <Flexwithgapcstmdivcol>
                       <div className="stardiv">
                         <p className="inputformptag">
-                          Number of persons attending
+                          Are there additional attendees?
                         </p>
                         <span className="starcstm">*</span>
                       </div>
@@ -315,13 +318,13 @@ const Meetings_Component = () => {
                             handlePersonCountChange(Number(e.target.value))
                           }
                         >
-                          {Array.from({ length: 5 }, (_, index) => (
+                          {Array.from({ length: 6 }, (_, index) => (
                             <option
-                              key={index + 1}
-                              value={index + 1}
+                              key={index}
+                              value={index}
                               className="optionclass"
                             >
-                              {index + 1}
+                              {index}
                             </option>
                           ))}
                         </select>
