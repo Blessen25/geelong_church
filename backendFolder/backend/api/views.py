@@ -216,6 +216,7 @@ def submit_meeting_request(request):
             fullname=data.get("fullname"),
             dateofbirth=data.get("dateofbirth"),
             mobilenumber=data.get("mobilenumber"),
+            country=data.get("country", ""),
             emailaddress=data.get("emailaddress"),
             address=data.get("address", ""),
             additional_attendees_count=data.get("additional_attendees_count", 0),
