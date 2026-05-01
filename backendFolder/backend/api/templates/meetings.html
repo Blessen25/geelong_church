@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block pages_header %}Meeting Requests{% endblock %}
+
+{% block content %}
+<h1 class="cstmcontenttableh1tag">Meeting Requests</h1>
+
+<div style="overflow-x: auto;">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th class="cstmeventtableth">Sl.No</th>
+                <th class="cstmeventtableth">Full Name</th>
+                <th class="cstmeventtableth">DOB</th>
+                <th class="cstmeventtableth">Mobile</th>
+                <th class="cstmeventtableth">Email</th>
+                <th class="cstmeventtableth">Address</th>
+                <th class="cstmeventtableth">Additional Count</th>
+                <th class="cstmeventtableth">Attendees</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% if meetings %}
+                {% for meeting in meetings %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ meeting.fullname }}</td>
+                    <td>{{ meeting.dateofbirth }}</td>
+                    <td>{{ meeting.mobilenumber }}</td>
+                    <td>{{ meeting.emailaddress }}</td>
+                    <td>{{ meeting.address|default:"—" }}</td>
+                    <td>{{ meeting.additional_attendees_count }}</td>
+
+                    <td>
+                        {% if meeting.attendees.all %}
+                            {% for attendee in meeting.attendees.all %}
+                                <div>
+                                    {{ attendee.name }} ({{ attendee.age }})
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            —
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="9" class="text-center">
+                        No Meeting Requests Found
+                    </td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

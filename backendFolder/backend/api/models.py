@@ -88,3 +88,34 @@ class PrayerRequest(models.Model):
 
     def __str__(self):
         return self.fullname
+
+class MeetingRequest(models.Model):
+    fullname = models.CharField(max_length= 50)
+    dateofbirth = models.DateField()
+    mobilenumber = models.CharField(max_length=20)
+    emailaddress = models.EmailField(max_length=80)
+    address = models.TextField(blank=True, null=True)
+
+    additional_attendees_count = models.PositiveBigIntegerField(default=0)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_deleted = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.fullname
+    
+class MeetingAttendee(models.Model):
+    meeting = models.ForeignKey(
+
+        MeetingRequest,
+        on_delete= models.CASCADE,
+        related_name= 'attendees',
+    )
+
+    name = models.CharField(max_length=100)
+    age = models.PositiveBigIntegerField()
+
+    def __str__(self):
+        return self.name
+    
+

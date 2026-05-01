@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect;
 from rest_framework import generics;
-from .models import Contact, Event, PrayerRequest;
+from .models import Contact, Event, PrayerRequest, MeetingRequest, MeetingAttendee
 from .serializers import ContactSerializer, EventSerializer, PrayerRequestSerializer;
 from django.http import HttpResponse, JsonResponse;
 from .forms import EventForm, AdminSignupForm, CustomPasswordResetForm, CustomSetPasswordForm;
@@ -22,6 +22,7 @@ class ContactListCreateView(generics.ListCreateAPIView):
 
     queryset = Contact.objects.filter(is_deleted = False)
     serializer_class = ContactSerializer
+
 
 class EventListCreateView(generics.ListCreateAPIView):
 
@@ -199,3 +200,34 @@ def Edit_event(request, event_id):
             return JsonResponse({'success': False, 'error': 'Event not found.'})
     else:
         return JsonResponse({'success': False, 'error': 'Invalid request method.'})
+
+def meeting(request):
+    meetings = MeetingRequest.objects.filter(is_deleted=False).order_by("-created_at")
+    return render(request, "meetings.html", {"meetings": meetings})
+
+@csrf_exempt
+def submit_meeting_request(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+
+        meeting = MeetingRequest.objects.create(
+            fullname=data.get("fullname"),
+            dateofbirth=data.get("dateofbirth"),
+            mobilenumber=data.get("mobilenumber"),
+            emailaddress=data.get("emailaddress"),
+            address=data.get("address", ""),
+            additional_attendees_count=data.get("additional_attendees_count", 0),
+        )
+
+        attendees = data.get("attendees", [])
+
+        for attendee in attendees:
+            MeetingAttendee.objects.create(
+                meeting=meeting,
+                name=attendee.get("name"),
+                age=attendee.get("age"),
+            )
+
+        return JsonResponse({"message": "Meeting request submitted successfully"}, status=201)
+
+    return JsonResponse({"error": "Invalid request"}, status=400)
