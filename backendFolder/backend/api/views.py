@@ -200,7 +200,8 @@ def Edit_event(request, event_id):
             return JsonResponse({'success': False, 'error': 'Event not found.'})
     else:
         return JsonResponse({'success': False, 'error': 'Invalid request method.'})
-
+    
+@login_required
 def meeting(request):
     meetings = MeetingRequest.objects.filter(is_deleted=False).order_by("-created_at")
     return render(request, "meetings.html", {"meetings": meetings})
