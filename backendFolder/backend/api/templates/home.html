@@ -18,7 +18,7 @@
             </thead>
             <tbody>
                 {% if contacts %}
-                    {% for contact in contacts %}
+                    {% for contact in contacts|slice:":5" %}
                     <tr>
                         <th scope="row">{{ forloop.counter }}</th>
                         <td>{{ contact.name }}</td>
