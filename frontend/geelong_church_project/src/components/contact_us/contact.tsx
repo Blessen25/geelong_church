@@ -234,7 +234,7 @@ export const ContactDetailsdiv = () => {
                     message: '',
                     country: '',
                 });
-                console.log('form data after subkitting', formData);
+                console.log('form data after submitting', formData);
                 // setTimeout(() => {
                 //     navigate('/'); // Redirect to the home page
                 // }, 1500);

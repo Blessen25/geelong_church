@@ -5,14 +5,18 @@ import {
   ContainerWidthCstm,
   Flexwithgapcstmdivcol,
   Flexwithgapcstmdivrow,
+  PopupModal,
   TitleinMaindiv,
 } from '../extra';
 import './meetings.css';
 import PhoneNumberField from '../inputs/input';
 import { Person } from '../../interface';
+import { set } from 'date-fns';
 
 const Meetings_Component = () => {
   const [personCount, setPersonCount] = useState<number>(0);
+  const [success, setSuccess] = useState('');
+  const [commonerror, setcommonError] = useState('');
 
   const [formData, setFormData] = useState({
     fullname: '',
@@ -21,10 +25,9 @@ const Meetings_Component = () => {
     phone: '',
     address: '',
   });
+  
 
-  const [persons, setPersons] = useState<Person[]>([
-    { name: '', age: '' },
-  ]);
+  const [persons, setPersons] = useState<Person[]>([]);
 
   const [errors, setErrors] = useState<any>({});
 
@@ -145,17 +148,62 @@ const Meetings_Component = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const formatDate = (date: Date | null) => {
+    if (!date) return "";
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  };
+
+  const API_URL = process.env.REACT_APP_API_URL
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setcommonError('');
+    setSuccess('');
+    
 
     if (!validateForm()) {
       return;
     }
 
-    console.log('Form submitted successfully', {
-      ...formData,
-      persons,
+    const payload = {
+
+      fullname: formData.fullname,
+      dateofbirth: formatDate(formData.dob),
+      mobilenumber: formData.phone,
+      emailaddress: formData.emailaddress,
+      address: formData.address,
+      additional_attendees_count: Number(personCount),
+      attendees: persons,
+    };
+
+    try {
+
+      const response = await fetch(`${API_URL}submit-meeting-request/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
     });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      setcommonError("Failed to submit the form. Please check your input.")
+      throw new Error('Failed to submit the form');
+    }
+
+    setSuccess("Form submitted successfully!");
+    } catch(error) {
+
+      console.error("Error from catch block", error);
+    }
+    
   };
 
   return (
@@ -405,6 +453,14 @@ const Meetings_Component = () => {
                   </button>
                 </Flexwithgapcstmdivcol>
               </form>
+              {success && 
+              <>
+                <PopupModal variant='success' modalSubtitle='Your registration has been submitted successfully' isOpen={true} primaryButtonText='Go To Home'/>
+              </>}
+              {commonerror && 
+              <>
+                <PopupModal variant='error' modalSubtitle={"There has been some issues while submitting your registration, please try again later!"} isOpen={true} primaryButtonText='Go To Home'/>
+              </>}
             </>
           }
         />
