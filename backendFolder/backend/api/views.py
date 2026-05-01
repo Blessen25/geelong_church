@@ -127,7 +127,8 @@ def Home(request):
     events = Event.objects.filter(is_deleted = False)
     contacts = Contact.objects.filter(is_deleted = False)
     prayers = PrayerRequest.objects.filter(is_deleted=False)
-    return render(request, 'home.html', {'events' : events, 'contacts' : contacts, 'prayers' : prayers})
+    meetings = MeetingRequest.objects.filter(is_deleted=False)
+    return render(request, 'home.html', {'events' : events, 'contacts' : contacts, 'prayers' : prayers, 'meetings' : meetings})
 
 @login_required
 def Contact_fn(request):
