@@ -23,6 +23,7 @@ const Meetings_Component = () => {
     emailaddress: '',
     dob: null as Date | null,
     phone: '',
+    country: '',
     address: '',
   });
   
@@ -158,6 +159,16 @@ const Meetings_Component = () => {
     return `${year}-${month}-${day}`;
   };
 
+  const handlePhoneChange = (phone: any, countryData: any) => {
+  setFormData((prevData) => ({
+    ...prevData,
+    phone: '+' + phone,
+    country: countryData?.name || 'Unknown',
+  }));
+
+};
+
+
   const API_URL = process.env.REACT_APP_API_URL
   
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -175,11 +186,14 @@ const Meetings_Component = () => {
       fullname: formData.fullname,
       dateofbirth: formatDate(formData.dob),
       mobilenumber: formData.phone,
+      country: formData.country,
       emailaddress: formData.emailaddress,
       address: formData.address,
       additional_attendees_count: Number(personCount),
       attendees: persons,
     };
+    
+    console.log(payload);
 
     try {
 
@@ -321,10 +335,9 @@ const Meetings_Component = () => {
 
                     <Flexwithgapcstmdivcol>
                       <PhoneNumberField
+
                         value={formData.phone}
-                        onChange={(phone: string) => {
-                          handleInputChange('phone', phone);
-                        }}
+                        onChange={handlePhoneChange}
                       />
 
                       {errors.phone && (
