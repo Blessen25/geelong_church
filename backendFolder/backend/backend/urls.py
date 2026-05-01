@@ -28,7 +28,6 @@ urlpatterns = [
     path('event/',Event_fn, name='Event_fn'),
     path("prayers/", prayer_page, name="prayer_page"),
     path("meeting/", meeting, name="meeting"),
-    path("submit-meeting-request/", submit_meeting_request, name="submit_meeting_request"),
 
     path('login/',User_login, name='login'),
     path('logout/',User_logout, name='logout'),

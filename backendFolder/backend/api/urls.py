@@ -6,6 +6,7 @@ urlpatterns = [
     path('contact/',ContactListCreateView.as_view()),
     path('event/',EventListCreateView.as_view()),
     path("prayers/", PrayerRequestListCreateView.as_view()),
+    path("submit-meeting-request/", submit_meeting_request, name="submit_meeting_request"),
     
     path("token/", token_login, name="token_login"),
 
