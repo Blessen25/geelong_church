@@ -15,6 +15,8 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 # Create your views here.
@@ -231,6 +233,36 @@ def submit_meeting_request(request):
                 age=attendee.get("age"),
             )
 
-        return JsonResponse({"message": "Meeting request submitted successfully"}, status=201)
+        # ✅ SEND EMAIL HERE
+        send_mail(
+            subject="Thank you for your meeting request",
+            message=f"""
+Hi {meeting.fullname},
+
+Thank you for submitting your meeting request.
+
+We have received your details successfully.
+
+Details:
+Name: {meeting.fullname}
+Email: {meeting.emailaddress}
+Mobile: {meeting.mobilenumber}
+Country: {meeting.country}
+Attendees: {meeting.additional_attendees_count}
+
+We will get back to you soon.
+
+Regards,
+Your Team
+""",
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[meeting.emailaddress],
+            fail_silently=False,
+        )
+
+        return JsonResponse(
+            {"message": "Meeting request submitted and email sent successfully"},
+            status=201
+        )
 
     return JsonResponse({"error": "Invalid request"}, status=400)
