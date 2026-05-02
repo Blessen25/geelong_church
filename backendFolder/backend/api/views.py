@@ -71,8 +71,8 @@ class PrayerRequestListCreateView(generics.ListCreateAPIView):
         response = super().create(request, *args, **kwargs)
 
         data = request.data
-        email = data.get("email")  # ensure this exists in model
-        name = data.get("name")
+        email = data.get("emailaddress")  # ensure this exists in model
+        name = data.get("fullname")
 
         if email:
             try:
