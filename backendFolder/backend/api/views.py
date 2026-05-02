@@ -22,8 +22,38 @@ from django.conf import settings
 # Create your views here.
 class ContactListCreateView(generics.ListCreateAPIView):
 
-    queryset = Contact.objects.filter(is_deleted = False)
+    queryset = Contact.objects.filter(is_deleted=False)
     serializer_class = ContactSerializer
+
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+
+        data = request.data
+        email = data.get("email")  # make sure your model has this field
+        name = data.get("name")
+
+        if email:
+            try:
+                send_mail(
+                    subject="Thank you for contacting us",
+                    message=f"""
+Hi {name},
+
+Thank you for reaching out to us.
+
+We have received your message and will get back to you soon.
+
+Regards,
+Geelong Pentecostal Assembly
+""",
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[email],
+                    fail_silently=False,
+                )
+            except Exception as e:
+                print("Contact email failed:", e)
+
+        return response
 
 
 class EventListCreateView(generics.ListCreateAPIView):
@@ -34,8 +64,40 @@ class EventListCreateView(generics.ListCreateAPIView):
 
 class PrayerRequestListCreateView(generics.ListCreateAPIView):
 
-    queryset = PrayerRequest.objects.filter(is_deleted = False)
+    queryset = PrayerRequest.objects.filter(is_deleted=False)
     serializer_class = PrayerRequestSerializer
+
+    def create(self, request, *args, **kwargs):
+        response = super().create(request, *args, **kwargs)
+
+        data = request.data
+        email = data.get("email")  # ensure this exists in model
+        name = data.get("name")
+
+        if email:
+            try:
+                send_mail(
+                    subject="Prayer Request Received",
+                    message=f"""
+Hi {name},
+
+Thank you for submitting your prayer request.
+
+Our team will keep you in our prayers.
+
+May God bless you.
+
+Regards,
+Geelong Pentecostal Assembly
+""",
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[email],
+                    fail_silently=False,
+                )
+            except Exception as e:
+                print("Prayer email failed:", e)
+
+        return response
 
 class MyPasswordResetView(PasswordResetView):
     template_name = 'accounts/password_reset.html'
