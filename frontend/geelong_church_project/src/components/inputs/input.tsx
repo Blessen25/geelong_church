@@ -20,6 +20,7 @@ const PhoneNumberField: React.FC<PhoneNumberFieldProps> = (Props) => {
                 onChange={(value, countryData) => {
                     Props.onChange(value, countryData);
                 }}
+                countryCodeEditable = {false}
                 inputProps={{
                     name: "phone",
                     required: true,
