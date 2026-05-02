@@ -4,7 +4,10 @@
 {% block pages_header %}Meeting Requests{% endblock %}
 
 {% block content %}
-<h1 class="cstmcontenttableh1tag">Meeting Requests</h1>
+<div class="w-100 d-flex justify-content-between">
+        <h1 class="cstmcontenttableh1tag eventscstmheader">Meeting Registration</h1>
+        <a class="viewmorebutton addnewcstm" href="{% url 'export_meetings_excel' %}"><i class="fa-solid fa-download"></i>Download Excel</a>
+    </div>
 
 <div style="overflow-x: auto;">
     <table class="table table-bordered">

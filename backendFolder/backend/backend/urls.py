@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
-from api.views import Home, User_login, User_logout, Base, Contact_fn, Event_fn, admin_signup_view, MyPasswordResetView, MyPasswordResetConfirmView, meeting, prayer_page, submit_meeting_request;
+from api.views import Home, User_login, User_logout, Base, Contact_fn, Event_fn, admin_signup_view, MyPasswordResetView, MyPasswordResetConfirmView, meeting, prayer_page, export_meetings_excel, submit_meeting_request;
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +28,9 @@ urlpatterns = [
     path('event/',Event_fn, name='Event_fn'),
     path("prayers/", prayer_page, name="prayer_page"),
     path("meeting/", meeting, name="meeting"),
+    
+    path('export-excel/', export_meetings_excel, name='export_meetings_excel'),
+    
 
     path('login/',User_login, name='login'),
     path('logout/',User_logout, name='logout'),

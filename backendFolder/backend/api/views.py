@@ -17,6 +17,7 @@ from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from django.core.mail import send_mail
 from django.conf import settings
+from openpyxl import Workbook
 
 
 # Create your views here.
@@ -328,3 +329,41 @@ Your Team
         )
 
     return JsonResponse({"error": "Invalid request"}, status=400)
+
+def export_meetings_excel(request):
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Meetings"
+
+    # Header
+    headers = [
+        'Full Name', 'DOB', 'Mobile', 'Country',
+        'Email', 'Address', 'Additional Count', 'Attendees'
+    ]
+    ws.append(headers)
+
+    meetings = MeetingRequest.objects.all()
+
+    for meeting in meetings:
+        attendees = ", ".join([
+            f"{a.name} ({a.age})" for a in meeting.attendees.all()
+        ])
+
+        ws.append([
+            meeting.fullname,
+            str(meeting.dateofbirth),
+            meeting.mobilenumber,
+            meeting.country,
+            meeting.emailaddress,
+            meeting.address,
+            meeting.additional_attendees_count,
+            attendees
+        ])
+
+    response = HttpResponse(
+        content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    )
+    response['Content-Disposition'] = 'attachment; filename=meetings.xlsx'
+
+    wb.save(response)
+    return response
