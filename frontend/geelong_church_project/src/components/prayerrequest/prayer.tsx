@@ -333,7 +333,7 @@ const PrayerRequest = () => {
                                                     className="inputformcstm"   
                                                     placeholderText="DD/MM/YYYY"
                                                 />
-                                            <i className="fa-regular fa-calendar"></i>
+                                            <i className="fa-regular fa-calendar fontawesomeiconsprayer"></i>
                                             </div>
                                             
                                     </Flexwithgapcstmdivcol>
@@ -352,7 +352,7 @@ const PrayerRequest = () => {
                                                 <option value="Email" className='optionclass'>Email</option>
                                                 <option value="WhatsApp" className='optionclass'>WhatsApp</option>
                                                 </select>
-                                                <i className="fa-solid fa-chevron-down"></i>
+                                                <i className="fa-solid fa-chevron-down fontawesomeiconsprayer"></i>
                                             </div>
                                             
                                     </Flexwithgapcstmdivcol>
@@ -375,7 +375,7 @@ const PrayerRequest = () => {
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
-                                        <i className="fa-solid fa-chevron-down"></i>
+                                        <i className="fa-solid fa-chevron-down fontawesomeiconsprayer"></i>
                                         </div>
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
@@ -394,7 +394,7 @@ const PrayerRequest = () => {
                                             <option value="Walked In" className='optionclass'>Walked In</option>
                                             <option value="Other" className='optionclass'>Other</option>
                                         </select>
-                                        <i className="fa-solid fa-chevron-down"></i>
+                                        <i className="fa-solid fa-chevron-down fontawesomeiconsprayer"></i>
                                         </div>
                                         {hearAboutUs === "Other" && (
                                         <input
@@ -422,7 +422,7 @@ const PrayerRequest = () => {
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
-                                        <i className="fa-solid fa-chevron-down"></i>
+                                        <i className="fa-solid fa-chevron-down fontawesomeiconsprayer"></i>
                                         </div>
                                         {attendAnotherChurch === "Yes" && (
                                         <input
@@ -456,7 +456,7 @@ const PrayerRequest = () => {
                                             <option value="Other" className='optionclass'>Other</option>
 
                                         </select>
-                                        <i className="fa-solid fa-chevron-down"></i>
+                                        <i className="fa-solid fa-chevron-down fontawesomeiconsprayer"></i>
                                         </div>
                                         {areasYouWouldLikePrayerFor === "Other" && (
 
@@ -497,7 +497,7 @@ const PrayerRequest = () => {
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
-                                        <i className="fa-solid fa-chevron-down"></i>
+                                        <i className="fa-solid fa-chevron-down fontawesomeiconsprayer"></i>
                                         </div>
                                     </Flexwithgapcstmdivcol>
                                     <Flexwithgapcstmdivcol>
@@ -513,7 +513,7 @@ const PrayerRequest = () => {
                                             <option value="Yes" className='optionclass'>Yes</option>
                                             <option value="No" className='optionclass'>No</option>
                                         </select>
-                                        <i className="fa-solid fa-chevron-down"></i>
+                                        <i className="fa-solid fa-chevron-down fontawesomeiconsprayer"></i>
                                         </div>
                                     </Flexwithgapcstmdivcol>
                                 </Flexwithgapcstmdivrow>
