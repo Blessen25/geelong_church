@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { faAlignLeft, faChevronDown, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
+import { faAlignLeft, faChevronDown, faChevronRight, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 
@@ -12,6 +12,8 @@ const Header = () => {
     const isActiveSidebar = (path : any) => location.pathname === path ? "headercontentssidebarpara headercontentssidebarparaactive" : "headercontentssidebarpara";
     const isActiveDropdownlink = (path : any) => location.pathname === path ? "headerdropdowncontentsparaactive" : "";
     const [ sidebarActive, setSidebarActive ] = useState(false);
+    const [ prayerdropdownsidebar, setPrayerDropDownSidebar] = useState(false);
+
     const handleSidebarActiveButt = () => {
 
         setSidebarActive(!sidebarActive);        
@@ -25,6 +27,16 @@ const Header = () => {
     const OnmouseLeave = () => {
 
         setPrayerDropDown(false);
+    }
+
+    const OnMouseEnterSidebar = () => {
+
+        setPrayerDropDownSidebar(true);
+    }
+
+    const OnMouseLeaveSidebar = () => {
+
+        setPrayerDropDownSidebar(false);
     }
 
     return(
@@ -69,7 +81,27 @@ const Header = () => {
                     <div className="sidebardiv">
                     <a href='/' className={`${isActiveSidebar('/')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faHome}/>Home</a>
                     <a href='/about' className={`${isActiveSidebar('/about')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faInfoCircle}/>About</a>
-                    <a href='/prayerrequest' className={`${isActiveSidebar('/prayerrequest')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPrayingHands}/>Prayer</a>
+                    <div 
+                    className="prayersidebardiv" 
+                    onMouseEnter={OnMouseEnterSidebar} 
+                    onMouseLeave={OnMouseLeaveSidebar}
+                    >
+                    <a className={`${isActiveSidebar('/prayerrequest')} ${isActiveSidebar('/meetingrequest')}`}>
+                        <FontAwesomeIcon icon={faPrayingHands}/>
+                        Prayer
+                        <FontAwesomeIcon icon={faChevronDown} className='dropdownicon'/>
+                    </a>
+
+                    <div className={`sidebarDropdown ${prayerdropdownsidebar ? "open" : ""}`}>
+                        <a href='/prayerrequest' className={`${isActiveSidebar('/prayerrequest')} prayerdropdownsidebar`}>
+                        <FontAwesomeIcon icon={faPrayingHands}/>Prayer Request
+                        </a>
+
+                        <a href='/meetingrequest' className={`${isActiveSidebar('/meetingrequest')} prayerdropdownsidebar`}>
+                        <FontAwesomeIcon icon={faPrayingHands}/>Meeting Registration
+                        </a>
+                    </div>
+                    </div>
                     <a href='/webelieve' className={`${isActiveSidebar('/webelieve')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faDove}/>We Believe</a>
                     <a href='/ministries' className={`${isActiveSidebar('/ministries')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faChurch}/>Ministries</a>
                     <a href='/planyourvisit' className={`${isActiveSidebar('/planyourvisit')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faNewspaper}/>Plan Your Visit</a>

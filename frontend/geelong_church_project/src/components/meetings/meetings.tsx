@@ -297,7 +297,7 @@ const Meetings_Component = () => {
                           className="inputformcstm"
                           placeholderText="DD/MM/YYYY"
                         />
-                        <i className="fa-regular fa-calendar"></i>
+                        <i className="fa-regular fa-calendar fontawesomeiconsprayer"></i>
                       </div>
 
                       {errors.dob && (
@@ -390,7 +390,7 @@ const Meetings_Component = () => {
                           ))}
                         </select>
 
-                        <i className="fa-solid fa-chevron-down"></i>
+                        <i className="fa-solid fa-chevron-down fontawesomeiconsprayer"></i>
                       </div>
                     </Flexwithgapcstmdivcol>
                   </Flexwithgapcstmdivrow>
