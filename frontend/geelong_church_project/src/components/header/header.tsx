@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { faAlignLeft, faChevronDown, faChevronRight, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
+import { faAlignLeft, faCalendarCheck, faChevronDown, faChevronRight, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 
@@ -98,7 +98,7 @@ const Header = () => {
                         </a>
 
                         <a href='/meetingrequest' className={`${isActiveSidebar('/meetingrequest')} prayerdropdownsidebar`}>
-                        <FontAwesomeIcon icon={faPrayingHands}/>Meeting Registration
+                        <FontAwesomeIcon icon={faCalendarCheck}/>Meeting Registration
                         </a>
                     </div>
                     </div>
