@@ -2,17 +2,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { faAlignLeft, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
+import { faAlignLeft, faChevronDown, faChurch, faDove, faHome, faInfoCircle, faNewspaper, faPhone, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
 
     const location = useLocation();
+    const [ prayerdropdown, setPrayerDropDown] = useState(false);
     const isActive = (path : any) => location.pathname === path ? "headercontentspara headercontentsparaactive" : "headercontentspara";
     const isActiveSidebar = (path : any) => location.pathname === path ? "headercontentssidebarpara headercontentssidebarparaactive" : "headercontentssidebarpara";
+    const isActiveDropdownlink = (path : any) => location.pathname === path ? "headerdropdowncontentsparaactive" : "";
     const [ sidebarActive, setSidebarActive ] = useState(false);
     const handleSidebarActiveButt = () => {
 
         setSidebarActive(!sidebarActive);        
+    }
+
+    const OnmouseEnter = () => {
+
+        setPrayerDropDown(true);
+    }
+
+    const OnmouseLeave = () => {
+
+        setPrayerDropDown(false);
     }
 
     return(
@@ -32,11 +44,21 @@ const Header = () => {
                         <div className="headercontents">
                             <a href='/' className={`${isActive('/')}`} rel="noopener noreferrer">Home</a>
                             <a href='/about' className={`${isActive('/about')}`} rel="noopener noreferrer">About</a>
+                            <div className="prayerdropdowndiv" onMouseEnter={OnmouseEnter} onMouseLeave={OnmouseLeave}>   
+                                <a className={`${isActive('/prayerrequest')} || ${isActive('/meetingrequest')}`} rel="noopener noreferrer">Prayer<FontAwesomeIcon icon={faChevronDown} className='dropdownicon'/></a>    
+                                {prayerdropdown && (
+                                    <>
+                                        <div className="prayerdropdown">
+                                            <a href='/prayerrequest' className={`prayerdropdownlink ${isActiveDropdownlink('/prayerrequest')}`} rel="noopener noreferrer">Prayer Request</a>
+                                            <a href='/meetingrequest' className={`prayerdropdownlink ${isActiveDropdownlink('/meetingrequest')}`} rel="noopener noreferrer">Meetings Registration</a>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
                             <a href='/webelieve' className={`${isActive('/webelieve')}`} rel="noopener noreferrer" >We Believe</a>
                             <a href='/ministries' className={`${isActive('/ministries')}`} rel="noopener noreferrer">Ministries</a>
                             <a href='/planyourvisit' className={`${isActive('/planyourvisit')}`} rel="noopener noreferrer">Plan Your Visit</a>
                             <a href='/contact' className={`${isActive('/contact')}`} rel="noopener noreferrer">Contact</a>   
-                            <a href='/prayerrequest' className={`${isActive('/prayerrequest')}`} rel="noopener noreferrer">Prayer</a>    
                         </div>
                     </div>
                 </div>
@@ -47,12 +69,11 @@ const Header = () => {
                     <div className="sidebardiv">
                     <a href='/' className={`${isActiveSidebar('/')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faHome}/>Home</a>
                     <a href='/about' className={`${isActiveSidebar('/about')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faInfoCircle}/>About</a>
+                    <a href='/prayerrequest' className={`${isActiveSidebar('/prayerrequest')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPrayingHands}/>Prayer</a>
                     <a href='/webelieve' className={`${isActiveSidebar('/webelieve')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faDove}/>We Believe</a>
                     <a href='/ministries' className={`${isActiveSidebar('/ministries')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faChurch}/>Ministries</a>
                     <a href='/planyourvisit' className={`${isActiveSidebar('/planyourvisit')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faNewspaper}/>Plan Your Visit</a>
-                    <a href='/contact' className={`${isActiveSidebar('/contact')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPhone}/>Contact</a> 
-                    <a href='/prayerrequest' className={`${isActiveSidebar('/prayerrequest')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPrayingHands}/>Prayer</a>
-                    
+                    <a href='/contact' className={`${isActiveSidebar('/contact')}`} rel="noopener noreferrer"><FontAwesomeIcon icon={faPhone}/>Contact</a>                     
                     </div>  
                     </>
                 ) : (

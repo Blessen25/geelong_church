@@ -222,7 +222,7 @@ const Meetings_Component = () => {
 
   return (
     <>
-      <TitleinMaindiv title="Meeting Request" initialtitle="Home" />
+      <TitleinMaindiv title="Meeting Registration" initialtitle="Home" />
 
       <Containercstm>
         <ContainerWidthCstm
