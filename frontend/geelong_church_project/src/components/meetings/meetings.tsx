@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import DatePicker from 'react-datepicker';
 import {
   Containercstm,
   ContainerWidthCstm,
@@ -11,7 +10,6 @@ import {
 import './meetings.css';
 import PhoneNumberField from '../inputs/input';
 import { Person } from '../../interface';
-import { set } from 'date-fns';
 
 const Meetings_Component = () => {
   const [personCount, setPersonCount] = useState<number>(0);
@@ -21,7 +19,7 @@ const Meetings_Component = () => {
   const [formData, setFormData] = useState({
     fullname: '',
     emailaddress: '',
-    dob: null as Date | null,
+    age : '',
     phone: '',
     country: '',
     address: '',
@@ -34,7 +32,7 @@ const Meetings_Component = () => {
 
   const handleInputChange = (
     field: keyof typeof formData,
-    value: string | Date | null
+    value: string
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -51,10 +49,16 @@ const Meetings_Component = () => {
       if (field === 'emailaddress' && String(value).trim()) {
         delete updatedErrors.emailaddress;
       }
-
-      if (field === 'dob' && value) {
-        delete updatedErrors.dob;
-      }
+      
+      if (
+      field === 'age' &&
+      String(value).trim() &&
+      Number(value) >= 1 &&
+      Number(value) <= 120
+    ) {
+      delete updatedErrors.age;
+    }
+      
 
       if (field === 'phone' && String(value).trim()) {
         delete updatedErrors.phone;
@@ -122,8 +126,13 @@ const Meetings_Component = () => {
       newErrors.emailaddress = 'Email is required';
     }
 
-    if (!formData.dob) {
-      newErrors.dob = 'Date of Birth is required';
+    if (!formData.age) {
+      newErrors.age = 'Age is required';
+    } else if (
+      Number(formData.age) < 1 ||
+      Number(formData.age) > 120
+    ) {
+      newErrors.age = 'Enter a valid age';
     }
 
     if (!formData.phone.trim()) {
@@ -147,16 +156,6 @@ const Meetings_Component = () => {
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  };
-
-    const formatDate = (date: Date | null) => {
-    if (!date) return "";
-
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-
-    return `${year}-${month}-${day}`;
   };
 
   const handlePhoneChange = (phone: any, countryData: any) => {
@@ -184,7 +183,7 @@ const Meetings_Component = () => {
     const payload = {
 
       fullname: formData.fullname,
-      dateofbirth: formatDate(formData.dob),
+      age: formData.age,
       mobilenumber: formData.phone,
       country: formData.country,
       emailaddress: formData.emailaddress,
@@ -282,28 +281,28 @@ const Meetings_Component = () => {
                     </Flexwithgapcstmdivcol>
 
                     <Flexwithgapcstmdivcol>
-                      <div className="stardiv">
-                        <p className="inputformptag">Date of Birth</p>
-                        <span className="starcstm">*</span>
-                      </div>
+                    <div className="stardiv">
+                      <p className="inputformptag">Age</p>
+                      <span className="starcstm">*</span>
+                    </div>
 
-                      <div className="datepickerwraper">
-                        <DatePicker
-                          selected={formData.dob}
-                          onChange={(date:any) =>
-                            handleInputChange('dob', date)
-                          }
-                          dateFormat="dd/MM/yyyy"
-                          className="inputformcstm"
-                          placeholderText="DD/MM/YYYY"
-                        />
-                        <i className="fa-regular fa-calendar fontawesomeiconsprayer"></i>
-                      </div>
+                    <input
+                      name="age"
+                      type="number"
+                      placeholder="Enter Your Age"
+                      className="inputformcstm"
+                      min={1}
+                      max={120}
+                      value={formData.age}
+                      onChange={(e) =>
+                        handleInputChange('age', e.target.value)
+                      }
+                    />
 
-                      {errors.dob && (
-                        <p className="errordivcstm">{errors.dob}</p>
-                      )}
-                    </Flexwithgapcstmdivcol>
+                    {errors.age && (
+                      <p className="errordivcstm">{errors.age}</p>
+                    )}
+                  </Flexwithgapcstmdivcol>
 
                     
                   </Flexwithgapcstmdivrow>
