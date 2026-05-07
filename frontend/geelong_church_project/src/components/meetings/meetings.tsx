@@ -240,7 +240,7 @@ const Meetings_Component = () => {
                   Event Name: Empowering Revival Meeting
                 </p>
                 <p className="text_cstm_normal_para">
-                  Ministering: PR. Merlin John
+                  Ministering: Pr. Merlin John
                 </p>
                 <p className="text_cstm_normal_para">
                   Date: June 6 Saturday
