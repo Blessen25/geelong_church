@@ -279,7 +279,7 @@ def submit_meeting_request(request):
 
         meeting = MeetingRequest.objects.create(
             fullname=data.get("fullname"),
-            dateofbirth=data.get("dateofbirth"),
+            age=data.get("age"),
             mobilenumber=data.get("mobilenumber"),
             country=data.get("country", ""),
             emailaddress=data.get("emailaddress"),
@@ -308,10 +308,11 @@ We have received your details successfully.
 
 Details:
 Name: {meeting.fullname}
+Age: {meeting.age}
 Email: {meeting.emailaddress}
 Mobile: {meeting.mobilenumber}
 Country: {meeting.country}
-Attendees: {meeting.additional_attendees_count}
+Total Attendees: {meeting.additional_attendees_count + 1}
 
 We will get back to you soon.
 
@@ -351,7 +352,7 @@ def export_meetings_excel(request):
 
         ws.append([
             meeting.fullname,
-            str(meeting.dateofbirth),
+            meeting.age,
             meeting.mobilenumber,
             meeting.country,
             meeting.emailaddress,

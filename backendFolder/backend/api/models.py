@@ -91,7 +91,7 @@ class PrayerRequest(models.Model):
 
 class MeetingRequest(models.Model):
     fullname = models.CharField(max_length= 50)
-    dateofbirth = models.DateField()
+    age = models.PositiveIntegerField()
     mobilenumber = models.CharField(max_length=20)
     country = models.CharField(max_length=50, blank=True, null=True)
     emailaddress = models.EmailField(max_length=80)
