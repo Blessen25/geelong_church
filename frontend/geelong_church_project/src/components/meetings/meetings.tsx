@@ -248,6 +248,7 @@ const Meetings_Component = () => {
                 <p className="text_cstm_normal_para">
                   Time: 10:00 AM – 4:00 PM
                 </p>
+                <img src="assets/images/main/geelong_revival_banner.png" alt="Geelong Revival Banner" loading='lazy' className='meetingimage'/>
               </div>
 
               <form className="meetingreqform" onSubmit={handleSubmit}>

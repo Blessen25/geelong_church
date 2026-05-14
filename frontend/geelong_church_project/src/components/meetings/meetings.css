@@ -11,6 +11,13 @@
     color: #3c79b0;
 }
 
+.meetingimage{
+
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 767px) {
  
     .meetingdetailsdiv {
