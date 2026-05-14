@@ -412,6 +412,41 @@
     z-index: 1;
 }
 
+.upcomingeventbanner {
+
+    position: absolute;
+    top: 0px;
+    width: 100%;    
+    background-color: #3c79b0;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upcoming_event_banner_para {
+
+    font-size: 13px;
+    color: white;
+    display: flex;
+    gap: 6px;
+}
+
+.knowmorebanner {
+
+    color: white;
+    text-decoration: underline;
+    transition: all 0.7s ease;
+}
+
+.knowmorebanner:hover {
+
+    color: #000000;
+}
+
 @media screen and (min-width: 1499px) {
     
     .homefourdivcstm{
@@ -771,6 +806,11 @@
 
         font-size: 14px;
     }
+
+    .upcoming_event_banner_para {
+
+        font-size: 11px;
+    }
 }
 
 @media screen and (max-width : 575px) {
@@ -886,6 +926,10 @@
         margin-top: 0px;
     }
 
+    .upcoming_event_banner_para {
+
+        font-size: 8px;
+    } 
 }
 
 

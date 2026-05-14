@@ -110,6 +110,9 @@ export const HomeIntroBanner = () => {
 
         <>
             <div className="imagecstmdivhome">
+                <div className="upcomingeventbanner">
+                    <p className="upcoming_event_banner_para">Empowering Revival 2026 • Join Us On Saturday, June 6th<a href="/meetingrequest" className="knowmorebanner">Know More</a></p>
+                </div>
                 <img
                     src="/assets/images/main/bibleone.webp"
                     alt="Geelong Pentecostal Assembly"
