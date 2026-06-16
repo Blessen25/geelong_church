@@ -237,6 +237,12 @@ const Meetings_Component = () => {
 
               <div className="meetingdetailsdiv">
                 <p className="text_cstm_normal_para">
+                  Sorry there is no meeting scheduled at the moment, please check back later for updates on upcoming meetings and events. We look forward to welcoming you to our future gatherings!
+                </p>
+              </div>
+
+              {/* <div className="meetingdetailsdiv">
+                <p className="text_cstm_normal_para">
                   Event Name: Empowering Revival Meeting
                 </p>
                 <p className="text_cstm_normal_para">
@@ -249,7 +255,7 @@ const Meetings_Component = () => {
                   Time: 10:00 AM – 4:00 PM
                 </p>
                 <img src="assets/images/main/geelong_revival_banner.png" alt="Geelong Revival Banner" loading='lazy' className='meetingimage'/>
-              </div>
+              </div> */}
 
               <form className="meetingreqform" onSubmit={handleSubmit}>
                 <Flexwithgapcstmdivcol parentClassname="contactdetailsdivcolcstm">
@@ -457,13 +463,13 @@ const Meetings_Component = () => {
                     </Flexwithgapcstmdivrow>
                   ))}
 
-                  <button
+                  {/* <button
                     type="submit"
                     className="submitbuttoncontactcstm"
                     style={{ cursor: 'pointer' }}
                   >
                     Submit
-                  </button>
+                  </button> */}
                 </Flexwithgapcstmdivcol>
               </form>
               {success && 
