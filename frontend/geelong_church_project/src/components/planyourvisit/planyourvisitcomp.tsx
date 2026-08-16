@@ -55,7 +55,7 @@ const ServiceTimings = () => {
             <h1 className="text_cstm_big_heading">Service Timings</h1>
             <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
                     <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
-                    <p className="text_cstm_normal_para textalign_cstmjustify">Sunday Service ( English & Malayalam ) : 10:00 am</p>
+                    <p className="text_cstm_normal_para textalign_cstmjustify">Sunday Service ( Malayalam ) : 10:00 am</p>
             </Flexwithgapcstmdivrow>
             <Flexwithgapcstmdivrow parentStyle={{ alignItems:"center"}}>
                     <FontAwesomeIcon icon={faCheckSquare} color="#3c79b0" className="fachecksquareiconcstm"/> 
